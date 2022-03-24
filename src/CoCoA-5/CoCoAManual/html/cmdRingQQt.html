@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RingQQt</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RingQQt">up</a> <a href="cmdRingQQ.html">previous</a>  <a href="cmdRingSet[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RingQQt<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+pre-defined polynomial rings</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RingQQt(N: INT): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a polynomial ring over <tt><b style="background:#bbeeee">QQ</b></tt> with indeterminates <font color=#0000aa>t[1]...t[N]</font>.
+In particular <tt><b style="background:#bbeeee">RingQQt(1)</b></tt> is the polynomial ring in which Hilbert
+polynomials are defined.
+<br><br>
+NOTE: calling <tt><b style="background:#bbeeee">RingQQt(2)</b></tt> twice gives the same identical ring,
+whereas calling <tt><b style="background:#bbeeee">NewPolyRing(QQ, "t[1],t[2]");</b></tt>
+returns each time a new ring (therefore incompatible).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  QQt := RingQQt(3);  use QQt;
+/**/  (t[1]+1)^3;
+t[1]^3 +3*t[1]^2 +3*t[1] +1
+/**/  indets(RingQQt(1));
+[t]
+/**/  indets(RingQQt(5));
+[t[1], t[2], t[3], t[4], t[5]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+<li><a href="cmdRingQQ.html">RingQQ</A>
+<li><a href="cmdRingZZ.html">RingZZ</A>
+</ul>
+</div>
+
+</body>
+</html>

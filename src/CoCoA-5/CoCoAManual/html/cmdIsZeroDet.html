@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsZeroDet</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsZeroDet">up</a> <a href="cmdIsZeroColIsZeroRow.html">previous</a>  <a href="cmdIsZeroDim.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsZeroDet<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether determinant is zero</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsZeroDet(M: MAT): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the determinant of <tt><b style="background:#bbeeee">M</b></tt> is zero; it may
+sometimes be faster than computing the determinant.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  M := matrix([[1,2], [3,4]]);
+/**/  IsZeroDet(M);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddet.html">det</A>
+<li><a href="cmdrk.html">rk</A>
+<li><a href="cmdIsZero.html">IsZero</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>close</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#close">up</a> <a href="cmdClearDenom.html">previous</a>  <a href="cmdCloseLog.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>close<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+close an output stream</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+close(OUT: OSTREAM)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function closes the output stream <tt><b style="background:#bbeeee">OUT</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  file := OpenOFile("my-test"); -- open file for output from CoCoA
+/**/  print "test" on file;  -- write to my-file
+/**/  close(file);  -- close the output stream, "flushes" all output
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+</ul>
+</div>
+
+</body>
+</html>

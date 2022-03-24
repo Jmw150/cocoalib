@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HermitePoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HermitePoly">up</a> <a href="cmdHColon.html">previous</a>  <a href="cmdHGBM.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HermitePoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Orthogonal Polynomials: Chebyshev, Hermite, Laguerre</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HermitePoly(N: INT, X: RINGELEM): RINGELEM
+HermitePoly2(N: INT, X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function <tt><b style="background:#bbeeee">HermitePoly</b></tt> returns the <tt><b style="background:#bbeeee">N</b></tt>-th Hermite polynomial (as used
+in physics); the function <tt><b style="background:#bbeeee">HermitePoly2</b></tt> returns the <tt><b style="background:#bbeeee">N</b></tt>-th Hermite
+polynomial (as used in probability).
+<br><br>
+These functions also work if <tt><b style="background:#bbeeee">X</b></tt> is not an indeterminate: the result
+is then the evaluation of the polynomial at the given value.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  HermitePoly(3,x);
+8*x^3 -12*x
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdChebyshevPoly.html">ChebyshevPoly</A>
+<li><a href="cmdLaguerrePoly.html">LaguerrePoly</A>
+</ul>
+</div>
+
+</body>
+</html>

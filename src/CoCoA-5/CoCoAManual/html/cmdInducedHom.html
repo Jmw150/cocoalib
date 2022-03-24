@@ -1,0 +1,100 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>InducedHom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#InducedHom">up</a> <a href="cmdIndetSymbols.html">previous</a>  <a href="cmdInitialIdeal.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>InducedHom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+homomorphism induced by a homomorphism</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+InducedHom(RmodI: RING, phi: RINGHOM): RINGHOM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">InducedHom(RmodI, phi)</b></tt> -- where <tt><b style="background:#bbeeee">RmodI</b></tt> is a QuotientRing,
+and <tt><b style="background:#bbeeee">phi</b></tt> is a homomorphism <tt><b style="background:#bbeeee">R --> S</b></tt>
+(which must have <tt><b style="background:#bbeeee">BaseRing(RmodI)</b></tt> as its <A HREF="cmddomain.html">
+    <tt>domain</tt>
+  </A>,
+and whose <A HREF="cmdker.html">
+    <tt>ker</tt>
+  </A> must contain <tt><b style="background:#bbeeee">DefiningIdeal(RmodI)</b></tt>)
+gives the homomorphism <tt><b style="background:#bbeeee">R/I --> S</b></tt> induced by <tt><b style="background:#bbeeee">phi</b></tt><br><br><tt><b style="background:#bbeeee">InducedHom(FrF, phi)</b></tt> -- may be partial where <tt><b style="background:#bbeeee">FrF</b></tt> is a
+FractionField, gives the homomorphism induced by <tt><b style="background:#bbeeee">phi</b></tt> (which must
+have the base ring of FrF as its domain).  Note that the resulting
+homomorphism may be only partial (e.g. if ker(phi) is non-trivial,
+or if the codomain is not a field).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  RmodI := NewQuotientRing(R, ideal(x^2-1));
+
+/**/ use S ::= QQ[a,b,c];
+/**/  SmodJ := NewQuotientRing(S, ideal(a^2-1));
+
+/**/  phi := PolyAlgebraHom(R,S,[a,b]);
+/**/  use R;
+/**/  phi(x);
+a
+/**/ RingOf(phi(x)) = S;
+true
+/**/  psi := CanonicalHom(S,SmodJ)(phi);  -- composition of homomorphisms
+/**/  psi(x);
+(a)
+/**/  RingOf(psi(x)) = SmodJ;
+true
+
+/**/  theta := InducedHom(RmodI, psi);
+/**/  use RmodI;
+/**/  theta(x);
+(a)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddomain.html">domain</A>
+<li><a href="cmdcodomain.html">codomain</A>
+<li><a href="partCompositionofRINGHOM.html">Composition of RINGHOM</A>
+<li><a href="cmdBaseRing.html">BaseRing</A>
+<li><a href="cmdDefiningIdeal.html">DefiningIdeal</A>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+<li><a href="cmdNewFractionField.html">NewFractionField</A>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+<li><a href="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+<li><a href="cmdPolyRingHom.html">PolyRingHom</A>
+</ul>
+</div>
+
+</body>
+</html>

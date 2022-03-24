@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>compts</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#compts">up</a> <a href="cmdCompleteToOrd[OBSOLETE].html">previous</a>  <a href="cmdComputeElimFirst.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>compts<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of components of a ModuleElem</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+compts(V: MODULEELEM): LIST
+Comps(V: MODULEELEM): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of components of the ModuleElem <tt><b style="background:#bbeeee">V</b></tt>.
+It is like converting the <tt><b style="background:#bbeeee">ModuleElem</b></tt> into a generic list.
+<br><br>
+NOTE: a <tt><b style="background:#bbeeee">ModuleElem</b></tt> is a more structured object than a generic list.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  R3 := NewFreeModule(R,3);
+/**/  V := ModuleElem(R3, [3*x^2+4*y, 2*x-5*z^3, 2*x+2*y]);  V;
+[3*x^2 +4*y, -5*z^3 +2*x, 2*x +2*y]
+/**/  type(V);
+MODULEELEM
+
+/**/  compts(V);
+[3*x^2 +4*y, -5*z^3 +2*x, 2*x +2*y]
+/**/ type(compts(V));
+LIST
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNumCompts.html">NumCompts</A>
+</ul>
+</div>
+
+</body>
+</html>

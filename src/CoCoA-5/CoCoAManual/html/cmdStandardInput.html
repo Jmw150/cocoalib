@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>StandardInput</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#StandardInput">up</a> <a href="cmdStagedTrees.html">previous</a>  <a href="cmdStandardOutput.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>StandardInput<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+an ISTREAM for reading the standard input</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+StandardInput(): ISTREAM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns an <tt><b style="background:#bbeeee">ISTREAM</b></tt> for reading interactive input: see <A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A>.
+<br><br><b>Warning:</b> this function may not work well if you are running CoCoA inside a GUI.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+//  UserInput := StandardInput();
+//  str := GetLine(UserInput);
+//  println "The input was: ", str;
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGetLine.html">GetLine</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+</ul>
+</div>
+
+</body>
+</html>

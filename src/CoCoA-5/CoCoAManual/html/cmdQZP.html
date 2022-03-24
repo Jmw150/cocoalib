@@ -1,0 +1,109 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>QZP</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#QZP">up</a> <a href="cmdQuotientingHom.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>QZP<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+change field for polynomials and ideals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+QZP(F: RINGELEM): RINGELEM
+QZP(F: LIST of POLY): LIST of POLY
+QZP(I: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+See example below
+<br><br>
+The functions <tt><b style="background:#bbeeee">QZP</b></tt> and <A HREF="cmdZPQ.html">
+    <tt>ZPQ</tt>
+  </A> map polynomials and
+ideals of other rings into ones of the current ring.
+When mapping from one ring to another, one of the rings must have
+coefficients in the rational numbers and the other must have
+coefficients in a finite field.  The indeterminates in both
+rings must be identical.
+<br><br>
+The function <tt><b style="background:#bbeeee">QZP</b></tt> maps polynomials with rational coefficients to
+polynomials with coefficients in a finite field; the function <A HREF="cmdZPQ.html">
+    <tt>ZPQ</tt>
+  </A>
+does the reverse, mapping a polynomial with finite field coefficients
+into one with rational (actually, integer) coefficients.  The function
+<A HREF="cmdZPQ.html">
+    <tt>ZPQ</tt>
+  </A> is not uniquely defined mathematically, and currently for each
+coefficient the least non-negative equivalent integer is chosen.
+Users should not rely on this choice, though any change will be
+documented.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  F := 1/2*x^3 + (34/567)*x*y*z - 890; -- a poly with rational coefficients
+/**/  use S ::= ZZ/(101)[x,y,z];
+/**/  -- this is the clean way to do it!
+/**/  phi := PolyRingHom(R, S, QQEmbeddingHom(S), indets(S));
+/**/  phi(F);
+-50*x^3 -19*x*y*z +19
+***** NOT YET IMPLEMENTED *****
+  QZP(F);                            -- compute its image with coeffs in ZZ/(101)
+-50x^3 - 19xyz + 19
+-------------------------------
+  G := It;
+  use R;
+  ZPQ(G);                      -- now map that result back to QQ[x,y,z]
+                               -- it is NOT the same as F...
+51x^3 + 82xyz + 19
+-------------------------------
+  H := It;
+  F - H;                       -- ... but the difference is divisible by 101
+-101/2x^3 - 46460/567xyz - 909
+-------------------------------
+  use S;
+  QZP(H) - G;                  -- F and H have the same image in ZZ/(101)[x,y,z]
+0
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoRINGHOM.html">Introduction to RINGHOM</A>
+<li><a href="cmdBringIn.html">BringIn</A>
+</ul>
+</div>
+
+</body>
+</html>

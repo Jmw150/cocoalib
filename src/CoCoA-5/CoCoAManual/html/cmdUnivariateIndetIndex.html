@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>UnivariateIndetIndex</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#UnivariateIndetIndex">up</a> <span class="grayed">previous</span> <a href="cmdUniversalGBasis.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>UnivariateIndetIndex<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the index of the indeterminate of a univariate polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+UnivariateIndetIndex(F: RINGELEM): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns 0 if the polynomial <tt><b style="background:#bbeeee">F</b></tt> is not univariate
+otherwise it returns the indeterminate index of <tt><b style="background:#bbeeee">F</b></tt>.  If <tt><b style="background:#bbeeee">F</b></tt> is
+constant, the function throws an error.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  UnivariateIndetIndex(3*x^4-2*x-1);
+1
+
+/**/  UnivariateIndetIndex(x-y-1);
+0
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdindet.html">indet</A>
+<li><a href="cmdIndetSubscripts.html">IndetSubscripts</A>
+<li><a href="cmdIndetIndex.html">IndetIndex</A>
+<li><a href="cmdIndetName.html">IndetName</A>
+<li><a href="cmdindets.html">indets</A>
+<li><a href="cmdNumIndets.html">NumIndets</A>
+</ul>
+</div>
+
+</body>
+</html>

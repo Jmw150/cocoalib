@@ -1,0 +1,63 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Polynomial Rings</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c9">up</a> <a href="partIntroductiontoRING.html">previous</a> <a href="partCoefficientRings.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.9.2 Polynomial Rings</b></font>
+</td></tr></table>
+
+CoCoA starts with the default (polynomial) ring <tt><b style="background:#bbeeee">R = QQ[x,y,z]</b></tt>.
+Polynomial rings are created with the function <A HREF="cmdNewPolyRing.html">
+    <tt>NewPolyRing</tt>
+  </A>,
+but there is a special simplyfied syntax working in most cases:
+it must be preceded by the command <A HREF="cmduse.html">
+    <tt>use</tt>
+  </A> or by the symbol <tt><b style="background:#bbeeee">::=</b></tt>
+(or both)
+
+  <pre>
+     R ::= C[X:INDETS];           use C[X:INDETS];
+     R ::= C[X:INDETS], O;        use C[X:INDETS], O;
+</pre>
+<tt><b style="background:#bbeeee">R</b></tt> is the identifier of a CoCoALanguage variable,
+<tt><b style="background:#bbeeee">C</b></tt> is a RING,
+<tt><b style="background:#bbeeee">X</b></tt> is an expression that defines the indeterminates,
+<tt><b style="background:#bbeeee">O</b></tt> is a pre-defined ordering (<tt><b style="background:#bbeeee">lex</b></tt>, <tt><b style="background:#bbeeee">deglex</b></tt>,
+<tt><b style="background:#bbeeee">degrevlex</b></tt>).  The default ordering is DegRevLex.
+<br><br>
+After the ring is defined using the above syntax, it can be made to be
+the current ring with the command <A HREF="cmduse.html">
+    <tt>use</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[a,b,c];  -- define and use the ring R
+/**/  K := NewFractionField(R);
+/**/  S ::= K[x,y], Lex;
+/**/  CurrentRing;  -- the current ring is still R
+RingWithID(21, "QQ[a,b,c]")
+/**/  use S;  -- now the ring S is the current ring
+/**/  CurrentRing;
+RingWithID(23, "RingWithID(22)[x,y]")
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

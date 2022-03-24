@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsZeroCol, IsZeroRow</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsZeroCol, IsZeroRow">up</a> <a href="cmdIsZero.html">previous</a>  <a href="cmdIsZeroDet.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsZeroCol, IsZeroRow<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether a column(row) is zero</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsZeroCol(M: MAT, N: INT): BOOL
+IsZeroRow(M: MAT, N: INT): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether all entries in the <tt><b style="background:#bbeeee">N</b></tt>-th column(row)
+of <tt><b style="background:#bbeeee">M</b></tt> are zero.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  IsZeroRow(matrix([[1,0,0], [0,0,0]]), 1);
+false
+/**/  IsZeroCol(matrix([[1,0,0], [0,0,0]]), 2);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsZero.html">IsZero</A>
+<li><a href="cmdZeroMat.html">ZeroMat</A>
+</ul>
+</div>
+
+</body>
+</html>

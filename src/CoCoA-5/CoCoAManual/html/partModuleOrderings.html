@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Module Orderings</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c9">up</a> <a href="partTermOrderings.html">previous</a> <a href="partQuotientRings.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.9.6 Module Orderings</b></font>
+</td></tr></table>
+
+***** NOT YET UPDATED TO CoCoA-5 *****
+<br><br>
+First we recall the definition of a module term-ordering. We assume
+that all our free modules have finite rank and are of the type <font color=#0000aa>M = R^r</font>
+where R is a polynomial ring with n indeterminates.  Let
+<font color=#0000aa>[e_i|i=1,...,r]</font> be the canonical basis of M. A <b>term</b> of M is an
+element of the form <font color=#0000aa>Te_i</font> where T belongs to the set T(R) of the terms
+of R.  Hence the set T(M), of the terms of M, is in one-to-one
+correspondence with the Cartesian product, <font color=#0000aa>T(R) x [1,...,r]</font>.
+<br><br>
+A <b>module term-ordering</b> is defined as a total ordering <font color=#0000aa>></font> on T(M)
+such that for all <tt><b style="background:#bbeeee">T, T_1, T_2</b></tt> in T(R), with T not equal to 1, and for
+all i, j in {1,...,r},
+
+  <pre>
+   (1)  T * T_1 * e_i > T_1 * e_i
+   (2)  T_1 * e_i > T_2 * e_j  =>  T * T_1 * e_i > T * T_2 * e_j
+</pre>
+
+Each term-ordering on the current ring induces several term-orderings
+on a free module.  CoCoA allows the user to choose between the
+following:
+<br><br>
+   * the ordering called <tt><b style="background:#bbeeee">ToPos</b></tt> (which is the default one) defined by:
+
+  <pre>
+      T_1 * e_i > T_2 * e_j <=>  T_1 > T_2 in R
+                                 or, if  T_1 = T_2 , i < j
+</pre>
+
+   * the ordering called <tt><b style="background:#bbeeee">PosTo</b></tt> defined by:
+
+  <pre>
+       T_1 * e_i > T_2 * e_j <=> i < j
+                                 or, if i = j, T_1 > T_2 in R .
+</pre>
+
+
+The leading term of the vector <font color=#0000aa>(x,y^2)</font> with respect
+to two different module term-orderings:
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+  use R ::= QQ[x,y], ToPos;
+  LT(Vector(x,y^2));
+Vector(0, y^2)
+-------------------------------
+  use R ::= QQ[x,y], PosTo;
+  LT(Vector(x,y^2));
+Vector(x, 0)
+-------------------------------
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GraverBasis</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GraverBasis">up</a> <a href="cmdgraeffe.html">previous</a>  <a href="cmdGroebnerFanIdeals.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GraverBasis<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Graver basis</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GraverBasis(M: MAT): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These function return the Graver basis, computed with <A HREF="cmdtoric.html">
+    <tt>toric</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= ZZ/(2)[x,y,z];
+/**/  toric(P, mat([[1,3,2]]));
+ideal(-x^2 +z, x^3 -y)
+/**/  GraverBasis(P, mat([[1,3,2]]));
+[x^2 -z, x*z -y, x^3 -y, x*y -z^2, z^3 -y^2]
+/**/  UniversalGBasis(toric(P, mat([[1,3,2]])));
+[x*z -y, x*y -z^2, x^2 -z, z^3 -y^2, x^3 -y]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdtoric.html">toric</A>
+<li><a href="cmdHilbertBasisKer.html">HilbertBasisKer</A>
+</ul>
+</div>
+
+</body>
+</html>

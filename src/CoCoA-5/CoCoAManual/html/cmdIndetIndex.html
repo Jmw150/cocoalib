@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IndetIndex</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IndetIndex">up</a> <a href="cmdindet.html">previous</a>  <a href="cmdIndetName.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IndetIndex<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+index of an indeterminate</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IndetIndex(X: RINGELEM): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the position in which the indeterminate is
+listed when the corresponding ring was created.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  IndetIndex(y);
+2
+
+/**/  use R ::= QQ[x[1..2,1..2],y[1..2]];
+/**/  Indets(R);
+[x[1,1], x[1,2], x[2,1], x[2,2], y[1], y[2]]
+
+/**/  IndetIndex(x[2,1]);
+3
+
+/**/  S ::= QQ[a,b,c];
+/**/  IndetIndex(RingElem(S, "b"));
+2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdindet.html">indet</A>
+<li><a href="cmdIndetSubscripts.html">IndetSubscripts</A>
+<li><a href="cmdIndetName.html">IndetName</A>
+<li><a href="cmdindets.html">indets</A>
+<li><a href="cmdNumIndets.html">NumIndets</A>
+<li><a href="cmdUnivariateIndetIndex.html">UnivariateIndetIndex</A>
+</ul>
+</div>
+
+</body>
+</html>

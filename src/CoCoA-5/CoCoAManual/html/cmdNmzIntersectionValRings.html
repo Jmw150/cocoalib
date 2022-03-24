@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NmzIntersectionValRings</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NmzIntersectionValRings">up</a> <a href="cmdNmzIntClosureToricRing.html">previous</a>  <a href="cmdNmzNormalToricRing.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NmzIntersectionValRings<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+intersection of ring of valuations</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NmzIntersectionValRings(M: MAT, M: Ring): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+A discrete monomial valuation <font color=#0000aa>v</font> on <font color=#0000aa>R=K[X_1,...,X_n]</font>
+is determined by the values <font color=#0000aa>v(X_j)</font> of the indeterminates.
+This function computes the subalgebra
+<font color=#0000aa>S = {f in R: v_i(f) >= 0, i=1,...,r}</font>
+that is the intersection of the valuation rings of the given
+valuations <font color=#0000aa>v_1, ...,v_r</font>, i.e. it consists of all
+elements of R that have a nonnegative value for all r valuations.
+It takes as input the matrix <font color=#0000aa>V=(v_i(X_j))</font> whose
+rows correspond to the values of the indeterminates.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/     use R::=QQ[x,y,z,w];
+/**/     V := matrix([[0,1,2,3],[-1,1,2,1]]);
+/**/     NmzIntersectionValRings(V,R);
+[y, z, w, x*y, x^2*z, x*w, x*z]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNmzComputation.html">NmzComputation</A>
+<li><a href="cmdNmzSetVerbosityLevel.html">NmzSetVerbosityLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

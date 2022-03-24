@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HomogCompt</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HomogCompt">up</a> <a href="cmdhomog.html">previous</a>  <a href="cmdHomogElimMat[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HomogCompt<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+homogeneous part of given degree</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HomogCompt(f: RINGELEM, d: INT): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the homogeneous part of weighted degree <tt><b style="background:#bbeeee">d</b></tt> of <tt><b style="background:#bbeeee">f</b></tt>.
+<br><br>
+NOTE: currently works only if the weighted degrees are integers (gr.dim is 1).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[a,b,c];
+/**/ HomogCompt(c^2-a+b+c+1, 1);
+-a +b +c
+/**/ OrdM := matrix([[2,3,1],[0,0,-1],[0,-1,0]]);
+/**/ P := NewPolyRing(QQ, "a,b,c", OrdM, 1); -- 3 indeterminates
+/**/ use P;
+/**/ HomogCompt(c^2-a+b+c+1, 1);
+c
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsHomog.html">IsHomog</A>
+<li><a href="cmdLF.html">LF</A>
+<li><a href="cmdDF.html">DF</A>
+<li><a href="cmdRandomLinearForm.html">RandomLinearForm</A>
+</ul>
+</div>
+
+</body>
+</html>

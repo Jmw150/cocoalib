@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>BlockMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#BlockMat">up</a> <a href="cmdblock.html">previous</a>  <a href="cmdBlockMat2x2.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>BlockMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a block matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+BlockMat(LIST of LIST of MAT: L): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function creates a block matrix from a LIST of rows of matrices.
+The following restrictions on the sizes of the matrices apply:
+  in each row list: all matrices must have the same number of rows;
+  for all row lists: the total number of columns must be the same.
+<br><br>
+The function <A HREF="cmdBlockMat2x2.html">
+    <tt>BlockMat2x2</tt>
+  </A> has a simpler syntax for a
+2x2 block matrix.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  A := RowMat([1,2,3,4]);   B := RowMat([0,0]);
+-- /**/ BlockMat2x2(A,B, B,A);  --> !!! ERROR !!! as expected
+/**/  BlockMat([[A,B], [B,A]]);
+matrix(QQ,
+ [[1, 2, 3, 4, 0, 0],
+  [0, 0, 1, 2, 3, 4]])
+/**/  BlockMat([[A,B], [RowMat(1..6)]]);
+matrix(QQ,
+ [[1, 2, 3, 4, 0, 0],
+  [1, 2, 3, 4, 5, 6]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdConcatHor.html">ConcatHor</A>
+<li><a href="cmdConcatVer.html">ConcatVer</A>
+<li><a href="cmdConcatHorList.html">ConcatHorList</A>
+<li><a href="cmdConcatVerList.html">ConcatVerList</A>
+<li><a href="cmdConcatDiag.html">ConcatDiag</A>
+<li><a href="cmdConcatAntiDiag.html">ConcatAntiDiag</A>
+<li><a href="cmdBlockMat2x2.html">BlockMat2x2</A>
+</ul>
+</div>
+
+</body>
+</html>

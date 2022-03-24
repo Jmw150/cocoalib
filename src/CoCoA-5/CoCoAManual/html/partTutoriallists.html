@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: lists</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialprinting.html">previous</a> <a href="partTutorialpolynomialringsusecommand.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.7 Tutorial: lists</b></font>
+</td></tr></table>
+
+A convenient way of "putting together" many values in CoCoA-5
+is to put them into a LIST.  Though the CoCoA-5 name is LIST
+the data-structure more closely resembles a <i>vector</i> in C++
+than a <i>list</i> in C++.
+<br><br>
+CoCoA-5 does not impose restrictions on the values a LIST may
+contain; nevertheless it usually makes most sense if the values
+are all of the same type (e.g. all integers, all polynomials).
+<br><br>
+A list may be created in several ways.  The simplest is to write
+out the entries explicitly.  Another is to start with an empty list,
+and the append new elements in a loop.  There is also a convenient
+syntax inspired by the mathematical notation for sets.
+<br><br>
+If you have a list, you can find out how many elements it contains
+using the function <tt><b style="background:#bbeeee">len</b></tt>.  You can also iterate over the
+elements of a list using the <tt><b style="background:#bbeeee">foreach</b></tt> loop command.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ [2,3,5];  // list containing the elements 2,3,5 in that order
+[2, 3, 5]
+/**/ 1..5;  // integer range
+[1, 2, 3, 4, 5]
+// Now create a list using "append":
+/**/ L := [];  // start with the empty list in L
+/**/ for i := 1 to 5 do append(ref L, i^2); endfor;
+/**/ println L;
+[1, 4, 9, 16, 25]
+/**/ [ n in L | IsEven(n)];  // list containing even values
+[4, 16]
+/**/ [ n^2 | n in L  and  n < 10];
+[1, 16, 81]
+/**/ len(L);
+5
+/**/ foreach n in L do print n," "; endforeach;
+1 4 9 16 25
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

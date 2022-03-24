@@ -1,0 +1,111 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>operators, shortcuts</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#operators, shortcuts">up</a> <span class="grayed">previous</span> <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>operators, shortcuts<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Special characters equivalent to commands</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+A := B         A: variable, B: OBJECT  assignment
+A ::= K[...]   A: variable, K: RING    assignment special syntax for rings
+A = B    A,B: OBJECT        returns BOOL
+A <> B   A,B: OBJECT        returns BOOL
+A < B    A,B: OBJECT        returns BOOL
+A <= B   A,B: OBJECT        returns BOOL
+A > B    A,B: OBJECT        returns BOOL
+A >= B   A,B: OBJECT        returns BOOL
+A >< B   A,B: LIST        returns LIST
+A..B     A,B: INT           returns LIST 
+A..B     A,B: RINGELEM (indets)  returns LIST 
+[...]                       returns LIST
+[..|..]                     returns LIST
+I : J    I, J: IDEAL        returns IDEAL
+L[N]     L: LIST, N: INT    returns OBJECT
+S[N]     S: STRING, N: INT  returns STRING
+M[i,j]   M: MAT, i,j: INT   returns RINGELEM
+R.F      R: RECORD and F field name      returns OBJECT
+R/I      R: RING, I: IDEAL  returns RING
+***E***  E: expression      returns OBJECT
+?S       S: STRING          prints manual
+<< S     S: STRING          [OBSOLESCENT]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">A := B;</b></tt> compute <tt><b style="background:#bbeeee">B</b></tt> then assign the result to <tt><b style="background:#bbeeee">A</b></tt><br><br><tt><b style="background:#bbeeee">A ::= <ring-spec></b></tt>  for the special ring syntax (see <A HREF="cmdNewPolyRing.html">
+    <tt>NewPolyRing</tt>
+  </A>)
+<br><br><tt><b style="background:#bbeeee">A = B</b></tt>   test whether <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt> are equal (see <A HREF="cmdOrderComparisonOperators.html">
+    <tt>Order Comparison Operators</tt>
+  </A>)
+<br><br><tt><b style="background:#bbeeee">A <> B</b></tt>  test whether <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt> are not equal (see <A HREF="cmdOrderComparisonOperators.html">
+    <tt>Order Comparison Operators</tt>
+  </A>)
+<br><br><tt><b style="background:#bbeeee">A < B</b></tt>  test whether <tt><b style="background:#bbeeee">A</b></tt> is smaller than <tt><b style="background:#bbeeee">B</b></tt> (see <A HREF="cmdOrderComparisonOperators.html">
+    <tt>Order Comparison Operators</tt>
+  </A>)
+<br><br><tt><b style="background:#bbeeee">A >< B</b></tt>  equivalent to <tt><b style="background:#bbeeee">CartesianProduct(A, B)</b></tt>, <tt><b style="background:#bbeeee">CartesianProductList([A,B])</b></tt><br><br><tt><b style="background:#bbeeee">A..B</b></tt>    is the <A HREF="partRangeOperator.html">
+    <tt>Range Operator</tt>
+  </A> (see <A HREF="partListConstructors.html">
+    <tt>List Constructors</tt>
+  </A>)
+<br><br><tt><b style="background:#bbeeee">[...]</b></tt>   build a new list (see <A HREF="partListConstructors.html">
+    <tt>List Constructors</tt>
+  </A>)
+<br><br><tt><b style="background:#bbeeee">[..|..]</b></tt> build a new list (see <A HREF="partListConstructors.html">
+    <tt>List Constructors</tt>
+  </A>)
+<br><br><tt><b style="background:#bbeeee">I : J</b></tt>   equivalent to <tt><b style="background:#bbeeee">colon(I, J)</b></tt><br><br><tt><b style="background:#bbeeee">L[N]</b></tt>    access <tt><b style="background:#bbeeee">N</b></tt>-th entry of list <tt><b style="background:#bbeeee">L</b></tt> (indexes start from 1)
+<br><br><tt><b style="background:#bbeeee">S[N]</b></tt>    access <tt><b style="background:#bbeeee">N</b></tt>-th char of string <tt><b style="background:#bbeeee">L</b></tt> (indexes start from 1)
+<br><br><tt><b style="background:#bbeeee">M[i,j]</b></tt>  access entry <tt><b style="background:#bbeeee">i,j</b></tt> in matrix <tt><b style="background:#bbeeee">M</b></tt><br><br><tt><b style="background:#bbeeee">R.F</b></tt><A HREF="cmdrecordfieldselector.html">
+    <tt>record field selector</tt>
+  </A> for field named <tt><b style="background:#bbeeee">F</b></tt> of record <tt><b style="background:#bbeeee">R</b></tt><br><br><tt><b style="background:#bbeeee">R/I</b></tt>     equivalent to <tt><b style="background:#bbeeee">NewQuotientRing(R,I)</b></tt><br><br><tt><b style="background:#bbeeee">***E***</b></tt> interpret <tt><b style="background:#bbeeee">E</b></tt> in <A HREF="cmdCoCoA4mode.html">
+    <tt>CoCoA-4 mode</tt>
+  </A><br><br><tt><b style="background:#bbeeee"><font color=#0000aa><< S</font></b></tt>  OBSOLESCENT equivalent to <tt><b style="background:#bbeeee">source(S)</b></tt><br><br><tt><b style="background:#bbeeee">? string</b></tt> prints the manual page for <tt><b style="background:#bbeeee">string</b></tt>, or a list of matching manual pages
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcolon.html">colon</A>
+<li><a href="cmdEqualityOperator.html">Equality Operator</A>
+<li><a href="cmdOrderComparisonOperators.html">Order Comparison Operators</A>
+<li><a href="partListConstructors.html">List Constructors</A>
+<li><a href="cmdCartesianProductCartesianProductList.html">CartesianProduct, CartesianProductList</A>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+<li><a href="cmdrecordfieldselector.html">record field selector</A>
+<li><a href="partRangeOperator.html">Range Operator</A>
+<li><a href="cmdsource.html">source</A>
+<li><a href="cmdManual.html">Manual</A>
+<li><a href="partCharacterSetandSpecialSymbols.html">Character Set and Special Symbols</A>
+<li><a href="partCoCoAOperatorsintroduction.html">CoCoA Operators: introduction</A>
+</ul>
+</div>
+
+</body>
+</html>

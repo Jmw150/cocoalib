@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>remove</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#remove">up</a> <a href="cmdReloadMan.html">previous</a>  <a href="cmdrepeat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>remove<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+remove an object in a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+remove(ref L: LIST, N: INT)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function removes the <tt><b style="background:#bbeeee">N</b></tt>-th component from <tt><b style="background:#bbeeee">L</b></tt>; it changes the value of <tt><b style="background:#bbeeee">L</b></tt>.
+Use the function <A HREF="cmdWithoutNth.html">
+    <tt>WithoutNth</tt>
+  </A> to create a new list containing the
+elements of <tt><b style="background:#bbeeee">L</b></tt> except the <tt><b style="background:#bbeeee">N</b></tt>-th (without changing <tt><b style="background:#bbeeee">L</b></tt>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  L := indets(R);
+/**/  L;
+[x, y, z]
+
+/**/  remove(ref L,2);
+/**/  L;
+[x, z]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddiff.html">diff</A>
+<li><a href="cmdWithoutNth.html">WithoutNth</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Printing a Tagged Object</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c16">up</a> <a href="partTagginganObject.html">previous</a> <a href="partCommandsandFunctionsforTags.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.16.2 Printing a Tagged Object</b></font>
+</td></tr></table>
+
+Suppose the object <tt><b style="background:#bbeeee">E</b></tt> is tagged with the string <tt><b style="background:#bbeeee">S</b></tt>.
+When one tries to print <tt><b style="background:#bbeeee">E</b></tt>---say with <tt><b style="background:#bbeeee">Print E</b></tt>---
+CoCoA looks for a user-defined function with name <tt><b style="background:#bbeeee">Print_S</b></tt>.  If no such function is
+available, CoCoA prints E as if it were not tagged, otherwise, it
+executes <tt><b style="background:#bbeeee">Print_S</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := ["Dave", "March 14", 1959, 372];
+/**/  M := tagged(L,"MiscData");
+
+/**/  Define SpecialPrinting(Dev, Obj)
+/**/    Print Obj[1],"'s birthday is: ", Obj[2] on Dev;
+/**/  EndDefine;
+
+/**/  PrintTagged := record[MiscData := SpecialPrinting];
+
+/**/  Print M;
+Dave's birthday is: March 14
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

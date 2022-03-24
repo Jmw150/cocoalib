@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>gcd</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#gcd">up</a> <a href="cmdGBM.html">previous</a>  <a href="cmdGenericPoints.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>gcd<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+greatest common divisor</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+gcd(M: INT, N: INT): INT
+gcd(L: LIST of INT): INT
+
+gcd(F: RINGELEM, G: RINGELEM): RINGELEM
+gcd(L: LIST of RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the greatest common divisor of its arguments
+or of the elements in the list <tt><b style="background:#bbeeee">L</b></tt>.
+For the calculation of the GCDs and LCMs of polynomials, the
+coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  F := x^2-y^2;
+/**/  G := (x+y)^3;
+/**/  gcd(F, G);
+x +y
+
+/**/  gcd([3*4,3*8,6*16]);
+12
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddiv.html">div</A>
+<li><a href="cmdmod.html">mod</A>
+<li><a href="cmdlcm.html">lcm</A>
+<li><a href="cmdIsCoprime.html">IsCoprime</A>
+</ul>
+</div>
+
+</body>
+</html>

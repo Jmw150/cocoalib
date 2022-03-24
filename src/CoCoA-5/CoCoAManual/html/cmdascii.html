@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ascii</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ascii">up</a> <a href="cmdArtinianOrlikTeraoIdeal.html">previous</a>  <a href="cmdAsINT.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ascii<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert between characters and ascii code</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ascii(N: INT): STRING
+ascii(L: LIST of INT): STRING
+ascii(S: STRING): LIST of INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+In the first form, <tt><b style="background:#bbeeee">ascii</b></tt> returns the character whose ASCII code is <tt><b style="background:#bbeeee">N</b></tt>.
+<br><br>
+In the second form, <tt><b style="background:#bbeeee">ascii</b></tt> returns the string whose characters, in
+order, have the ASCII codes listed in <tt><b style="background:#bbeeee">L</b></tt>.
+<br><br>
+The third form is the inverse of the second: it returns the ASCII codes
+of the characters in <tt><b style="background:#bbeeee">S</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  ascii(97);
+a
+
+/**/  C := ascii("hello world");
+/**/  C;
+[104, 101, 108, 108, 111, 32, 119, 111, 114, 108, 100]
+
+/**/  ascii(C);
+hello world
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

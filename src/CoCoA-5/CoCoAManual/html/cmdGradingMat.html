@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GradingMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GradingMat">up</a> <a href="cmdGradingDim.html">previous</a>  <a href="cmdgraeffe.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GradingMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+matrix of generalized weights for indeterminates</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GradingMat(R: RING): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the grading matrix (or weights matrix) for the
+polynomials ring <tt><b style="background:#bbeeee">R</b></tt>.
+To define a ring with (multi)weights use <A HREF="cmdNewPolyRing.html">
+    <tt>NewPolyRing</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  OrdM := MakeTermOrdMat(RowMat([2,3]));  OrdM;
+matrix(ZZ,
+ [[2, 3],
+  [0, -1]])
+/**/  P := NewPolyRing(QQ, "x,y", OrdM, 1);  -- GradingDim = 1
+/**/  GradingMat(P);
+matrix(ZZ,
+ [[2, 3]])
+
+/**/  use P;
+/**/  deg(x*y);
+2
+/**/  wdeg(x*y);
+[5]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddeg.html">deg</A>
+<li><a href="cmdwdeg.html">wdeg</A>
+<li><a href="cmdGradingDim.html">GradingDim</A>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>break</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#break">up</a> <a href="cmdBool01.html">previous</a>  <a href="cmdBringIn.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>break<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+break out of a loop command</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+break
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command may be used only inside a loop statement (<tt><b style="background:#bbeeee">for</b></tt>, <tt><b style="background:#bbeeee">foreach</b></tt>,
+<tt><b style="background:#bbeeee">repeat</b></tt>, or <tt><b style="background:#bbeeee">while</b></tt>).
+<br><br>
+When executed, the entire current loop statement is terminated, and
+control passes to the command following the loop statement.  If you
+just want to skip to the next iteration of the current loop statement
+use instead <A HREF="cmdcontinue.html">
+    <tt>continue</tt>
+  </A>.
+<br><br>
+In the case of nested loops <tt><b style="background:#bbeeee">break</b></tt> leaves just the innermost loop
+statement in which the <tt><b style="background:#bbeeee">break</b></tt> statement appears.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  for i := 5 to 1 step -1 do
+/**/    for j := 1 to 10 do
+/**/      print j, " ";
+/**/      if j = i then println; break; endif;
+/**/    endfor;
+/**/  endfor;
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcontinue.html">continue</A>
+<li><a href="cmdreturn.html">return</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+</ul>
+</div>
+
+</body>
+</html>

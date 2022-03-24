@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>mod</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#mod">up</a> <a href="cmdMinSubsetOfGens.html">previous</a>  <a href="cmdMod2Rat[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>mod<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+remainder for integers</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+mod(N: INT, D: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the remainder of integer division of <tt><b style="background:#bbeeee">N</b></tt> by <tt><b style="background:#bbeeee">D</b></tt>;
+the <b>remainder is zero or has the same sign as</b><tt><b style="background:#bbeeee">N</b></tt>.
+<br><br>
+If we set <tt><b style="background:#bbeeee">Q = div(N,D)</b></tt> and <tt><b style="background:#bbeeee">R = mod(N,D)</b></tt> then <font color=#0000aa>N = Q*D + R</font>.
+<br><br>
+NOTE: for polynomials use <A HREF="cmdNR.html">
+    <tt>NR</tt>
+  </A> (remainder),  <A HREF="cmdDivAlg.html">
+    <tt>DivAlg</tt>
+  </A> (quotients and remainder),
+<A HREF="cmdIsIn.html">
+    <tt>IsIn</tt>
+  </A> (ideal membership).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  mod(10,3);
+1
+/**/  mod(-10,3);
+-1
+/**/  // How to test if two numbers are equivalent modulo M
+/**/  A := 10; B := -5; M := 3;
+/**/  mod(A-B,M) = 0;      // CORRECT!
+true
+/**/  mod(A,M) = mod(B,M); // WRONG!!  Do not do this!
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddiv.html">div</A>
+<li><a href="cmdDivAlg.html">DivAlg</A>
+<li><a href="cmdIsIn.html">IsIn</A>
+<li><a href="cmdNF.html">NF</A>
+<li><a href="cmdNR.html">NR</A>
+</ul>
+</div>
+
+</body>
+</html>

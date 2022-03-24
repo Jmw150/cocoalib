@@ -1,0 +1,59 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsEvenPoly, IsOddPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsEvenPoly, IsOddPoly">up</a> <a href="cmdIsEvenIsOdd.html">previous</a>  <a href="cmdIsFactorClosed.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsEvenPoly, IsOddPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether a polynomial is even or odd as a function</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsEvenPoly(F: RINGELEM): BOOL
+IsOddPoly(F: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions test whether a polynomial is even or odd (as a function).
+Of course, most polynomials are neither even nor odd.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x];
+/**/  f := x^2+1;
+/**/  IsEvenPoly(f);
+true
+/**/  IsOddPoly(x*f);
+true
+/**/  IsEvenPoly(f+x);
+false
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

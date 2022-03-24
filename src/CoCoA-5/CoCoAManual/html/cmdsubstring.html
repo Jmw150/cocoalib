@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>substring</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#substring">up</a> <a href="cmdsubst.html">previous</a>  <a href="cmdsum.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>substring<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+substring of a string</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+substring(S: STRING, StartPosn: INT, Length: INT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function extracts a substring (with given start posn and length)
+from a string.  It is an error if the start posn is not inside the string,
+and also if the length is negative.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  substring("abcdef", 2, 3);
+bcd
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdconcat.html">concat</A>
+</ul>
+</div>
+
+</body>
+</html>

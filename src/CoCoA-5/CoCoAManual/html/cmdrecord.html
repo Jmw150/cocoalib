@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>record</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#record">up</a> <a href="cmdRealRootsApprox.html">previous</a>  <a href="cmdrecordfieldselector.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>record<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a record</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+record[F_1 := OBJECT,..., F_n := OBJECT]
+  where each F_i is a field name
+  returns RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This constructor creates a record with fields called <tt><b style="background:#bbeeee">F_1</b></tt>,...,<tt><b style="background:#bbeeee">F_n</b></tt>.
+The empty record is given by <tt><b style="background:#bbeeee">record[]</b></tt>.
+
+Records in CoCoA are <b>open</b> in the sense that new fields may be
+added after the record is first defined.  The names allowed for the
+fields are the same as those allowed for variables.
+<br><br>
+The dot operator is used to access the fields in a record.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  P := record[height := 10, width := 5];
+/**/  P.height * P.width;
+50
+
+/**/  P.area := It;  --> creates a new field called "area"
+/**/  P;
+record[area := 50, height := 10, width := 5]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrecordfieldselector.html">record field selector</A>
+<li><a href="cmdfields.html">fields</A>
+</ul>
+</div>
+
+</body>
+</html>

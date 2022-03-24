@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>last</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#last">up</a> <a href="cmdLaguerrePoly.html">previous</a>  <a href="cmdlatex.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>last<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the last N elements of a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+last(L: LIST): OBJECT
+last(L: LIST, N: INT): OBJECT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+In the first form, the function returns the last element of L.  In
+the second form, it returns the list of the last N elements of L.
+<br><br>
+The CoCoA equivalent to GAP <tt><b style="background:#bbeeee">last</b></tt> is the variable <A HREF="cmdIt.html">
+    <tt>It</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [1,2,3,4,5];
+/**/  last(L);
+5
+
+/**/  last(L,3);
+[3, 4, 5]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfirst.html">first</A>
+<li><a href="cmdtail.html">tail</A>
+<li><a href="cmdIt.html">It</A>
+</ul>
+</div>
+
+</body>
+</html>

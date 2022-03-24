@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RandomUnimodularMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RandomUnimodularMat">up</a> <a href="cmdRandomTupleIndices.html">previous</a>  <a href="cmdrank[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RandomUnimodularMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+random unimodular matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RandomUnimodularMat(R: RING, N: INT): MAT
+RandomUnimodularMat(R: RING, N: INT, Niters: INT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function returns a random <tt><b style="background:#bbeeee">N</b></tt>-by-<tt><b style="background:#bbeeee">N</b></tt> matrix with integer
+entries, and determinant +1 or -1.  The matrix is over the ring <tt><b style="background:#bbeeee">R</b></tt>.
+<br><br>
+The optional 3rd argument says how many internal iterations to
+perform: the algorithm starts with an identity matrix, then on each
+iteration simply adds or substracts one random row to another random
+row.  The default number of iterations is currently <tt><b style="background:#bbeeee">25*N</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ RandomUnimodularMat(ZZ, 3);
+matrix(ZZ,
+ [[-684, -2919, -769],
+  [1054, 4498, 1185],
+  [-519, -2215, -584]])
+/**/ det(It);
+1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrandom.html">random</A>
+</ul>
+</div>
+
+</body>
+</html>

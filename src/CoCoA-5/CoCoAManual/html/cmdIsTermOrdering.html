@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsTermOrdering</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsTermOrdering">up</a> <a href="cmdIsTerm.html">previous</a>  <a href="cmdIsTree5.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsTermOrdering<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if a matrix defines a term-ordering</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsTermOrdering(M: MAT): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function determines whether a square matrix defines a term-ordering,
+i.e. if its determinant is non-zero and if for each column the first
+nonnegative entry is positive.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  IsTermOrdering(LexMat(5));
+true
+
+/**/  IsTermOrdering(StdDegRevLexMat(5));
+true
+
+/**/  IsTermOrdering(RevLexMat(5));
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+<li><a href="cmdOrdMat.html">OrdMat</A>
+</ul>
+</div>
+
+</body>
+</html>

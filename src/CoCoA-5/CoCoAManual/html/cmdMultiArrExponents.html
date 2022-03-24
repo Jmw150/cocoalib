@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MultiArrExponents</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MultiArrExponents">up</a> <a href="cmdMultiArrDerModule.html">previous</a>  <a href="cmdMultiArrRestrictionZiegler.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MultiArrExponents<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+exponents of a free multiarrangement of hyperplanes</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MultiArrExponents(MultiA: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of exponents of a free multiarrangement of hyperplanes MultiA.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y];	
+/**/ MultiA := [[x,1], [x-y,3], [y,2]]; -- free
+/**/ MultiArrExponents(MultiA);
+[3,  3]
+
+/**/ use QQ[x,y,z];
+/**/ MultiA := [[x,1], [x-y,3], [z,2], [x+y-z,3]]; -- not free
+/**/ IsMultiArrFree(MultiA); --> false
+-- /**/ MultiArrExponents(MultiA);  --> !!! ERROR !!! as expected, not free
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMultiArrDerModule.html">MultiArrDerModule</A>
+<li><a href="cmdIsMultiArrFree.html">IsMultiArrFree</A>
+</ul>
+</div>
+
+</body>
+</html>

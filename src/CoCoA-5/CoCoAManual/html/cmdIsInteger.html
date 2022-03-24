@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsInteger</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsInteger">up</a> <a href="cmdIsInSubalgebra[OBSOLETE].html">previous</a>  <a href="cmdIsIntegralDomain.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsInteger<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if a RINGELEM is integer</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsInteger(ref n: INT, f: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the argument <tt><b style="background:#bbeeee">f</b></tt> is integer and
+convert it into an INT.
+To convert <tt><b style="background:#bbeeee">f</b></tt> straight away use <tt><b style="background:#bbeeee">AsINT(f)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use R ::= QQ[x];
+/**/ f := x-x-3;  f;  type(f);
+-3
+RINGELEM
+/**/ IsInteger(ref a, x-x-3);
+true
+/**/ a;  type(a);
+-3
+INT
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAsINT.html">AsINT</A>
+<li><a href="cmdAsRAT.html">AsRAT</A>
+<li><a href="cmdIsRational.html">IsRational</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,502 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Commands and Functions returning INT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c2">up</a> <a href="partCommandsandFunctionsforINT.html">previous</a> <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.2.3 Commands and Functions returning INT</b></font>
+</td></tr></table>
+
+<CENTER>
+<TABLE BORDER=1>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdabs.html">abs</A>
+  </TD><TD>
+absolute value of a number
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAffHilbertFn.html">AffHilbertFn</A>
+  </TD><TD>
+the affine Hilbert function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAsINT.html">AsINT</A>
+  </TD><TD>
+convert into an INT
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdbinomial.html">binomial</A>
+  </TD><TD>
+binomial coefficient
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBinomialReprBinomialReprShift.html">BinomialRepr, BinomialReprShift</A>
+  </TD><TD>
+binomial representation of integers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBool01.html">Bool01</A>
+  </TD><TD>
+Convert a boolean to an integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdceil.html">ceil</A>
+  </TD><TD>
+round rational up to integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcharacteristic.html">characteristic</A>
+  </TD><TD>
+the characteristic of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdContFrac.html">ContFrac</A>
+  </TD><TD>
+continued fraction quotients
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcount.html">count</A>
+  </TD><TD>
+count the objects in a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddate.html">date</A>
+  </TD><TD>
+the date
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddeg.html">deg</A>
+  </TD><TD>
+the standard degree of a polynomial or moduleelem
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdden.html">den</A>
+  </TD><TD>
+denominator
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddepth.html">depth</A>
+  </TD><TD>
+Depth of a module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddim.html">dim</A>
+  </TD><TD>
+the dimension of a (quotient) ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddiv.html">div</A>
+  </TD><TD>
+quotient for integers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdEulerTotient.html">EulerTotient</A>
+  </TD><TD>
+Euler Totient function for positive integers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdEvalHilbertFn.html">EvalHilbertFn</A>
+  </TD><TD>
+evaluate the Hilbert function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdfactorial.html">factorial</A>
+  </TD><TD>
+factorial function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFactorMultiplicity.html">FactorMultiplicity</A>
+  </TD><TD>
+multiplicity of a factor of an integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdfibonacci.html">fibonacci</A>
+  </TD><TD>
+n-th fibonacci number
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdfloor.html">floor</A>
+  </TD><TD>
+round rational down to integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFloorLog2FloorLog10FloorLogBase.html">FloorLog2, FloorLog10, FloorLogBase</A>
+  </TD><TD>
+integer part of the logarithm
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFloorRoot.html">FloorRoot</A>
+  </TD><TD>
+integer part of r-th root of an integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFloorSqrt.html">FloorSqrt</A>
+  </TD><TD>
+(truncated) square root of an integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdgcd.html">gcd</A>
+  </TD><TD>
+greatest common divisor
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanContainsPositiveVector.html">GFanContainsPositiveVector</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetAmbientDimension.html">GFanGetAmbientDimension</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetCodimension.html">GFanGetCodimension</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetDimension.html">GFanGetDimension</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetDimensionOfLinealitySpace.html">GFanGetDimensionOfLinealitySpace</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGradingDim.html">GradingDim</A>
+  </TD><TD>
+Number of components in weighted degree
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertFn.html">HilbertFn</A>
+  </TD><TD>
+the Hilbert function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIndetIndex.html">IndetIndex</A>
+  </TD><TD>
+index of an indeterminate
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdKroneckerSymbol.html">KroneckerSymbol</A>
+  </TD><TD>
+Kronecker symbol of R mod M
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdlcm.html">lcm</A>
+  </TD><TD>
+least common multiple
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdlen.html">len</A>
+  </TD><TD>
+the length of an object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLogCardinality.html">LogCardinality</A>
+  </TD><TD>
+extension degree of a finite field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLPosn.html">LPosn</A>
+  </TD><TD>
+the position of the leading power-product in a ModuleElem
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMayerVietorisTreeN1.html">MayerVietorisTreeN1</A>
+  </TD><TD>
+N-1st Betti multidegrees of monomial ideals using Mayer-Vietoris trees
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinPowerInIdeal.html">MinPowerInIdeal</A>
+  </TD><TD>
+the mininum power of a polynomial is an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmod.html">mod</A>
+  </TD><TD>
+remainder for integers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmoebius.html">moebius</A>
+  </TD><TD>
+Moebius function of a poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmultiplicity.html">multiplicity</A>
+  </TD><TD>
+the multiplicity (degree) of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNextPrimeNextProbPrime.html">NextPrime, NextProbPrime</A>
+  </TD><TD>
+find the next prime number
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzVerbosityLevel.html">NmzVerbosityLevel</A>
+  </TD><TD>
+Get the verbosity level for Normaliz
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdnum.html">num</A>
+  </TD><TD>
+numerator
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumBChambers.html">NumBChambers</A>
+  </TD><TD>
+number of bounded chambers of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumChambers.html">NumChambers</A>
+  </TD><TD>
+number of chambers of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumCols.html">NumCols</A>
+  </TD><TD>
+number of columns in a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumCompts.html">NumCompts</A>
+  </TD><TD>
+the number of components
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumGens.html">NumGens</A>
+  </TD><TD>
+number of generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumIndets.html">NumIndets</A>
+  </TD><TD>
+number of indeterminates
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumPartitions.html">NumPartitions</A>
+  </TD><TD>
+number of partitions of an integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumRealRoots.html">NumRealRoots</A>
+  </TD><TD>
+number of real roots of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumRows.html">NumRows</A>
+  </TD><TD>
+number of rows in a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumTerms.html">NumTerms</A>
+  </TD><TD>
+number of terms in a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPosetNRank.html">PosetNRank</A>
+  </TD><TD>
+rank of the node N from the relations of the graded poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPosetRank.html">PosetRank</A>
+  </TD><TD>
+rank of the poset from its relations
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdpower.html">power</A>
+  </TD><TD>
+compute a power
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPowerMod.html">PowerMod</A>
+  </TD><TD>
+compute a modular power efficiently
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrevPrimePrevProbPrime.html">PrevPrime, PrevProbPrime</A>
+  </TD><TD>
+find the previous prime number
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrimitiveRoot.html">PrimitiveRoot</A>
+  </TD><TD>
+find a primitive root modulo a prime
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdprimorial.html">primorial</A>
+  </TD><TD>
+primorial function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdradical.html">radical</A>
+  </TD><TD>
+radical of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdrandom.html">random</A>
+  </TD><TD>
+random integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomSmallPrime.html">RandomSmallPrime</A>
+  </TD><TD>
+Random prime between 5 and N
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdreg.html">reg</A>
+  </TD><TD>
+Castelnuovo-Mumford regularity of a module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRegularityIndex.html">RegularityIndex</A>
+  </TD><TD>
+regularity index of a Hilbert function or series
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingID.html">RingID</A>
+  </TD><TD>
+identification for ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdrk.html">rk</A>
+  </TD><TD>
+rank of a matrix or module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdround.html">round</A>
+  </TD><TD>
+round to integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdScalarProduct.html">ScalarProduct</A>
+  </TD><TD>
+scalar product
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsign.html">sign</A>
+  </TD><TD>
+the sign of a number
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSmallestNonDivisor.html">SmallestNonDivisor</A>
+  </TD><TD>
+find smallest prime which does not divide an integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSystemCommand.html">SystemCommand</A>
+  </TD><TD>
+run a system command
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdTimeOfDay.html">TimeOfDay</A>
+  </TD><TD>
+the current time
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdUnivariateIndetIndex.html">UnivariateIndetIndex</A>
+  </TD><TD>
+the index of the indeterminate of a univariate polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdVerbosityLevel.html">VerbosityLevel</A>
+  </TD><TD>
+verbosity level
+  </TD></TR>
+
+</TABLE>
+</CENTER>
+<BR><BR>
+
+</div>
+
+</body>
+</html>

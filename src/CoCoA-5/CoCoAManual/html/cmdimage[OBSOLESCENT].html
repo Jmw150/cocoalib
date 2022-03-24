@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>image [OBSOLESCENT]</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#image [OBSOLESCENT]">up</a> <a href="cmdILogBase.html">previous</a>  <a href="cmdimplicit.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>image [OBSOLESCENT]<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+[OBSOLESCENT] apply ring homomorphism</i> </small></b></font>
+</td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+In CoCoA-5 homomorphisms are properly implemented as <A HREF="toc.html#RINGHOM">
+    <tt>RINGHOM</tt>
+  </A>.
+<tt><b style="background:#bbeeee">Image</b></tt> was the CoCoA-4 function mimicking homomorphisms, in
+particular <A HREF="cmdPolyAlgebraHom.html">
+    <tt>PolyAlgebraHom</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use Dom ::= QQ[x,y];   -- domain
+/**/  f := x-y;   -- a RINGELEM in D
+
+/**/  use Cod ::= QQ[a,b,c]; -- codomain
+
+/**/  -- the old trick
+/**/  -- Phi := RMap(a, c^2-a*b);  -- OBSOLESCENT
+/**/  -- Image(f, Phi);            -- OBSOLESCENT
+a*b -c^2 +a
+
+/**/  -- the proper call
+/**/  phi := PolyAlgebraHom(Dom, Cod, [a, c^2-a*b]);  -- a RINGHOM
+/**/  phi(f);
+a*b -c^2 +a
+/**/  phi([f, f^2]);
+[a*b -c^2 +a,  a^2*b^2 -2*a*b*c^2 +c^4 +2*a^2*b -2*a*c^2 +a^2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+<li><a href="partIntroductiontoRINGHOM.html">Introduction to RINGHOM</A>
+<li><a href="cmdBringIn.html">BringIn</A>
+<li><a href="cmdsubst.html">subst</A>
+</ul>
+</div>
+
+</body>
+</html>

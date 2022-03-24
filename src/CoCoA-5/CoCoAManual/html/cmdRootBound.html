@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RootBound</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RootBound">up</a> <a href="cmdRMap[OBSOLESCENT].html">previous</a>  <a href="cmdRootBoundTransform.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RootBound<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+bound on roots of a polynomial over QQ</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RootBound(F: RINGELEM): RAT
+RootBound(F: RINGELEM, N: INT): RAT
+RootBound_Birkhoff(F: RINGELEM): RAT
+RootBound_Cauchy(F: RINGELEM): RAT
+RootBound_Lagrange(F: RINGELEM): RAT
+RootBound_LMS(F: RINGELEM): RAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function <tt><b style="background:#bbeeee">RootBound</b></tt> computes a bound on the absolute values
+of the complex roots of a univariate polynomial with rational
+coefficients.  In some cases you may get a better bound by applying
+first the transformation produced by the function <tt><b style="background:#bbeeee">LinearSimplify</b></tt>.
+The optional second argument specifies a trade-off between speed and
+tightness of the bound (more precisely: it says how many iterations of
+Graeffe transformation to apply); higher numbers give better bounds
+but can take significantly more time.  With just one argument, the
+number of iterations is determined heuristically.
+<br><br>
+The functions <tt><b style="background:#bbeeee">RootBound_Birkhoff</b></tt>, <tt><b style="background:#bbeeee">RootBound_Cauchy</b></tt>, <tt><b style="background:#bbeeee">RootBound_Lagrange</b></tt>
+and <tt><b style="background:#bbeeee">RootBound_LMS</b></tt> compute those bounds directly.  You should normally use
+the function <tt><b style="background:#bbeeee">RootBound</b></tt> which computes all the bounds, and takes the smallest;
+it may also apply some Graeffe transformations.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x];
+/**/  RootBound(x^2-2);
+363/256
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdgraeffe.html">graeffe</A>
+<li><a href="cmdRootBoundTransform.html">RootBoundTransform</A>
+<li><a href="cmdLinearSimplify.html">LinearSimplify</A>
+<li><a href="cmdRealRootRefine.html">RealRootRefine</A>
+<li><a href="cmdRealRoots.html">RealRoots</A>
+</ul>
+</div>
+
+</body>
+</html>

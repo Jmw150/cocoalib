@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsFiniteField</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsFiniteField">up</a> <a href="cmdIsField.html">previous</a>  <a href="cmdIsFractionField.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsFiniteField<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether a ring is a finite field</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsFiniteField(R: RING): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether a ring is a finite field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  IsFiniteField(ZZ);
+false
+/**/  IsFiniteField(QQ);
+false
+/**/  Fp::=ZZ/(7); IsFiniteField(Fp);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsField.html">IsField</A>
+<li><a href="cmdIsPthPower.html">IsPthPower</A>
+<li><a href="cmdLogCardinality.html">LogCardinality</A>
+<li><a href="cmdPthRoot.html">PthRoot</A>
+</ul>
+</div>
+
+</body>
+</html>

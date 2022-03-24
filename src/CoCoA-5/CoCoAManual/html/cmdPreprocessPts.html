@@ -1,0 +1,99 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PreprocessPts</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PreprocessPts">up</a> <a href="cmdpreimage0.html">previous</a>  <a href="cmdPrevPrimePrevProbPrime.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PreprocessPts<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Reduce redundancy in a set of approximate points</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PreprocessPts(Pts: MAT, Toler: MAT): RECORD
+PreprocessPtsGrid(Pts: MAT, Toler: MAT): RECORD
+PreprocessPtsAggr(Pts: MAT, Toler: MAT): RECORD
+PreprocessPtsSubDiv(Pts: MAT, Toler: MAT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Thanks to Maria-Laura Torrente.
+<br><br>
+These functions detect groupings of close points, and choose a single
+representative for them (which lies within the given tolerance of each
+original point); the result is the list of these representatives, and
+the number of original points associated to each representative.
+<br><br>
+The first argument is a matrix whose rows represent a set of points in
+k-dimensional space, and the second argument is row-matrix of k positive
+tolerances (one for each dimension).
+<br><br>
+The return value is a record containing two fields: <tt><b style="background:#bbeeee">NewPoints</b></tt> contains
+a matrix whose rows represent a list of <b>well-separated</b> points, and
+<tt><b style="background:#bbeeee">weights</b></tt> which contains the number of input points associated to each
+output point.
+<br><br>
+There are three underlying algorithms: <tt><b style="background:#bbeeee">Grid</b></tt> is fast but crude;
+<tt><b style="background:#bbeeee">Subdiv</b></tt> works best when the original points are densely packed
+(so the result will be a small list); finally <tt><b style="background:#bbeeee">Aggr</b></tt> is best
+suited to situations where the original points are less densely packed.
+<br><br>
+The function <tt><b style="background:#bbeeee">PreprocessPts</b></tt> automatically chooses between <tt><b style="background:#bbeeee">Subdiv</b></tt>
+and <tt><b style="background:#bbeeee">Aggr</b></tt> with the aim of minimising computation time.  Note that the
+<tt><b style="background:#bbeeee">Aggr</b></tt> and <tt><b style="background:#bbeeee">Subdiv</b></tt> methods regard the tolerances as being slightly
+flexible.
+<br><br>
+For a full description of the algorithms we refer to the paper
+J.Abbott, C.Fassino, L.Torrente
+<b>Thinning Out Redundant Empirical Data</b> (published in
+Mathematics in Computer Science, 2007).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Pts := matrix([[-1,0],[0,0],[1,0],[99,1],[99,0],[99,-1]]);
+/**/  Toler := RowMat([3,3]);
+/**/  PreprocessPts(Pts, Toler);
+record[NewPoints := matrix(QQ,
+ [[99, 0],
+  [0, 0]]), weights := [3, 3]]
+
+/**/  PreprocessPts(Pts, RowMat([0.8,0.8]));
+record[NewPoints := matrix(QQ,
+ [[-1/2, 0],
+  [1, 0],
+  [99, 1/2],
+  [99, -1]]), weights := [2, 1, 2, 1]]
+
+/**/  PreprocessPtsAggr(Pts, RowMat([0.9,0.9])); -- exhibits tolerance flex
+record[NewPoints := matrix(QQ,
+ [[0, 0],
+  [99, 0]], weights := [3, 3]]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

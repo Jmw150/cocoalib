@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RowMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RowMat">up</a> <a href="cmdround.html">previous</a>  <a href="cmdrref.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RowMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+single row matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RowMat(L: LIST): MAT
+RowMat(R: RING, L: LIST): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the matrix whose only row consists of the
+elements of the list <tt><b style="background:#bbeeee">L</b></tt>.
+<br><br>
+The first form produces a matrix over <tt><b style="background:#bbeeee">QQ</b></tt> if all entries in
+<tt><b style="background:#bbeeee">L</b></tt> are of type INT or RAT.  If <tt><b style="background:#bbeeee">L</b></tt> contains any entries
+of type RINGELEM then the matrix is over the ring these elements
+belong to.
+<br><br>
+The second form produces a matrix over <tt><b style="background:#bbeeee">R</b></tt>, and requires that
+the elements of <tt><b style="background:#bbeeee">L</b></tt> be INT, RAT or RINGELEM belonging to <tt><b style="background:#bbeeee">R</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  RowMat([3,4,5]);
+matrix(QQ,
+ [[3, 4, 5]])
+
+/**/  RowMat(QQ,[5,6,7]);
+matrix(QQ,
+ [[5, 6, 7]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBlockMat.html">BlockMat</A>
+<li><a href="cmdDiagMat.html">DiagMat</A>
+<li><a href="cmdColMat.html">ColMat</A>
+</ul>
+</div>
+
+</body>
+</html>

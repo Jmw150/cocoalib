@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FloatStr</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FloatStr">up</a> <a href="cmdFloatApprox.html">previous</a>  <a href="cmdfloor.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FloatStr<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert rational number to a decimal string</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FloatStr(X: INT|RAT|RINGELEM): STRING
+FloatStr(X: INT|RAT|RINGELEM, Prec: INT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function produces a decimal string representation of the rational
+number <tt><b style="background:#bbeeee">X</b></tt>.  The optional second argument <tt><b style="background:#bbeeee">Prec</b></tt> says how many
+significant decimal digits to produce; the default number of digits is 5.
+
+The aim is to produce an easily readable result.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  FloatStr(2/3);      -- last printed digit is rounded
+0.66667
+
+/**/  FloatStr(7^510);    -- no arbitrary limit on exponent range
+1.0000*10^431
+
+/**/  FloatStr(1/81, 35);    -- specify number of digits
+0.012345679012345679012345679012345679
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdDecimalStr.html">DecimalStr</A>
+<li><a href="cmdScientificStr.html">ScientificStr</A>
+<li><a href="cmdFloatApprox.html">FloatApprox</A>
+<li><a href="cmdMantissaAndExponent10.html">MantissaAndExponent10</A>
+</ul>
+</div>
+
+</body>
+</html>

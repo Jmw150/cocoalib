@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>Equality Operator</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#Equality Operator">up</a> <a href="cmdEqSet.html">previous</a>  <a href="cmdEquiIsoDec.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>Equality Operator<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether two values are equal or not</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+A = B
+A <> B
+  return BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These operators test for equality or not-equality.  The first form
+returns <tt><b style="background:#bbeeee">true</b></tt> if <tt><b style="background:#bbeeee">A</b></tt> is equal to <tt><b style="background:#bbeeee">B</b></tt>, otherwise it returns <tt><b style="background:#bbeeee">false</b></tt>.
+The second form is the same as <tt><b style="background:#bbeeee">not(A=B)</b></tt>.  These operators signal an
+error if the types of <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt> differ, or if they are ring elements
+belonging to different rings.
+<br><br>
+To compare two values using an ordering see <A HREF="cmdOrderComparisonOperators.html">
+    <tt>Order Comparison Operators</tt>
+  </A><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ 1=2;
+false
+/**/ 1<>2;
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdOrderComparisonOperators.html">Order Comparison Operators</A>
+<li><a href="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+</ul>
+</div>
+
+</body>
+</html>

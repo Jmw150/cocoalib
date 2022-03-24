@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>while</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#while">up</a> <a href="cmdWeightsMatrix[OBSOLESCENT].html">previous</a>  <a href="cmdWithoutNth.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>while<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+loop command</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+While B Do C EndWhile
+
+where B is a boolean expression and C is a sequence of commands.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The command sequence <tt><b style="background:#bbeeee">C</b></tt> is repeated until <tt><b style="background:#bbeeee">B</b></tt> evaluates to <tt><b style="background:#bbeeee">false</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  N := 0;
+/**/  while N <= 5 do
+/**/    PrintLn 2, "^", N, " = ", 2^N;
+/**/    N := N+1;
+/**/  EndWhile;
+2^0 = 1
+2^1 = 2
+2^2 = 4
+2^3 = 8
+2^4 = 16
+2^5 = 32
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfor.html">for</A>
+<li><a href="cmdforeach.html">foreach</A>
+<li><a href="cmdrepeat.html">repeat</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+</ul>
+</div>
+
+</body>
+</html>

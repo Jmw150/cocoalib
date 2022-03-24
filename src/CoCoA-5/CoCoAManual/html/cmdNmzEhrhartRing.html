@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NmzEhrhartRing</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NmzEhrhartRing">up</a> <a href="cmdNmzDiagInvariants.html">previous</a>  <a href="cmdNmzFiniteDiagInvariants.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NmzEhrhartRing<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Ehrhart ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NmzEhrhartRing(L: LIST of RINGELEM, s: RINGELEM): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The exponent vectors of the given monomials are considered as vertices
+of a lattice polytope <tt><b style="background:#bbeeee">P</b></tt>.  The Ehrhart ring of a (lattice)
+polytope <tt><b style="background:#bbeeee">P</b></tt> is the monoid algebra defined by the monoid of
+lattice points in the cone over the polytope <tt><b style="background:#bbeeee">P</b></tt>; see the book
+by Bruns and Gubeladze, <i>Polytopes, Rings, and K-theory</i>, publ.
+Springer 2009, pp. 228--229.
+<br><br>
+The function returns the generators of the Ehrhart ring.  It uses the
+indeterminate in the second argument as auxiliary indeterminate of the
+Ehrhart ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/     use R::=QQ[x,y,z,t];
+/**/     NmzEhrhartRing([x^2,y^2,z^3],t);
+[x^2*t, z^3*t, x*y*t, y^2*t]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNmzComputation.html">NmzComputation</A>
+<li><a href="cmdNmzHilbertBasis.html">NmzHilbertBasis</A>
+<li><a href="cmdNmzNormalToricRing.html">NmzNormalToricRing</A>
+<li><a href="cmdNmzIntClosureMonIdeal.html">NmzIntClosureMonIdeal</A>
+<li><a href="cmdNmzSetVerbosityLevel.html">NmzSetVerbosityLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>dim</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#dim">up</a> <a href="cmddiff.html">previous</a>  <a href="cmddiscriminant.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>dim<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the dimension of a (quotient) ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+dim(R: RING): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the dimension of the ring <tt><b style="background:#bbeeee">R</b></tt>, where <tt><b style="background:#bbeeee">R</b></tt> is a
+quotient of a polynomial ring.  NB: the coefficient ring must be a field.
+<br><br>
+If <tt><b style="background:#bbeeee">I</b></tt> is a zero-dimensional ideal in the polynomial ring <tt><b style="background:#bbeeee">P</b></tt>, and
+you want the compute the vector-space dimension of <tt><b style="background:#bbeeee">P/I</b></tt> then use the
+function <A HREF="cmdmultiplicity.html">
+    <tt>multiplicity</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  dim(R/ideal(x));
+2
+
+/**/  dim(R/ideal(y^2-x, x*z-y^3));
+1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdmultiplicity.html">multiplicity</A>
+</ul>
+</div>
+
+</body>
+</html>

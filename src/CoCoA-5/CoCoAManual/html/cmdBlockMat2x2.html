@@ -1,0 +1,89 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>BlockMat2x2</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#BlockMat2x2">up</a> <a href="cmdBlockMat.html">previous</a>  <a href="cmdBool01.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>BlockMat2x2<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a block matrix with 4 matrices</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+BlockMat2x2(A: MAT,B: MAT,C: MAT,D: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function creates a block matrix.  Each entry is a matrix.
+Given A, B, C, D matrices, then <tt><b style="background:#bbeeee">BlockMat(A,B,C,D)</b></tt> returns the matrix
+
+  <pre>
+                | A B |
+                | C D |
+</pre>
+
+The obvious restrictions on the sizes of the matrices apply:
+<br><br><tt><b style="background:#bbeeee">NumRows(A) = NumRows(B)</b></tt>  and  <tt><b style="background:#bbeeee">NumRows(C) = NumRows(D)</b></tt>,
+and
+<tt><b style="background:#bbeeee">NumCols(A) = NumCols(C)</b></tt>  and  <tt><b style="background:#bbeeee">NumCols(B) = NumCols(D)</b></tt>.
+<br><br>
+The function <A HREF="cmdBlockMat.html">
+    <tt>BlockMat</tt>
+  </A> offers more flexibility, but
+with a heavier syntax.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/    A := matrix([[1,2,3], [4,5,6]]);
+/**/    B := matrix([[1,2], [3,4]]);
+/**/    C := matrix([[1,1,1], [2,2,2], [3,3,3]]);
+/**/    D := matrix([[4,4], [5,5], [6,6]]);
+/**/    BlockMat2x2(A,B, C,D);
+matrix(QQ,
+ [[1, 2, 3, 1, 2],
+  [4, 5, 6, 3, 4],
+  [1, 1, 1, 4, 4],
+  [2, 2, 2, 5, 5],
+  [3, 3, 3, 6, 6]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdConcatHor.html">ConcatHor</A>
+<li><a href="cmdConcatVer.html">ConcatVer</A>
+<li><a href="cmdConcatDiag.html">ConcatDiag</A>
+<li><a href="cmdConcatAntiDiag.html">ConcatAntiDiag</A>
+<li><a href="cmdBlockMat.html">BlockMat</A>
+</ul>
+</div>
+
+</body>
+</html>

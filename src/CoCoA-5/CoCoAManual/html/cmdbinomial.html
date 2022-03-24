@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>binomial</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#binomial">up</a> <a href="cmdBettiNumbers.html">previous</a>  <a href="cmdBinomialReprBinomialReprShift.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>binomial<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+binomial coefficient</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+binomial(N: INT, K: INT): INT
+binomial(N: RINGELEM, K: INT): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the binomial coefficient, <b>N choose K</b>
+according to the formula <font color=#0000aa>(N)(N-1)(N-2)...(N-K+1) / K!</font>
+If <tt><b style="background:#bbeeee">K < 0</b></tt> or <tt><b style="background:#bbeeee">K > abs(N)</b></tt> the value is 0.
+<br><br>
+The same formula is used if <tt><b style="background:#bbeeee">N</b></tt> is a ring element; in this case it
+is an error if the integer <tt><b style="background:#bbeeee">K</b></tt> is negative.  See the example below, to
+see how to compute <tt><b style="background:#bbeeee">binomial(N,K)</b></tt> where <tt><b style="background:#bbeeee">N</b></tt> is a rational.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  binomial(4,2);
+6
+
+/**/  binomial(-4,3);
+-20
+
+/**/  N := 5/3;  // want to compute binomial(N,2)
+/**/  AsRAT(binomial(RingElem(QQ,N), 2));  // trick: convert N to elem of QQ
+5/9
+
+/**/  use QQ[x,y];
+/**/  binomial(x^2+2*y,3);
+(1/6)*x^6 +x^4*y +(-1/2)*x^4 +2*x^2*y^2 -2*x^2*y +(4/3)*y^3 +(1/3)*x^2 -2*y^2 +(2/3)*y
+
+/**/  It = (x^2+2*y)*(x^2+2*y-1)*(x^2+2*y-2)/6;
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBinomialReprBinomialReprShift.html">BinomialRepr, BinomialReprShift</A>
+</ul>
+</div>
+
+</body>
+</html>

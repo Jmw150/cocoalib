@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>DensePoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#DensePoly">up</a> <a href="cmdden.html">previous</a>  <a href="cmdDenSigma.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>DensePoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the sum of all power-products of a given degree</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+DensePoly(R: RING, N: INT): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the sum of all power-products of (standard) degree <tt><b style="background:#bbeeee">N</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  DensePoly(R,3);
+x^3 + x^2*y + x*y^2 + y^3
+
+/**/  Weights := RowMat([2,3]);
+/**/  P := NewPolyRing(QQ, "x,y", MakeTermOrdMat(Weights), 1);
+/**/  use P;
+/**/  DensePoly(P,1);  // NOTE: standard degree!!
+y +x
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

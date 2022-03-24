@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PrimaryDecompositionGTZ0</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PrimaryDecompositionGTZ0">up</a> <a href="cmdPrimaryDecomposition0[OBSOLETE].html">previous</a>  <a href="cmdPrimaryHilbertSeries.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PrimaryDecompositionGTZ0<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+primary decomposition of a 0-dimensional ideal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PrimaryDecompositionGTZ0(I: IDEAL): LIST of IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function, alternative to <A HREF="cmdPrimaryDecomposition.html">
+    <tt>PrimaryDecomposition</tt>
+  </A>,
+returns the primary decomposition of the 0-dimensional
+ideal <tt><b style="background:#bbeeee">I</b></tt> using the GTZ algorithm (implemented by Luis David
+Garcia -- updated to CoCoA-5 by Anna M. Bigatti).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  PD := PrimaryDecompositionGTZ0(ideal(x-z, y^2-z^2, z^2));
+/**/  indent(PD);
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPrimaryDecomposition.html">PrimaryDecomposition</A>
+</ul>
+</div>
+
+</body>
+</html>

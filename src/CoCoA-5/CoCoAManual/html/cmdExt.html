@@ -1,0 +1,151 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>Ext</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#Ext">up</a> <a href="cmdexport.html">previous</a>  <a href="cmdExternalLibs.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>Ext<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+presentation Ext modules as quotients of free modules</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+Ext(I: INT, M:TAGGED("Quotient"), Q:TAGGED("Quotient")): TAGGED("Quotient")
+Ext(I: LIST, M:TAGGED("Quotient"), Q:TAGGED("Quotient")): TAGGED("$ext.ExtList")</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+In the first form the function computes the <tt><b style="background:#bbeeee">I</b></tt>-th Ext module of <tt><b style="background:#bbeeee">M</b></tt> and <tt><b style="background:#bbeeee">N</b></tt>.
+It returns a presentation of <font color=#0000aa>Ext^I_R(M, N)</font> as a quotient of a free module.
+<br><br>
+IMPORTANT: the only exception to the type of <tt><b style="background:#bbeeee">M</b></tt> or <tt><b style="background:#bbeeee">N</b></tt> (or even of the
+output) is when they are either a zero module or a free module.
+In these cases their type is indeed MOD.
+<br><br>
+It computes Ext via a presentation of the quotient of the two modules
+<font color=#0000aa>Ker(Phi*_I)</font>
+and
+<font color=#0000aa>Im(Phi*_{I-1})</font>, where
+<br><br>
+  -   <font color=#0000aa>Phi_I</font>   is the <tt><b style="background:#bbeeee">I</b></tt>-th map in the free resolution of <tt><b style="background:#bbeeee">M</b></tt><br><br>
+  -   <font color=#0000aa>Phi*_I</font>   is the map <font color=#0000aa>Hom(Phi_I, N)</font>
+  in the dual of the free resolution.
+<br><br>
+The main differences with the previous version include:
+<br><br>
+- SHIFTS have been removed, consequently only standard homogeneous
+  modules and quotients are supported
+<br><br>
+- as a consequence of 1), the type <tt><b style="background:#bbeeee">Tagged("Shifted")</b></tt> has been
+  removed. Ext will just be a <tt><b style="background:#bbeeee">Tagged("Quotient")</b></tt><br><br>
+- The former functions Presentation(), HomPresentation() and
+  KerPresentation() have been removed
+<br><br>
+- The algorithm uses Res() to compute the maps needed, and not
+  SyzOfGens anylonger, believed to cause troubles
+<br><br>
+- The function <tt><b style="background:#bbeeee">Ext</b></tt> always has THREE variables, see syntax...
+<br><br>
+
+In the second form the variable <tt><b style="background:#bbeeee">I</b></tt> is a LIST of nonnegative
+integers. In this case the function Ext prints all the Ext modules
+corresponding to the integers in <tt><b style="background:#bbeeee">I</b></tt>.
+The output is of special type <tt><b style="background:#bbeeee">Tagged("$ext.ExtList")</b></tt> which is basically
+just the list of pairs  <font color=#0000aa>{(J, Ext^J(M, N)) | J in I}</font> in
+which the first element is an integer of <tt><b style="background:#bbeeee">I</b></tt> and the second element is
+the correpsonding Ext module.
+<br><br>
+VERY IMPORTANT: CoCoA cannot accept  the ring <tt><b style="background:#bbeeee">R</b></tt> as one of the inputs,
+so if you want to calculate the module <font color=#0000aa>Ext^I_R(M, R)</font>
+you need to type something like
+<br><br><tt><b style="background:#bbeeee">Ext(I, M, ideal(1));</b></tt><br><br>
+or
+<br><br><tt><b style="background:#bbeeee">Ext(I, M, R^1);</b></tt><br><br>
+or
+<br><br><tt><b style="background:#bbeeee">Ext(I, M, R/ideal(0));</b></tt><br><br>
+NOTE: The input is pretty flexible in terms of what you can use for <tt><b style="background:#bbeeee">M</b></tt>
+and <tt><b style="background:#bbeeee">N</b></tt>.  For example, they can be zero modules or free modules.See some  examples below.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x^5, y^3, z^2);
+/**/  ideal(R, []) : (I);
+ideal(0)
+-------------------------------
+***** NOT YET IMPLEMENTED *****
+  $hom.Hom(R^1/Module(I), R^1);   -- from Hom package
+Module([[0]])
+-------------------------------
+  Ext(0, R/I, R^1);   --- all those things should be isomorphic
+Module([[0]])
+-------------------------------
+  Ext(0..4, R/I, R/ideal(0)); -- another way to define the ring R as a quotient
+Ext^0 = Module([[0]])
+
+Ext^1 = Module([[0]])
+
+Ext^2 = Module([[0]])
+
+Ext^3 = R^1/Module([[x^5], [y^3], [z^2]])
+
+Ext^4 = Module([[0]])
+
+-------------------------------
+  N := Module([x^2,y], [x+z,0]);
+  Ext(0..4, R/I, R^2/N);
+Ext^0 = Module([[0]])
+
+Ext^1 = Module([[0]])
+
+Ext^2 = R^2/Module([[0, x + z], [y, 0], [0, z^2], [z^2, 0], [0, y^3], [x^5, 0]])
+
+Ext^3 = R^2/Module([[x + z, 0], [0, z^2], [z^2, 0], [y^3, 0], [0, x^5], [0, y]])
+
+Ext^4 = Module([[0]])
+
+-------------------------------
+</pre></td></tr></table>
+
+Since version 4.7.3 the output modules are presented minimally.
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdres.html">res</A>
+<li><a href="cmddepth.html">depth</A>
+<li><a href="cmdMinimalPresentation.html">MinimalPresentation</A>
+</ul>
+</div>
+
+</body>
+</html>

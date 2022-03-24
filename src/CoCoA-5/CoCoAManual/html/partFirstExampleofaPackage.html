@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>First Example of a Package</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c9">up</a> <a href="partIntroductiontoPackages.html">previous</a> <a href="partPackageessentials.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.9.2 First Example of a Package</b></font>
+</td></tr></table>
+
+The following is an example of a package.  It could be typed into a
+window as-is during a CoCoA session, but we will assume that it is
+stored in a file in the CoCoA directory under the name <tt><b style="background:#bbeeee">one.cpkg5</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+package $contrib/toypackage
+
+export ToyTest;
+
+define IsNumberOne(n)
+  if n = 1 then return true; else return false; endif;
+enddefine;
+
+define ToyTest(n)
+  if IsNumberOne(n) then
+    print "The number 1";
+  else
+    print "Not the number 1";
+  endif;
+enddefine;
+
+endpackage; -- of toypackage
+</pre></td></tr></table>
+
+
+Below is output from a CoCoA session in which this package was used:
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+-- read in the package:
+Source "one.cpkg";
+/**/ ToyTest(4);  -- was exported
+Not the number 1
+-- /**/ IsNumberOne(4);  -- !!! ERROR !!! as expected: fn was not exported
+
+/**/ $contrib/toypackage.IsNumberOne(4);
+false
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

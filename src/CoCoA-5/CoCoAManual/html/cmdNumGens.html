@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NumGens</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NumGens">up</a> <a href="cmdNumCompts.html">previous</a>  <a href="cmdNumIndets.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NumGens<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+number of generators</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NumGens(I: IDEAL): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the number of generators of<tt><b style="background:#bbeeee">I</b></tt>.
+This is more direct, therefore efficient, than writing <tt><b style="background:#bbeeee">len(gens(I))</b></tt>,
+because it does not create the temporary list <tt><b style="background:#bbeeee">gens(I)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(indets(R))^40;
+/**/  NumGens(I);
+861
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdlen.html">len</A>
+</ul>
+</div>
+
+</body>
+</html>

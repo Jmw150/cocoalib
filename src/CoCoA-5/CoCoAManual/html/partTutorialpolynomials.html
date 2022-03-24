@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: polynomials</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialpolynomialringsusecommand.html">previous</a> <a href="partTutorialdefiningnewfunctions.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.9 Tutorial: polynomials</b></font>
+</td></tr></table>
+
+If you are new to CoCoA-5, we recommend that you read first the
+<A HREF="partTutorialpolynomialringsusecommand.html">
+    <tt>Tutorial: polynomial rings, use command</tt>
+  </A>.
+<br><br>
+A complete list of the functions and commands which operate on
+or return a polynomial can be obtained by looking up "RINGELEM"
+in the on-line manual.
+<br><br>
+In addition to the usual arithmetic operations, CoCoA-5 offers
+several functions for looking "inside" a polynomial.  We give
+some examples here.  Each non-zero polynomial has a leading
+monomial (see <A HREF="cmdLM.html">
+    <tt>LM</tt>
+  </A>), a leading coefficient (see <A HREF="cmdLC.html">
+    <tt>LC</tt>
+  </A>), and a
+leading term (see <A HREF="cmdLT.html">
+    <tt>LT</tt>
+  </A> and <A HREF="cmdLPP.html">
+    <tt>LPP</tt>
+  </A>).
+<br><br>
+One may also extract all monomials (see <A HREF="cmdmonomials.html">
+    <tt>monomials</tt>
+  </A>), all
+coefficients (see <A HREF="cmdcoefficients.html">
+    <tt>coefficients</tt>
+  </A>), and all power-products
+(see <A HREF="cmdsupport.html">
+    <tt>support</tt>
+  </A>).  In each case the lists have the same order
+as in the polynomial itself.
+<br><br>
+There are more advanced functions for exploring the structure of
+a polynomial: see for instance <A HREF="cmdCoefficientsWRT.html">
+    <tt>CoefficientsWRT</tt>
+  </A>, <A HREF="cmdCoeffListWRT.html">
+    <tt>CoeffListWRT</tt>
+  </A>,
+and <A HREF="cmdCoeffOfTerm.html">
+    <tt>CoeffOfTerm</tt>
+  </A>.
+
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[x,y];  // polys in x,y with coefficients in QQ
+/**/ f := (2*x^2+y)^3; f;
+8*x^6 +12*x^4*y +6*x^2*y^2 +y^3
+/**/ [LM(f), LC(f), LT(f)];
+[8*x^6,  8,  x^6]
+/**/ monomials(f);
+[8*x^6,  12*x^4*y,  6*x^2*y^2,  y^3]
+/**/ coefficients(f);
+[8,  12,  6,  1]
+/**/ support(f);
+[x^6,  x^4*y,  x^2*y^2,  y^3]
+/**/ CoeffListWRT(f,x);
+[y^3,  0,  6*y^2,  0,  12*y,  0,  8]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

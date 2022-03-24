@@ -1,0 +1,129 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Changes in the CoCoA language</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c11">up</a> <span class="grayed">previous</span> <a href="partRecentchangesintheCoCoA5language.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.11.1 Changes in the CoCoA language</b></font>
+</td></tr></table>
+
+CoCoA-5 is largely, but not completely, backward-compatible with CoCoA-4.
+Some commands/functions have changed name; others have been removed or
+replaced.  Here we give a little guidance to help update your CoCoA-4
+programs to CoCoA-5.
+<br><br>
+The operator <tt><b style="background:#bbeeee">Not</b></tt> has been replaced by the function <tt><b style="background:#bbeeee">not(...)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/*C4*/ If Not X IsIn L Then ... EndIf;
+/*C5*/ If not(X IsIn L) Then ... EndIf;
+</pre></td></tr></table>
+
+Several functions modify one of their arguments (e.g.<A HREF="cmdappend.html">
+    <tt>append</tt>
+  </A>,
+<A HREF="cmdsort.html">
+    <tt>sort</tt>
+  </A>); CoCoA-5 wants these arguments to be identified with the new
+keyword <A HREF="cmdref.html">
+    <tt>ref</tt>
+  </A>, and will issue a warning if you do not do this
+(just to make sure you know that <tt><b style="background:#bbeeee">L</b></tt> will be modified).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/*C4*/ L := [1,2,3];  Append(L, 4);
+/*C5*/ L := [1,2,3];  append(ref L, 4);
+</pre></td></tr></table>
+
+Implicit multiplication has gone: either write <tt><b style="background:#bbeeee">x*y</b></tt> instead of <tt><b style="background:#bbeeee">xy</b></tt>
+for every product, or use <A HREF="cmdCoCoA4mode.html">
+    <tt>CoCoA-4 mode</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/*C4*/ F := 3xyzt;
+/*C5*/ F := 3*x*y*z*t;  OR  F := ***3xyzt***;
+</pre></td></tr></table>
+
+Many CoCoA-4 functions would employ the <tt><b style="background:#bbeeee">CurrentRing</b></tt> implicitly (e.g.<tt><b style="background:#bbeeee">NumIndets()</b></tt>, <tt><b style="background:#bbeeee">CoeffRing()</b></tt>).  They now require an explicit argument;
+you can pass <tt><b style="background:#bbeeee">CurrentRing</b></tt> as the argument, but inside a function you must
+make that system variable visible via the command <A HREF="cmdTopLevel.html">
+    <tt>TopLevel</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/*C4*/ Define LastIndet() Return Last(Indets()); EndDefine;
+/*C5*/ Define LastIndet()
+         TopLevel CurrentRing;
+         Return last(indets(CurrentRing));
+       EndDefine;
+</pre></td></tr></table>
+
+However, we encourage you to consider modifying your function so that
+it does not depend on <tt><b style="background:#bbeeee">CurrentRing</b></tt>; e.g. you can find
+out to which ring a value belongs by calling the function <A HREF="cmdRingOf.html">
+    <tt>RingOf</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/*C5*/ I := ideal(x,y^2);  NumIndets(RingOf(I));
+</pre></td></tr></table>
+
+The function <A HREF="cmdLinKer.html">
+    <tt>LinKer</tt>
+  </A> has been replaced by <A HREF="cmdLinKerBasis.html">
+    <tt>LinKerBasis</tt>
+  </A>,
+and there is a new function called <A HREF="cmdLinKer.html">
+    <tt>LinKer</tt>
+  </A> which produces a matrix.
+<br><br>
+More generally, see also the CoCoA-4 "translation table" in the
+CoCoAManual directory or at the URL
+
+  <pre>
+  http://cocoa.dima.unige.it/cocoalib/doc/CoCoATranslationTable.html
+</pre>
+
+</div>
+
+</body>
+</html>

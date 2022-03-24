@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>eval</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#eval">up</a> <a href="cmdEulerTotient.html">previous</a>  <a href="cmdEvalHilbertFn.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>eval<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+substitute numbers or polynomials for indeterminates</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+eval(E: RINGELEM|MODULEELEM|LIST|MAT, L: LIST): OBJECT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function substitutes <tt><b style="background:#bbeeee">L[I]</b></tt> for <tt><b style="background:#bbeeee">indet(I)</b></tt> in the
+expression <tt><b style="background:#bbeeee">E</b></tt> which must be of type POLY, MODULEELEM, LIST, or MAT.
+The evaluation takes place in the ring of <tt><b style="background:#bbeeee">E</b></tt>.
+<br><br>
+If <tt><b style="background:#bbeeee">len(L)</b></tt> is different from <tt><b style="background:#bbeeee">NumIndets()</b></tt> then only
+the first N substitutions are performed, where N is the minumum of the
+two values.
+<br><br>
+For more general substitutions use <A HREF="cmdsubst.html">
+    <tt>subst</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y];
+/**/  eval(x^2+y, [2, 3]);
+7
+/**/  eval(x^2+y, [2]);
+y +4
+
+/**/  F := x*(x-1)*(x-2)*y*(y-1)*(y-2)/36;
+/**/  P := [1/2, -2/3];
+/**/  eval(F, P);
+-5/162
+/**/  eval([x+y,x-y], [2,1]);
+[3, 1]
+/**/  eval([x+y,x-y], [x^2,y^2]);
+[x^2 + y^2, x^2 - y^2]
+/**/  eval([x+y,x-y], [y]);
+[2*y, 0]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partEvaluationofPolynomials.html">Evaluation of Polynomials</A>
+<li><a href="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+<li><a href="cmdsubst.html">subst</A>
+</ul>
+</div>
+
+</body>
+</html>

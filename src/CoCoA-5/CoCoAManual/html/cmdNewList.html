@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewList</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewList">up</a> <a href="cmdNewLine[OBSOLESCENT].html">previous</a>  <a href="cmdNewMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewList<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a new list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NewList(N: INT): LIST
+NewList(N: INT, E: OBJECT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first form returns a list of length <tt><b style="background:#bbeeee">N</b></tt> filled with 0 (INT).
+The second form returns a list of length <tt><b style="background:#bbeeee">N</b></tt>, filled with copies of <tt><b style="background:#bbeeee">E</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  NewList(4,"a");
+["a", "a", "a", "a"]
+
+/**/  NewList(4);
+[0, 0, 0, 0]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partListConstructors.html">List Constructors</A>
+</ul>
+</div>
+
+</body>
+</html>

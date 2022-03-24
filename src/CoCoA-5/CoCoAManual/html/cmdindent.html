@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>indent</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#indent">up</a> <a href="cmdincrdecr.html">previous</a>  <a href="cmdindet.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>indent<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+prints in a more readable way</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+indent(L: LIST)
+indent(I: IDEAL)
+indent(R: RECORD)
+indent(X: OBJECT, RecursionDepth: INT)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function prints its argument splitting it into several lines:
+a LIST or IDEAL is printed one element per line, a RECORD
+one field per line.
+<br><br>
+The second optional argument is for setting the level of recursive
+indentation; it can be useful when printing a list of records.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ L := [[n,n+1] | n in [1,2,3]];
+/**/ println L;
+[[1, 2], [2, 3], [3, 4]]
+
+/**/ indent(L);
+[
+  [1, 2],
+  [2, 3],
+  [3, 4]
+]
+
+/**/ indent(record[B := 1,  A := 2]);
+record[
+  A := 2,
+  B := 1
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdformat.html">format</A>
+<li><a href="cmdfold.html">fold</A>
+</ul>
+</div>
+
+</body>
+</html>

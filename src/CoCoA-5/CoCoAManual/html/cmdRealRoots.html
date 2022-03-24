@@ -1,0 +1,102 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RealRoots</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RealRoots">up</a> <a href="cmdRealRootRefine.html">previous</a>  <a href="cmdRealRootsApprox.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RealRoots<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+real roots of a univariate polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RealRoots(F: RINGELEM): LIST
+RealRoots(F: RINGELEM, Precision: RAT): LIST
+RealRoots(F: RINGELEM, Precision: RAT, Interval:[RAT, RAT]): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes isolating intervals for the real roots of a
+non-zero univariate polyomial over <tt><b style="background:#bbeeee">QQ</b></tt>.  It returns the list of the
+real roots, where a root is represented as a record containing either
+the exact root (if the fields <tt><b style="background:#bbeeee">inf</b></tt> and <tt><b style="background:#bbeeee">sup</b></tt> are equal), or an open
+interval <tt><b style="background:#bbeeee">(inf, sup)</b></tt> containing the root.  There is a third field
+(called <tt><b style="background:#bbeeee">CoeffList</b></tt>) not intended for "public use".
+<br><br>
+An optional second argument specifies the maximum width an isolating
+interval may have.  An optional third argument specifies a closed
+interval in which to search for roots.
+<br><br>
+The interval represented by a root record may be refined by using the
+function <A HREF="cmdRealRootRefine.html">
+    <tt>RealRootRefine</tt>
+  </A>.
+<br><br>
+The function <A HREF="cmdRealRootsApprox.html">
+    <tt>RealRootsApprox</tt>
+  </A> may be easier to use:
+it produces rational approximations to the real roots (but these
+cannot later be refined).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x];
+/**/  indent(RealRoots(x^2-2));
+[
+  record[CoeffList := [-1, 0, 2], inf := -4, sup := 0],
+  record[CoeffList := [1, 0, -2], inf := 0, sup := 4]
+]
+
+/**/  RR := RealRoots((x^2-2)*(x-1), 10^(-5));
+/**/  FloatStr(RR[1].inf,10);  -- left end of interval
+-1.414213562*10^0
+
+/**/  FloatStr(RR[1].sup,10);  -- right end of interval
+-1.414213561*10^0
+
+/**/  RR := RealRoots(x^2-2, 10^(-20), [0, 2]);
+/**/  FloatStr(RR[1].inf, 20);  -- print rational RR[1].inf in a comprehensible way
+1.4142135623730950488*10^0
+/**/  RR[1].inf;                -- actual raional is rather incomprehensible
+60153992292001127886258443119406264231/42535295865117307932921825928971026432
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNumRealRoots.html">NumRealRoots</A>
+<li><a href="cmdRealRootRefine.html">RealRootRefine</A>
+<li><a href="cmdRealRootsApprox.html">RealRootsApprox</A>
+<li><a href="cmdRootBound.html">RootBound</A>
+</ul>
+</div>
+
+</body>
+</html>

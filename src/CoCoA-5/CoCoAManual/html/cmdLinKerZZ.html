@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LinKerZZ</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LinKerZZ">up</a> <a href="cmdLinKerModP[OBSOLETE].html">previous</a>  <a href="cmdLinSol[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LinKerZZ<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+find the kernel of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LinKerZZ(M: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function expects a matrix <tt><b style="background:#bbeeee">M</b></tt> with integer or rational entries,
+and returns a matrix of integers whose columns represent a <tt><b style="background:#bbeeee">ZZ</b></tt>-module
+basis for the integer vectors in the kernel of <tt><b style="background:#bbeeee">M</b></tt>.  Calling the function
+twice on the same input will not necessarily produce the same output,
+though in each case, a basis for the kernel is produced.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ LinKerZZ(RowMat([1,1/2,1/3]));
+matrix(ZZ,
+ [[1, 0],
+  [0, 2],
+  [-3, -3]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdLinKer.html">LinKer</A>
+<li><a href="cmdLinKerBasis.html">LinKerBasis</A>
+<li><a href="cmdLinSolve.html">LinSolve</A>
+</ul>
+</div>
+
+</body>
+</html>

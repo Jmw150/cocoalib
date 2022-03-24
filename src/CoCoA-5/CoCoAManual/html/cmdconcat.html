@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>concat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#concat">up</a> <a href="cmdComputeElimFirst.html">previous</a>  <a href="cmdConcatAntiDiag.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>concat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+concatenate lists</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+concat(L_1: LIST,...,L_n: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list obtained by concatenating the lists
+<tt><b style="background:#bbeeee">L_1,...,L_n</b></tt>.
+<br><br>
+NOTE: to concatenate strings use <A HREF="cmdConcatStrings.html">
+    <tt>ConcatStrings</tt>
+  </A> or <tt><b style="background:#bbeeee">str1+str2</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  concat([1,2,3],[4,5],[],[6]);
+[1, 2, 3, 4, 5, 6]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdappend.html">append</A>
+<li><a href="cmdConcatLists.html">ConcatLists</A>
+<li><a href="cmdConcatStrings.html">ConcatStrings</A>
+<li><a href="partStringOperations.html">String Operations</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>inverse</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#inverse">up</a> <a href="cmdIntersectionList.html">previous</a>  <a href="cmdInverseSystem.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>inverse<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+multiplicative inverse of matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+inverse(X: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the multiplicative inverse of its argument.
+It is included for use when writing inverse(X) comes more naturally
+than writing <tt><b style="background:#bbeeee">X^(-1)</b></tt>, though both notations are functionally equivalent.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  inverse(mat([[1,2], [3,4]]));
+matrix(QQ,
+ [[-2, 1],
+  [3/2, -1/2]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdadj.html">adj</A>
+</ul>
+</div>
+
+</body>
+</html>

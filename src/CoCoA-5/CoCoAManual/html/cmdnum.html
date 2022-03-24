@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>num</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#num">up</a> <a href="cmdNR.html">previous</a>  <a href="cmdNumBChambers.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>num<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+numerator</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+num(N: INT): INT
+num(N: RAT): INT
+num(N: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the numerator of <tt><b style="background:#bbeeee">N</b></tt>.
+<br><br>
+The OBSOLETE fragile syntax in CoCoA 4 <tt><b style="background:#bbeeee">N.Num</b></tt> and <tt><b style="background:#bbeeee">N.Den</b></tt> is no
+longer supported.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  num(3);
+3
+
+/**/  P ::= QQ[x,y];
+/**/  F := NewFractionField(P);
+/**/  use F;
+/**/  num(x/(x+y));
+x
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdden.html">den</A>
+</ul>
+</div>
+
+</body>
+</html>

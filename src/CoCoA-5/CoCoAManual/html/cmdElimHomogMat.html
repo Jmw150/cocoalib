@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ElimHomogMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ElimHomogMat">up</a> <a href="cmdelim.html">previous</a>  <a href="cmdElimMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ElimHomogMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+matrix for elimination ordering</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ElimHomogMat(ElimInd: LIST, W: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a matrix for a term ordering eliminating the
+indeterminates with indices in <tt><b style="background:#bbeeee">ElimInd</b></tt> for inputs which are
+homogeneous wrt the weights in the matrix <tt><b style="background:#bbeeee">W</b></tt>.
+If you are unsure what this means, just use <A HREF="cmdElimMat.html">
+    <tt>ElimMat</tt>
+  </A> ;-)
+<br><br>
+NOTE: this function used to be called <tt><b style="background:#bbeeee">HomogElimMat</b></tt> up to version 5.1.4,
+and had swapped arguments.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  ElimHomogMat([2,3], mat([[1,5,2]]));
+matrix(ZZ,
+ [[1, 5, 2],
+  [0, 1, 1],
+  [0, 0, -1]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdelim.html">elim</A>
+<li><a href="cmdElimMat.html">ElimMat</A>
+</ul>
+</div>
+
+</body>
+</html>

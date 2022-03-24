@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>colon</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#colon">up</a> <a href="cmdColMat.html">previous</a>  <a href="cmdColumnVectors[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>colon<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+ideal or module quotient</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+colon(M: IDEAL, N: IDEAL): IDEAL
+colon(M: MODULE, N: MODULE): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the colon of M by N: the ideal of all
+polynomials F such that F*G is in M for all G in N.
+The command <tt><b style="background:#bbeeee">M : N</b></tt> is a shortcut for <tt><b style="background:#bbeeee">colon(M, N)</b></tt>.
+<br><br>
+See also  <A HREF="cmdHColon.html">
+    <tt>HColon</tt>
+  </A> for non-homogeneous input.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  ideal(x*y, x^2) : ideal(x);
+ideal(y, x)
+
+/**/  colon(ideal(x^2, x*y), ideal(x, x-y^2));
+ideal(x)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdsaturate.html">saturate</A>
+<li><a href="cmdHSaturation.html">HSaturation</A>
+<li><a href="cmdHColon.html">HColon</A>
+</ul>
+</div>
+
+</body>
+</html>

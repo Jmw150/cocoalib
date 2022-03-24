@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FirstNonZeroPosn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FirstNonZeroPosn">up</a> <a href="cmdFirstNonZero.html">previous</a>  <a href="cmdFixedDivisor.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FirstNonZeroPosn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the position of the first non-zero entry in a MODULEELEM</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FirstNonZeroPosn(V: MODULEELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the index of the first non-zero entry of V.  If it
+is handed a zero MODULEELEM then an error is signalled.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  R5 := NewFreeModule(R,5);
+/**/  V := ModuleElem(R5, [0, 0, x^2+y*z, 0, z^2]);
+
+/**/  FirstNonZero(V);
+x^2 +y*z
+
+/**/  FirstNonZeroPosn(V);
+3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdFirstNonZero.html">FirstNonZero</A>
+<li><a href="cmdIsZero.html">IsZero</A>
+<li><a href="cmdNonZero.html">NonZero</A>
+</ul>
+</div>
+
+</body>
+</html>

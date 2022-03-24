@@ -1,0 +1,105 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CallOnGroebnerFanIdeals</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CallOnGroebnerFanIdeals">up</a> <a href="cmdCall[OBSOLETE].html">previous</a>  <a href="cmdCanonicalBasis.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CallOnGroebnerFanIdeals<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+apply a function to Groebner fan ideals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CallOnGroebnerFanIdeals(I: IDEAL, fn: FUNCTION)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Storing all the possible different (reduced) GBases in a Groebner
+fan is practicable only for small examples; larger ideals may have
+fans containing thousands or even millions of different Groebner bases.
+Typically we are interested only in those bases satisfying a
+certain property.
+<br><br><tt><b style="background:#bbeeee">CallOnGroebnerFanIdeals</b></tt> calls the given function <tt><b style="background:#bbeeee">fn</b></tt> successively
+on the ideal <tt><b style="background:#bbeeee">I</b></tt> mapped into different polynomial rings so that
+the Groebner bases run though all possible distinct ones.  This approach
+avoids storing all distinct possibilities in a big list.
+<br><br>
+Verbosity: see <A HREF="cmdGroebnerFanIdeals.html">
+    <tt>GroebnerFanIdeals</tt>
+  </A>.
+<br><br>
+NOTE: using this needs a little technical ability, but might make the
+difference between getting an answer or filling up the RAM.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ -- print ord and GBasis if ideal I has GBases of length 3:
+/**/ define PrintIfGBHasLen3(I)
+/**/   if len(ReducedGBasis(I))=3 then
+/**/     println OrdMat(RingOf(I));
+/**/     indent(ReducedGBasis(I));
+/**/   endif;
+/**/ enddefine;
+
+/**/ use R ::= QQ[a,b,c];
+/**/ I := ideal(a^5+b^3+c^2-1, b^2+a^2+c-1, c^3+a^6+b^5-1);
+/**/ SetVerbosityLevel(10);
+/**/ CallOnGroebnerFanIdeals(I, PrintIfGBHasLen3);
+******************************************************(....)
+matrix(ZZ,
+ [[3, 7, 7],
+  [3, 6, 8],
+  [0, 0, -1]])
+[b^2+c+a^2-1,
+ a^5+c^2-b*c-a^2*b+b-1,
+ c^3+b*c^2+2*a^2*b*c+a^4*b-a*c^2+a*b*c+a^3*b-2*b*c-2*a^2*b-a*b+b+a-1]
+*
+matrix(ZZ,
+ [[6, 7, 14],
+  [6, 5, 15],
+  [0, 0, -1]])
+[c+b^2+a^2-1,
+ -b^6-3*a^2*b^4-3*a^4*b^2+b^5+3*b^4+6*a^2*b^2+3*a^4-3*b^2-3*a^2,
+ a^5+b^4+2*a^2*b^2+a^4+b^3-2*b^2-2*a^2]
+******************************************************(....)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGroebnerFanIdeals.html">GroebnerFanIdeals</A>
+<li><a href="cmdOrdMat.html">OrdMat</A>
+<li><a href="cmdRingOf.html">RingOf</A>
+</ul>
+</div>
+
+</body>
+</html>

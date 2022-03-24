@@ -1,0 +1,910 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Commands and Functions returning LIST</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c5">up</a> <a href="partCommandsandFunctionsforLIST.html">previous</a> <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.5.4 Commands and Functions returning LIST</b></font>
+</td></tr></table>
+
+<CENTER>
+<TABLE BORDER=1>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrBettiNumbers.html">ArrBettiNumbers</A>
+  </TD><TD>
+Betti numbers of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrBoolean.html">ArrBoolean</A>
+  </TD><TD>
+boolean arrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrBraid.html">ArrBraid</A>
+  </TD><TD>
+braid arrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrCatalanA.html">ArrCatalanA</A>
+  </TD><TD>
+Catalan arrangement of type A
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrCatalanB.html">ArrCatalanB</A>
+  </TD><TD>
+Catalan arrangement of type B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrCatalanD.html">ArrCatalanD</A>
+  </TD><TD>
+Catalan arrangement of type D
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrCone.html">ArrCone</A>
+  </TD><TD>
+cone of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrDeletion.html">ArrDeletion</A>
+  </TD><TD>
+deletes a hyperplane from a list of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrExponents.html">ArrExponents</A>
+  </TD><TD>
+exponents of a free arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrFlats.html">ArrFlats</A>
+  </TD><TD>
+list of flats of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrGraphical.html">ArrGraphical</A>
+  </TD><TD>
+graphical arrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrLattice.html">ArrLattice</A>
+  </TD><TD>
+lattice of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrRestriction.html">ArrRestriction</A>
+  </TD><TD>
+arrangement of hyperplanes A restricted to a hyperplane
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiA.html">ArrShiA</A>
+  </TD><TD>
+Shi arrangement of type A
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiB.html">ArrShiB</A>
+  </TD><TD>
+Shi arrangement of type B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiCatalanA.html">ArrShiCatalanA</A>
+  </TD><TD>
+Shi-Catalan arrangement of type A with multiplicities
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiCatalanB.html">ArrShiCatalanB</A>
+  </TD><TD>
+Shi-Catalan arrangement of type B with given multiplicities
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiCatalanD.html">ArrShiCatalanD</A>
+  </TD><TD>
+Shi-Catalan arrangement of type D with given multiplicities
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiD.html">ArrShiD</A>
+  </TD><TD>
+Shi arrangement of type D
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrSignedGraphical.html">ArrSignedGraphical</A>
+  </TD><TD>
+signed graphical arrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrToMultiArr.html">ArrToMultiArr</A>
+  </TD><TD>
+multiarrangement from an arrangement and a list of multiplicities
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrTypeB.html">ArrTypeB</A>
+  </TD><TD>
+reflection arrangement of type B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrTypeD.html">ArrTypeD</A>
+  </TD><TD>
+reflection arrangement of type D
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdascii.html">ascii</A>
+  </TD><TD>
+convert between characters and ascii code
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBBasis5.html">BBasis5</A>
+  </TD><TD>
+Border Basis of zero dimensional ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBettiNumbers.html">BettiNumbers</A>
+  </TD><TD>
+(Multi-)graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBinomialReprBinomialReprShift.html">BinomialRepr, BinomialReprShift</A>
+  </TD><TD>
+binomial representation of integers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCanonicalBasis.html">CanonicalBasis</A>
+  </TD><TD>
+canonical basis of a free module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCartesianProductCartesianProductList.html">CartesianProduct, CartesianProductList</A>
+  </TD><TD>
+Cartesian product of lists
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCFApproximants.html">CFApproximants</A>
+  </TD><TD>
+continued fraction approximants
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcoefficients.html">coefficients</A>
+  </TD><TD>
+list of coefficients of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoefficientsWRT.html">CoefficientsWRT</A>
+  </TD><TD>
+list of coeffs and PPs of a poly wrt indet or list of indets
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoeffListWRT.html">CoeffListWRT</A>
+  </TD><TD>
+list of coefficients of a polynomial wrt an indet
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoeffListWRTSupport.html">CoeffListWRTSupport</A>
+  </TD><TD>
+list of coefficients of a polynomial wrt a power-product basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcompts.html">compts</A>
+  </TD><TD>
+list of components of a ModuleElem
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdconcat.html">concat</A>
+  </TD><TD>
+concatenate lists
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdConcatLists.html">ConcatLists</A>
+  </TD><TD>
+concatenate a list of lists
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdContFrac.html">ContFrac</A>
+  </TD><TD>
+continued fraction quotients
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoprimeFactorBasis.html">CoprimeFactorBasis</A>
+  </TD><TD>
+determine coprime factor base for a set of integers or ring elements
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcovers.html">covers</A>
+  </TD><TD>
+a poset description from the list of the strict relations
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCurrentTypes.html">CurrentTypes</A>
+  </TD><TD>
+lists all data types
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddiff.html">diff</A>
+  </TD><TD>
+returns the difference between two lists
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddistrib.html">distrib</A>
+  </TD><TD>
+the distribution of objects in a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdeigenfactors.html">eigenfactors</A>
+  </TD><TD>
+eigenfactors of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdeigenvectors.html">eigenvectors</A>
+  </TD><TD>
+eigenvalues and eigenvectors of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdEquiIsoDec.html">EquiIsoDec</A>
+  </TD><TD>
+equidimensional isoradical decomposition
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdexponents.html">exponents</A>
+  </TD><TD>
+the list of exponents of the leading term of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdExternalLibs.html">ExternalLibs</A>
+  </TD><TD>
+Linked external libraries
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFGLM5.html">FGLM5</A>
+  </TD><TD>
+perform a FGLM Groebner Basis conversion
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdfields.html">fields</A>
+  </TD><TD>
+list the fields of a record
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdflatten.html">flatten</A>
+  </TD><TD>
+flatten a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbAlexanderDual.html">FrbAlexanderDual</A>
+  </TD><TD>
+Alexander Dual of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbAssociatedPrimes.html">FrbAssociatedPrimes</A>
+  </TD><TD>
+Associated primes of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbIrreducibleDecomposition.html">FrbIrreducibleDecomposition</A>
+  </TD><TD>
+Irreducible decomposition of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbMaximalStandardMonomials.html">FrbMaximalStandardMonomials</A>
+  </TD><TD>
+Maximal standard monomials of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbPrimaryDecomposition.html">FrbPrimaryDecomposition</A>
+  </TD><TD>
+Primary decomposition of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGBasis.html">GBasis</A>
+  </TD><TD>
+calculate a Groebner basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGBasisByHomog.html">GBasisByHomog</A>
+  </TD><TD>
+calculate a Groebner basis by homogenization
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGBasisTimeout.html">GBasisTimeout</A>
+  </TD><TD>
+compute a Groebner basis with a timeout
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGenericPoints.html">GenericPoints</A>
+  </TD><TD>
+random projective points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGenRepr.html">GenRepr</A>
+  </TD><TD>
+representation in terms of generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdgens.html">gens</A>
+  </TD><TD>
+list of generators of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGensJacobian.html">GensJacobian</A>
+  </TD><TD>
+set of generators of the Jacobian ideal of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGetCol.html">GetCol</A>
+  </TD><TD>
+convert a column of a matrix into a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGetCols.html">GetCols</A>
+  </TD><TD>
+convert a matrix into a list of lists
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGetRow.html">GetRow</A>
+  </TD><TD>
+convert a row of a matrix into a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGetRows.html">GetRows</A>
+  </TD><TD>
+convert a matrix into a list of lists
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGraverBasis.html">GraverBasis</A>
+  </TD><TD>
+Graver basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGroebnerFanIdeals.html">GroebnerFanIdeals</A>
+  </TD><TD>
+all reduced Groebner bases of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGroebnerFanReducedGBases.html">GroebnerFanReducedGBases</A>
+  </TD><TD>
+Groebner fan reduced GBases
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertBasisKer.html">HilbertBasisKer</A>
+  </TD><TD>
+Hilbert basis for a monoid
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdhomog.html">homog</A>
+  </TD><TD>
+homogenize wrt an indeterminate
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHVector.html">HVector</A>
+  </TD><TD>
+the h-vector of a module or quotient object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdin.html">in</A>
+  </TD><TD>
+list element selector in list constructor
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdindets.html">indets</A>
+  </TD><TD>
+list of indeterminates in a PolyRing
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIndetSubscripts.html">IndetSubscripts</A>
+  </TD><TD>
+the indices in the name of an indeterminate
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdinterreduced.html">interreduced</A>
+  </TD><TD>
+interreduce a list of polynomials
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdintersection.html">intersection</A>
+  </TD><TD>
+intersect lists, ideals, or modules
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIntersectionList.html">IntersectionList</A>
+  </TD><TD>
+intersect lists, ideals, or modules
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdInverseSystem.html">InverseSystem</A>
+  </TD><TD>
+Inverse system of an ideal of derivations
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdJanetBasis.html">JanetBasis</A>
+  </TD><TD>
+the Janet basis of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLinKerBasis.html">LinKerBasis</A>
+  </TD><TD>
+find the kernel of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMakeSet.html">MakeSet</A>
+  </TD><TD>
+remove duplicates from a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMaxChains.html">MaxChains</A>
+  </TD><TD>
+computes all the maximal chains from the relations of the poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinGBoverZZ[PROTOTYPE].html">MinGBoverZZ [PROTOTYPE]</A>
+  </TD><TD>
+[PROTOTYPE] minimal Groebner basis of polys over ZZ
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinGens.html">MinGens</A>
+  </TD><TD>
+list of minimal generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdminors.html">minors</A>
+  </TD><TD>
+list of minor determinants of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinSubsetOfGens.html">MinSubsetOfGens</A>
+  </TD><TD>
+list of minimal generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmoebius.html">moebius</A>
+  </TD><TD>
+Moebius function of a poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmonomials.html">monomials</A>
+  </TD><TD>
+the list of monomials of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMultiArrExponents.html">MultiArrExponents</A>
+  </TD><TD>
+exponents of a free multiarrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMultiArrRestrictionZiegler.html">MultiArrRestrictionZiegler</A>
+  </TD><TD>
+Ziegler multirestriction of the arrangement of hyperplanes  wrt a hyperplane
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMultiArrToArr.html">MultiArrToArr</A>
+  </TD><TD>
+underling arrangement from a multiarrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewList.html">NewList</A>
+  </TD><TD>
+create a new list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzDiagInvariants.html">NmzDiagInvariants</A>
+  </TD><TD>
+ring of invariants of a diagonalizable group action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzEhrhartRing.html">NmzEhrhartRing</A>
+  </TD><TD>
+Ehrhart ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzFiniteDiagInvariants.html">NmzFiniteDiagInvariants</A>
+  </TD><TD>
+ring of invariants of a finite group action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzIntClosureMonIdeal.html">NmzIntClosureMonIdeal</A>
+  </TD><TD>
+integral closure of a monomial ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzIntClosureToricRing.html">NmzIntClosureToricRing</A>
+  </TD><TD>
+integral closure of a toric ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzIntersectionValRings.html">NmzIntersectionValRings</A>
+  </TD><TD>
+intersection of ring of valuations
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzNormalToricRing.html">NmzNormalToricRing</A>
+  </TD><TD>
+normalization of a toric ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzTorusInvariants.html">NmzTorusInvariants</A>
+  </TD><TD>
+ring of invariants of torus action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNonZero.html">NonZero</A>
+  </TD><TD>
+remove zeroes from a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+  </TD><TD>
+Special characters equivalent to commands
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdpackages.html">packages</A>
+  </TD><TD>
+list of loaded packages
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdpartitions.html">partitions</A>
+  </TD><TD>
+partitions of an integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdpermutations.html">permutations</A>
+  </TD><TD>
+returns all permutations of the entries of a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPosetDual.html">PosetDual</A>
+  </TD><TD>
+dual of a poset from the relations of the poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPosetJoin.html">PosetJoin</A>
+  </TD><TD>
+join between two elements of a poset from the relations of the poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPosetMeet.html">PosetMeet</A>
+  </TD><TD>
+meet between two elements of a poset from the relations of the poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrimaryDecomposition.html">PrimaryDecomposition</A>
+  </TD><TD>
+primary decomposition of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrimaryDecompositionGTZ0.html">PrimaryDecompositionGTZ0</A>
+  </TD><TD>
+primary decomposition of a 0-dimensional ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQuotientBasis.html">QuotientBasis</A>
+  </TD><TD>
+vector space basis for zero-dimensional quotient rings
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQuotientBasisSorted.html">QuotientBasisSorted</A>
+  </TD><TD>
+vector space basis for zero-dimensional quotient rings
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQZP.html">QZP</A>
+  </TD><TD>
+change field for polynomials and ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomPermutation.html">RandomPermutation</A>
+  </TD><TD>
+random permutation (of indices)
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomSubset.html">RandomSubset</A>
+  </TD><TD>
+random subset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomSubsetIndices.html">RandomSubsetIndices</A>
+  </TD><TD>
+indices for random subset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomTuple.html">RandomTuple</A>
+  </TD><TD>
+random tuple
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomTupleIndices.html">RandomTupleIndices</A>
+  </TD><TD>
+indices for random tuples
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRealRoots.html">RealRoots</A>
+  </TD><TD>
+real roots of a univariate polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRealRootsApprox.html">RealRootsApprox</A>
+  </TD><TD>
+approximations to the real roots of a univariate poly
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdReducedGBasis.html">ReducedGBasis</A>
+  </TD><TD>
+reduced Groebner basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdres.html">res</A>
+  </TD><TD>
+free resolution
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdreversereversed.html">reverse, reversed</A>
+  </TD><TD>
+reverse a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingElemListRingElems.html">RingElemList, RingElems</A>
+  </TD><TD>
+convert expressions into a LIST of RINGELEM
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingsOf.html">RingsOf</A>
+  </TD><TD>
+list of the rings of an object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSeparatorsOfPoints.html">SeparatorsOfPoints</A>
+  </TD><TD>
+separators for affine points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSeparatorsOfProjectivePoints.html">SeparatorsOfProjectivePoints</A>
+  </TD><TD>
+separators for projective points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdshape.html">shape</A>
+  </TD><TD>
+extended list of types involved in an expression
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsorted.html">sorted</A>
+  </TD><TD>
+sort a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSortedBy.html">SortedBy</A>
+  </TD><TD>
+sort a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdstarting.html">starting</A>
+  </TD><TD>
+list functions starting with a given string
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdStdBasis.html">StdBasis</A>
+  </TD><TD>
+Standard basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSturmSeq.html">SturmSeq</A>
+  </TD><TD>
+Sturm sequence of a univariate polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsubsets.html">subsets</A>
+  </TD><TD>
+returns all sublists of a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsupport.html">support</A>
+  </TD><TD>
+the list of terms of a polynomial or moduleelem
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSymbolRange.html">SymbolRange</A>
+  </TD><TD>
+range of symbols for the indeterminates of a PolyRing
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSymmetricPolys.html">SymmetricPolys</A>
+  </TD><TD>
+list of symmetric polynomials
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdtail.html">tail</A>
+  </TD><TD>
+remove the first element of a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdTopLevelFunctions.html">TopLevelFunctions</A>
+  </TD><TD>
+returns the functions available at top-level
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdtuples.html">tuples</A>
+  </TD><TD>
+N-tuples
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdTVecFromHF.html">TVecFromHF</A>
+  </TD><TD>
+Type vector from Hilbert Function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdUniversalGBasis.html">UniversalGBasis</A>
+  </TD><TD>
+universal Groebner basis of the input ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdwdeg.html">wdeg</A>
+  </TD><TD>
+multi-degree of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdWithoutNth.html">WithoutNth</A>
+  </TD><TD>
+removes the N-th component from a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdZPQ.html">ZPQ</A>
+  </TD><TD>
+change field for polynomials and ideals
+  </TD></TR>
+
+</TABLE>
+</CENTER>
+<BR><BR>
+
+</div>
+
+</body>
+</html>

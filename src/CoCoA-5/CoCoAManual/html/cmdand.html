@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>and</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#and">up</a> <a href="cmdAlmostQR.html">previous</a>  <a href="cmdappend.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>and<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+boolean "and" operator</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+A and B
+where A, B: BOOL; return BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This operator represents the logical conjunction of <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt>.
+CoCoA first evaluates <tt><b style="background:#bbeeee">A</b></tt>; if that gives <tt><b style="background:#bbeeee">false</b></tt> then the result
+is <tt><b style="background:#bbeeee">false</b></tt>, and <tt><b style="background:#bbeeee">B</b></tt> is not evaluated.  Otherwise if <tt><b style="background:#bbeeee">A</b></tt> gives <tt><b style="background:#bbeeee">true</b></tt>
+then <tt><b style="background:#bbeeee">B</b></tt> is evaluated, and its value is the final result.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  A := -1;
+/**/  A >= 0 and FloorSqrt(A) < 10;  --> calls FloorSqrt only if A >= 0
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdor.html">or</A>
+<li><a href="cmdnot.html">not</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewMat">up</a> <a href="cmdNewList.html">previous</a>  <a href="cmdNewMatFilled.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Zero matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NewMat(R: RING, M: INT, N: INT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function is kept for CoCoA-4 nostalgia: better use <A HREF="cmdZeroMat.html">
+    <tt>ZeroMat</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use S ::= QQ[x,y,z];
+/**/  NewMat(S,2,3);
+matrix( /*RingDistrMPolyClean(QQ, 3)*/
+ [[0, 0, 0],
+  [0, 0, 0]])
+/**/  ZeroMat(S,2,3);
+matrix( /*RingDistrMPolyClean(QQ, 3)*/
+ [[0, 0, 0],
+  [0, 0, 0]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdmatrix.html">matrix</A>
+<li><a href="cmdNewMatFilled.html">NewMatFilled</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>DiagMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#DiagMat">up</a> <a href="cmdDF.html">previous</a>  <a href="cmdDicksonPoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>DiagMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+matrix with given diagonal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+DiagMat(L: LIST): MAT
+DiagMat(R: RING, L: LIST): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the diagonal matrix whose diagonal are the
+elements of the list <tt><b style="background:#bbeeee">L</b></tt>.  By default the matrix is over <A HREF="cmdQQ.html">
+    <tt>QQ</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  DiagMat([3,4,5]);
+matrix(QQ,
+[
+  [3, 0, 0],
+  [0, 4, 0],
+  [0, 0, 5]
+])
+
+/**/ DiagMat(ZZ,[5,6,7]);
+matrix(ZZ,
+[
+  [5, 0, 0],
+  [0, 6, 0],
+  [0, 0, 7]
+])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBlockMat.html">BlockMat</A>
+<li><a href="cmdIsDiagonal.html">IsDiagonal</A>
+<li><a href="cmdColMat.html">ColMat</A>
+<li><a href="cmdRowMat.html">RowMat</A>
+</ul>
+</div>
+
+</body>
+</html>

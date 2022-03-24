@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SimplestBinaryRatBetween</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SimplestBinaryRatBetween">up</a> <a href="cmdsign.html">previous</a>  <a href="cmdSimplestRatBetween.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SimplestBinaryRatBetween<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+find simplest binary rational in a closed interval</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SimplestBinaryRatBetween(A: RAT, B: RAT): RAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function finds the simplest binary rational in the closed interval
+with end points <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt>.  We define the simplest binary rational
+to be the rational number of the form <tt><b style="background:#bbeeee">N*2^k</b></tt> where the integer <tt><b style="background:#bbeeee">N</b></tt> has
+the smallest possible absolute value.  See also <A HREF="cmdSimplestRatBetween.html">
+    <tt>SimplestRatBetween</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  SimplestBinaryRatBetween(0.123, 0.456);
+1/4
+
+/**/  SimplestBinaryRatBetween(-3.14159, -2.71828);
+-3
+
+/**/  SimplestBinaryRatBetween(5,10); // contrast with SimplestRatBetween!
+8
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCFApprox.html">CFApprox</A>
+<li><a href="cmdFloatApprox.html">FloatApprox</A>
+<li><a href="cmdSimplestRatBetween.html">SimplestRatBetween</A>
+</ul>
+</div>
+
+</body>
+</html>

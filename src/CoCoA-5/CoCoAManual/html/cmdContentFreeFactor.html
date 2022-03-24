@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ContentFreeFactor</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ContentFreeFactor">up</a> <a href="cmdcontent.html">previous</a>  <a href="cmdContentWRT.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ContentFreeFactor<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+factorization of multivariate polynomial into content-free factors</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ContentFreeFactor(F: RINGELEM): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a factorization of the multivariate polynomial <tt><b style="background:#bbeeee">F</b></tt>
+into (polynomial) content-free factors; it works by calling <tt><b style="background:#bbeeee">ContentWRT</b></tt>
+repeatedly.  The multiplicities will always be 1.
+<br><br>
+A polynomial which is (polynomial) content-free means that all its irreducible
+factors involve all indeterminates appearing in the polynomial itself.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[x,y,z];
+/**/ f := 2*(x+1)*(y+2)*(x+y)^2*(x-y);
+/**/ indent(ContentFreeFactor(f));
+record[
+  RemainingFactor := 2,
+  factors := [y +2, x +1, x^3 +x^2*y -x*y^2 -y^3],
+  multiplicities := [1, 1, 1]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdContentWRT.html">ContentWRT</A>
+<li><a href="cmdfactor.html">factor</A>
+<li><a href="cmdSqFreeFactor.html">SqFreeFactor</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ImplicitHypersurface</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ImplicitHypersurface">up</a> <a href="cmdimplicit.html">previous</a>  <a href="cmdImplicitPlot.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ImplicitHypersurface<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+implicitization of hypersurface</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ImplicitHypersurface(ParamDescr: LIST): RINGELEM
+ImplicitHypersurface(ParamDescr: LIST, Algo: STRING): RINGELEM
+ImplicitHypersurface(P: RING, ParamDescr: LIST): RINGELEM
+ImplicitHypersurface(P: RING, ParamDescr: LIST, Algo: STRING): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the implicitization of the hypersurface
+parametrically described by the list <tt><b style="background:#bbeeee">ParamDescr</b></tt>.
+From version CoCoA-5.2.2 it works also for rational parametrization.
+<br><br>
+The algorithms are described in the JSC paper Abbott, Bigatti, Robbiano
+<b>Implicitization of Hypersurfaces</b><br><br>
+If provided with a polynomial ring <tt><b style="background:#bbeeee">P</b></tt>, the result is in <tt><b style="background:#bbeeee">P</b></tt>,
+otherwise it is in a newly created ring.
+<br><br>
+Verbosity: 20-80-90.
+<br><br>
+NOTE: it assumes the input is a correct parametric description of a
+hypersurface in <tt><b style="background:#bbeeee">K^(len(ParamDescr)+1)</b></tt>!! 
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ P ::= QQ[x,y,z];
+/**/ use S ::= QQ[s,t];
+/**/ ImplicitHypersurface(P, [s^2, s*t, t^2]);
+y^2 -x*z
+/**/ ImplicitHypersurface(P, [s^2, s*t, t^2], "Direct");
+y^2 -x*z
+/**/ ImplicitHypersurface(P, [s^2, s*t, t^2], "ElimTH");
+y^2 -x*z
+
+/**/ -- Parametrization by rational functions
+/**/ K := NewFractionField(RingQQt(1));
+/**/ use K;
+/**/ ParamDescr := [ (1-t^2)/(1+t^2), 2*t/(1+t^2) ];
+/**/ ImplicitHypersurface(ParamDescr);
+x[1]^2 +x[2]^2 -1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdimplicit.html">implicit</A>
+</ul>
+</div>
+
+</body>
+</html>

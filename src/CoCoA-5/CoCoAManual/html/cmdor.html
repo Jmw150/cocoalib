@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>or</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#or">up</a> <a href="cmdOption[OBSOLETE].html">previous</a>  <a href="cmdOrderComparisonOperators.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>or<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+boolean "or" operator</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+A or B
+where A, B: BOOL; return BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This operator represents the logical disjunction of <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt>.
+CoCoA first evaluates <tt><b style="background:#bbeeee">A</b></tt>; if that gives <tt><b style="background:#bbeeee">true</b></tt> then the result is
+<tt><b style="background:#bbeeee">true</b></tt>, and <tt><b style="background:#bbeeee">B</b></tt> is not evaluated.  Otherwise, if <tt><b style="background:#bbeeee">A</b></tt> gives
+<tt><b style="background:#bbeeee">false</b></tt> then <tt><b style="background:#bbeeee">B</b></tt> is evaluated, and its value is the final result.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Define IsUnsuitable(X)
+/**/    Return X < 0 or FloorSqrt(X) >= 2^16;
+/**/  EndDefine;
+/**/  IsUnsuitable(-9);
+true
+/**/  IsUnsuitable(9);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdand.html">and</A>
+<li><a href="cmdnot.html">not</A>
+</ul>
+</div>
+
+</body>
+</html>

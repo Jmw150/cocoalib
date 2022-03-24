@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>JacobianMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#JacobianMat">up</a> <span class="grayed">previous</span> <a href="cmdJanetBasis.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>JacobianMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the Jacobian matrix of a list of polynomials</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+JacobianMat(L: LIST of RINGELEM): MAT
+JacobianMat(L: LIST of RINGELEM, X: LIST of indets): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the Jacobian matrix of the polynomials in
+the non empty list <tt><b style="background:#bbeeee">L</b></tt> with respect to all the indeterminates
+of the ring of <tt><b style="background:#bbeeee">L</b></tt> or, if specified, to the indeterminates in <tt><b style="background:#bbeeee">X</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  L := [x-y, x^2-y, x^3-y^2];
+/**/  JacobianMat(L);
+matrix( /*RingWithID(26, "QQ[x,y]")*/
+ [[1, -1],
+  [2*x, -1],
+  [3*x^2, -2*y]])
+/**/  JacobianMat(L,[y]);
+matrix( /*RingWithID(26, "QQ[x,y]")*/
+ [[-1],
+  [-1],
+  [-2*y]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

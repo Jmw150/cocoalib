@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CharPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CharPoly">up</a> <a href="cmdcharacteristic.html">previous</a>  <a href="cmdChebyshevPoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CharPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+characteristic polynomial of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CharPoly(M: MAT, X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the characteristic polynomial of <tt><b style="background:#bbeeee">M</b></tt>,
+square matrix, in the indeterminate <tt><b style="background:#bbeeee">X</b></tt>.
+<br><br>
+See also <A HREF="cmdMinPoly.html">
+    <tt>MinPoly</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  CharPoly(matrix([[1,2,3],[4,5,6],[7,8,9]]), x);
+x^3 -15*x^2 -18*x
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMinPoly.html">MinPoly</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>FUNCTIONs are first class objects</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c7">up</a> <a href="partIntroductiontoFUNCTION.html">previous</a> <a href="partCommandsandFunctionsforFUNCTION.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.7.2 FUNCTIONs are first class objects</b></font>
+</td></tr></table>
+
+In CoCoA-5 functions are "first class objects", and so may be passed
+like any other value.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+-- The following function MyMax takes a function LessThan as parameter,
+-- and returns the maximum of X and Y w.r.t. the ordering defined by the
+-- function LessThan.
+
+/**/  Define MyMax(LessThan, X, Y)
+/**/    If LessThan(X, Y) Then Return Y; Else Return X; EndIf;
+/**/  EndDefine;
+
+-- Let's use MyMax by giving two different orderings.
+
+/**/  Define CompareLT(X, Y)  Return LT(X) < LT(Y);  EndDefine;
+/**/  Define CompareLC(X, Y)  Return LC(X) < LC(Y);  EndDefine;
+
+/**/  use R ::= QQ[x,y,z];
+/**/  MyMax(CompareLC, 3*x-y, 5*z-2);
+5*z -2
+/**/  MyMax(CompareLT, 3*x-y, 5*z-2);
+3*x -y
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

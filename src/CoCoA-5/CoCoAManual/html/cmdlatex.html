@@ -1,0 +1,87 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>latex</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#latex">up</a> <a href="cmdlast.html">previous</a>  <a href="cmdLawrenceMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>latex<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+LaTeX formatting</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+latex(X: OBJECT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a string containing the argument formatted in LaTeX.
+It can also be called with the name <tt><b style="background:#bbeeee">LaTeX</b></tt>.
+<br><br>
+For typesetting ideals this function assumes use of a LaTeX macro like this:
+
+  <pre>
+  \newcommand{\ideal}[1]{\langle #1 \rangle}
+</pre>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  F := x^10 +2*y^12*z^3;
+/**/  latex(F);
+2 y^{12} z^3  +x^{10} 
+
+/**/  M := mat([[1,2],[3,4]]);
+/**/  latex(M);
+\left( \begin{array}{cc}
+  1 & 2 \\
+  3 & 4 \end{array}\right)
+
+/**/  R ::= QQ[x,y,z];
+/**/  latex(ideal(x^2, y+z));
+\ideal{x^2 ,
+  y +z}
+
+/**/  P := NewFractionField(R);
+/**/  use P;
+/**/  F := (x+y)/(1-z)^3;
+/**/  latex(F);
+\frac{ -x -y} {z^3  -3 z^2  +3 z -1}
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdformat.html">format</A>
+<li><a href="cmdsprint.html">sprint</A>
+</ul>
+</div>
+
+</body>
+</html>

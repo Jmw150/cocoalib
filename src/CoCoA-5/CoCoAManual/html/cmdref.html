@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ref</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ref">up</a> <a href="cmdReducedGBasis.html">previous</a>  <a href="cmdRefineGCDFreeBasis[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ref<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+passing function parameters by reference</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ref X
+  where X is the identifier of a CoCoA variable.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The keyword <tt><b style="background:#bbeeee">ref</b></tt> is used to pass a parameter "by reference" to a
+function which may modify its value (e.g.<A HREF="cmdappend.html">
+    <tt>append</tt>
+  </A>).
+The keyword <tt><b style="background:#bbeeee">ref</b></tt> alerts the programmer to the possibility that the
+value may be changed during the call.
+<br><br>
+To write a new function which can modify some parameters use the same
+keyword <tt><b style="background:#bbeeee">ref</b></tt> to identify which formal parameters are to be passed
+by reference.  The following example illustrates the difference between
+passing by reference and passing by value.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ Define CallByRef(ref L)  -- "call by reference": The variable referred
+/**/   L := "new value";       -- to by L is changed.
+/**/ EndDefine;
+/**/ M := "old value";
+/**/ CallByRef(ref M);  -- here "ref" recalls that M might change
+/**/ PrintLn M;
+new value
+
+/**/ Define CallByVal(L)  -- "call by value": The value of L is passed to
+/**/   L := "new value";  -- the function.
+/**/   Return L;
+/**/ EndDefine;
+/**/ L := "old value";
+/**/ CallByVal(L);
+new value
+
+/**/  PrintLn L;
+old value
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddefine.html">define</A>
+</ul>
+</div>
+
+</body>
+</html>

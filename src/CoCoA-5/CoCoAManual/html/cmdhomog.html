@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>homog</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#homog">up</a> <a href="cmdHilbertSeriesShifts.html">previous</a>  <a href="cmdHomogCompt.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>homog<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+homogenize wrt an indeterminate</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+homog(V: RINGELEM, X: RINGELEM): RINGELEM
+homog(V: MODULEELEM, X: RINGELEM): MODULEELEM
+homog(L: LIST, X: RINGELEM): LIST
+homog(I: IDEAL, X: RINGELEM): IDEAL
+homog(M: MODULE, X: RINGELEM): MODULE</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the homogenization of the first arg with respect
+to the indeterminate <tt><b style="background:#bbeeee">X</b></tt>, which must have weight 1.  The elements
+of the list <tt><b style="background:#bbeeee">L</b></tt> are homogenized separately.
+<br><br>
+NOTE: For an ideal/module the result is the ideal/module containing the
+homogenizations of all elements (and not simply the homogenizations of
+the specific generators).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z,w];
+/**/  homog(x^3-y, w);
+x^3 -y*w^2
+
+/**/  homog([x^3-y, x^4-z], w);
+[x^3 -y*w^2, x^4 -z*w^3]
+
+/**/  I := ideal(x^3-y, x^4-z);
+/**/  homog(I, w);    -- not just ideal gen by the homogenizations of
+                      -- the generators of I
+ideal(x*y -z*w, x^2*z -y^2*w, x^3 -y*w^2, y^3 -x*z^2)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsHomog.html">IsHomog</A>
+</ul>
+</div>
+
+</body>
+</html>

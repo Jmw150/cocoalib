@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IndetSubscripts</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IndetSubscripts">up</a> <a href="cmdIndetsProd.html">previous</a>  <a href="cmdIndetSymbols.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IndetSubscripts<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the indices in the name of an indeterminate</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IndetSubscripts(X: RINGELEM): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the subscripts of the name of the argument,
+an indeterminate (used to be called <tt><b style="background:#bbeeee">IndetInd</b></tt>).
+<br><br>
+Please note the difference with <A HREF="cmdIndetIndex.html">
+    <tt>IndetIndex</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x[1..3,1..2],y,z];
+/**/  IndetSubscripts(x[3,2]);
+[3, 2]
+/**/  IndetSubscripts(y);
+[]
+/**/  IndetIndex(RingElem(R, ["x",3,2]));
+6
+/**/  IndetSubscripts(RingElem(R, ["x",3,2]));
+[3, 2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdindet.html">indet</A>
+<li><a href="cmdIndetIndex.html">IndetIndex</A>
+<li><a href="cmdIndetName.html">IndetName</A>
+<li><a href="cmdIndetSymbols.html">IndetSymbols</A>
+<li><a href="cmdindets.html">indets</A>
+<li><a href="cmdNumIndets.html">NumIndets</A>
+</ul>
+</div>
+
+</body>
+</html>

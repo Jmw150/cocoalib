@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MinSubsetOfGens</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MinSubsetOfGens">up</a> <a href="cmdMinPowerInIdeal.html">previous</a>  <a href="cmdmod.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MinSubsetOfGens<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of minimal generators</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MinSubsetOfGens(M: IDEAL|MODULE): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a subset <tt><b style="background:#bbeeee">S</b></tt> of <tt><b style="background:#bbeeee">gens(M)</b></tt> which is
+minimal in the sense that no proper subset of <tt><b style="background:#bbeeee">S</b></tt> generates <tt><b style="background:#bbeeee">M</b></tt>.
+<br><br>
+NOTE: there no guarantee that <tt><b style="background:#bbeeee">S</b></tt> is the subset with smallest cardinality.
+<br><br>
+If <tt><b style="background:#bbeeee">M</b></tt> is a homogeneous ideal or module, the function
+<A HREF="cmdMinGens.html">
+    <tt>MinGens</tt>
+  </A> is much faster (but may return a generating set
+which is not a subset of <tt><b style="background:#bbeeee">gens(M)</b></tt>).
+<br><br>
+The coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x-1, (x-y)^4, z+y, (z+y)^2);
+/**/  MinSubsetOfGens(I);
+[x -1, x^4 -4*x^3*y +6*x^2*y^2 -4*x*y^3 +y^4, y +z]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMinGens.html">MinGens</A>
+<li><a href="cmdIdealOfMinGens.html">IdealOfMinGens</A>
+<li><a href="cmdSubmoduleOfMinGens.html">SubmoduleOfMinGens</A>
+</ul>
+</div>
+
+</body>
+</html>

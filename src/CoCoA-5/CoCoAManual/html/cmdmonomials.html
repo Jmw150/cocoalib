@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>monomials</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#monomials">up</a> <a href="cmdmonic.html">previous</a>  <a href="cmdMonsInIdeal.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>monomials<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the list of monomials of a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+monomials(F: RINGELEM|MODULEELEM): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of monomials of F.
+The function <A HREF="cmdsupport.html">
+    <tt>support</tt>
+  </A> returns the list of terms
+(monomials without coefficients).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  F := 3*x^2*y +5*y^3 -x*y^5;
+/**/  monomials(F);
+[-x*y^5, 3*x^2*y, 5*y^3]
+
+/**/  support(F);
+[x*y^5, x^2*y, y^3]
+
+  Monomials(Vector(3*x^2*y+y,5*x*y+4)); --***WORK IN PROGRESS***
+[Vector(3x^2y, 0), Vector(0, 5xy), Vector(y, 0), Vector(0, 4)]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcoefficients.html">coefficients</A>
+<li><a href="cmdsupport.html">support</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>fold</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#fold">up</a> <a href="cmdFloorSqrt.html">previous</a>  <a href="cmdFoldToListInput.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>fold<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+inset newlines into a long string</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+fold(S: STRING, W: INT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function copies a string inserting a newline every <tt><b style="background:#bbeeee">W</b></tt>
+characters.  Together with <A HREF="cmdsprint.html">
+    <tt>sprint</tt>
+  </A> it can be helpful for
+displaying a long result more comprehensibly.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  n := factorial(100);
+/**/  fold(sprint(n), 60);
+933262154439441526816992388562667004907159682643816214685929
+638952175999932299156089414639761565182862536979208272237582
+51185210916864000000000000000000000000
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdFoldToListInput.html">FoldToListInput</A>
+<li><a href="cmdsprint.html">sprint</A>
+</ul>
+</div>
+
+</body>
+</html>

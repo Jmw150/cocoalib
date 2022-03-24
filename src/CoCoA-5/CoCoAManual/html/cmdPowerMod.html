@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PowerMod</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PowerMod">up</a> <a href="cmdpower.html">previous</a>  <a href="cmdPreImage[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PowerMod<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+compute a modular power efficiently</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PowerMod(A: INT, B: INT, M: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function calculates efficiently an integer power modulo a given
+modulus.  Thus <tt><b style="background:#bbeeee">PowerMod(A, B, M)</b></tt> is equal to <tt><b style="background:#bbeeee">mod(A^B, M)</b></tt>, but the former
+is computed faster.  <tt><b style="background:#bbeeee">B</b></tt> must be non-negative.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  PowerMod(12345,41041,41041); -- 41041 is a Carmichael number
+12345
+
+/**/  PowerMod(123456789,987654321,32003); -- cannot compute 123456789^987654321 directly
+2332
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

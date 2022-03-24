@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GFanRelativeInteriorPoint</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GFanRelativeInteriorPoint">up</a> <a href="cmdGFanGetUniquePoint.html">previous</a>  <a href="cmdgin.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GFanRelativeInteriorPoint<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+relative interior point of a cone</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GFanRelativeInteriorPoint(EqMat: MAT, IneqMat: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a column matrix whose entries are the coordinates
+of a relative interior point of the cone described by <tt><b style="background:#bbeeee">IneqMat</b></tt><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ GFanRelativeInteriorPoint(matrix([[1,2,3]]), matrix([[1,0,2],[2,-1,-1]]));
+matrix(ZZ,
+ [[2],
+  [5],
+  [-1]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

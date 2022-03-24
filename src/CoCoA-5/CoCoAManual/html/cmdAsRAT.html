@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>AsRAT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#AsRAT">up</a> <a href="cmdAsINT.html">previous</a>  <a href="cmdassert.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>AsRAT<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert into a RAT</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+AsRAT(N: INT): RAT
+AsRAT(N: RAT): RAT
+AsRAT(N: RINGELEM): RAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+If the argument is a rational value this function returns this value as
+a RAT, otherwise it throws an error.  Note that if the argument is
+actually an integer the result is nevertheless a RAT (with denominator 1).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y];
+/**/  type(LC(3*x-y));
+RINGELEM
+/**/ type(AsRAT(LC(3*x-y)));
+RAT
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAsINT.html">AsINT</A>
+</ul>
+</div>
+
+</body>
+</html>

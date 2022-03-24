@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>QuotientingHom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#QuotientingHom">up</a> <a href="cmdQuotientBasisSorted.html">previous</a>  <a href="cmdQZP.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>QuotientingHom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the projection homomorphism into a quotient ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+QuotientingHom(P: RING): RINGHOM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the projection homomorphism of a ring <tt><b style="background:#bbeeee">R</b></tt> into 
+a quotient ring <tt><b style="background:#bbeeee">R/I</b></tt>.
+<br><br>
+It is equivalent to calling <tt><b style="background:#bbeeee">CanonicalHom(BaseRing(RModI), RModI)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[i];
+/**/  f := i^3;
+/**/  K := P/ideal(i^2+1);
+/**/  phi := QuotientingHom(K);  -- phi: P -> K
+/**/  RingOf(phi(f));
+/**/  phi(f); --> round brackets indicate it is the class of -i in K = P/I
+(-i)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+</ul>
+</div>
+
+</body>
+</html>

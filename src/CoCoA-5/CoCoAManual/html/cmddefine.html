@@ -1,0 +1,180 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>define</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#define">up</a> <a href="cmdDecimalStr.html">previous</a>  <a href="cmdDefiningIdeal.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>define<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+define a function</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+Define F(X_1, .., X_n)   C   EndDefine
+Define F(X_1, .., opt X_n)   C   EndDefine
+Define F(...)   C   EndDefine
+  return FUNCTION</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These commands introduce a user-defined function.  <tt><b style="background:#bbeeee">F</b></tt> is the name
+comprising letters, digits or underscore, but must start with a letter.
+<tt><b style="background:#bbeeee">X_1</b></tt> and so on are the parameters (much like local variables).
+<tt><b style="background:#bbeeee">C</b></tt> is the function body.
+<br><br>
+(1) INTRODUCTION.
+These commands assign a user-defined function to the variable <tt><b style="background:#bbeeee">F</b></tt>;
+any previous value <tt><b style="background:#bbeeee">F</b></tt> held will be lost!  The function <tt><b style="background:#bbeeee">F</b></tt> can be
+called in the following obvious way:
+
+  <pre>
+    F(E_1,...,E_n)
+</pre>
+
+where the arguments <tt><b style="background:#bbeeee">E_i</b></tt>'s are expressions.
+<br><br>
+The result of the evaluation of each expression <tt><b style="background:#bbeeee">E_i</b></tt> is assigned
+to the respective formal parameter <tt><b style="background:#bbeeee">X_i</b></tt>, and the command sequence
+<tt><b style="background:#bbeeee">C</b></tt> is executed.
+<br><br>
+If, during the execution of <tt><b style="background:#bbeeee">C</b></tt>, a statement <tt><b style="background:#bbeeee">Return E</b></tt> is executed,
+then the result of the evaluation of <tt><b style="background:#bbeeee">E</b></tt> is the return-value of the
+function <tt><b style="background:#bbeeee">F</b></tt>.  If no <tt><b style="background:#bbeeee">Return</b></tt> command is executed, or <tt><b style="background:#bbeeee">Return</b></tt> is
+executed without argument, then the return-value is <tt><b style="background:#bbeeee">Null</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  define square(X) --> simple fn with 1 parameter
+/**/    return X^2;
+/**/  enddefine;
+
+/**/  square(5);
+25
+</pre></td></tr></table>
+
+
+(2) SCOPE OF VARIABLES.
+Every parameter and every variable used in the function body <tt><b style="background:#bbeeee">C</b></tt> is
+local to the function <b>unless</b> the variable is a <A HREF="cmdref.html">
+    <tt>ref</tt>
+  </A> parameter, or
+the variable was declared global by <A HREF="cmdTopLevel.html">
+    <tt>TopLevel</tt>
+  </A>.
+<br><br>
+See <A HREF="cmdref.html">
+    <tt>ref</tt>
+  </A> to learn about passing function arguments <b>by reference</b>,
+i.e. so that the function can change the value of an existing variable.
+<br><br>
+See <A HREF="cmdTopLevel.html">
+    <tt>TopLevel</tt>
+  </A> for the use of global variables.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Define Add5(N)  // use helpful name for fn
+/**/    N := N + 5;
+/**/    Return N;
+/**/  EndDefine;
+
+/**/  N := 0;
+/**/  Add5(N);
+5
+/**/  N;  --> N is unchanged despite the function call.
+0
+</pre></td></tr></table>
+
+
+(3) VARIABLE NUMBER OF PARAMETERS.
+It is also possible to have some optional parameters or a variable
+number of parameters.  For optional parameters see also <A HREF="cmdIsDefined.html">
+    <tt>IsDefined</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+-- (3a) OPTIONAL ARGUMENTS
+--      These must be in the last position(s).
+
+/**/  define deg0(f, opt x)
+/**/    if f=0 then return 0; endif;
+/**/    if IsDefined(x) then return deg(f,x); endif;
+/**/    return deg(f);
+/**/  enddefine;
+
+/**/  use P ::= QQ[x,y,z];
+/**/  deg0(zero(P));
+0
+/**/  deg0(x^2+y);
+2
+/**/  deg0(x^2+y, y);
+1
+
+--------------------------------------
+-- (3b) VARIABLE NUMBER OF PARAMETERS
+
+/**/   Define MySum(...)  -->  arguments are in the LIST "ARGV"
+/**/     If len(ARGV) = 0 Then Return 12345; EndIf;
+/**/     ans := 0;
+/**/     Foreach N In ARGV Do ans := ans+N; EndForeach;
+/**/     Return ans;
+/**/   EndDefine;
+
+/**/  MySum(1,2,3,4,5);
+15
+/**/  MySum();
+12345
+</pre></td></tr></table>
+
+The CoCoA-4 statement, <tt><b style="background:#bbeeee">Help S;</b></tt> is now OBSOLETE!
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdreturn.html">return</A>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+<li><a href="cmdref.html">ref</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: variables, assignment</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialEmacsUIbasic.html">previous</a> <a href="partTutorialarithmeticoperators.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.4 Tutorial: variables, assignment</b></font>
+</td></tr></table>
+
+CoCoA-5 includes its own <i>imperative</i> programming language.
+Values you plan to use in future computations need to be <i>stored</i> in
+variables; the act of storing a value in a variable is also called
+<i>assignment</i>.  CoCoA-5 uses the <i>colon-equals</i> operator to indicate
+assignment, for instance <tt><b style="background:#bbeeee">A := 13;</b></tt> assigns 13 to the variable <tt><b style="background:#bbeeee">A</b></tt>.
+<br><br>
+A variable name must start with a letter, and may contain letters,
+digits, and the underscore character.  We recommend using names
+which are mnemonic (but hopefully not too long).
+<br><br>
+The most basic types in CoCoA-5 are integers, rationals and strings.
+A number written in "decimal notation" is automatically converted to
+a rational number: for example <tt><b style="background:#bbeeee">3.14</b></tt> is converted into the fraction
+<tt><b style="background:#bbeeee">157/50</b></tt>.
+
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ A := 1;          // assign the integer 1 to the variable "A"
+/**/ half := 1/2;     // assign rational 1/2 to the variable "half"
+/**/ A := 0.333;      // assign the rational 333/1000 to "A"
+                      // The previously stored value is overwritten.
+/**/ mesg1 := "hi!";  // assign the string "hi!" to variable "mesg1"
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

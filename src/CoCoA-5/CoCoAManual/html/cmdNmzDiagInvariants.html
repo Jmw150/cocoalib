@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NmzDiagInvariants</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NmzDiagInvariants">up</a> <a href="cmdNmzComputation.html">previous</a>  <a href="cmdNmzEhrhartRing.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NmzDiagInvariants<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+ring of invariants of a diagonalizable group action</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NmzDiagInvariants(M: MAT, N: MAT, R: Ring): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the ring of invariants of a diagonalizable
+group <font color=#0000aa>D = T x G</font> where T is a torus and G is a finite abelian
+group, both acting diagonally on the polynomial
+ring <font color=#0000aa>K[X_1,...,X_n]</font>.
+<br><br>
+The group actions are specified by the input matrices <tt><b style="background:#bbeeee">M</b></tt> and <tt><b style="background:#bbeeee">N</b></tt>. The
+first matrix specifies the torus action, the second the action of the
+finite group.  See NmzTorusInvariants or NmzFiniteDiagInvariants for more
+detail.  The output is the monomial subalgebra of invariants in <tt><b style="background:#bbeeee">R</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/     use R::=QQ[x,y,z,w];
+/**/     T := matrix([[-1,-1,2,0],[1,1,-2,-1]]);
+/**/     U := matrix([[1,1,1,1,5],[1,0,2,0,7]]);
+/**/     NmzDiagInvariants(T,U,R);
+[x^4*y^6*z^5, x^15*y^5*z^10, x*y^19*z^10, x^26*y^4*z^15, x^37*y^3*z^20, x^48*y^2*z^25, x^59*y*z^30, x^70*z^35, y^70*z^35]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNmzComputation.html">NmzComputation</A>
+<li><a href="cmdNmzTorusInvariants.html">NmzTorusInvariants</A>
+<li><a href="cmdNmzFiniteDiagInvariants.html">NmzFiniteDiagInvariants</A>
+<li><a href="cmdNmzSetVerbosityLevel.html">NmzSetVerbosityLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

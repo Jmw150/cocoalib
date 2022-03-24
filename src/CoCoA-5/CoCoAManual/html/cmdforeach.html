@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>foreach</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#foreach">up</a> <a href="cmdfor.html">previous</a>  <a href="cmdformat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>foreach<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+loop command</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+foreach  X  in  L  do  CMDS  endforeach
+where <tt><b style="background:#bbeeee">X</b></tt> is a loop variable, <tt><b style="background:#bbeeee">L</b></tt> is a LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The loop variable <tt><b style="background:#bbeeee">X</b></tt> is assigned the value of each component
+of <tt><b style="background:#bbeeee">L</b></tt> in turn.  After each assignment the command sequence
+<tt><b style="background:#bbeeee">CMDS</b></tt> is executed.
+<br><br>
+NOTE: the variable <tt><b style="background:#bbeeee">X</b></tt> contains a <b>copy of the value</b> in the list;
+changing <tt><b style="background:#bbeeee">X</b></tt> will not change the list <tt><b style="background:#bbeeee">L</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  foreach N in 1..10 do  -- recall that 1..10 gives the list [1,2,...,10].
+/**/    print N^2, " ";
+/**/  endforeach;
+1 4 9 16 25 36 49 64 81 100
+
+/**/  use P ::= QQ[x,y,z];
+/**/  f := x^2*y + 3*y^2*z - z^3;
+/**/  J := [deriv(f, x) | x in indets(P)];
+/**/  J;
+[2*x*y, x^2 +6*y*z, 3*y^2 -3*z^2]
+
+/**/  foreach g in J do
+/**/    println g^2;
+/**/  endforeach;
+4*x^2*y^2
+x^4 +12*x^2*y*z +36*y^2*z^2
+9*y^4 -18*y^2*z^2 +9*z^4
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfor.html">for</A>
+<li><a href="partListConstructors.html">List Constructors</A>
+<li><a href="cmdrepeat.html">repeat</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+<li><a href="cmdwhile.html">while</A>
+</ul>
+</div>
+
+</body>
+</html>

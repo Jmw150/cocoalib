@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RingOf</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RingOf">up</a> <a href="cmdRingID.html">previous</a>  <a href="cmdRingQQ.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RingOf<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the ring of the object</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RingOf(E: RINGELEM|IDEAL|MAT|MODULE): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the ring on which the object <tt><b style="background:#bbeeee">E</b></tt> is defined.
+<br><br>
+NOTE: A ring contains many information and two separate rings, even when
+defined with the same commands, are not "equal".  Also, when a ring
+is printed only limited information is shown, so different rings might
+print out the same
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x,y);
+/**/  RingOf(I);
+RingWithID(6, "QQ[x,y,z]")
+
+/**/  RingOf(mat([[1,2],[3,4]]));
+QQ
+
+/**/  use Qabc ::= QQ[a,b,c];
+/**/  F := a^2+b;
+/**/  G := a*b+b^2;
+/**/  use S ::=ZZ/(3)[x,y];
+/**/  RingOf(F+G);  -- F+G is computed in the ring of definition
+RingWithID(7, "QQ[a,b,c]")
+/**/  indets(RingOf(F));
+[a, b, c]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCoeffRing.html">CoeffRing</A>
+<li><a href="cmdCurrentRing.html">CurrentRing</A>
+<li><a href="cmdRingsOf.html">RingsOf</A>
+<li><a href="cmdBaseRing.html">BaseRing</A>
+</ul>
+</div>
+
+</body>
+</html>

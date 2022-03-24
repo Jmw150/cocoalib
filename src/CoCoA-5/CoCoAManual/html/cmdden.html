@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>den</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#den">up</a> <a href="cmddeg.html">previous</a>  <a href="cmdDensePoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>den<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+denominator</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+den(X: INT|RAT): INT
+den(X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These function returns the denominator of the argument <tt><b style="background:#bbeeee">X</b></tt>.
+If <tt><b style="background:#bbeeee">X</b></tt> is a RINGELEM in <tt><b style="background:#bbeeee">FractionField(R)</b></tt>,
+then <tt><b style="background:#bbeeee">den(X)</b></tt> is a RINGELEM in <tt><b style="background:#bbeeee">R</b></tt>.
+<br><br>
+NOTE: In CoCoA 4 the numerator and denominator could also be found
+using the suffixes <tt><b style="background:#bbeeee">.Num</b></tt> and <tt><b style="background:#bbeeee">.Den</b></tt>; this fragile syntax is
+now obsolete.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  den(3);
+1
+
+/**/  P ::= QQ[x,y];
+/**/  F := NewFractionField(P);
+/**/  use F;
+/**/  den(x/(x+y));
+x +y
+/**/  RingOf(It);
+RingWithID(4, "QQ[x,y]")
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdnum.html">num</A>
+</ul>
+</div>
+
+</body>
+</html>

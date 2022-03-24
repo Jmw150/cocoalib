@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>elim</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#elim">up</a> <a href="cmdElapsedTime.html">previous</a>  <a href="cmdElimHomogMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>elim<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+eliminate variables</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+elim(X: RINGELEM, M: IDEAL): IDEAL
+elim(L: LIST, M: IDEAL): IDEAL
+elim(X: RINGELEM, M: MODULE): MODULE
+elim(L: LIST, M: MODULE): MODULE</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the ideal or module obtained by eliminating the
+indeterminate <tt><b style="background:#bbeeee">X</b></tt>, or all indeterminates in <tt><b style="background:#bbeeee">L</b></tt>, from <tt><b style="background:#bbeeee">M</b></tt>.  The coefficient
+ring needs to be a field.
+<br><br>
+As opposed to this function, there is also the <b>modifier</b>, <tt><b style="background:#bbeeee">elim</b></tt>,
+used when constructing a ring (see <A HREF="partTermOrderings.html">Term Orderings</A>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use R ::= QQ[t,x,y,z];
+/**/ E := elim(t, ideal(t^15+t^6+t-x, t^5-y, t^3-z));
+/**/ indent(E);
+ideal(
+  z^5 -y^3,
+  y^4 +y*z^2 -x*y +z^2,
+  x*y^3*z +y^2*z^3 +x*z^3 -x^2*z +y^2 +y,
+  y^2*z^4 +x^2*y^3 +x*y^2*z^2 +y*z^4 +x^2*z^2 -x^3 +y^2*z +2*y*z +z,
+  y^3*z^3 -x*z^3 +y^3 +y^2
+)
+
+/**/ use R ::= QQ[t,s,x,y,z,w];
+/**/ t..x;
+[t, s, x]
+
+/**/ elim(t..x, ideal(t-x^2*z*w, x^2-t, y^2*t-w)); -- Note the use of t..x.
+ideal(z*w^2 -w)
+
+/**/ use R ::= QQ[t[1..2], x[1..4]];
+/**/ I := ideal(x[1]-t[1]^4, x[2]-t[1]^2*t[2], x[3]-t[1]*t[2]^3, x[4]-t[2]^4);
+/**/ elim(indets(R,"t"), I);
+ideal(x[2]^4 -x[1]^2*x[4],  x[3]^4 -x[1]*x[4]^3)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partTermOrderings.html">Term Orderings</A>
+</ul>
+</div>
+
+</body>
+</html>

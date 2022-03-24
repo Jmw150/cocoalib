@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FloatApprox</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FloatApprox">up</a> <a href="cmdflatten.html">previous</a>  <a href="cmdFloatStr.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FloatApprox<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+approx. of rational number of the form <font color=#0000aa>M*2^E</font></i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FloatApprox(X: INT|RAT|RINGELEM, PrecBits: INT): RAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes an approximation of the form <font color=#0000aa>M*2^E</font> to a rational number
+<tt><b style="background:#bbeeee">X</b></tt> where the mantissa satisfies <font color=#0000aa>2^(PrecBits-1) &lt;= |M| < 2^PrecBits-1</font> where
+<font color=#0000aa>PrecBits</font> is the specified bit precision.  It gives 0 when applied to 0.
+<br><br>
+The updated version of this function is not backward compatible with the
+old one; you must replace the 2nd arg by the number of bits you want in
+the mantissa (see <A HREF="cmdFloorLog2FloorLog10FloorLogBase.html">
+    <tt>FloorLog2, FloorLog10, FloorLogBase</tt>
+  </A>).
+The old fn is obsolescent and is now called <tt><b style="background:#bbeeee">FloatApprox10</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  FloatApprox(1/3, 10);
+683/2048
+
+/**/  FloatApprox(1/3, 20);
+699051/2097152
+
+/**/  FloatApprox(123456789,8);
+123207680
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCFApprox.html">CFApprox</A>
+<li><a href="cmdFloatStr.html">FloatStr</A>
+<li><a href="cmdMantissaAndExponent2.html">MantissaAndExponent2</A>
+</ul>
+</div>
+
+</body>
+</html>

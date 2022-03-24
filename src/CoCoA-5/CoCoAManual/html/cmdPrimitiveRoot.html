@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PrimitiveRoot</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PrimitiveRoot">up</a> <a href="cmdPrimaryPoincare[OBSOLESCENT].html">previous</a>  <a href="cmdprimorial.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PrimitiveRoot<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+find a primitive root modulo a prime</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PrimitiveRoot(P: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Find a primitive root modulo the prime <tt><b style="background:#bbeeee">P</b></tt>, i.e. a generator of
+the cyclic multiplicative group of non-zero integers mod <tt><b style="background:#bbeeee">P</b></tt>.
+<br><br>
+Currently, the function produces the least positive primitive root.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  PrimitiveRoot(17551561);
+97
+/**/  PrimitiveRoot(4111);
+12;
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsPrime.html">IsPrime</A>
+</ul>
+</div>
+
+</body>
+</html>

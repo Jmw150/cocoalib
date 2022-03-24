@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>support</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#support">up</a> <a href="cmdsum.html">previous</a>  <a href="cmdswap.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>support<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the list of terms of a polynomial or moduleelem</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+support(F: RINGELEM): LIST
+support(F: MODULEELEM): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of terms of F.  To get a list of
+monomials, which includes coefficients, use <A HREF="cmdmonomials.html">
+    <tt>monomials</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  F := 3*x^2-4*x*y+y^3+3;
+/**/  support(F);
+[y^3, x^2, x*y, 1]
+
+/**/  monomials(F);
+[y^3, 3*x^2, -4*x*y, 3]
+
+// NOT YET IMPLEMENTED for MODULEELEM
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcoefficients.html">coefficients</A>
+<li><a href="cmdmonomials.html">monomials</A>
+</ul>
+</div>
+
+</body>
+</html>

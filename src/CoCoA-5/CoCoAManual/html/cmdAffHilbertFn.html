@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>AffHilbertFn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#AffHilbertFn">up</a> <a href="cmdAffHilbert[OBSOLESCENT].html">previous</a>  <a href="cmdAffHilbertSeries.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>AffHilbertFn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the affine Hilbert function</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+AffHilbertFn(R: (Poly or Quotient)RING): TAGGED("$hp.Hilbert")
+AffHilbertFn(R: (Poly or Quotient)RING, N: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first form of this function computes the affine Hilbert function
+for <tt><b style="background:#bbeeee">R</b></tt>.  The second form computes the <tt><b style="background:#bbeeee">N</b></tt>-th value of the affine
+Hilbert function.  The weights of the indeterminates of <tt><b style="background:#bbeeee">R</b></tt> must all
+be 1.  For evaluating of the Hilbert function repeatedly, use the
+function <A HREF="cmdEvalHilbertFn.html">
+    <tt>EvalHilbertFn</tt>
+  </A> instead of <tt><b style="background:#bbeeee">AffHilbertFn(R, N)</b></tt> in order
+to speed up execution.
+<br><br>
+The coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  AffHilbertFn(R/ideal(z^4-1, x*z^4-y-3));
+H(0) = 1
+H(1) = 3
+H(t) = 4t - 2   for t >= 2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAffHilbertSeries.html">AffHilbertSeries</A>
+<li><a href="cmdEvalHilbertFn.html">EvalHilbertFn</A>
+<li><a href="cmdHilbertPoly.html">HilbertPoly</A>
+<li><a href="cmdHVector.html">HVector</A>
+<li><a href="cmdHilbertSeries.html">HilbertSeries</A>
+</ul>
+</div>
+
+</body>
+</html>

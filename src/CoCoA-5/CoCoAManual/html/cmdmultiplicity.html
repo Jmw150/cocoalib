@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>multiplicity</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#multiplicity">up</a> <a href="cmdMultiplicationMat.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>multiplicity<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the multiplicity (degree) of a ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+multiplicity(R: RING): INT
+multiplicity(M: MODULE): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the multiplicity (or degree) of <tt><b style="background:#bbeeee">R</b></tt> or <tt><b style="background:#bbeeee">M</b></tt>,
+i.e. the leading coefficient of the Hilbert polynomial multiplied by
+the factorial of the degree of the Hilbert polynomial.
+<tt><b style="background:#bbeeee">M</b></tt> can be a module or a quotient.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[t,x,y,z];
+/**/  multiplicity(R/ideal(x,y,z)^5);
+35
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdHilbertFn.html">HilbertFn</A>
+<li><a href="cmdHilbertSeries.html">HilbertSeries</A>
+<li><a href="cmdHVector.html">HVector</A>
+</ul>
+</div>
+
+</body>
+</html>

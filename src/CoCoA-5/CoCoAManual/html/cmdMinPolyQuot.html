@@ -1,0 +1,107 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MinPolyQuot</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MinPolyQuot">up</a> <a href="cmdMinPoly.html">previous</a>  <a href="cmdMinPowerInIdeal.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MinPolyQuot<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+minimal polynomial in quotient ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MinPolyQuot(f: RINGELEM, I: IDEAL, z: RINGELEM): RINGELEM
+MinPolyQuot(f: RINGELEM, I: IDEAL, z: RINGELEM, VerificationLevel: INT): RINGELEM
+MinPolyQuotDef(f: RINGELEM, I: IDEAL, z: RINGELEM): RINGELEM
+MinPolyQuotElim(f: RINGELEM, I: IDEAL, z: RINGELEM): RINGELEM
+MinPolyQuotMat(f: RINGELEM, I: IDEAL, z: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions return the minimal polynomial (in the indeterminate <tt><b style="background:#bbeeee">z</b></tt>)
+of the element <tt><b style="background:#bbeeee">f</b></tt> modulo the 0-dimensional ideal <tt><b style="background:#bbeeee">I</b></tt>.
+<br><br>
+See article Abbott, Bigatti, Palezzato, Robbiano
+"Computing and Using Minimal Polynomials"
+(<tt><b style="background:#bbeeee">https://arxiv.org/abs/1702.07262</b></tt>)
+<br><br>
+When coefficients are in <A HREF="cmdQQ.html">
+    <tt>QQ</tt>
+  </A>, <tt><b style="background:#bbeeee">MinPolyQuot</b></tt> uses modular methods.
+If called with <tt><b style="background:#bbeeee">VerificationLevel</b></tt> equal to <font color=#0000aa>n>=0</font> the result polynomial
+is verified over <tt><b style="background:#bbeeee">FF_p</b></tt>, with n different primes (if n=0, not verified).
+<br><br>
+Verbosity:
+At level 80 it lists all primes used, indicating any which are <b>bad</b>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[x,y];
+/**/ I := IdealOfPoints(P, mat([[1,2], [3,4], [5,6]]));
+/**/ MinPolyQuot(x,I,x); -- the smallest x-univariate poly in I
+x^3 -9*x^2 +23*x -15
+/**/ indent(factor(It));
+record[
+  RemainingFactor := 1,
+  factors := [x -1, x -3, x -5],
+  multiplicities := [1, 1, 1]
+]
+
+/**/ f := x+y;
+/**/ I := ideal(x^2, y^2);
+/**/ MinPolyQuot(f,I,x);
+x^3
+/**/ subst(It, x, f) isin I;
+true
+
+/**/ use QQ[x,y];
+/**/ I := ideal(x^3-5,y^2-3);
+/**/ f := x+y;
+/**/ SetVerbosityLevel(80);
+/**/ MinPolyQuot(f, I, x);
+1: prime is 32009
+2: prime is 32027
+x^6 -9*x^4 -10*x^3 +27*x^2 -90*x -2
+
+---- this is how to use an indet in another ring:
+/**/ QQt := RingQQt(1);
+/**/ MinPolyQuot(f, I, indet(RingQQt(1),1));
+t^6 -9*t^4 -10*t^3 +27*t^2 -90*t -2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMinPoly.html">MinPoly</A>
+</ul>
+</div>
+
+</body>
+</html>

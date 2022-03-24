@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ImportByRef, ImportByValue</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ImportByRef, ImportByValue">up</a> <a href="cmdImplicitPlotOn.html">previous</a>  <a href="cmdin.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ImportByRef, ImportByValue<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+import an external local variable by reference or value</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ImportByRef X;
+ImportByValue X;
+  where <tt><b style="background:#bbeeee">X</b></tt> is the name of a variable in the containing scope.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These commands can be used only inside anonymous functions (see <A HREF="cmdfunc.html">
+    <tt>func</tt>
+  </A>).
+<br><br>
+These commands "import" an external, non-top-level variable by reference
+or value.  <tt><b style="background:#bbeeee">ImportByValue</b></tt> creates a variable inside the anon func with
+the given name, and its initial value is taken from the external variable
+of the same name in the context the anonymous function is defined.  In
+contrast, <tt><b style="background:#bbeeee">ImportByRef</b></tt> creates a <b>reference</b> (from inside the anon
+func) to the named external variable in the context where the anon func
+is defined.
+<br><br>
+See <A HREF="cmdTopLevel.html">
+    <tt>TopLevel</tt>
+  </A> for accessing top-level variables.
+<br><br>
+NOTE: Package variables should be accessed directly (via their fully
+qualified names); they cannot be imported.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  define add(X)
+/**/    AnonFn := func(Y) ImportByValue X; return X+Y; EndFunc;
+/**/    return AnonFn;
+/**/  EndDefine;
+/**/  add3 := add(3);
+/**/  add3(2);
+5
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+<li><a href="cmdfunc.html">func</A>
+</ul>
+</div>
+
+</body>
+</html>

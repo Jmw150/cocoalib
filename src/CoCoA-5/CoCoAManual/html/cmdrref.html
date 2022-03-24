@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>rref</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#rref">up</a> <a href="cmdRowMat.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>rref<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+reduced row echelon form of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+rref(M: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the reduced row echelon form of <tt><b style="background:#bbeeee">M</b></tt>;
+the columns are considered in left-to-right order.  An error is
+signalled if the matrix is not over a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  M := mat([[1,2,3],[2,3,4]]);
+/**/  rref(M);
+matrix(QQ,
+ [[1, 0, -1],
+  [0, 1, 2]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrk.html">rk</A>
+</ul>
+</div>
+
+</body>
+</html>

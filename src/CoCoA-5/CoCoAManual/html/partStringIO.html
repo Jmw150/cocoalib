@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>String IO</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c8">up</a> <a href="partFileIO.html">previous</a> <a href="partCommandsandFunctionsforIO.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.8.4 String IO</b></font>
+</td></tr></table>
+
+***** NOT YET UPDATED TO CoCoA-5: follow with care *****
+<br><br>
+To print CoCoA output to a string, on may use <A HREF="cmdOpenOString.html">
+    <tt>OpenOString</tt>
+  </A> to
+<b>open</b> the string, then <A HREF="cmdprinton.html">
+    <tt>print on</tt>
+  </A> to write to it.  To read from a
+string, one may open the string for input with <A HREF="cmdOpenIString.html">
+    <tt>OpenIString</tt>
+  </A> then read
+substrings from it with <A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  S := "hello world!\ngoodbye world!";
+/**/  D := OpenIString(S);  -- open the string S for input to CoCoA
+/**/  line := GetLine(D);  -- read 1st line from the string
+/**/  line;
+hello world!
+/**/  Close(D);  -- close device D
+</pre></td></tr></table>
+
+There are usually more direct ways to collect results in strings.  For
+instance, if the output of a CoCoA command is not already of type
+<tt><b style="background:#bbeeee">STRING</b></tt>, one may convert it to a string using <A HREF="cmdsprint.html">
+    <tt>sprint</tt>
+  </A>.
+
+</div>
+
+</body>
+</html>

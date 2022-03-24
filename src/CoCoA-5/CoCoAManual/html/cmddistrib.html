@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>distrib</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#distrib">up</a> <a href="cmddiscriminant.html">previous</a>  <a href="cmddiv.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>distrib<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the distribution of objects in a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+distrib(L: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+For each object <tt><b style="background:#bbeeee">E</b></tt> of a list <tt><b style="background:#bbeeee">L</b></tt>,
+let N(E) be the number of times <tt><b style="background:#bbeeee">E</b></tt> occurs as a component of <tt><b style="background:#bbeeee">L</b></tt>.
+Then <tt><b style="background:#bbeeee">Distrib(L)</b></tt> returns the list whose components are <tt><b style="background:#bbeeee">[E, N(E)]</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  distrib(["b","a","b",4,4,[1,2]]);
+[["b", 2], ["a", 1], [4, 2], [[1, 2], 1]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcount.html">count</A>
+</ul>
+</div>
+
+</body>
+</html>

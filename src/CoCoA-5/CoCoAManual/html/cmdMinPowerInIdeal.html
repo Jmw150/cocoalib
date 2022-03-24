@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MinPowerInIdeal</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MinPowerInIdeal">up</a> <a href="cmdMinPolyQuot.html">previous</a>  <a href="cmdMinSubsetOfGens.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MinPowerInIdeal<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the mininum power of a polynomial is an ideal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MinPowerInIdeal(F: RINGELEM, I: IDEAL): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the minimum power of F, the first argument, in
+the ideal I, the second argument.
+If F is not in the radical I then -1 is returned.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  I := ideal(x^6*y^4, z);
+/**/  IsInRadical(x*y, I);
+true
+
+/**/  MinPowerInIdeal(x*y, I);
+6
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsInRadical.html">IsInRadical</A>
+<li><a href="cmdradical.html">radical</A>
+</ul>
+</div>
+
+</body>
+</html>

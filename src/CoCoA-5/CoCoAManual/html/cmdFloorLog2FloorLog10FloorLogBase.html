@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FloorLog2, FloorLog10, FloorLogBase</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FloorLog2, FloorLog10, FloorLogBase">up</a> <a href="cmdfloor.html">previous</a>  <a href="cmdFloorRoot.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FloorLog2, FloorLog10, FloorLogBase<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+integer part of the logarithm</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FloorLog2(X: RAT): INT
+FloorLog10(X: RAT): INT
+FloorLogBase(X: RAT, base: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions compute the integer part (floor) of the logarithm of a
+rational number in a given base.  <tt><b style="background:#bbeeee">FloorLog2(X)</b></tt> is just shorthand
+for <tt><b style="background:#bbeeee">FloorLogBase(X,2)</b></tt>; similarly for <tt><b style="background:#bbeeee">FloorLog10</b></tt>.
+<br><br>
+NOTE: <tt><b style="background:#bbeeee">FloorLog10</b></tt> may be useful for formatted printing as it
+gives the number of digits (minus 1) in base 10; the signs of <tt><b style="background:#bbeeee">X</b></tt> and
+<tt><b style="background:#bbeeee">base</b></tt> are ignored.
+<br><br>
+These functions were called <tt><b style="background:#bbeeee">ILogBase</b></tt> up to version CoCoA-5.1.2.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  FloorLog2(128);
+7
+/**/  FloorLog10(999);  -- number of digits minus 1
+2
+/**/  FloorLogBase(128,2);
+7
+/**/  FloorLogBase(81.5,3);
+4
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

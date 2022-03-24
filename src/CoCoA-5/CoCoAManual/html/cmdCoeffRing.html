@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CoeffRing</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CoeffRing">up</a> <a href="cmdCoeffOfTerm.html">previous</a>  <a href="cmdColMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CoeffRing<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the ring of coefficients of a polynomial ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CoeffRing(R: RING): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the ring of coefficients of a polynomial ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  S ::= ZZ/(2)[a,b,c];
+/**/  CoeffRing(R);
+QQ
+
+/**/  CoeffRing(S);
+FFp(2)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcharacteristic.html">characteristic</A>
+<li><a href="cmdcoefficients.html">coefficients</A>
+<li><a href="cmdCurrentRing.html">CurrentRing</A>
+<li><a href="cmdindets.html">indets</A>
+</ul>
+</div>
+
+</body>
+</html>

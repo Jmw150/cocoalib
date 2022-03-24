@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HColon</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HColon">up</a> <a href="cmdHasGBasis.html">previous</a>  <a href="cmdHermitePoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HColon<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+ideal or module quotient</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HColon(M: IDEAL, N: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+The function <A HREF="cmdcolon.html">
+    <tt>colon</tt>
+  </A> returns the quotient of M by N:
+the ideal of all polynomials F such that F*G is in M for all G in N.
+<br><br>
+This function computes the same ideal using a Hilbert-driven
+algorithm. It differs from <A HREF="cmdcolon.html">
+    <tt>colon</tt>
+  </A> only when the input
+is non-homogeneous, in which case, <tt><b style="background:#bbeeee">HColon</b></tt> may be faster.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/   use R ::= QQ[x,y];
+/**/   ideal(x*y, x^2) : ideal(x);
+ideal(y,  x)
+/**/   colon(ideal(x^2, x*y), ideal(x, x-y^2));
+ideal(x)
+***** NOT YET IMPLEMENTED *****
+  HColon(ideal(x^2, x*y), ideal(x, x-y^2));
+ideal(x)
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdHSaturation.html">HSaturation</A>
+<li><a href="cmdsaturate.html">saturate</A>
+<li><a href="cmdHColon.html">HColon</A>
+<li><a href="cmdcolon.html">colon</A>
+</ul>
+</div>
+
+</body>
+</html>

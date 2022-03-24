@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsFactorClosed</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsFactorClosed">up</a> <a href="cmdIsEvenPolyIsOddPoly.html">previous</a>  <a href="cmdIsField.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsFactorClosed<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether a list of PPs is factor closed</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsFactorClosed(L: LIST of power products): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+A set of power products is factor closed iff it contains every factor of
+every one of its elements.  This function checks whether the given set
+is factor closed (also known as "order-ideal").  It is an error if the
+list <tt><b style="background:#bbeeee">L</b></tt> is empty.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  IsFactorClosed([1, x, x^2]);
+true
+/**/  IsFactorClosed([one(P), y^2]);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdQuotientBasis.html">QuotientBasis</A>
+<li><a href="cmdLT.html">LT</A>
+<li><a href="cmdApproxPointsNBM.html">ApproxPointsNBM</A>
+<li><a href="cmdIsStronglyStable.html">IsStronglyStable</A>
+</ul>
+</div>
+
+</body>
+</html>

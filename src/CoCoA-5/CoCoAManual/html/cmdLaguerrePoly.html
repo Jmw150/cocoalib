@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LaguerrePoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LaguerrePoly">up</a> <span class="grayed">previous</span> <a href="cmdlast.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LaguerrePoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Orthogonal Polynomials: Chebyshev, Hermite, Laguerre</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LaguerrePoly(N: INT, X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function <tt><b style="background:#bbeeee">LaguerrePoly</b></tt> returns the <tt><b style="background:#bbeeee">N</b></tt>-th Laguerre polynomial
+multiplied by <tt><b style="background:#bbeeee">factorial(N)</b></tt> (so that the coefficients are integers).
+<br><br>
+This function also works if <tt><b style="background:#bbeeee">X</b></tt> is not an indeterminate: the result
+is then the evaluation of the polynomial at the given value.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  LaguerrePoly(3,x);
+-x^3 +9*x^2 -18*x +6
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdChebyshevPoly.html">ChebyshevPoly</A>
+<li><a href="cmdHermitePoly.html">HermitePoly</A>
+</ul>
+</div>
+
+</body>
+</html>

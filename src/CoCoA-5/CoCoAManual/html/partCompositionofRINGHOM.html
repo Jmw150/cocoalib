@@ -1,0 +1,43 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Composition of RINGHOM</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c10">up</a> <a href="partIntroductiontoRINGHOM.html">previous</a> <a href="partCommandsandFunctionsforRINGHOM.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.10.2 Composition of RINGHOM</b></font>
+</td></tr></table>
+
+Two RINGHOM <tt><b style="background:#bbeeee">phi: R-->S</b></tt> and <tt><b style="background:#bbeeee">psi: S-->T</b></tt>
+can be composed.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  R := NewPolyRing(QQ, "a");
+/**/  S := NewFractionField(R);  -- QQ(a)
+/**/  T := NewPolyRing(S, "x");
+/**/  phi := CanonicalHom(R,S);
+/**/  psi := CanonicalHom(S,T);
+/**/  theta := psi(phi);
+/**/  theta(RingElem(R, "a^2+a-1"));
+a^2 +a -1
+/**/  RingOf(theta(RingElem(R, "a^2+a-1"))) = T;
+true
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

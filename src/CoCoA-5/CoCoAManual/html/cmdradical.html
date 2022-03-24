@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>radical</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#radical">up</a> <span class="grayed">previous</span> <a href="cmdRadicalOfUnmixed.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>radical<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+radical of an ideal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+radical(N: INT): INT
+radical(X: RINGELEM): RINGELEM
+radical(I: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the radical of its argument.  For integers and
+ring elements this means the product of the distinct irreducibles
+dividing the argument (sometimes called "square-free").
+For ideals it computes the radical ideal using the algorithm described
+in the paper
+<br><br>
+  M. Caboara, P. Conti and C. Traverso: <b>Yet Another Ideal
+  Decomposition Algorithm.</b> Proc. AAECC-12, pp 39-54, 1997, Lecture
+  Notes in Computer Science, n.1255 Springer-Verlag.
+<br><br>
+NOTE: at the moment, this implementation works only if the coefficient
+ring is the rationals or has large enough characteristic.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  radical(99);
+33
+/**/  use R ::= QQ[x,y];
+/**/  radical((x -y)^3 * (x +y));
+x^2 -y^2
+/**/  I := ideal(x,y)^3;
+/**/  radical(I);
+ideal(y, x)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsInRadical.html">IsInRadical</A>
+<li><a href="cmdEquiIsoDec.html">EquiIsoDec</A>
+<li><a href="cmdRadicalOfUnmixed.html">RadicalOfUnmixed</A>
+<li><a href="cmdSqFreeFactor.html">SqFreeFactor</A>
+</ul>
+</div>
+
+</body>
+</html>

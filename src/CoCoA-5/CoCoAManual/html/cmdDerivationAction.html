@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>DerivationAction</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#DerivationAction">up</a> <a href="cmdderiv.html">previous</a>  <a href="cmddescribe.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>DerivationAction<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Action of a derivation</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+DerivationAction(D: RINGELEM, P: RINGELEM)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Thanks to Enrico Carlini.
+<br><br>
+Given the polynomial <tt><b style="background:#bbeeee">P</b></tt> and the derivation <tt><b style="background:#bbeeee">D</b></tt>, this function
+computes the action of <tt><b style="background:#bbeeee">D</b></tt> on <tt><b style="background:#bbeeee">P</b></tt>.
+<br><br>
+For the sake of simplicity Forms/Polynomials and Derivations live in
+the same ring, the distinction between them is purely formal.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  DerivationAction(x*y*z, x^3+x*y*z);
+1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdInverseSystem.html">InverseSystem</A>
+<li><a href="cmdPerpIdealOfForm.html">PerpIdealOfForm</A>
+</ul>
+</div>
+
+</body>
+</html>

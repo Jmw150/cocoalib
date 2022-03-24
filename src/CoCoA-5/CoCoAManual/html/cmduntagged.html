@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>untagged</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#untagged">up</a> <a href="cmdUnset[OBSOLETE].html">previous</a>  <a href="cmduse.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>untagged<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+untag an object</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+untagged(E:TAGGED_OBJECT): OBJECT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function strips an object <tt><b style="background:#bbeeee">E</b></tt> of its tag, if any.
+<br><br>
+Tags are used for pretty printing of objects: see the reference
+<A HREF="partPrintingaTaggedObject.html">Printing a Tagged Object</A>.
+<br><br>
+NOTE: in CoCoA-4 the obsolete syntax <tt><b style="background:#bbeeee">@E</b></tt> should be replaced
+by <tt><b style="background:#bbeeee">untagged(E)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [1,2,3];
+/**/  M := tagged(L,"MyTag");
+/**/  type(L);
+LIST
+
+/**/  type(M);
+TAGGED("MyTag")
+
+/**/  type(untagged(M));
+LIST
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partPrintingaTaggedObject.html">Printing a Tagged Object</A>
+<li><a href="cmdtag.html">tag</A>
+<li><a href="cmdtagged.html">tagged</A>
+</ul>
+</div>
+
+</body>
+</html>

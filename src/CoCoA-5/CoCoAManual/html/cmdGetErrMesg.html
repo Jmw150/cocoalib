@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GetErrMesg</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GetErrMesg">up</a> <a href="cmdGetEnv.html">previous</a>  <a href="cmdGetLine.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GetErrMesg<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the message associated with an error</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GetErrMesg(E: ERROR): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the string containing the error message
+associated with an error.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  ErrMsg := "";
+
+  Try
+    F := 1/0;
+  UponError E Do
+    ErrMsg := GetErrMesg(E);
+  EndTry;  -- no error is thrown with Try .. UponError .. EndTry
+
+/**/ ErrMsg;
+Division by zero or by a zero-divisor
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdtry.html">try</A>
+<li><a href="cmderror.html">error</A>
+</ul>
+</div>
+
+</body>
+</html>

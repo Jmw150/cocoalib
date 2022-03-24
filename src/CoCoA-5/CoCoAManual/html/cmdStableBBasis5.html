@@ -1,0 +1,113 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>StableBBasis5</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#StableBBasis5">up</a> <a href="cmdSqFreeFactor.html">previous</a>  <a href="cmdStableIdeal.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>StableBBasis5<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Stable Border Basis of ideal of points</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ StableBBasis5(Pts: LIST, Toler: LIST): RECORD
+ StableBBasis5(Pts: LIST, Toler: LIST, Gamma: RAT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+See <A HREF="cmdApproxPointsNBM.html">
+    <tt>ApproxPointsNBM</tt>
+  </A><br><br>
+This function returns a record containing a <b>stable order ideal</b> of
+the ideal of points, and a list of <b>almost vanishing</b> polynomials.
+If the cardinality of the order ideal is equal to the number of points,
+it is in fact a <b>quotient basis</b>, and in this case a
+<b>stable border basis</b> founded on it is also returned.  The boolean field
+<tt><b style="background:#bbeeee">StableBBasisFound</b></tt> is set to <tt><b style="background:#bbeeee">true</b></tt> if a stable border basis was found,
+otherwise <tt><b style="background:#bbeeee">false</b></tt>.
+<br><br>
+The first argument is a list of points in k-dimensional space, and the
+second argument is list of k positive tolerances (one for each dimension).
+The function builds the stable order ideal stepwise by testing, from a
+numerical point of view, the linear dependence of a set of vectors.
+So that the answer can be represented, the current ring must have at
+least k indeterminates; the term ordering is ignored as it plays no role
+in determining the border basis.
+ <br><br>
+ There is a third, optional argument: it is a real non negative number
+ <tt><b style="background:#bbeeee">Gamma</b></tt> which is used for scaling the threshold on the
+ admissible perturbation of the points.
+ A value of <tt><b style="background:#bbeeee">Gamma</b></tt> << 1 should be used.
+ If no value is specified then by default <tt><b style="background:#bbeeee">Gamma</b></tt> = 0.1
+ <br><br>
+ For a full description of the algorithms we refer to the paper
+ J.Abbott, C.Fassino, L.Torrente
+ <b>Stable Border Bases for Ideals of Points</b> (to appear in JSC
+ or arXiv:07062316).
+ <br><br><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED ***** See ApproxPointsNBM
+  Pts := [[0.1,-1],[1,1],[2,3]];
+  Toler := [0.1,0.1];
+  StableBBasis5(Pts, Toler);
+record[
+  AlmostVanishing := [ (...) ],
+  BBasis := [
+    -3602879701896397/288230376151711744y^2 + x -
+  32425917317067571/72057594037927936y -
+  154923827181545063/288230376151711744,
+    xy - 140512308373959475/288230376151711744y^2 -
+  39631676720860365/72057594037927936y +
+  10808639105689191/288230376151711744,
+    y^3 - 3y^2 - y + 3,
+    xy^2 - 580063632005319885/288230376151711744y^2 -
+  32425917317067571/72057594037927936y +
+  421536925121878425/288230376151711744],
+  SOI := [1, y, y^2],
+  StableBBasisFound := true]
+-------------------------------
+  Toler := [0.6, 0.6]:
+  StableBBasis5(Pts, Toler);
+record[AlmostVanishing := [.....], SOI := [1, y], StableBBasisFound := false]
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdApproxPointsNBM.html">ApproxPointsNBM</A>
+</ul>
+</div>
+
+</body>
+</html>

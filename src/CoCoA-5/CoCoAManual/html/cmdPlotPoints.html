@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PlotPoints</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PlotPoints">up</a> <a href="cmdPlayCantStop.html">previous</a>  <a href="cmdPlotPointsOn.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PlotPoints<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+outputs the coordinates of the points to a file</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PlotPoints(L: LIST of points)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function outputs the coordinates of the points (with two
+components) to a file called "CoCoAPlot".
+See <A HREF="cmdPlotPointsOn.html">
+    <tt>PlotPointsOn</tt>
+  </A> for outputting to another file.
+<br><br>
+This result can be plotted using your preferred plotting program.
+For example, start "gnuplot" and then give it the command
+
+  <pre>  plot "CoCoAPlot"</pre>
+
+to see the plot.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  PlotPoints([ [X, X^2-X+14] | X in -10..10]);
+Plotting points...100%
+21 plotted points have been placed in the file CoCoAPlot
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdImplicitPlot.html">ImplicitPlot</A>
+<li><a href="cmdPlotPointsOn.html">PlotPointsOn</A>
+</ul>
+</div>
+
+</body>
+</html>

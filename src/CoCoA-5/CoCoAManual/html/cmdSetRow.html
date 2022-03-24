@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SetRow</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SetRow">up</a> <a href="cmdSetEntry.html">previous</a>  <a href="cmdSetStackSize.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SetRow<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+set a list as a row into a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SetRow(ref M: MAT, i: INT, L: LIST)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This procedure sets the elements in <tt><b style="background:#bbeeee">L</b></tt> as entries of the
+<tt><b style="background:#bbeeee">i</b></tt>-th row in the matrix <tt><b style="background:#bbeeee">M</b></tt>; it returns nothing!
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  M := IdentityMat(QQ, 5);
+/**/  SetRow(ref M, 1, [2,3,4,5,6]);
+/**/  M;
+matrix(QQ,
+ [[2, 3, 4, 5, 6],
+  [0, 1, 0, 0, 0],
+  [0, 0, 1, 0, 0],
+  [0, 0, 0, 1, 0],
+  [0, 0, 0, 0, 1]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdref.html">ref</A>
+<li><a href="cmdGetRow.html">GetRow</A>
+<li><a href="cmdSetCol.html">SetCol</A>
+<li><a href="cmdSwapRows.html">SwapRows</A>
+</ul>
+</div>
+
+</body>
+</html>

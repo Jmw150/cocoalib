@@ -1,0 +1,42 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Package essentials</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c9">up</a> <a href="partFirstExampleofaPackage.html">previous</a> <a href="partGlobalAliases.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.9.3 Package essentials</b></font>
+</td></tr></table>
+
+A package begins with
+
+  <pre>
+  Package $PackageName
+</pre>
+
+and ends with
+
+  <pre>
+  EndPackage;
+</pre>
+<tt><b style="background:#bbeeee">PackageName</b></tt> is a string that will be used to identify the package.
+The dollar sign is required.  The <tt><b style="background:#bbeeee">PackageName</b></tt> must be a valid
+identifier: i.e. start with a letter and comprise only letters,
+digits, slash and underscore; the name should be meaningful (and
+usually long, to avoid any risk of a name clash).  We recommend using
+a name of the form <tt><b style="background:#bbeeee">contrib/subject</b></tt>.
+<br><br>
+All packages in the CoCoA directory <tt><b style="background:#bbeeee">packages</b></tt> are
+automatically loaded when starting CoCoA.
+
+</div>
+
+</body>
+</html>

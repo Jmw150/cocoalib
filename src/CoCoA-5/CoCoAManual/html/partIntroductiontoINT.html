@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Introduction to INT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c2">up</a> <span class="grayed">previous</span> <a href="partCommandsandFunctionsforINT.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.2.1 Introduction to INT</b></font>
+</td></tr></table>
+
+There are two types of numbers recognized by CoCoA: integers (type
+INT), rationals (type RAT).
+(CoCoA-4 also had <tt><b style="background:#bbeeee">ZMOD</b></tt>, but CoCoA-5 can deal with more rings:
+see <A HREF="cmdNewZZmod.html">
+    <tt>NewZZmod</tt>
+  </A>).
+Numbers in CoCoA are handled with arbitrary precision.  This means that the
+sizes of numbers are only limited by the amount of available memory.
+The basic numeric operations---addition (<tt><b style="background:#bbeeee">+</b></tt>), subtraction (<tt><b style="background:#bbeeee">-</b></tt>),
+multiplication (<tt><b style="background:#bbeeee">*</b></tt>), division (<tt><b style="background:#bbeeee">/</b></tt>), exponentiation (<tt><b style="background:#bbeeee">^</b></tt>),
+and negation (<tt><b style="background:#bbeeee">-</b></tt>)---behave as one would expect.
+Be careful, two adjacent minus signs, <tt><b style="background:#bbeeee">--</b></tt>, start a comment in CoCoA.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  N := 3;
+/**/  -N;
+-3
+--N;  <-- THIS IS A COMMENT  (not C++ decrement)
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

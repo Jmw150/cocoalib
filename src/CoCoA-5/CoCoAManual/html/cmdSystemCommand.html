@@ -1,0 +1,61 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SystemCommand</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SystemCommand">up</a> <a href="cmdSymmetricPolys.html">previous</a>  <a href="cmdsyz.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SystemCommand<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+run a system command</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SystemCommand(CMD: STRING): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function will work only if the CoCoA interpreter was started with
+the "enable system command" flag set; by default the flag is not set
+since system commands can be used maliciously (e.g. to delete files).
+<br><br>
+This function expects a string containing a "system command" (e.g. a
+shell command on Linux platforms).  The string <tt><b style="background:#bbeeee">CMD</b></tt> is passed to the
+underlying operating system command line interpreter for execution.
+The return value of <tt><b style="background:#bbeeee">SystemCommand</b></tt> depends on the platform (i.e. the
+C++ run-time environment), so should not be relied upon to provide
+any specific information: e.g. on some Linux systems the value returned
+is the exit code, on others it is 256 times the process exit code.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ ExitCode := SystemCommand("echo abc");  --> value of ExitCode is unclear
+abc
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

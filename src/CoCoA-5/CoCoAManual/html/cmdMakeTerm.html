@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MakeTerm</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MakeTerm">up</a> <a href="cmdMakeSet.html">previous</a>  <a href="cmdMakeTermOrd[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MakeTerm<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns a monomial (power-product) with given exponents</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MakeTerm(R: RING, L: LIST of INT): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the power-product in <tt><b style="background:#bbeeee">R</b></tt> whose list of exponents is
+<tt><b style="background:#bbeeee">L</b></tt>.  It is the inverse of <A HREF="cmdexponents.html">
+    <tt>exponents</tt>
+  </A>.  The length of <tt><b style="background:#bbeeee">L</b></tt> must be equal
+to the number of indeterminates in <tt><b style="background:#bbeeee">R</b></tt>.
+<br><br>
+This function was called <tt><b style="background:#bbeeee">LogToTerm</b></tt> up to version CoCoA-5.1.2.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  MakeTerm(R, [2,3,5]);
+x^2*y^3*z^5
+
+/**/  exponents(It);
+[2, 3, 5]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdexponents.html">exponents</A>
+</ul>
+</div>
+
+</body>
+</html>

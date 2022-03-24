@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsRadical</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsRadical">up</a> <a href="cmdIsQuotientRing.html">previous</a>  <a href="cmdIsRational.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsRadical<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if an IDEAL is radical</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsRadical(I: IDEAL): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the IDEAL <tt><b style="background:#bbeeee">I</b></tt> is radical.
+Currently works only for 0-dimensional ideals.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use R ::= QQ[x,y,z];
+/**/ I := ideal(x^2-1, y^2-2, z^3);
+/**/ IsRadical(I);
+false
+/**/ I := ideal(x^2-1, y^2-2, z^3-3);
+/**/ IsRadical(I);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdradical.html">radical</A>
+<li><a href="cmdIsMaximal.html">IsMaximal</A>
+<li><a href="cmdIsPrimary.html">IsPrimary</A>
+</ul>
+</div>
+
+</body>
+</html>

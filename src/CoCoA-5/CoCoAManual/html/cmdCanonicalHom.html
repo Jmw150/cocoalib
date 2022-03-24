@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CanonicalHom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CanonicalHom">up</a> <a href="cmdCanonicalBasis.html">previous</a>  <a href="cmdCanonicalRepr.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CanonicalHom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+canonical homomorphism</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CanonicalHom(R: RING, S: RING): RINGHOM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+CanonicalHom(R, S) -- where R and S are rings, gives the
+canonical homomorphism from R to S.
+Currently it works only on the most natural constructions:
+
+  <pre>
+ZZ -> S    QQ -> S
+R -> R/I   R -> FractionFiels(R)
+R -> R[x[1..N]]
+</pre>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  RmodI := NewQuotientRing(R, ideal(x^2-1));
+
+/**/  phi := CanonicalHom(R, RmodI);
+/**/  phi(x^3*y);
+(x*y)
+/**/  RingOf(It) = RmodI;
+true
+
+/**/  RingElem(RmodI, x^3*y);  -- same as phi(x^3*y)
+			       -- internally computes CanonicalHom
+(x*y)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewFractionField.html">NewFractionField</A>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+<li><a href="cmdCoeffEmbeddingHom.html">CoeffEmbeddingHom</A>
+<li><a href="cmdQuotientingHom.html">QuotientingHom</A>
+<li><a href="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+<li><a href="cmdPolyRingHom.html">PolyRingHom</A>
+</ul>
+</div>
+
+</body>
+</html>

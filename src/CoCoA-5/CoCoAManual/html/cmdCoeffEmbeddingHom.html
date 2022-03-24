@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CoeffEmbeddingHom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CoeffEmbeddingHom">up</a> <a href="cmdcodomain.html">previous</a>  <a href="cmdCoeffHeight.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CoeffEmbeddingHom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the coefficient embedding homomorphism of a polynomial ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CoeffEmbeddingHom(P: RING): RINGHOM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the coefficient embedding homomorphism of the
+polynomial ring <tt><b style="background:#bbeeee">P</b></tt>.  <A HREF="cmdConstantCoeff.html">
+    <tt>ConstantCoeff</tt>
+  </A> is a sort of inverse.
+<br><br>
+It is equivalent to (indeed it is called by) <tt><b style="background:#bbeeee">CanonicalHom(CoeffRing(P), P)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y];
+/**/  phi := CoeffEmbeddingHom(P);  -- phi: QQ -> P
+/**/  f := 2*x+3*y;
+/**/  f/phi(LC(f));
+x + (3/2)*y
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdConstantCoeff.html">ConstantCoeff</A>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+</ul>
+</div>
+
+</body>
+</html>

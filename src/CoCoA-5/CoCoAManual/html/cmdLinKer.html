@@ -1,0 +1,90 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LinKer</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LinKer">up</a> <a href="cmdLinearSimplify.html">previous</a>  <a href="cmdLinKerBasis.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LinKer<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+find the kernel of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LinKer(M: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a matrix whose columns represent a basis for
+the kernel of <tt><b style="background:#bbeeee">M</b></tt>.  Calling the function twice on the same input will
+not necessarily produce the same output, though in each case, a basis
+for the kernel is produced.
+<br><br>
+This function works only on matrices whose entries are in a field
+(from version CoCoA-5.0.3).  See <A HREF="cmdLinKerZZ.html">
+    <tt>LinKerZZ</tt>
+  </A> for computing a
+ZZ-basis for the kernel of <tt><b style="background:#bbeeee">M</b></tt>.
+<br><br>
+The output as it was given by CoCoA-4 (the basis of the ker) is
+now given by <A HREF="cmdLinKerBasis.html">
+    <tt>LinKerBasis</tt>
+  </A>.  See also <A HREF="cmdHilbertBasisKer.html">
+    <tt>HilbertBasisKer</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/   M := mat([[1,2,3,4],[5,6,7,8],[9,10,11,12]]);
+/**/   LinKer(M);
+matrix(QQ,
+ [[-1, -2],
+  [2, 3],
+  [-1, 0],
+  [0, -1]])
+
+/**/ M*It;
+matrix(QQ,
+ [[0, 0],
+  [0, 0],
+  [0, 0]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdLinKerBasis.html">LinKerBasis</A>
+<li><a href="cmdLinKerZZ.html">LinKerZZ</A>
+<li><a href="cmdLinSolve.html">LinSolve</A>
+<li><a href="cmdHilbertBasisKer.html">HilbertBasisKer</A>
+</ul>
+</div>
+
+</body>
+</html>

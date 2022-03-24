@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ZPQ</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ZPQ">up</a> <a href="cmdZeroMat.html">previous</a>  <a href="cmdZZ.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ZPQ<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+change field for polynomials and ideals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ZPQ(F: RINGELEM): RINGELEM
+ZPQ(F: LIST of RINGELEM): LIST of RINGELEM
+ZPQ(I: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+The function <tt><b style="background:#bbeeee">ZPQ</b></tt> maps a polynomial with finite field coefficients
+into one with rational (actually, integer) coefficients.  It is not
+uniquely defined mathematically, and currently for each coefficient
+the least non-negative equivalent integer is chosen.
+Users should not rely on this choice, though any change will be
+documented.
+<br><br>
+See <A HREF="cmdQZP.html">
+    <tt>QZP</tt>
+  </A> for more details.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  use R ::= QQ[x,y,z];
+  F := 1/2*x^3 + 34/567*x*y*z - 890; -- a poly with rational coefficients
+  use S ::= ZZ/(101)[x,y,z];
+  QZP(F);                            -- compute its image with coeffs in ZZ/(101)
+-50x^3 - 19xyz + 19
+-------------------------------
+  G := It;
+  use R;
+  ZPQ(G);     -- now map that result back to QQ[x,y,z] it is NOT the same as F...
+51x^3 + 82xyz + 19
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBringIn.html">BringIn</A>
+</ul>
+</div>
+
+</body>
+</html>

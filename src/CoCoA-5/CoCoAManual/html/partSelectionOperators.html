@@ -1,0 +1,46 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Selection Operators</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c4">up</a> <a href="partRelationalOperators.html">previous</a> <a href="partRangeOperator.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.4.4 Selection Operators</b></font>
+</td></tr></table>
+
+The selection operators are
+
+  <pre>
+      []    .
+</pre>
+
+Let N be of type INT and let L be of type STRING, MODULEELEM, LIST, or
+MAT.  Then the meaning of L[N] depends on the type of L as explained
+in the following table:
+
+  <pre>
+    ------------------------------------------------------------
+   |  Type of L    Meaning of L[N]                              |
+    ------------------------------------------------------------
+   | STRING       string consisting of the N-th character of L. |
+   | MODULEELEM   N-th component of L                           |
+   | LIST         N-th element of L                             |
+   | MAT          N-th element of L                             |
+    ------------------------------------------------------------
+                   Selection Operator
+</pre>
+
+If N is an identifier and L is of type RECORD, then <tt><b style="background:#bbeeee">L.N</b></tt> indicates the
+object contained in the field N of the record L (see <A HREF="cmdrecord.html">record</A>).
+	
+</div>
+
+</body>
+</html>

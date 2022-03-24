@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>QQEmbeddingHom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#QQEmbeddingHom">up</a> <a href="cmdQQ.html">previous</a>  <a href="cmdquit.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>QQEmbeddingHom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the homomorphism QQ --> R</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+QQEmbeddingHom(R: RING): RINGHOM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the homomorphism <tt><b style="background:#bbeeee">QQ --> R</b></tt>.
+This is useful for changing the ring of coefficients.
+<br><br>
+NOTE: this is a partial homomorphism when <tt><b style="background:#bbeeee">R</b></tt> has finite characteristic.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQxy ::= QQ[x,y];
+/**/  f := (2/3)*x +5*y;
+
+/**/  FFpxy ::= ZZ/(101)[x,y];
+/**/  QQEmbeddingHom(FFpxy) (LC(f));
+-33
+/**/  phi := PolyRingHom(QQxy, FFpxy, QQEmbeddingHom(FFpxy), indets(FFpxy));
+/**/  phi(f);
+-33*x +5*y
+
+/**/  RRxy := NewPolyRing(NewRingTwinFloat(64), "x,y");
+/**/  phi := PolyRingHom(QQxy, RRxy, QQEmbeddingHom(RRxy), indets(RRxy));
+/**/  phi(f);
+2/3*x +5*y
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+</ul>
+</div>
+
+</body>
+</html>

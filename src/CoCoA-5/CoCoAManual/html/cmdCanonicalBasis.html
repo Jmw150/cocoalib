@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CanonicalBasis</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CanonicalBasis">up</a> <a href="cmdCallOnGroebnerFanIdeals.html">previous</a>  <a href="cmdCanonicalHom.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CanonicalBasis<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+canonical basis of a free module</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CanonicalBasis(F: MODULE): LIST of MODULEELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">CanonicalBasis(F)</b></tt> return a list of the canonical basis elements
+of the free module <tt><b style="background:#bbeeee">F</b></tt>: i.e. the k-th element in the list is the
+unit vector with a 1 in the k-th coordinate.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  F := NewFreeModule(R,2);
+/**/  e := CanonicalBasis(F);
+/**/  e[2];
+[0, 1]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewFreeModule.html">NewFreeModule</A>
+<li><a href="cmdgens.html">gens</A>
+<li><a href="cmdGensAsColsGensAsRows.html">GensAsCols, GensAsRows</A>
+</ul>
+</div>
+
+</body>
+</html>

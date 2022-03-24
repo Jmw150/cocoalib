@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>resultant</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#resultant">up</a> <a href="cmdResetPanels[OBSOLETE].html">previous</a>  <a href="cmdreturn.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>resultant<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the resultant of two polynomials</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+resultant(F: RINGELEM, G: RINGELEM): RINGELEM
+resultant(F: RINGELEM, G: RINGELEM, X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions compute the resultant of the polynomials <tt><b style="background:#bbeeee">F</b></tt> and <tt><b style="background:#bbeeee">G</b></tt> with
+respect to the indeterminate <tt><b style="background:#bbeeee">X</b></tt>; in the first form <tt><b style="background:#bbeeee">F</b></tt> and <tt><b style="background:#bbeeee">G</b></tt>
+must be univariate, and <tt><b style="background:#bbeeee">X</b></tt> is taken to be their common indeterminate. 
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[p,q,x];
+/**/  F := x^3+p*x-q;   G := deriv(F, x);
+/**/  resultant(F, G, x);
+4*p^3 +27*q^2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddiscriminant.html">discriminant</A>
+<li><a href="cmdSylvesterMat.html">SylvesterMat</A>
+</ul>
+</div>
+
+</body>
+</html>

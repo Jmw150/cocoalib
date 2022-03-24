@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>EquiIsoDec</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#EquiIsoDec">up</a> <a href="cmdEqualityOperator.html">previous</a>  <a href="cmderror.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>EquiIsoDec<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+equidimensional isoradical decomposition</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+EquiIsoDec(I: IDEAL): LIST of IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes an equidimensional isoradical decomposition of
+I, i.e. a list of unmixed ideals <font color=#0000aa>I_1,...,I_k</font> such that the radical of I
+is the intersection of the radicals of <font color=#0000aa>I_1,...,I_k</font>. Redundancies are
+possible.
+<br><br>
+NOTE: at the moment, this implementation works only if the coefficient
+ring is the rationals or has large enough characteristic.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use R ::= QQ[x,y,z];
+/**/ I := IntersectionList([ideal(x-1,y-1,z-1), ideal(x-2,y-2)^2, ideal(x)^3]);
+/**/ H := $radical.EquiIsoDec(I);  H;
+[ideal(x),  ideal(y -2,  x^2 -4*x +4),  ideal(z -1,  x*y -y^2 -2*x +2*y,  x^2 -y^2 -4*x +4*y,  y^3 -5*y^2 +8*y -4)]
+/**/ T := [radical(J) | J in H];
+/**/ S := IntersectionList(T);
+/**/ radical(I) = S;
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPrimaryDecomposition.html">PrimaryDecomposition</A>
+<li><a href="cmdradical.html">radical</A>
+<li><a href="cmdRadicalOfUnmixed.html">RadicalOfUnmixed</A>
+</ul>
+</div>
+
+</body>
+</html>

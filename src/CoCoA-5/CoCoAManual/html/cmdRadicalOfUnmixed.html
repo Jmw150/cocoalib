@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RadicalOfUnmixed</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RadicalOfUnmixed">up</a> <a href="cmdradical.html">previous</a>  <a href="cmdrandom.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RadicalOfUnmixed<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+radical of an unmixed ideal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RadicalOfUnmixed(I: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the radical of an unmixed ideal.
+<br><br>
+NOTE: at the moment, this implementation works only if the coefficient
+ring is the rationals or has large enough characteristic.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  I := ideal(x^2 - y^2 - 4*x + 4*y, x - 2);
+/**/  RadicalOfUnmixed(I);
+ideal(x^2 -y^2 -4*x +4*y, x -2, y -2)
+/**/ interreduced(gens(It)); -- the result may not be in its simplest form
+[y -2, x -2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdEquiIsoDec.html">EquiIsoDec</A>
+<li><a href="cmdradical.html">radical</A>
+</ul>
+</div>
+
+</body>
+</html>

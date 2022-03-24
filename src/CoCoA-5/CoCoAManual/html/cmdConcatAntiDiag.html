@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ConcatAntiDiag</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ConcatAntiDiag">up</a> <a href="cmdconcat.html">previous</a>  <a href="cmdConcatDiag.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ConcatAntiDiag<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a simple block matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ConcatAntiDiag(A: MAT, B: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function creates a simple block matrix.  The two entries are
+matrices.
+ConcatAntiDiag(A, B) will return a matrix of the form
+
+  <pre>
+                | 0 A |
+                | B 0 |
+</pre>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  A := mat([[1,2,3],   [4,5,6]]);
+/**/  B := mat([[101,102], [103,104]]);
+/**/  ConcatAntiDiag(A, B);
+matrix(QQ,
+ [[0, 0, 1, 2, 3],
+  [0, 0, 4, 5, 6],
+  [101, 102, 0, 0, 0],
+  [103, 104, 0, 0, 0]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBlockMat.html">BlockMat</A>
+<li><a href="cmdConcatDiag.html">ConcatDiag</A>
+<li><a href="cmdConcatHor.html">ConcatHor</A>
+<li><a href="cmdConcatVer.html">ConcatVer</A>
+</ul>
+</div>
+
+</body>
+</html>

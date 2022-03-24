@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>assert</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#assert">up</a> <a href="cmdAsRAT.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>assert<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check an assertion</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+assert(cond: BOOL)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function <b>always evaluates</b> its argument.  If the argument is
+not <tt><b style="background:#bbeeee">true</b></tt> then an exception is thrown.  This function is
+intended for use only during development, and should not be used in
+released code.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  define fn(X)
+/**/    assert(X > 0);
+/**/    return FloorSqrt(X);
+/**/  enddefine;
+
+/**/  fn(3);
+1
+-- /**/  fn(-3); --> !!! ERROR !!! "assertion failed", as expected
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmderror.html">error</A>
+</ul>
+</div>
+
+</body>
+</html>

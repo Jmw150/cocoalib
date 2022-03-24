@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FoldToListInput</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FoldToListInput">up</a> <a href="cmdfold.html">previous</a>  <a href="cmdfor.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FoldToListInput<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert string so it looks like a list of short strings</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FoldToListInput(S: STRING, W: INT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function transforms a string so that it looks like a list
+of short strings (length at most <tt><b style="background:#bbeeee">W</b></tt>).  Similar to <tt><b style="background:#bbeeee">fold</b></tt>
+but the result is ready to be read by CoCoA.
+<br><br>
+WARNING: does not handle "funny" characters cleverly.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  n := factorial(100);
+/**/  FoldToListInput(sprint(n), 60);
+["933262154439441526816992388562667004907159682643816214685929",
+"638952175999932299156089414639761565182862536979208272237582",
+"51185210916864000000000000000000000000"]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdConcatStrings.html">ConcatStrings</A>
+<li><a href="cmdfold.html">fold</A>
+<li><a href="cmdsprint.html">sprint</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>InverseSystem</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#InverseSystem">up</a> <a href="cmdinverse.html">previous</a>  <a href="cmdIsAntiSymmetric.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>InverseSystem<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Inverse system of an ideal of derivations</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+InverseSystem(I: IDEAL, D: INT): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Thanks to Enrico Carlini.
+<br><br>
+Given an ideal of derivations <tt><b style="background:#bbeeee">I</b></tt>, and an integer <tt><b style="background:#bbeeee">D</b></tt>, this function
+computes the degree <tt><b style="background:#bbeeee">D</b></tt> part of the inverse system of <tt><b style="background:#bbeeee">I</b></tt>.
+<br><br>
+For the sake of simplicity Forms/Polynomials and Derivations live in
+the same ring, the distinction between them is purely formal.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  InverseSystem(ideal(x^3+x*y*z), 3);
+[z^3, y*z^2, x*z^2, y^2*z, x^2*z, y^3, x*y^2, x^2*y, x^3 - 6*x*y*z]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdDerivationAction.html">DerivationAction</A>
+<li><a href="cmdPerpIdealOfForm.html">PerpIdealOfForm</A>
+</ul>
+</div>
+
+</body>
+</html>

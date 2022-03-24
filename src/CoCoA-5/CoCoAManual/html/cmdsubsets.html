@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>subsets</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#subsets">up</a> <a href="cmdSubmoduleOfMinGens.html">previous</a>  <a href="cmdsubst.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>subsets<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns all sublists of a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+subsets(S: LIST): LIST
+subsets(S: LIST, N: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes all sublists (subsets) of a list (set).
+If N is specified, it computes all sublists of cardinality N.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  subsets([1, 4, 7]);
+[[ ], [7], [4], [4, 7], [1], [1, 7], [1, 4], [1, 4, 7]]
+
+/**/  subsets([1, 4, 7], 2);
+[[1, 4], [1, 7], [4, 7]]
+
+/**/  subsets([2,3,3]);                 -- list with repeated entries
+[[ ], [3], [3], [3, 3], [2], [2, 3], [2, 3], [2, 3, 3]]
+
+/**/  subsets(MakeSet([2,3,3]));
+[[ ], [3], [2], [2, 3]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsSubset.html">IsSubset</A>
+<li><a href="cmdpartitions.html">partitions</A>
+<li><a href="cmdpermutations.html">permutations</A>
+<li><a href="cmdMakeSet.html">MakeSet</A>
+<li><a href="cmdtuples.html">tuples</A>
+</ul>
+</div>
+
+</body>
+</html>

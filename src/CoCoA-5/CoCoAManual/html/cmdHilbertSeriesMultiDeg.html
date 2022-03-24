@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HilbertSeriesMultiDeg</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HilbertSeriesMultiDeg">up</a> <a href="cmdHilbertSeries.html">previous</a>  <a href="cmdHilbertSeriesShifts.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HilbertSeriesMultiDeg<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the Hilbert-Poincare series wrt a multigrading</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HilbertSeriesMultiDeg(RmodI: RING, WM: MAT): TAGGED("$hp.PSeries")</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the multigraded Hilbert-Poincare series
+of <tt><b style="background:#bbeeee">RmodI</b></tt> wrt the multigrading <tt><b style="background:#bbeeee">WM</b></tt>.
+The <tt><b style="background:#bbeeee">I</b></tt> must be homogeneous wrt the multigrading <tt><b style="background:#bbeeee">WM</b></tt>.
+<br><br>
+This function is only a handy shortcut to avoid creating the proper
+polynomial ring multi-graded with <tt><b style="background:#bbeeee">WM</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  HilbertSeriesMultiDeg(R/ideal(Indets(R))^2, mat([[1,1]]));
+(1 + 2*t) / (1-t)^0
+
+/**/  HilbertSeriesMultiDeg(R/ideal(Indets(R))^2, mat([[1,0],[0,1]]));
+---  Non-simplified HilbertPoincare Series  ---
+(1 - t[2]^2 - t[1]*t[2] - t[1]^2 + t[1]*t[2]^2 + t[1]^2*t[2])
+/ ( (1-t[1])*(1-t[2]) )
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdHilbertSeries.html">HilbertSeries</A>
+</ul>
+</div>
+
+</body>
+</html>

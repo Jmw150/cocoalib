@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsInjective</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsInjective">up</a> <a href="cmdIsInImage.html">previous</a>  <a href="cmdIsInRadical.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsInjective<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if a RINGHOM is injective</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsInjective(phi: RINGHOM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function checks if a RINGHOM is injective.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  QQxyz ::= QQ[x,y,z];
+/**/  QQab  ::= QQ[a,b];
+
+/**/  use QQab;
+/**/  phi := PolyAlgebraHom(QQxyz, QQab, [a+1, a*b+3, b^2]);
+/**/  IsInjective(phi);
+false
+/**/  ker(phi);
+ideal(-x^2*z +y^2 +2*x*z -6*y -z +9)
+/**/  IsSurjective(phi);
+false
+
+/**/  use QQab;
+/**/  preimage0(phi, b);
+0
+
+/**/  preimage0(phi, a^2);
+x^2 -2*x +1
+
+/**/  phi(RingElem(QQxyz, "x^2 - 2*x + 1"));
+a^2
+/**/  phi(RingElem(QQxyz, "x^2 - 2*x + 1 + (-x^2*z +y^2 +2*x*z -6*y -z +9)"));
+a^2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdker.html">ker</A>
+<li><a href="cmdpreimage0.html">preimage0</A>
+<li><a href="cmdIsSurjective.html">IsSurjective</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>diff</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#diff">up</a> <a href="cmdDicksonPoly.html">previous</a>  <a href="cmddim.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>diff<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the difference between two lists</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+diff(L: LIST, M: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list obtained by removing all the elements
+of <tt><b style="background:#bbeeee">M</b></tt> from <tt><b style="background:#bbeeee">L</b></tt>.  See <A HREF="cmdderiv.html">
+    <tt>deriv</tt>
+  </A> for the derivative.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [1,2,3,2,[2,3]];
+/**/  M := [1,2];
+/**/  diff(L, M);
+[3, [2, 3]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdremove.html">remove</A>
+</ul>
+</div>
+
+</body>
+</html>

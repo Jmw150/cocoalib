@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>fields</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#fields">up</a> <a href="cmdfibonacci.html">previous</a>  <a href="cmdfirst.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>fields<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list the fields of a record</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+fields(R: RECORD): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list of all of the fields of the record <tt><b style="background:#bbeeee">R</b></tt>.
+It is particularly useful when you want to know if a record field
+has been defined.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  rec := record[name := "David", number := 3728852, data := ["X","Y"] ];
+/**/  fields(rec);
+["data", "name", "number"]
+
+/**/  rec.data;
+["X", "Y"]
+
+/**/  "surname" IsIn fields(rec);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrecord.html">record</A>
+<li><a href="cmdrecordfieldselector.html">record field selector</A>
+</ul>
+</div>
+
+</body>
+</html>

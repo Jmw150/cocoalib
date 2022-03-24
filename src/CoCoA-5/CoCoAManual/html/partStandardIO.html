@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Standard IO</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c8">up</a> <a href="partIntroductiontoIO.html">previous</a> <a href="partFileIO.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.8.2 Standard IO</b></font>
+</td></tr></table>
+
+***** NOT YET UPDATED TO CoCoA-5: follow with care *****
+<br><br>
+Standard IO is what takes places normally when one interacts with
+CoCoA.
+CoCoA accepts and interprets strings typed in by the user and prints
+out expressions.  If E is a CoCoA object, then the command
+
+  <pre>
+    E;
+</pre>
+
+causes the value of E to be printed to the CoCoA window.  One may also
+use the functions <A HREF="cmdprint.html">
+    <tt>print</tt>
+  </A> and <A HREF="cmdprintln.html">
+    <tt>println</tt>
+  </A> for more control over the
+format of the output.
+<br><br>
+The official devices that are being used here are <tt><b style="background:#bbeeee">DEV.STDIN</b></tt> and
+<tt><b style="background:#bbeeee">DEV.OUT</b></tt>. So for instance, the commands <A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A> and <A HREF="cmdprinton.html">
+    <tt>print on</tt>
+  </A> can be
+used with the standard devices although they are really meant to be
+used with the other devices.  <tt><b style="background:#bbeeee">Print E On DEV.OUT</b></tt> is synonymous with
+<tt><b style="background:#bbeeee">Print E</b></tt>.  Also, one may use <tt><b style="background:#bbeeee">Get(DEV.STDIN,10)</b></tt>, for example, to get
+the next 10 characters typed in the CoCoA window.  Thus, clever use of
+<A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A> will allow your user-defined functions to prompt the user for
+input, but normal practice is to pass variables to a function as
+arguments to that function.
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: arithmetic operators</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialvariablesassignment.html">previous</a> <a href="partTutorialprinting.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.5 Tutorial: arithmetic operators</b></font>
+</td></tr></table>
+
+CoCoA-5 includes its own <i>imperative</i> programming language.  The
+language includes some fairly natural arithmetic operators (usually
+similar to other computer algebra systems).
+<br><br>
+The main peculiarities are: <i>colon-equals</i> representing assignment,
+<i>less-than greater-than</i> representing not-equals, and the words <tt><b style="background:#bbeeee">and</b></tt>,
+<tt><b style="background:#bbeeee">or</b></tt> and <tt><b style="background:#bbeeee">not</b></tt> representing the boolean operations.
+<br><br>
+To see a complete list of all infix operators, type the manual query
+<tt><b style="background:#bbeeee">?operator</b></tt><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ A := 1;          // assign the integer 1 to the variable "A"
+/**/ 1+2*3^4;         // addition, multiplication, power
+163
+/**/ 1-2/3;           // subtraction, division
+1/3
+/**/ (A > 0) and (A < 2);  // greater-than, less-than, boolean "and"
+true
+/**/ (A >= 0) or (A <= 2); // greater-or-equal, less-or-equal, boolean "or"
+true
+/**/ (A = 1) or (A <> 2);  // equal, not-equal
+true
+/**/ not(A > -1 and A < 3); // boolean "not"
+false
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

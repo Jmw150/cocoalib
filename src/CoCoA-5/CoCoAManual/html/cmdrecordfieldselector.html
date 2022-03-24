@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>record field selector</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#record field selector">up</a> <a href="cmdrecord.html">previous</a>  <a href="cmdReducedGBasis.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>record field selector<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+select a field of a record</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+R.FieldName
+R["FieldName"]
+  where R is a RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+A record is a data structure containing named entries.  They are created
+using the command <A HREF="cmdrecord.html">
+    <tt>record</tt>
+  </A>.  Each entry may be selected
+using the "dot operator", or equivalently via a string index.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  rec := record[name := "David", year := 1961];
+/**/  rec.name;
+David
+
+/**/  rec.year := 1849;             --> change value of a field
+/**/  rec.surname := "Copperfield"; --> create a new field
+/**/  rec["year"];  -- alternative syntax
+1849
+
+/**/  foreach F in fields(rec) do print rec[F]; endforeach;
+DavidCopperfield1849
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrecord.html">record</A>
+<li><a href="cmdfields.html">fields</A>
+</ul>
+</div>
+
+</body>
+</html>

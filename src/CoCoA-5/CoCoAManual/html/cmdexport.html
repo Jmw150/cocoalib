@@ -1,0 +1,63 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>export</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#export">up</a> <a href="cmdexponents.html">previous</a>  <a href="cmdExt.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>export<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+export a function from a package</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+export FunctionName
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command makes a function defined in a package visible at top-level
+(without having to use the package prefix).  See the manual entry for
+<A HREF="partFirstExampleofaPackage.html">First Example of a Package</A> for an example.
+<br><br>
+The <tt><b style="background:#bbeeee">export</b></tt> command exports <b>just a single name;</b> you must call
+it separately for each exported function.  All calls to <tt><b style="background:#bbeeee">export</b></tt>
+must be at the start of the package (i.e. before the first function
+definition).
+<br><br>
+If you do not want to export any names from your package then you
+should export the keyword <tt><b style="background:#bbeeee">skip</b></tt> (to avoid a warning that no <tt><b style="background:#bbeeee">export</b></tt>
+commands were found).
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddefine.html">define</A>
+<li><a href="partPackageessentials.html">Package essentials</A>
+<li><a href="cmdprotect.html">protect</A>
+</ul>
+</div>
+
+</body>
+</html>

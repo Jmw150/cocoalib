@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>block</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#block">up</a> <a href="cmdBinomialReprBinomialReprShift.html">previous</a>  <a href="cmdBlockMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>block<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+group several commands into a single command</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+block C_1; ... ; C_n EndBlock;
+
+where each C_i is a command.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The <tt><b style="background:#bbeeee">block</b></tt> command executes the commands as if they where one
+command.  What this means in practice is that CoCoA will not print a
+string of dashes after executing each <tt><b style="background:#bbeeee">C_i</b></tt>.  Thus, <tt><b style="background:#bbeeee">Block</b></tt> is used
+on-the-fly and not inside user-defined functions.  (It has nothing to
+do with declaration of local variables, for instance, as one might
+infer from some other computer languages.)  The following example
+should make the use of <tt><b style="background:#bbeeee">Block</b></tt> clear:
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Print "hello "; Print "world";
+hello world
+-------------------------------
+/**/  Block
+/**/    Print "hello ";
+/**/    Print "world";
+/**/  EndBlock;
+hello world
+-------------------------------
+/**/  use QQ[x,y];
+/**/  Block
+/**/    PrintLn GCD([12, 24, 96]);
+/**/    PrintLn LCM([12, 24, 96]);
+/**/    PrintLn GCD([x+y, x^2-y^2]);
+/**/    Print LCM([x+y, x^2-y^2]);
+/**/  EndBlock;
+
+12
+96
+x + y
+x^2 - y^2
+-------------------------------
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

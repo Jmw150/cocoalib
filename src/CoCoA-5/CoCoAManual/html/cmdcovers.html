@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>covers</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#covers">up</a> <a href="cmdcount.html">previous</a>  <a href="cmdCpuTime.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>covers<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+a poset description from the list of the strict relations</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+covers(relP: LIST): LIST  of LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function print a poset description from the list relP of the strict relations in a poset.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+// POSET:
+//         3   4
+//          \ /
+//           2
+//           |
+//           1
+/**/ relP := [[1,2],  [2,3],  [2,4]];
+/**/ covers(relP);
+[[],  [1],  [1,  2],  [1,  2]]
+
+/**/ indent(covers(relP));
+[
+  [],      // elems < 1
+  [1],     // elems < 2
+  [1,  2], // elems < 3
+  [1,  2]  // elems < 4
+]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

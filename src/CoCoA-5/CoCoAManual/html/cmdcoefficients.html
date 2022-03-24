@@ -1,0 +1,114 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>coefficients</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#coefficients">up</a> <a href="cmdCoeffHeight.html">previous</a>  <a href="cmdCoefficientsWRT.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>coefficients<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of coefficients of a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+coefficients(F: RINGELEM): LIST
+coefficients(F: RINGELEM, S: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list of coefficients of <tt><b style="background:#bbeeee">F</b></tt> which are
+elements of <tt><b style="background:#bbeeee">CoeffRing(RingOf(F))</b></tt>.
+<br><br>
+Called with one argument <tt><b style="background:#bbeeee">F</b></tt> it returns the list of all non-zero
+coefficients; the order being decreasing on the terms in <tt><b style="background:#bbeeee">F</b></tt> as
+determined by the term-ordering of <tt><b style="background:#bbeeee">RingOf(F)</b></tt>.
+<br><br>
+Called with two arguments <tt><b style="background:#bbeeee">F,S</b></tt> it returns the coefficients of the
+list of specified terms <tt><b style="background:#bbeeee">S</b></tt>; their order is determined by the list
+<tt><b style="background:#bbeeee">S</b></tt>.  If a terms does not appear in <tt><b style="background:#bbeeee">F</b></tt> then the corresponding
+coefficient is 0.
+<br><br>
+The old form (CoCoA-4) <tt><b style="background:#bbeeee">Coefficients(F,x)</b></tt> for the coefficients of
+<tt><b style="background:#bbeeee">F</b></tt> with respect to (WRT) an indeterminate <tt><b style="background:#bbeeee">x</b></tt> is now
+replaced by the functions <A HREF="cmdCoefficientsWRT.html">
+    <tt>CoefficientsWRT</tt>
+  </A> and <A HREF="cmdCoeffListWRT.html">
+    <tt>CoeffListWRT</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  F := 3*x^2*y + 5*y^2 - x*y;
+/**/  Coeffs := coefficients(F);  Coeffs;  -- with one argument
+[3, -1, 5]
+/**/  phi := CoeffEmbeddingHom(RingOf(F));
+/**/  F = ScalarProduct(phi(Coeffs), support(F));
+true
+
+/**/  Skeleton := [1, x, y, z, x^2, x*y, y^2, y*z, z^2];
+/**/  Coeffs := coefficients(F, Skeleton);  Coeffs;  -- with two arguments
+[0, 0, 0, 0, 0, -1, 5, 0, 0]
+/**/  ScalarProduct(phi(Coeffs), Skeleton);
+-x*y +5*y^2
+
+/**/  L := CoefficientsWRT(F,[x,y,z]);  indent(L);  -- similar function
+[
+  record[PP := y^3, coeff := 5],
+  record[PP := x^2*y, coeff := 3],
+  record[PP := x*y^5, coeff := -1]
+]
+/**/  F = sum([X.coeff * X.PP | X in L]);
+true
+
+/**/  L := CoeffListWRT(F, y);  L;  -- similar function
+[0, 3*x^2 -x, 5]
+/**/  F = sum([L[d+1]*y^d | d in 0..(len(L)-1)]);
+true
+
+/**/  R3 := NewFreeModule(R,3);
+/**/  V := ModuleElem(R3, [3*x^2+y, x-5*z^3, x+2*y]);
+/**/  ConcatLists([coefficients(V[i]) | i in 1..NumCompts(V)]);
+[3, 1, -5, 1, 1, 2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partCoefficientRings.html">Coefficient Rings</A>
+<li><a href="cmdCoefficientsWRT.html">CoefficientsWRT</A>
+<li><a href="cmdCoeffListWRT.html">CoeffListWRT</A>
+<li><a href="cmdLC.html">LC</A>
+<li><a href="cmdmonomials.html">monomials</A>
+<li><a href="cmdsupport.html">support</A>
+</ul>
+</div>
+
+</body>
+</html>

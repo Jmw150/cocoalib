@@ -1,0 +1,158 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IdealAndSeparatorsOfProjectivePoints</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IdealAndSeparatorsOfProjectivePoints">up</a> <a href="cmdIdealAndSeparatorsOfPoints.html">previous</a>  <a href="cmdIdealOfGBasis.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IdealAndSeparatorsOfProjectivePoints<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+ideal and separators for points</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IdealAndSeparatorsOfProjectivePoints(Points: LIST): RECORD
+
+where Points is a list of lists of coefficients representing a set of
+<b>distinct</b> points in projective space.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function computes the results of <A HREF="cmdIdealOfProjectivePoints.html">
+    <tt>IdealOfProjectivePoints</tt>
+  </A> and
+<A HREF="cmdSeparatorsOfProjectivePoints.html">
+    <tt>SeparatorsOfProjectivePoints</tt>
+  </A> together at a cost lower than making
+the two separate calls.  The result is a record with three fields:
+
+  <pre>
+    points     -- the points given as argument
+    ideal      -- the result of IdealOfProjectivePoints
+    separators -- the result of SeparatorsOfProjectivePoints
+</pre>
+
+Thus, if the result is stored in a variable with identifier X, then:
+X.ideal will be the ideal of the set of points, with generators
+forming a reduced Groebner basis for the ideal;
+X.separators will be a list of homogeneous polynomials whose i-th
+element will be non-zero (actually 1, using the given representatives
+for the coordinates of the points) on the i-th point and 0 on the others.
+<br><br>
+NOTE:
+<br><br>
+ * the current ring must have at least one more indeterminate than the
+   dimension of the projective space in which the points lie, i.e. at
+   least as many indeterminates as the length of an element of
+   the input, Points;
+<br><br>
+ * the base field for the space in which the points lie is taken to be
+   the coefficient ring, which should be a field;
+<br><br>
+ * in the polynomials returned, the first coordinate in the space is
+   taken to correspond to the first indeterminate, the second to the
+   second, and so on;
+<br><br>
+ * if the number of points is large, say 100 or more, the returned
+   value can be very large.  To avoid possible problems when printing
+   such values as a single item we recommend printing out the elements
+   one at a time as in this example:
+
+  <pre>
+***** NOT YET IMPLEMENTED *****
+     X := IdealAndSeparatorsOfProjectivePoints(Pts);
+     foreach g in gens(X.ideal) do
+       println g;
+     endforeach;
+</pre>
+
+
+For ideals and separators of points in affine space, see
+<A HREF="cmdIdealAndSeparatorsOfPoints.html">
+    <tt>IdealAndSeparatorsOfPoints</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  use R ::= QQ[x,y,z];
+  Points := [[0,0,1],[1/2,1,1],[0,1,0]];
+  X := IdealAndSeparatorsOfProjectivePoints(Points);
+  X.points;
+[[0, 0, 1], [1, 1, 1], [0, 1, 0]]
+-------------------------------
+  X.ideal;
+ideal(x*z - (1/2)*y*z,  x*y - (1/2)*y*z,  x^2 - (1/4)*y*z,  y^2*z - y*z^2)
+-------------------------------
+  X.separators;
+[-2*x + z,  x,  -2*x + y]
+-------------------------------
+
+  use R ::= QQ[t,x,y,z];
+  Pts := GenericPoints(20);  -- 20 random points in projective 3-space
+  X := IdealAndSeparatorsOfProjectivePoints(Pts);
+  Len(Gens(X.Ideal));  -- number of generators in the ideal
+17
+-------------------------------
+  HilbertFn(R/X.Ideal);
+H(0) = 1
+H(1) = 4
+H(2) = 10
+H(t) = 20   for t >= 3
+-------------------------------
+  F := X.Separators[3];
+  [Eval(F, P) | P in Pts];
+[0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+-------------------------------
+  Res(R/X.Ideal);  -- the resolution of the ideal
+0 --> R^10(-6) --> R^24(-5) --> R^15(-4) --> R
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdHGBM.html">HGBM</A>
+<li><a href="cmdGBM.html">GBM</A>
+<li><a href="cmdGenericPoints.html">GenericPoints</A>
+<li><a href="cmdIdealAndSeparatorsOfPoints.html">IdealAndSeparatorsOfPoints</A>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdIdealOfProjectivePoints.html">IdealOfProjectivePoints</A>
+<li><a href="cmdInterpolate.html">Interpolate</A>
+<li><a href="cmdQuotientBasis.html">QuotientBasis</A>
+<li><a href="cmdSeparatorsOfPoints.html">SeparatorsOfPoints</A>
+<li><a href="cmdSeparatorsOfProjectivePoints.html">SeparatorsOfProjectivePoints</A>
+</ul>
+</div>
+
+</body>
+</html>

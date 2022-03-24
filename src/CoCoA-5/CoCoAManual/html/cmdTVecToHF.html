@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>TVecToHF</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#TVecToHF">up</a> <a href="cmdTVecPrintRes.html">previous</a>  <a href="cmdtype.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>TVecToHF<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Hilbert Function of a type vector</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+TVecToHF(TV: LIST): TAGGED</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the Hilbert function associated to the type vector <tt><b style="background:#bbeeee">TV</b></tt>.
+<br><br>
+See <A HREF="cmdTVecFromHF.html">
+    <tt>TVecFromHF</tt>
+  </A><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Use P ::= QQ[x,y,z,t];
+/**/  T := TVecFromHF([[1, 3, 5], 6]);  T;
+[[[2],  [4]]]
+/**/  TVecToHF([[[2], [4]]]);
+H(0) = 1
+H(1) = 3
+H(2) = 5
+H(t) = 6   for t >= 3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdTVecFromHF.html">TVecFromHF</A>
+<li><a href="cmdTVecPrintRes.html">TVecPrintRes</A>
+<li><a href="cmdTVecPoints.html">TVecPoints</A>
+</ul>
+</div>
+
+</body>
+</html>

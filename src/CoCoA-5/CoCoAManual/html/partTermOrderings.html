@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Term Orderings</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c9">up</a> <a href="partIndeterminates.html">previous</a> <a href="partModuleOrderings.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.9.5 Term Orderings</b></font>
+</td></tr></table>
+
+Polynomials are always sorted with respect to the ordering of their
+base ring; this ordering is specified when the ring is created.  All
+operations involving polynomials utilize and preserve this ordering.
+There are mnemonic keywords for some predefined term-orderings;
+otherwise a custom ordering defined by an "ordering matrix" can be
+specified when using the function <A HREF="cmdNewPolyRing.html">
+    <tt>NewPolyRing</tt>
+  </A>.
+<br><br>
+The predefined term-orderings are:
+<br><br>
+ * standard-degree reverse lexicographic: <tt><b style="background:#bbeeee">DegRevLex</b></tt>  (default)
+<br><br>
+ * standard-degree lexicographic: <tt><b style="background:#bbeeee">DegLex</b></tt><br><br>
+ * pure lexicographic: <tt><b style="background:#bbeeee">Lex</b></tt> (no grading)
+<br><br>
+ * pure xel: <tt><b style="background:#bbeeee">Xel</b></tt> (no grading)
+<br><br>
+If the indeterminates are given in the order <tt><b style="background:#bbeeee">x_1, ...,x_n</b></tt>,
+then <tt><b style="background:#bbeeee">x_1 > ... > x_n</b></tt> with respect to Lex, and
+<tt><b style="background:#bbeeee">x_1 < ... < x_n</b></tt> with respect to Xel.
+
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+-- Specify the ordering when you create the ring:
+/**/  P ::= QQ[x,y,z];             --> default is DegRevLex
+/**/  P ::= QQ[x,y,z], DegRevLex;  --> same as above
+/**/  P ::= QQ[x,y,z], lex;
+/**/  P ::= QQ[x,y,z], DegLex;
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>interreduced</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#interreduced">up</a> <a href="cmdinterreduce.html">previous</a>  <a href="cmdintersection.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>interreduced<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+interreduce a list of polynomials</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+interreduced(L: LIST of RINGELEM): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns an interreduced list <tt><b style="background:#bbeeee">L0</b></tt> of polynomials,
+i.e. each polynomial in <tt><b style="background:#bbeeee">L0</b></tt> is fully reduced with respect to the others,
+such that <tt><b style="background:#bbeeee">L</b></tt> and <tt><b style="background:#bbeeee">L0</b></tt> generate the same ideal.
+<br><br>
+This is generally computed in several interreducing loops.
+In each loop each polynomial in the list is fully reduced with respect
+to the others, and this process terminates when a loop finds no
+possible reduction.
+Verbosity shows how many loops are performed.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y,z];
+/**/ L := [x^3-x*y^2+y*z,  x*y,  z];
+/**/ interreduced(L);
+[z,  x*y,  x^3]
+/**/ L; -- unmodified
+[x^3 -x*y^2 +y*z,  x*y,  z]
+
+/**/ SetVerbosityLevel(90);
+/**/ L := [x^3*y^3 -y,  x^3*y^2 +x,  x^3*y +y^2];
+/**/ interreduced(L);
+interreduced: loop n.1
+interreduced: loop n.2
+interreduced: loop n.3
+interreduced: loop n.4
+interreduced: loop n.5
+[-2*y,  x]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

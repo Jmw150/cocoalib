@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Introduction to RINGELEM</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c11">up</a> <span class="grayed">previous</span> <a href="partEvaluationofPolynomials.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.11.1 Introduction to RINGELEM</b></font>
+</td></tr></table>
+
+An object of type RINGELEM in CoCoA represents an element of a ring.
+<br><br>
+To fix terminology about polynomials (elements of a polynomial ring):
+a polynomial is a sum of terms; each term is the product of a
+coefficient and power-product, and a power-product is a product of
+powers of indeterminates.
+<br><br>
+In English it is standard to use <b>monomial</b> to mean a power-product,
+however, in other languages, such as Italian, monomial connotes a
+power-product multiplied by a scalar.  In the interest of world peace, we
+will use the term power-product in those cases where confusion may arise.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  f := 3*x*y*z + x*y^2;
+/**/  f;
+x*y^2 + 3*x*y*z
+-------------------------------
+/**/  use P ::= QQ[x[1..5]];
+/**/  sum([x[N]^2 | N in 1..5]);
+x[1]^2 + x[2]^2 + x[3]^2 + x[4]^2 + x[5]^2
+-------------------------------
+</pre></td></tr></table>
+
+CoCoA always keeps polynomials ordered with respect to the
+term-orderings of their corresponding rings.
+<br><br>
+The following algebraic operations on polynomials are supported:
+
+  <pre>
+  F^N, +F, -F, F*G, F/G if G divides F, F+G, F-G,
+</pre>
+
+where F, G are polynomials and N is an integer.  The result may be a
+rational function.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  F := x^2 +x*y;
+/**/  G := x;
+/**/  F/G;
+x + y
+
+-- /**/  F/(x+z); --> !!! ERROR !!! as expected: Inexact division
+
+/**/  F^2;
+x^4 +2*x^3*y +x^2*y^2
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

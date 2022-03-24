@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="http://txt2tags.org">
+<LINK REL="stylesheet" TYPE="text/css" HREF="cocoalib-doc.css">
+<TITLE>      ExternalLibs-GMP</TITLE>
+</HEAD><BODY BGCOLOR="white" TEXT="black">
+<CENTER>
+<H1>      ExternalLibs-GMP</H1>
+<FONT SIZE="4"><I>      &copy;  2016,2022  John Abbott, Anna M. Bigatti</I></FONT><BR>
+<FONT SIZE="4">      GNU Free Documentation License, Version 1.2</FONT>
+</CENTER>
+
+<P></P>
+<HR NOSHADE SIZE=1>
+<P></P>
+
+    <UL>
+    <LI><A HREF="#toc1">User documentation</A>
+      <UL>
+      <LI><A HREF="#toc2">Examples</A>
+      <LI><A HREF="#toc3">Installing the GMP library</A>
+        <UL>
+        <LI><A HREF="#toc4">Download and compile GMP</A>
+        <LI><A HREF="#toc5">Telling CoCoALib where GMP is</A>
+        </UL>
+      </UL>
+    <LI><A HREF="#toc6">Maintainer documentation</A>
+    <LI><A HREF="#toc7">Bugs, shortcomings and other ideas</A>
+    <LI><A HREF="#toc8">Main changes</A>
+    </UL>
+
+<P></P>
+<HR NOSHADE SIZE=1>
+<P></P>
+<P>
+      <center><a href="index.html">CoCoALib Documentation Index</a></center>
+</P>
+
+<A NAME="toc1"></A>
+<H2>User documentation</H2>
+
+<P>
+<B>GMP is an essential external library</B> for CoCoALib: a sufficiently
+recent version of GMP (5.1.0 or later) must be present to permit
+compilation of CoCoALib.  The CoCoALib classes <CODE>BigInt</CODE> and <CODE>BigRat</CODE>
+are simply wrappers for the underlying GMP types.
+</P>
+<P>
+At the moment CoCoALib does not require the C++ interface to GMP,
+however if you wish to combine CoCoALib with the external library
+<B>Normaliz</B> then the C++ interface to GMP must also be present.
+</P>
+
+<A NAME="toc2"></A>
+<H3>Examples</H3>
+
+<UL>
+<LI><A HREF="../../examples/index.html#ex-BigInt1.C">ex-BigInt1.C</A>
+<LI><A HREF="../../examples/index.html#ex-BigInt2.C">ex-BigInt2.C</A>
+<LI><A HREF="../../examples/index.html#ex-BigInt3.C">ex-BigInt3.C</A>
+<LI><A HREF="../../examples/index.html#ex-BigRat1.C">ex-BigRat1.C</A>
+<LI><A HREF="../../examples/index.html#ex-GMPAllocator1.C">ex-GMPAllocator1.C</A>
+<LI><A HREF="../../examples/index.html#ex-GMPAllocator2.C">ex-GMPAllocator2.C</A>
+</UL>
+
+<A NAME="toc3"></A>
+<H3>Installing the GMP library</H3>
+
+<P>
+It is common for Linux computers to have the <B>GMP library already</B>
+<B>installed;</B> the CoCoALib <CODE>configure</CODE> script will check for this,
+and will give an error message if it cannot be found.
+</P>
+<P>
+In the unlikely event that GMP was not found by the CoCoALib
+<CODE>configure</CODE> script, we recommend using your computer's
+package manager to install a package having a name something like
+<CODE>libgmpxx-devel</CODE> (or maybe just <CODE>libgmp-devel</CODE>).  You should
+pick the version "for developers" as that is what CoCoALib needs.
+</P>
+
+<A NAME="toc4"></A>
+<H4>Download and compile GMP</H4>
+
+<P>
+If you cannot install the GMP library using your package manager,
+you can try compiling it yourself!
+If you have little or no experience compiling software, ask
+someone who has experience to help you.  It is not hard, but
+experience helps a lot!
+</P>
+<P>
+To build the GMP library yourself, you must first download the sources from
+</P>
+
+<TABLE ALIGN="center" CELLPADDING="4">
+<TR>
+<TD><A HREF="http://www.gmplib.org/">**GMP** website</A></TD>
+</TR>
+</TABLE>
+
+<P>
+Note that <B>CoCoALib</B> expects <B>GMP release 5.1.0 or later.</B>
+</P>
+<P>
+You must then decide whether to make a "personal" installation or
+a "system-wide" installation.  To make a system-wide installation
+your account must have "administrator privileges"; in case of
+doubt, make a personal installation.
+</P>
+
+<PRE>
+  ## Commands for a ***system-wide*** installation
+  tar xzf gmp-6.2.1.tar.gz
+  cd gmp-6.2.1
+  ./configure  --enable-cxx
+  make
+  sudo make install
+  ## Maybe run the ldconfig command to register the shared library.
+  ## You can now delete gmp-6.2.1.tar.gz and the directory gmp-6.2.1
+</PRE>
+
+<P>
+To make a personal installation you must decide where GMP should
+be installed.  We suggest something like <CODE>$HOME/MySoftware</CODE>
+(if you choose somewhere else, change the lines below accordingly).
+</P>
+
+<PRE>
+  ## Commands for a ***personal*** installation
+  mkdir "$HOME/MySoftware"
+  ./configure  --enable-cxx  --disable-shared  --prefix="$HOME/MySoftware"
+  make
+  make install
+  ## You can now delete gmp-6.2.1.tar.gz and the directory gmp-6.2.1
+</PRE>
+
+<A NAME="toc5"></A>
+<H4>Telling CoCoALib where GMP is</H4>
+
+<P>
+If you compiled GMP and did a system-wide installation then
+the CoCoALib <CODE>configure</CODE> script should find it automatically.
+</P>
+<P>
+If you compiled GMP and made a personal installation then you
+must tell the CoCoALib <CODE>configure</CODE> script where to find GMP
+by using the option <CODE>--with-libgmp</CODE>.  Here is an example:
+</P>
+
+<PRE>
+  cd CoCoALib-0.99  # go into the CoCoALib directory
+  ./configure  --with-libgmp="$HOME/MySoftware/lib/libgmp.a"
+</PRE>
+
+<P>
+<B>FOOTNOTE</B>
+System-wide installation on a GNU/Linux computer is
+<B>possible only if</B> your user account has the relevant permissions.
+You can check whether your account has permission by running
+<CODE>sudo -v</CODE>.  This will ask for your password, and give an error
+if your account does not have permission.
+</P>
+
+<A NAME="toc6"></A>
+<H2>Maintainer documentation</H2>
+
+<P>
+A future version of CoCoALib may use the C++ interface to GMP, but
+that it not imminent.
+</P>
+
+<A NAME="toc7"></A>
+<H2>Bugs, shortcomings and other ideas</H2>
+
+<P>
+Strictly the parts of CoCoALib which compute with small finite fields
+do not need the GMP library; nevertheless we chose not to permit
+compilation without GMP.
+</P>
+<P>
+I found the following website useful:
+</P>
+
+<PRE>
+  http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html
+</PRE>
+
+<A NAME="toc8"></A>
+<H2>Main changes</H2>
+
+<P>
+<B>2022</B>
+</P>
+
+<UL>
+<LI>February: guidelines system-wide/personal installation (now necessary for CoCoALib)
+</UL>
+
+<P>
+<B>2016</B>
+</P>
+
+<UL>
+<LI>10 June: first version; added new note about ldconfig
+</UL>
+
+<!-- html code generated by txt2tags 2.6 (http://txt2tags.org) -->
+<!-- cmdline: txt2tags -t html -o html/ExternalLibs-GMP.html -i txt/ExternalLibs-GMP.txt -->
+</BODY></HTML>

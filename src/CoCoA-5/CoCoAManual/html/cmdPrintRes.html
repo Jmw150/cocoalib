@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PrintRes</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PrintRes">up</a> <a href="cmdprintln.html">previous</a>  <a href="cmdPrintSectionalMatrix.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PrintRes<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+print free resolution</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PrintRes(M)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function prints the minimal free resolution of <tt><b style="background:#bbeeee">M</b></tt>.
+(see <A HREF="cmdres.html">
+    <tt>res</tt>
+  </A>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x, y, z^2);
+/**/  RES := res(I);
+/**/  PrintRes(I);   -- recomputes resolution
+0 --> R(-4) --> R(-2)(+)R(-3)^2 --> R(-1)^2(+)R(-2)
+/**/  PrintRes(RES); -- just prints RES
+0 --> R(-4) --> R(-2)(+)R(-3)^2 --> R(-1)^2(+)R(-2)
+/**/  PrintBettiDiagram(RES); -- just prints the BettiDiagram for RES
+        0    1    2
+--------------------
+  1:    2    1    -
+  2:    1    2    1
+--------------------
+Tot:    3    3    1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPrintBettiDiagram.html">PrintBettiDiagram</A>
+<li><a href="cmdPrintBettiMatrix.html">PrintBettiMatrix</A>
+<li><a href="cmdres.html">res</A>
+</ul>
+</div>
+
+</body>
+</html>

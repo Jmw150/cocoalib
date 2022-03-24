@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tagging an Object</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c16">up</a> <span class="grayed">previous</span> <a href="partPrintingaTaggedObject.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.16.1 Tagging an Object</b></font>
+</td></tr></table>
+
+If <tt><b style="background:#bbeeee">E</b></tt> is any CoCoA object and <tt><b style="background:#bbeeee">S</b></tt> a string, then the function
+<tt><b style="background:#bbeeee">Tagged(E, S)</b></tt> returns the object <tt><b style="background:#bbeeee">E</b></tt> tagged with the string <tt><b style="background:#bbeeee">S</b></tt>.
+The returned object is then of type <tt><b style="background:#bbeeee">TAGGED(S)</b></tt>.
+The function <A HREF="cmdtag.html">
+    <tt>tag</tt>
+  </A> returns <tt><b style="background:#bbeeee">S</b></tt>, the tag string of an object,
+and the function <A HREF="cmduntagged.html">
+    <tt>untagged</tt>
+  </A> returns <tt><b style="background:#bbeeee">E</b></tt>, the
+original object, stripped of its tag.
+<br><br>
+This is the way to add a new type at run-time.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := ["Dave", "March 14, 1959", 372];
+/**/  M := Tagged(L, "MiscData");  -- L tagged with the string "MiscData"
+/**/  type(L);  -- L is a list
+LIST
+/**/  type(M);  -- M is a tagged object
+TAGGED("MiscData")
+/**/  --M;  -- Until a special print function is defined, the printing of M
+            -- is the same as L (with a WARNING)
+--> WARNING: Cannot find "$BackwardCompatible.PrintTagged", so I am implicitly untagging the value
+--> ["Dave", "March 14, 1959", 372]
+</pre></td></tr></table>
+
+The next section explains how to define functions for pretty printing
+of tagged objects.
+
+</div>
+
+</body>
+</html>

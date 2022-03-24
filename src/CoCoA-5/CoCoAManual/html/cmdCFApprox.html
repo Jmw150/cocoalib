@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CFApprox</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CFApprox">up</a> <a href="cmdceil.html">previous</a>  <a href="cmdCFApproximants.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CFApprox<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+continued fraction approximation</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CFApprox(X: RAT, MaxRelErr: RAT): RAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">CFApprox</b></tt> finds the <b>simplest</b> continued fraction approximant
+to <tt><b style="background:#bbeeee">X</b></tt> which is within the maximum specified <b>relative error</b>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  CFApprox(1.414213, 10^(-2));
+17/12
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCFApproximants.html">CFApproximants</A>
+<li><a href="cmdContFrac.html">ContFrac</A>
+<li><a href="cmdSimplestRatBetween.html">SimplestRatBetween</A>
+</ul>
+</div>
+
+</body>
+</html>

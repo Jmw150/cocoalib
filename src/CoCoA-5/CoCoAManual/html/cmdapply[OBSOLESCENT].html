@@ -1,0 +1,51 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>apply [OBSOLESCENT]</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#apply [OBSOLESCENT]">up</a> <a href="cmdappend.html">previous</a>  <a href="cmdApproxPointsNBM.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>apply [OBSOLESCENT]<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+apply [OBSOLESCENT]</i> </small></b></font>
+</td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+To apply a homomorphism <tt><b style="background:#bbeeee">phi</b></tt> to all elements in second argument <tt><b style="background:#bbeeee">X</b></tt>
+(RINGELEM, LIST, or MAT)
+just use normal "function call" syntax: <tt><b style="background:#bbeeee">phi(X)</b></tt>.
+<br><br>
+See also <A HREF="partIntroductiontoRINGHOM.html">
+    <tt>Introduction to RINGHOM</tt>
+  </A><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  S ::= QQ[x[1..3]];
+/**/  phi := PolyAlgebraHom(R, S, indets(S));
+/**/  phi([x^2-y, z-2]);         -- was  apply(phi, [x^2-y, z-2])  up to 5.3.3
+[x[1]^2 -x[2], x[3] -2]
+/**/  phi(mat([[x,1], [y,z]]));  -- was  apply(phi, mat(...))   up to 5.3.3
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>abs</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#abs">up</a> <span class="grayed">previous</span> <a href="cmdadj.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>abs<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+absolute value of a number</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+abs(N: INT): INT
+abs(N: RAT): RAT
+abs(N: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the absolute value of <tt><b style="background:#bbeeee">N</b></tt>.  If <tt><b style="background:#bbeeee">N</b></tt> is a
+<tt><b style="background:#bbeeee">RINGELEM</b></tt> then it must belong to an ordered ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  abs(-3);
+3
+
+/**/  abs(-2/3);
+2/3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdsign.html">sign</A>
+</ul>
+</div>
+
+</body>
+</html>

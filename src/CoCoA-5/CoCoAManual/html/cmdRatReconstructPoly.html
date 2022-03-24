@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RatReconstructPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RatReconstructPoly">up</a> <a href="cmdRatReconstructByLattice.html">previous</a>  <a href="cmdRatReconstructWithBounds.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RatReconstructPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Rational reconstruction of polynomial coefficents</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RatReconstructPoly(f1: RINGELEM, M1: INT): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function attempts to reconstruct the rational coefficents of a
+polynomial <tt><b style="background:#bbeeee">f</b></tt> from a modular image <tt><b style="background:#bbeeee">f mod M</b></tt>.  
+The algorithm is fault-tolerant: it will succeed provided
+that the coefficients in <tt><b style="background:#bbeeee">f</b></tt> are correct modulo a sufficiently
+large factor of <tt><b style="background:#bbeeee">M</b></tt>.
+<br><br>
+NOTE: so that the heuristic can work, the modulus must be larger than
+strictly necessary; indeed, reconstruction always fails if <tt><b style="background:#bbeeee">M</b></tt> is small.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y];
+/**/  RatReconstructPoly(10923689802589*x^2 +8192767351939*y, 32771069407757);
+(10/3)*x^2 +(-1/4)*y
+
+-- input comes from CTR computation:
+/**/ RingElem(NewPolyRing(NewZZmod(32003),"x,y"), "(10/3)*x^2 +(-1/4)*y");
+10671*x^2 -8001*y
+/**/ RingElem(NewPolyRing(NewZZmod(31991),"x,y"), "(10/3)*x^2 +(-1/4)*y");
+10667*x^2 -7998*y
+/**/ RingElem(NewPolyRing(NewZZmod(32009),"x,y"), "(10/3)*x^2 +(-1/4)*y");
+10673*x^2 +8002*y
+
+/**/ CRTPoly(10671*x^2 -8001*y, 32003,    10667*x^2 -7998*y, 31991);
+record[modulus := 1023807973, residue := -341269321*x^2 +255951993*y]
+/**/ CRTPoly(It.residue, It.modulus,    10673*x^2 +8002*y, 32009);
+record[modulus := 32771069407757,
+      residue := 10923689802589*x^2 +8192767351939*y]
+/**/ RatReconstructPoly(It.residue, It.modulus);
+(10/3)*x^2 +(-1/4)*y
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCRTPoly.html">CRTPoly</A>
+<li><a href="cmdRatReconstructByContFrac.html">RatReconstructByContFrac</A>
+<li><a href="cmdRatReconstructByLattice.html">RatReconstructByLattice</A>
+</ul>
+</div>
+
+</body>
+</html>

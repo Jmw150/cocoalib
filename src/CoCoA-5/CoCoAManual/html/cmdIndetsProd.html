@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IndetsProd</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IndetsProd">up</a> <a href="cmdindets.html">previous</a>  <a href="cmdIndetSubscripts.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IndetsProd<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+(product of) indeterminates actually in a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IndetsProd(f: RINGELEM): RINGELEM
+IndetsProd(L: LIST of RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function says which indeterminates are used in <tt><b style="background:#bbeeee">f</b></tt> (or <tt><b style="background:#bbeeee">L</b></tt>).
+The result is the product of all indeterminates which actually appear
+in <tt><b style="background:#bbeeee">f</b></tt> (or <tt><b style="background:#bbeeee">L</b></tt>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  IndetsProd(x^2-z);
+x*z
+/**/  IndetsProd([x^2-z,  y]);
+x*y*z
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdindet.html">indet</A>
+<li><a href="cmdIndetIndex.html">IndetIndex</A>
+<li><a href="cmdsupport.html">support</A>
+</ul>
+</div>
+
+</body>
+</html>

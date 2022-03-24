@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RelNotes</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RelNotes">up</a> <a href="cmdRegularityIndex.html">previous</a>  <a href="cmdReloadMan.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RelNotes<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+print the release notes</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RelNotes()
+RelNotes(N: INT)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function prints the release notes of the version you are running,
+of all versions, or of last <tt><b style="background:#bbeeee">N</b></tt> versions.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ RelNotes();  --> last version
+/**/ RelNotes(1); --> last version
+/**/ RelNotes(3); --> last 3 versions
+/**/ RelNotes(0); --> all versions
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdVersionInfo.html">VersionInfo</A>
+</ul>
+</div>
+
+</body>
+</html>

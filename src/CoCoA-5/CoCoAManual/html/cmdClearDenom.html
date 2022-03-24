@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ClearDenom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ClearDenom">up</a> <a href="cmdciao.html">previous</a>  <a href="cmdclose.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ClearDenom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+clear common denominator of a polynomial with rational coeffs</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ClearDenom(F: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function clears the denominators of the coefficients in a
+polynomial over QQ.  It simply multiplies by the least common multiple
+of the denominators.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y];
+/**/  f := (2/3)*x + (4/5)*y;
+/**/  ClearDenom(f);
+10*x +12*y
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCommonDenom.html">CommonDenom</A>
+<li><a href="cmdcontent.html">content</A>
+<li><a href="cmdprim.html">prim</A>
+</ul>
+</div>
+
+</body>
+</html>

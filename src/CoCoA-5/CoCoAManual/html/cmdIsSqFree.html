@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsSqFree</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsSqFree">up</a> <a href="cmdIsSigmaGoodPrime.html">previous</a>  <a href="cmdIsSquare.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsSqFree<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if an INT or RINGELEM is square-free</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsSqFree(f: RINGELEM): BOOL
+IsSqFree(N: INT): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the argument is square-free.
+A ring elem <tt><b style="background:#bbeeee">f</b></tt> must belong to a polynomial ring over a field.
+Currently, it may wrongly declare as square-free an integer <tt><b style="background:#bbeeee">N</b></tt> with
+a repeated large prime factor.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use R ::= QQ[x];
+/**/ IsSqFree(x^2);
+false
+/**/ IsSqFree(101);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdradical.html">radical</A>
+<li><a href="cmdfactor.html">factor</A>
+<li><a href="cmdFactorINT.html">FactorINT</A>
+</ul>
+</div>
+
+</body>
+</html>

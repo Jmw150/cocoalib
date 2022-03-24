@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MantissaAndExponent10</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MantissaAndExponent10">up</a> <a href="cmdMakeTermOrdMat.html">previous</a>  <a href="cmdMantissaAndExponent2.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MantissaAndExponent10<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert rational number to a float</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MantissaAndExponent10(X: INT|RAT, Prec: INT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function converts a rational number into a <tt><b style="background:#bbeeee">RECORD</b></tt> with components
+named <tt><b style="background:#bbeeee">exponent</b></tt>, <tt><b style="background:#bbeeee">mantissa</b></tt> and <tt><b style="background:#bbeeee">NumDigits</b></tt>.
+<br><br>
+If <tt><b style="background:#bbeeee">X=0</b></tt>, all fields of the record are set to zero.
+<br><br>
+For non-zero <tt><b style="background:#bbeeee">X</b></tt> the fields give the best representation of the form <font color=#0000aa>M*10^E</font>
+where <tt><b style="background:#bbeeee">M</b></tt> has <tt><b style="background:#bbeeee">Prec</b></tt> decimal digits.
+The value of <tt><b style="background:#bbeeee">NumDigits</b></tt> is simply <tt><b style="background:#bbeeee">Prec</b></tt>.
+The value of <tt><b style="background:#bbeeee">exponent</b></tt> is <tt><b style="background:#bbeeee">FloorLog10(X)</b></tt>, plus 1 if the mantissa "overflows".
+The value of <tt><b style="background:#bbeeee">mantissa</b></tt> is an integer <tt><b style="background:#bbeeee">M</b></tt> satisfying <font color=#0000aa>10^(Prec-1) &lt;= |M| < 10^Prec-1</font><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  MantissaAndExponent10(1/2,3);       --  1/2 = 5.00*10^(-1)
+record[NumDigits := 3, exponent := -1, mantissa := 500]
+
+/**/  MantissaAndExponent10(0.99999, 4);   --  0.99999 rounds up to give 1.000
+record[NumDigits := 4, exponent := 0, mantissa := 1000]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAsINT.html">AsINT</A>
+<li><a href="cmdAsRAT.html">AsRAT</A>
+<li><a href="cmdDecimalStr.html">DecimalStr</A>
+<li><a href="cmdFloatApprox.html">FloatApprox</A>
+<li><a href="cmdFloatStr.html">FloatStr</A>
+<li><a href="cmdFloorLog2FloorLog10FloorLogBase.html">FloorLog2, FloorLog10, FloorLogBase</A>
+<li><a href="cmdMantissaAndExponent2.html">MantissaAndExponent2</A>
+<li><a href="cmdScientificStr.html">ScientificStr</A>
+</ul>
+</div>
+
+</body>
+</html>

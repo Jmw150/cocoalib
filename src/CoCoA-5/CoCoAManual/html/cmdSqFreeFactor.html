@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SqFreeFactor</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SqFreeFactor">up</a> <a href="cmdSprintTrunc.html">previous</a>  <a href="cmdStableBBasis5.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SqFreeFactor<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+compute a squarefree factorization</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SqFreeFactor(F: RINGELEM): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Compute a factorization (of a polynomial) into coprime squarefree factors.
+The factorization may sometimes be <b>finer than strictly necessary</b> (i.e. two
+factors could have the same multiplicity).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  f := (x^2-1)^2*(y*z+2*z)^3;
+/**/  indent(SqFreeFactor(f));
+record[
+  RemainingFactor := 1,
+  factors := [x^2 -1, y +2, z],
+  multiplicities := [2, 3, 3]
+]
+/**/ use ZZ/(3)[x,y];
+/**/ SqFreeFactor((x^3+y)*(x+y^3)).factors;
+[x^3 +y,  y^3 +x]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdradical.html">radical</A>
+<li><a href="cmdfactor.html">factor</A>
+<li><a href="cmdContentFreeFactor.html">ContentFreeFactor</A>
+</ul>
+</div>
+
+</body>
+</html>

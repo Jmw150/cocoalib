@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ConcatVerList</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ConcatVerList">up</a> <a href="cmdConcatVer.html">previous</a>  <a href="cmdConstantCoeff.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ConcatVerList<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a simple block matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ConcatVerList(L: LIST of MAT): MAT
+
+where the matrices in L have the same number of columns
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function creates a vertically stacked block matrix.  The
+entries in the list are matrices with the same number of columns.
+<tt><b style="background:#bbeeee">ConcatVerList(L)</b></tt> will return a matrix of the form
+
+  <pre>
+                | L[1] |
+                | L[2] |
+                |  ..  |
+</pre>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [ mat([[1,2,3], [4,5,6]]), mat([[11,12,13]]) ];
+/**/  ConcatVerList(L);
+matrix(QQ,
+ [[1, 2, 3],
+  [4, 5, 6],
+  [11, 12, 13]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBlockMat.html">BlockMat</A>
+<li><a href="cmdColMat.html">ColMat</A>
+<li><a href="cmdMakeMatByRowsMakeMatByCols.html">MakeMatByRows, MakeMatByCols</A>
+<li><a href="cmdConcatAntiDiag.html">ConcatAntiDiag</A>
+<li><a href="cmdConcatDiag.html">ConcatDiag</A>
+<li><a href="cmdConcatVer.html">ConcatVer</A>
+<li><a href="cmdConcatHorList.html">ConcatHorList</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>wdeg</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#wdeg">up</a> <span class="grayed">previous</span> <a href="cmdWeightsMatrix[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>wdeg<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+multi-degree of a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+wdeg(F: RINGELEM): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the multi-weighted degree of F, as determined by
+the matrix weights of the polynomial ring of F.  The function <A HREF="cmddeg.html">
+    <tt>deg</tt>
+  </A>
+returns the standard degree.
+<br><br>
+NOTE: In CoCoA-4 <A HREF="cmddeg.html">
+    <tt>deg</tt>
+  </A> gave the weight given by only the first row
+of the weights matrix.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  M := matrix([[2,3,4], [1,0,2], [1,0,0]]);
+/**/  P := NewPolyRing(QQ, "x,y,z", M, 1);  -- GradingDim=1
+/**/  use P;
+/**/  wdeg(x*y^2+y);
+[8]
+/**/  P := NewPolyRing(QQ, "x,y,z", M, 2);  -- GradingDim=2
+/**/  use P;
+/**/  wdeg(x*y^2+y);
+[8, 1]
+/**/  deg(x*y^2+y);
+3
+
+/**/  P4 := NewFreeModule(P,4); -- the default module ordering is TOPos
+/**/  wdeg(ModuleElem(P4, [0, x, y^2, x^2]));
+[6, 0]
+
+/**/  LT(ModuleElem(P4, [0, x, y^2, x^2]));
+[0, 0, y^2, 0]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddeg.html">deg</A>
+<li><a href="cmdLF.html">LF</A>
+</ul>
+</div>
+
+</body>
+</html>

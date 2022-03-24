@@ -1,0 +1,592 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Commands and Functions for RING</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c9">up</a> <a href="partQuotientRings.html">previous</a> <a href="partCommandsandFunctionsreturningRING.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.9.8 Commands and Functions for RING</b></font>
+</td></tr></table>
+
+<CENTER>
+<TABLE BORDER=1>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAffHilbertFn.html">AffHilbertFn</A>
+  </TD><TD>
+the affine Hilbert function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAffHilbertSeries.html">AffHilbertSeries</A>
+  </TD><TD>
+the affine Hilbert-Poincare series
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdApproxPointsNBM.html">ApproxPointsNBM</A>
+  </TD><TD>
+Numerical Border Basis of ideal of points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrBoolean.html">ArrBoolean</A>
+  </TD><TD>
+boolean arrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrBraid.html">ArrBraid</A>
+  </TD><TD>
+braid arrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrCatalanA.html">ArrCatalanA</A>
+  </TD><TD>
+Catalan arrangement of type A
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrCatalanB.html">ArrCatalanB</A>
+  </TD><TD>
+Catalan arrangement of type B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrCatalanD.html">ArrCatalanD</A>
+  </TD><TD>
+Catalan arrangement of type D
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrGraphical.html">ArrGraphical</A>
+  </TD><TD>
+graphical arrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiA.html">ArrShiA</A>
+  </TD><TD>
+Shi arrangement of type A
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiB.html">ArrShiB</A>
+  </TD><TD>
+Shi arrangement of type B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiCatalanA.html">ArrShiCatalanA</A>
+  </TD><TD>
+Shi-Catalan arrangement of type A with multiplicities
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiCatalanB.html">ArrShiCatalanB</A>
+  </TD><TD>
+Shi-Catalan arrangement of type B with given multiplicities
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiCatalanD.html">ArrShiCatalanD</A>
+  </TD><TD>
+Shi-Catalan arrangement of type D with given multiplicities
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrShiD.html">ArrShiD</A>
+  </TD><TD>
+Shi arrangement of type D
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrSignedGraphical.html">ArrSignedGraphical</A>
+  </TD><TD>
+signed graphical arrangement
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrTypeB.html">ArrTypeB</A>
+  </TD><TD>
+reflection arrangement of type B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrTypeD.html">ArrTypeD</A>
+  </TD><TD>
+reflection arrangement of type D
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBaseRing.html">BaseRing</A>
+  </TD><TD>
+the base ring of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBettiDiagram.html">BettiDiagram</A>
+  </TD><TD>
+the diagram of the graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBringIn.html">BringIn</A>
+  </TD><TD>
+bring in objects from another ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCanonicalHom.html">CanonicalHom</A>
+  </TD><TD>
+canonical homomorphism
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdChainCanonicalHom.html">ChainCanonicalHom</A>
+  </TD><TD>
+canonical homomorphism
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcharacteristic.html">characteristic</A>
+  </TD><TD>
+the characteristic of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoeffEmbeddingHom.html">CoeffEmbeddingHom</A>
+  </TD><TD>
+returns the coefficient embedding homomorphism of a polynomial ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoeffRing.html">CoeffRing</A>
+  </TD><TD>
+the ring of coefficients of a polynomial ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdColMat.html">ColMat</A>
+  </TD><TD>
+single column matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdDefiningIdeal.html">DefiningIdeal</A>
+  </TD><TD>
+defining ideal of a quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdDensePoly.html">DensePoly</A>
+  </TD><TD>
+the sum of all power-products of a given degree
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddepth.html">depth</A>
+  </TD><TD>
+Depth of a module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdDiagMat.html">DiagMat</A>
+  </TD><TD>
+matrix with given diagonal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddim.html">dim</A>
+  </TD><TD>
+the dimension of a (quotient) ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdEmbeddingHom.html">EmbeddingHom</A>
+  </TD><TD>
+returns the embedding homomorphism of a fraction field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGenericPoints.html">GenericPoints</A>
+  </TD><TD>
+random projective points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGradingMat.html">GradingMat</A>
+  </TD><TD>
+matrix of generalized weights for indeterminates
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertFn.html">HilbertFn</A>
+  </TD><TD>
+the Hilbert function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertPoly.html">HilbertPoly</A>
+  </TD><TD>
+the Hilbert polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertSeries.html">HilbertSeries</A>
+  </TD><TD>
+the Hilbert-Poincare series
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertSeriesMultiDeg.html">HilbertSeriesMultiDeg</A>
+  </TD><TD>
+the Hilbert-Poincare series wrt a multigrading
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHVector.html">HVector</A>
+  </TD><TD>
+the h-vector of a module or quotient object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdideal.html">ideal</A>
+  </TD><TD>
+ideal generated by list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIdealOfPoints.html">IdealOfPoints</A>
+  </TD><TD>
+ideal of a set of affine points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIdealOfProjectivePoints.html">IdealOfProjectivePoints</A>
+  </TD><TD>
+ideal of a set of projective points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIdentityMat.html">IdentityMat</A>
+  </TD><TD>
+the identity matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdimplicit.html">implicit</A>
+  </TD><TD>
+implicitization
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdImplicitHypersurface.html">ImplicitHypersurface</A>
+  </TD><TD>
+implicitization of hypersurface
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdindet.html">indet</A>
+  </TD><TD>
+individual indeterminates
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdindets.html">indets</A>
+  </TD><TD>
+list of indeterminates in a PolyRing
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIndetSymbols.html">IndetSymbols</A>
+  </TD><TD>
+the names of the indeterminates in a PolyRing
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdInducedHom.html">InducedHom</A>
+  </TD><TD>
+homomorphism induced by a homomorphism
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsCommutative.html">IsCommutative</A>
+  </TD><TD>
+test whether a ring is commutative
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsField.html">IsField</A>
+  </TD><TD>
+test whether a ring is a field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsFiniteField.html">IsFiniteField</A>
+  </TD><TD>
+test whether a ring is a finite field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsFractionField.html">IsFractionField</A>
+  </TD><TD>
+test whether a ring is a fraction field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsIntegralDomain.html">IsIntegralDomain</A>
+  </TD><TD>
+test whether a ring is integral
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPolyRing.html">IsPolyRing</A>
+  </TD><TD>
+test whether a ring is a polynomial ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsQQ.html">IsQQ</A>
+  </TD><TD>
+test whether a ring is the ring of rationals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsQuotientRing.html">IsQuotientRing</A>
+  </TD><TD>
+test whether a ring is a quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsStdGraded.html">IsStdGraded</A>
+  </TD><TD>
+checks if the grading is standard
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsTrueGCDDomain.html">IsTrueGCDDomain</A>
+  </TD><TD>
+test whether a ring is a true GCD domain
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZZ.html">IsZZ</A>
+  </TD><TD>
+test whether a ring is the ring of integers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLogCardinality.html">LogCardinality</A>
+  </TD><TD>
+extension degree of a finite field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMakeTerm.html">MakeTerm</A>
+  </TD><TD>
+returns a monomial (power-product) with given exponents
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmatrix.html">matrix</A>
+  </TD><TD>
+convert a list into a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmultiplicity.html">multiplicity</A>
+  </TD><TD>
+the multiplicity (degree) of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewFractionField.html">NewFractionField</A>
+  </TD><TD>
+create a new fraction field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewFreeModule.html">NewFreeModule</A>
+  </TD><TD>
+create a new FreeModule
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewMat.html">NewMat</A>
+  </TD><TD>
+Zero matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewPolyRing.html">NewPolyRing</A>
+  </TD><TD>
+create a new PolyRing
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewQuotientRing.html">NewQuotientRing</A>
+  </TD><TD>
+create a new quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewWeylAlgebra.html">NewWeylAlgebra</A>
+  </TD><TD>
+create a new Weyl Algebra
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumIndets.html">NumIndets</A>
+  </TD><TD>
+number of indeterminates
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdone.html">one</A>
+  </TD><TD>
+one of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+  </TD><TD>
+Special characters equivalent to commands
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdOrdMat.html">OrdMat</A>
+  </TD><TD>
+matrix defining a term-ordering
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+  </TD><TD>
+homomorphism of polynomial algebras
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPolyRingHom.html">PolyRingHom</A>
+  </TD><TD>
+homomorphism of polynomial rings
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrintBettiDiagram.html">PrintBettiDiagram</A>
+  </TD><TD>
+print the diagram of the graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrintSectionalMatrix.html">PrintSectionalMatrix</A>
+  </TD><TD>
+print sectional matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQQEmbeddingHom.html">QQEmbeddingHom</A>
+  </TD><TD>
+returns the homomorphism QQ --> R
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQuotientingHom.html">QuotientingHom</A>
+  </TD><TD>
+returns the projection homomorphism into a quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomLinearForm.html">RandomLinearForm</A>
+  </TD><TD>
+random linear form in polynomial ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomSparseNonSing01Mat.html">RandomSparseNonSing01Mat</A>
+  </TD><TD>
+random sparse non-singular (0,1) matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomUnimodularMat.html">RandomUnimodularMat</A>
+  </TD><TD>
+random unimodular matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdreg.html">reg</A>
+  </TD><TD>
+Castelnuovo-Mumford regularity of a module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRegularityIndex.html">RegularityIndex</A>
+  </TD><TD>
+regularity index of a Hilbert function or series
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingElem.html">RingElem</A>
+  </TD><TD>
+convert an expression into a RINGELEM
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingElemListRingElems.html">RingElemList, RingElems</A>
+  </TD><TD>
+convert expressions into a LIST of RINGELEM
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingID.html">RingID</A>
+  </TD><TD>
+identification for ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRowMat.html">RowMat</A>
+  </TD><TD>
+single row matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSectionalMatrix.html">SectionalMatrix</A>
+  </TD><TD>
+sectional matrix 
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSymmetricPolys.html">SymmetricPolys</A>
+  </TD><TD>
+list of symmetric polynomials
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdzero.html">zero</A>
+  </TD><TD>
+zero of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdZeroMat.html">ZeroMat</A>
+  </TD><TD>
+matrix filled with 0
+  </TD></TR>
+
+</TABLE>
+</CENTER>
+<BR><BR>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CurrentRing</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CurrentRing">up</a> <a href="cmdCRTPoly.html">previous</a>  <a href="cmdCurrentTypes.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CurrentRing<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the current ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CurrentRing: RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This is a top-level <b>system variable</b> containing the current ring.
+<br><br>
+NOTE: we advise against using it inside functions (see <A HREF="cmdTopLevel.html">
+    <tt>TopLevel</tt>
+  </A>).
+Previously, in CoCoA-4 it was a function (namely <tt><b style="background:#bbeeee">CurrentRing()</b></tt>)
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  use S ::= ZZ/(3)[t];
+/**/  CurrentRing;
+RingWithID(5, "ZZ/(3)[t]")
+
+/**/  use R;
+/**/  CurrentRing;
+RingWithID(3, "QQ[x,y]")
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRingOf.html">RingOf</A>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

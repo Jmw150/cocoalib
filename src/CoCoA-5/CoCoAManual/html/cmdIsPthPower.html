@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsPthPower</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsPthPower">up</a> <a href="cmdIsProbPrime.html">previous</a>  <a href="cmdIsQQ.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsPthPower<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+p-th power test</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsPthPower(X: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function determines whether a polynomial over a finite
+field (of char p) is a p-th power.
+If the coefficient ring is not a finite field then an error is signalled.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use ZZ/(7)[x];
+/**/  IsPthPower(x^7+3);
+true
+/**/  IsPthPower(x^6+3);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsFiniteField.html">IsFiniteField</A>
+<li><a href="cmdPthRoot.html">PthRoot</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SprintTrunc</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SprintTrunc">up</a> <a href="cmdsprint.html">previous</a>  <a href="cmdSqFreeFactor.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SprintTrunc<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert to a string and truncate</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SprintTrunc(E: OBJECT, N: INT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function works like <A HREF="cmdsprint.html">
+    <tt>sprint</tt>
+  </A>, turning the value of the
+expression <tt><b style="background:#bbeeee">E</b></tt> into a string, but if the string has length greater than
+N-1, it is truncated and the string <tt><b style="background:#bbeeee">...</b></tt> is concatenated.  This
+function is useful in formatting reports of results.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  I := ideal(987*x+123*y)^4;
+/**/  SprintTrunc(I, 20);
+ideal(949005240561*x...
+/**/  SprintTrunc(gens(I)[1], 20);
+949005240561*x^4 +47...
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdformat.html">format</A>
+<li><a href="cmdsprint.html">sprint</A>
+</ul>
+</div>
+
+</body>
+</html>

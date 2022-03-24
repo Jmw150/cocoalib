@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CanonicalRepr</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CanonicalRepr">up</a> <a href="cmdCanonicalHom.html">previous</a>  <a href="cmdCartesianProductCartesianProductList.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CanonicalRepr<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+representative of a class in a quotient ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CanonicalRepr(f: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Given an element <tt><b style="background:#bbeeee">f</b></tt> in a quotient ring <tt><b style="background:#bbeeee">R/I</b></tt> this function
+returns a representative of <tt><b style="background:#bbeeee">f</b></tt> in <tt><b style="background:#bbeeee">R</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[a];
+/**/  RmodI := R/ideal(a^2-2);
+/**/  use RmodI;
+/**/  a^3;
+(2*a)
+/**/  RingOf(a^3);
+RingWithID(9, "RingWithID(7)/ideal(a^2 -2)")
+/**/  CanonicalRepr(a^3);
+2*a
+/**/  RingOf(CanonicalRepr(a^3));
+RingWithID(7, "QQ[a]")
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+<li><a href="cmdDefiningIdeal.html">DefiningIdeal</A>
+</ul>
+</div>
+
+</body>
+</html>

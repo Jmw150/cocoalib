@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GetLine</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GetLine">up</a> <a href="cmdGetErrMesg.html">previous</a>  <a href="cmdGetRow.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GetLine<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+read a line of input from an in-stream</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GetLine(IN: ISTREAM): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function reads a line of input from the in-stream <tt><b style="background:#bbeeee">IN</b></tt>, and returns
+the result as a string.  The string does not contain the end-of-line
+character.  The function <A HREF="cmdIsAtEOF.html">
+    <tt>IsAtEOF</tt>
+  </A> says whether the end of input has
+been reached.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Istring := OpenIString("one\ntwo");
+/**/  GetLine(Istring);  -- get the first line
+one
+/**/  GetLine(Istring);  -- get next line
+two
+/**/  IsAtEOF(Istring);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsAtEOF.html">IsAtEOF</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+<li><a href="cmdStandardInput.html">StandardInput</A>
+</ul>
+</div>
+
+</body>
+</html>

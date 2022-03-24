@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RandomSparseNonSing01Mat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RandomSparseNonSing01Mat">up</a> <a href="cmdRandomSmallPrime.html">previous</a>  <a href="cmdRandomSubset.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RandomSparseNonSing01Mat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+random sparse non-singular (0,1) matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RandomSparseNonSing01Mat(R: RING, N: INT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a random <tt><b style="background:#bbeeee">N</b></tt>-by-<tt><b style="background:#bbeeee">N</b></tt> sparse matrix (with entries
+0 or 1) having non-zero determinant.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ RandomSparseNonSing01Mat(ZZ, 3);
+matrix(ZZ,
+ [[1, 1, 0],
+  [0, 1, 0],
+  [0, 0, 1]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrandom.html">random</A>
+<li><a href="cmdRandomUnimodularMat.html">RandomUnimodularMat</A>
+</ul>
+</div>
+
+</body>
+</html>

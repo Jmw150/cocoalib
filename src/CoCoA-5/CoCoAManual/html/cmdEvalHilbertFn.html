@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>EvalHilbertFn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#EvalHilbertFn">up</a> <a href="cmdeval.html">previous</a>  <a href="cmdEvalQuasiPoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>EvalHilbertFn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+evaluate the Hilbert function</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+EvalHilbertFn(H:TAGGED("$hp.Hilbert"), N: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function evaluates the Hilbert function <tt><b style="background:#bbeeee">H</b></tt> at <tt><b style="background:#bbeeee">N</b></tt>.  If <tt><b style="background:#bbeeee">H</b></tt> is the
+Hilbert function of a quotient <tt><b style="background:#bbeeee">R/I</b></tt>, then the value returned is the
+same as that returned by <tt><b style="background:#bbeeee">HilbertFn(R/I, N)</b></tt> but time is saved
+since the Hilbert function does not need to be recalculated at each call.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[w,x,y,z];
+/**/  I := ideal(z^2-x*y, x*z^2+w^3);
+/**/  H := HilbertFn(R/I);
+/**/  H;
+H(0) = 1
+H(1) = 4
+H(t) = 6t - 3   for t >= 2
+
+/**/  EvalHilbertFn(H,1);
+4
+/**/  EvalHilbertFn(H,2);
+9
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdHilbertFn.html">HilbertFn</A>
+<li><a href="cmdHilbertPoly.html">HilbertPoly</A>
+</ul>
+</div>
+
+</body>
+</html>

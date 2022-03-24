@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MakeMatByRows, MakeMatByCols</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MakeMatByRows, MakeMatByCols">up</a> <a href="cmdMakeCheck.html">previous</a>  <a href="cmdMakeSet.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MakeMatByRows, MakeMatByCols<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert a list into a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MakeMatByRows(R: INT, C: INT, L: LIST): MAT
+MakeMatByCols(R: INT, C: INT, L: LIST): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+ These functions create an <tt><b style="background:#bbeeee">RxC</b></tt> matrix from the list <tt><b style="background:#bbeeee">L</b></tt>.
+ The first argument <tt><b style="background:#bbeeee">R</b></tt> is the number of rows,
+ and the second <tt><b style="background:#bbeeee">C</b></tt> is the number of columns.
+ It is an error if the length of <tt><b style="background:#bbeeee">L</b></tt> is not <tt><b style="background:#bbeeee">RxC</b></tt>.
+<br><br>
+ The ring of the matrix is determined from the ring containing the
+ elements of <tt><b style="background:#bbeeee">L</b></tt>.  If <tt><b style="background:#bbeeee">L</b></tt> contains only integers/rationals
+ then the matrix is over <tt><b style="background:#bbeeee">QQ</b></tt>. 
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  MakeMatByRows(2, 10, 1..20);
+matrix(QQ,
+ [[1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]])
+
+/**/  MakeMatByCols(2, 10, 1..20);
+matrix(QQ,
+ [[1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
+  [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBlockMat.html">BlockMat</A>
+<li><a href="cmdmatrix.html">matrix</A>
+<li><a href="cmdNewMat.html">NewMat</A>
+<li><a href="cmdColMat.html">ColMat</A>
+<li><a href="cmdRowMat.html">RowMat</A>
+<li><a href="cmdDiagMat.html">DiagMat</A>
+<li><a href="cmdConcatHor.html">ConcatHor</A>
+<li><a href="cmdConcatVer.html">ConcatVer</A>
+</ul>
+</div>
+
+</body>
+</html>

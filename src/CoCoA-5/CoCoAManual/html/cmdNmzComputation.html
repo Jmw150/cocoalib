@@ -1,0 +1,101 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NmzComputation</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NmzComputation">up</a> <a href="cmdNFsAreZero[OBSOLETE].html">previous</a>  <a href="cmdNmzDiagInvariants.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NmzComputation<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+flexible access to Normaliz</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NmzComputation(Cone: RECORD): RECORD
+NmzComputation(Cone: RECORD, ToCompute: LIST): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">NmzComputation</b></tt> provides direct access to libnormaliz.  It faithfully
+reflects the internal structure of the libnormaliz design.  Its first
+argument should be a record representing the cone.  For the possible
+input options see the Normaliz documentation.  With the second (optional)
+argument one can specify what should be computed.  If it is omitted,
+everything that can be computed by libnormaliz will be computed.
+<br><br>
+(sub-)list of fields of cone properties:
+ModuleGenerators, Generators, ExtremeRays, VerticesOfPolyhedron,
+Deg1Elements, OriginalMonoidGenerators, SupportHyperplanes,
+ExcludedFaces, HilbertSeries, Multiplicity, Grading,
+IsDeg1HilbertBasis, IsPointed, IsIntegrallyClosed, RecessionRank,
+AffineDim, ModuleRank, Dehomogenization. 
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ Cone := record[ integral_closure := mat([[1,2],[2,1]]),
+/**/                 grading := mat([[2,1]])];
+/**/ NC2 := NmzComputation(Cone, ["HilbertBasis", "SupportHyperplanes", "HilbertSeries"]);
+/**/ indent(NC2);
+
+record[
+  Congruences := [],
+  Deg1Elements := [],
+  EmbeddingDim := 2,
+  Equations := [],
+  ExtremeRays := [[1, 2], [2, 1]],
+  Generators := [[1, 2], [2, 1]],
+  Grading := [2, 1],
+  HilbertBasis := [[1, 1], [1, 2], [2, 1]],
+  HilbertSeries := record[DenFactors := record[RemainingFactor := 1, factors := [-t +1, -t^20 +1], multiplicities := [1, 1]], num := t^18 -t^17 +t^15 +t^10 -t^9 +t^8 +t^3 -t +1],
+  IsDeg1HilbertBasis := false,
+  IsInhomogeneous := false,
+  IsIntegrallyClosed := false,
+  IsPointed := true,
+  Multiplicity := 3/20,
+  Rank := 2,
+  SupportHyperplanes := [[-1, 2], [2, -1]]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNmzIntClosureToricRing.html">NmzIntClosureToricRing</A>
+<li><a href="cmdNmzNormalToricRing.html">NmzNormalToricRing</A>
+<li><a href="cmdNmzIntClosureMonIdeal.html">NmzIntClosureMonIdeal</A>
+<li><a href="cmdNmzEhrhartRing.html">NmzEhrhartRing</A>
+<li><a href="cmdNmzTorusInvariants.html">NmzTorusInvariants</A>
+<li><a href="cmdNmzFiniteDiagInvariants.html">NmzFiniteDiagInvariants</A>
+<li><a href="cmdNmzDiagInvariants.html">NmzDiagInvariants</A>
+<li><a href="cmdNmzIntersectionValRings.html">NmzIntersectionValRings</A>
+<li><a href="cmdNmzSetVerbosityLevel.html">NmzSetVerbosityLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LexSegmentIdeal</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LexSegmentIdeal">up</a> <a href="cmdLexMat.html">previous</a>  <a href="cmdLF.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LexSegmentIdeal<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+lex-segment ideal containing L, or with the same HilbertFn as I</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LexSegmentIdeal(L: LIST of power-products): IDEAL
+LexSegmentIdeal(I: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+If the argument is a LIST of power-products <tt><b style="background:#bbeeee">L</b></tt>, this function returns the
+smallest lex-segment ideal containing the power-products in <tt><b style="background:#bbeeee">L</b></tt>.
+<br><br>
+If it is an IDEAL <tt><b style="background:#bbeeee">I</b></tt>, it returns the lex-segment ideal having the same
+Hilbert function as <tt><b style="background:#bbeeee">I</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  LexSegmentIdeal([y^3]);
+ideal(y^3, x*z^2, x*y*z, x*y^2, x^2*z, x^2*y, x^3)
+/**/  LexSegmentIdeal(ideal(y^3));
+ideal(x^3)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsLexSegment.html">IsLexSegment</A>
+<li><a href="cmdStableIdeal.html">StableIdeal</A>
+<li><a href="cmdStronglyStableIdeal.html">StronglyStableIdeal</A>
+</ul>
+</div>
+
+</body>
+</html>

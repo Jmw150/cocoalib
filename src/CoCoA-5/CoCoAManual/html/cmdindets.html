@@ -1,0 +1,93 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>indets</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#indets">up</a> <a href="cmdIndetName.html">previous</a>  <a href="cmdIndetsProd.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>indets<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of indeterminates in a PolyRing</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+indets(R: RING): LIST
+indets(R: RING, X: STRING): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+With one argument (a polynomial ring), this function returns the
+list of indeterminates of that polynomial ring.
+With two arguments (the second a STRING), it returns the
+list of all indeterminates whose name is the given string.
+The indeterminates in the list appear in order of increasing
+index (see the function <tt><b style="background:#bbeeee">IndetIndex</b></tt>).
+<br><br>
+This function used to be called <tt><b style="background:#bbeeee">IndetsCalled</b></tt> up to version CoCoA-5.0.3,
+and <tt><b style="background:#bbeeee">AllIndetsCalled</b></tt> in CoCoA-4.
+<br><br>
+Additionally, up to version 4.7.3 you could get this list just by giving
+the name, e.g.<tt><b style="background:#bbeeee">Use QQ[x[0..4]];  x;</b></tt> but this syntax is no longer
+allowed because it is ambiguous:
+<tt><b style="background:#bbeeee">x[2];</b></tt> is different from <tt><b style="background:#bbeeee">X := x;  X[2];</b></tt><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  S ::= QQ[x,y,z];
+/**/  use R ::= QQ[a,b];
+/**/  indets(CurrentRing);
+[a, b]
+/**/  indets(S);
+[x, y, z]
+/**/  indets(S,"x");
+[x]
+/**/  RingElem(S,"x"); -- works also if R is not a polynomial ring
+x
+
+/**/  use R ::= QQ[x[1..4],a[1..2,1..3]];
+/**/  indets(R,"x");
+[x[1], x[2], x[3], x[4]]
+/**/  indets(R,"a");
+[a[1,1], a[1,2], a[1,3], a[2,1], a[2,2], a[2,3]]
+/**/  indets(R,"b"); -- empty list if no indet has a matching head
+[]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdindet.html">indet</A>
+<li><a href="cmdIndetSubscripts.html">IndetSubscripts</A>
+<li><a href="cmdIndetIndex.html">IndetIndex</A>
+<li><a href="cmdIndetName.html">IndetName</A>
+<li><a href="cmdNumIndets.html">NumIndets</A>
+</ul>
+</div>
+
+</body>
+</html>

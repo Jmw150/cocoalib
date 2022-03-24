@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>rgin</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#rgin">up</a> <a href="cmdRevLexMat.html">previous</a>  <a href="cmdRingElem.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>rgin<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+generic initial ideal wrt StdDegRevLex</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+rgin(I: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions return the [probabilistic] rgin
+(generic initial ideal wrt StdDegRevLex) of the ideal <tt><b style="background:#bbeeee">I</b></tt>.
+<br><br>
+See <A HREF="cmdgin.html">
+    <tt>gin</tt>
+  </A> for details and verbosity.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z], DegLex;
+/**/  I := ideal(y^2-x*z, x^2*z-y*z^2);
+/**/  gin(I);
+ideal(x^2, x*y^2, x*y*z^2, x*z^4, y^6)
+
+/**/  rgin(I);  
+ideal(x^2, x*y^2, y^4)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdgin.html">gin</A>
+<li><a href="cmdLT.html">LT</A>
+</ul>
+</div>
+
+</body>
+</html>

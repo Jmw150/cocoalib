@@ -1,0 +1,136 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IdealAndSeparatorsOfPoints</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IdealAndSeparatorsOfPoints">up</a> <a href="cmdideal.html">previous</a>  <a href="cmdIdealAndSeparatorsOfProjectivePoints.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IdealAndSeparatorsOfPoints<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+ideal and separators for affine points</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IdealAndSeparatorsOfPoints(Points: LIST): RECORD
+
+where Points is a list of lists of coefficients representing a set of
+<b>distinct</b> points in affine space.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function computes the results of <A HREF="cmdIdealOfPoints.html">
+    <tt>IdealOfPoints</tt>
+  </A> and
+<A HREF="cmdSeparatorsOfPoints.html">
+    <tt>SeparatorsOfPoints</tt>
+  </A> together at a cost lower than making the two
+separate calls.  The result is a record with three fields:
+
+  <pre>
+    points     -- the points given as argument
+    ideal      -- the result of IdealOfPoints
+    separators -- the result of SeparatorsOfPoints
+</pre>
+
+Thus, if the result is stored in a variable with identifier X, then:
+X.points will be the input list of points;
+X.ideal will be the ideal of the set of points, with generators
+forming the reduced Groebner basis for the ideal;
+X.separators will be a list of polynomials whose i-th element will
+take the value 1 on the i-th point and 0 on the others.
+<br><br>
+NOTE:
+<br><br>
+ * the current ring must have at least as many indeterminates as the
+   dimension of the space in which the points lie;
+<br><br>
+ * the base field for the space in which the points lie is taken to be
+   the coefficient ring, which should be a field;
+<br><br>
+ * in the polynomials returned, the first coordinate in the space is
+   taken to correspond to the first indeterminate, the second to the
+   second, and so on;
+<br><br>
+ * if the number of points is large, say 100 or more, the returned
+   value can be very large.  To avoid possible problems when printing
+   such values as a single item we recommend printing out the elements
+   one at a time as in this example:
+
+  <pre>
+***** NOT YET IMPLEMENTED *****
+     X := IdealAndSeparatorsOfPoints(Pts);
+     foreach g in gens(X.ideal) do
+       println g;
+     endforeach;
+</pre>
+
+
+For ideals and separators of points in projective space, see
+<A HREF="cmdIdealAndSeparatorsOfProjectivePoints.html">
+    <tt>IdealAndSeparatorsOfProjectivePoints</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  use R ::= QQ[x,y];
+  Points := [[1, 2], [3, 4], [5, 6]];
+  X := IdealAndSeparatorsOfPoints(Points);
+  X.points;
+[[1, 2], [3, 4], [5, 6]]
+-------------------------------
+  X.ideal;
+ideal(x - y + 1, y^3 - 12y^2 + 44y - 48)
+-------------------------------
+  X.separators;
+[1/8y^2 - 5/4y + 3, -1/4y^2 + 2y - 3, 1/8y^2 - 3/4y + 1]
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGBM.html">GBM</A>
+<li><a href="cmdHGBM.html">HGBM</A>
+<li><a href="cmdGenericPoints.html">GenericPoints</A>
+<li><a href="cmdIdealAndSeparatorsOfProjectivePoints.html">IdealAndSeparatorsOfProjectivePoints</A>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdIdealOfProjectivePoints.html">IdealOfProjectivePoints</A>
+<li><a href="cmdInterpolate.html">Interpolate</A>
+<li><a href="cmdQuotientBasis.html">QuotientBasis</A>
+<li><a href="cmdSeparatorsOfPoints.html">SeparatorsOfPoints</A>
+<li><a href="cmdSeparatorsOfProjectivePoints.html">SeparatorsOfProjectivePoints</A>
+</ul>
+</div>
+
+</body>
+</html>

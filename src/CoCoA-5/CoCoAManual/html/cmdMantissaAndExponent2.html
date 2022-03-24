@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MantissaAndExponent2</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MantissaAndExponent2">up</a> <a href="cmdMantissaAndExponent10.html">previous</a>  <a href="cmdManual.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MantissaAndExponent2<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert rational number to a binary float</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MantissaAndExponent2(X: INT|RAT, Prec: INT): RECORD
+MantissaAndExponent2(X: RINGELEM): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first form of this function converts an integer or rational number into a <tt><b style="background:#bbeeee">RECORD</b></tt> with components
+named <tt><b style="background:#bbeeee">exponent</b></tt>, <tt><b style="background:#bbeeee">mantissa</b></tt> and <tt><b style="background:#bbeeee">NumDigits</b></tt>.
+<br><br>
+If <tt><b style="background:#bbeeee">X=0</b></tt>, all fields of the record are set to zero.
+<br><br>
+For non-zero <tt><b style="background:#bbeeee">X</b></tt> the fields give the best representation of the form <font color=#0000aa>M*2^E</font>
+where <tt><b style="background:#bbeeee">M</b></tt> has <tt><b style="background:#bbeeee">Prec</b></tt> bits.
+The value of <tt><b style="background:#bbeeee">NumDigits</b></tt> is simply <tt><b style="background:#bbeeee">Prec</b></tt>.
+The value of <tt><b style="background:#bbeeee">exponent</b></tt> is <tt><b style="background:#bbeeee">FloorLog2(X,2)</b></tt>, plus 1 if the mantissa "overflows".
+The value of <tt><b style="background:#bbeeee">mantissa</b></tt> is an integer <tt><b style="background:#bbeeee">M</b></tt> satisfying <font color=#0000aa>2^(Prec-1) &lt;= |M| < 2^Prec-1</font><br><br>
+The second form of this function applies to elements of a "twin-float"
+ring.  In this case the "precision" is determined directly from the
+twin-float value; since twin-float arithmetic is based on a randomized
+heuristic, repeating a computation may give a slightly different result
+(and this can be seen in the output of <tt><b style="background:#bbeeee">MantissaAndExponent2</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  MantissaAndExponent2(1/2,8);       --  1/2 = 128*2^(-8)
+record[NumDigits := 8, exponent := -1, mantissa := 128]
+
+/**/  MantissaAndExponent2(65535, 10);   --  rounds up
+record[NumDigits := 10, exponent := 16, mantissa := 512]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAsINT.html">AsINT</A>
+<li><a href="cmdAsRAT.html">AsRAT</A>
+<li><a href="cmdFloatApprox.html">FloatApprox</A>
+<li><a href="cmdFloorLog2FloorLog10FloorLogBase.html">FloorLog2, FloorLog10, FloorLogBase</A>
+<li><a href="cmdMantissaAndExponent10.html">MantissaAndExponent10</A>
+<li><a href="cmdNewRingTwinFloat.html">NewRingTwinFloat</A>
+</ul>
+</div>
+
+</body>
+</html>

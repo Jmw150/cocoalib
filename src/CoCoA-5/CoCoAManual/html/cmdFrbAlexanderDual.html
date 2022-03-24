@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FrbAlexanderDual</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FrbAlexanderDual">up</a> <a href="cmdformat.html">previous</a>  <a href="cmdFrbAssociatedPrimes.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FrbAlexanderDual<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Alexander Dual of monomial ideals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FrbAlexanderDual(I: IDEAL): LIST
+FrbAlexanderDual(I: IDEAL, T: RINGELEM): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Using the <A HREF="partFrobby.html">
+    <tt>Frobby</tt>
+  </A> library linked with CoCoALib.
+Thanks to Bjarke Roune.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  I := ideal(x^2, x*y, y^2, z^2);
+/**/  FrbAlexanderDual(I);
+ideal(x^2*y*z, x*y^2*z)
+
+/**/  FrbAlexanderDual(I, x^2*y^2*z^5);
+ideal(x^2*y*z^4, x*y^2*z^4)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partFrobby.html">Frobby</A>
+<li><a href="cmdFrbPrimaryDecomposition.html">FrbPrimaryDecomposition</A>
+<li><a href="cmdPrimaryDecomposition.html">PrimaryDecomposition</A>
+</ul>
+</div>
+
+</body>
+</html>

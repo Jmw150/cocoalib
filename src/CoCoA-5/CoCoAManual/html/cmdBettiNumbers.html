@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>BettiNumbers</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#BettiNumbers">up</a> <a href="cmdBettiMatrix.html">previous</a>  <a href="cmdbinomial.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>BettiNumbers<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+(Multi-)graded Betti numbers</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+BettiNumbers(M: IDEAL|MODULE|Resolution): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the Betti numbers for <tt><b style="background:#bbeeee">M</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ M := MakeTermOrdMat(matrix([[5,5,5,1,1], [1,1,1,0,0]]));
+/**/ P := NewPolyRing(QQ, "t[1],t[2],t[3],x,y", M, 2); -- ZZ^2-grading
+/**/ use P;
+/**/ I := ideal(t[1]^6 -t[3]^6, t[2]^6 -t[1]^5*t[3], t[1]*t[3]*x^8 -t[2]^2*y^8);
+/**/ RES := res(P/I);
+/**/ PrintRes(RES);
+0 --> R[-78,-14] --> R[-48,-8]^2(+)R[-60,-12] --> R[-18,-2](+)R[-30,-6]^2 --> R
+
+/**/ PrintBettiNumbers(RES);  --> just prints in a readable way
+-- Betti 0 -----------
+-- Betti 1 -----------
+  [18,  2]: 1
+  [30,  6]: 2
+-- Betti 2 -----------
+  [48,  8]: 2
+  [60,  12]: 1
+-- Betti 3 -----------
+  [78,  14]: 1
+----------------------
+
+/**/ BettiNumbers(RES);  --> returns the value for further computations
+[[],  [[[18,  2],  1],  [[30,  6],  2]],  [[[48,  8],  2],
+ [[60,  12],  1]],  [[[78,  14],  1]]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPrintRes.html">PrintRes</A>
+<li><a href="cmdBettiDiagram.html">BettiDiagram</A>
+<li><a href="cmdBettiMatrix.html">BettiMatrix</A>
+<li><a href="cmdPrintBettiNumbers.html">PrintBettiNumbers</A>
+</ul>
+</div>
+
+</body>
+</html>

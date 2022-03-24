@@ -1,0 +1,115 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>factor</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#factor">up</a> <span class="grayed">previous</span> <a href="cmdFactorAlgExt[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>factor<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+factor a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+factor(F: RINGELEM): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function factorizes a polynomial into irreducibles in its ring of
+definition.  Multivariate factorization is not yet supported over finite
+fields (but you can use <A HREF="cmdSqFreeFactor.html">
+    <tt>SqFreeFactor</tt>
+  </A> and then <A HREF="cmdContentFreeFactor.html">
+    <tt>ContentFreeFactor</tt>
+  </A>
+to obtain a partial factorization).
+<br><br>
+(For information about the algorithm, consult John Abbott's papers,
+for univariate polynomials with coefficients in an algebraic extension,
+from version 5.2.3, consult E.Palezzato's PhD thesis)
+<br><br>
+To factorize an integer use <A HREF="cmdFactorINT.html">
+    <tt>FactorINT</tt>
+  </A>.
+<br><br>
+NOTE: in older versions of CoCoA-5 the field names were <tt><b style="background:#bbeeee">Factors</b></tt>
+and <tt><b style="background:#bbeeee">Exponents</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  F := 4*x^8 + 4*x^6 + x^4 + 4*x^2 + 4;
+/**/  FacInfo := factor(F);
+/**/  indent(FacInfo);
+record[
+  RemainingFactor := 1,
+  factors := [2*x^4-4*x^3+5*x^2-4*x+2, 2*x^4+4*x^3+5*x^2+4*x+2],
+  multiplicities := [1, 1]
+]
+/**/  G := product([FacInfo.factors[i]^FacInfo.multiplicities[i]
+/**/                        | i in 1..len(FacInfo.factors)]);
+/**/  F = G * FacInfo.RemainingFactor;
+true
+
+/**/  factor((8*x^2 +16*x +8)/27);
+record[factors := [x +1], multiplicities := [2], RemainingFactor := 8/27]
+
+/**/  factor(2*x^2-4); -- over a finite field the factors are monic
+record[factors := [x^2 -2], multiplicities := [1], RemainingFactor := 2]
+
+/**/ use QQab ::= QQ[a,b];
+/**/ L := QQab/ideal(a^2-2, b^2-3);
+/**/ use L[x,y];
+/**/ indent(factor(x^2-2));
+record[
+  RemainingFactor := (1),
+  factors := [x +(a), x +(-a)],
+  multiplicities := [1, 1]
+]
+
+/**/ indent(factor(x^2-6));
+record[
+  RemainingFactor := (1),
+  factors := [x +(-a*b), x +(a*b)],
+  multiplicities := [1, 1]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdFactorINT.html">FactorINT</A>
+<li><a href="cmdSqFreeFactor.html">SqFreeFactor</A>
+<li><a href="cmdContentFreeFactor.html">ContentFreeFactor</A>
+<li><a href="cmdIsDivisible.html">IsDivisible</A>
+</ul>
+</div>
+
+</body>
+</html>

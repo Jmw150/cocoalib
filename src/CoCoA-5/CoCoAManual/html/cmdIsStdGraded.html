@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsStdGraded</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsStdGraded">up</a> <a href="cmdIsStable.html">previous</a>  <a href="cmdIsStronglyStable.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsStdGraded<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if the grading is standard</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsStdGraded(P: RING): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether <tt><b style="background:#bbeeee">P</b></tt> is standard graded,
+<b>i.e.</b><tt><b style="background:#bbeeee">GradingDim</b></tt> is 1 and all indeterminates
+in <tt><b style="background:#bbeeee">P</b></tt> have degree 1.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  P ::= QQ[x,y,z];
+/**/  IsStdGraded(P);
+true
+/**/  P ::= QQ[x,y,z], lex;
+/**/  IsStdGraded(P);
+false
+/**/  P := NewPolyRing(QQ, "x,y", mat([[2,3],[1,2]]), 1);
+/**/  IsStdGraded(P);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+<li><a href="cmdwdeg.html">wdeg</A>
+</ul>
+</div>
+
+</body>
+</html>

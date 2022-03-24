@@ -1,0 +1,103 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>matrix</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#matrix">up</a> <a href="cmdMapDown[OBSOLETE].html">previous</a>  <a href="cmdmax.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>matrix<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert a list into a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+matrix(LofL: LIST): MAT
+matrix(R: RING, LofL: LIST): MAT
+matrix(R: RING, M: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions construct a matrix.
+The 2nd and 3rd forms produce a matrix over the specified ring <tt><b style="background:#bbeeee">R</b></tt>
+(or error if the entries in <tt><b style="background:#bbeeee">LofL</b></tt> or <tt><b style="background:#bbeeee">M</b></tt> cannot be mapped into <tt><b style="background:#bbeeee">R</b></tt>).
+<br><br>
+In the first form, where the ring is not specified, CoCoA "guesses" the
+ring: if all elements of <tt><b style="background:#bbeeee">LofL</b></tt> are INT or RAT the resulting matrix is in <tt><b style="background:#bbeeee">QQ</b></tt>
+(otherwise it picks the biggest ring from the given elements and uses that).
+<br><br>
+The third form is equivalent to <tt><b style="background:#bbeeee">CanonicalHom(RingOf(M),R)(M)</b></tt>
+(See <A HREF="cmdCanonicalHom.html">
+    <tt>CanonicalHom</tt>
+  </A>).
+<br><br><tt><b style="background:#bbeeee">LofL</b></tt> must be a <b>rectangular</b>LIST of LIST of RINGELEMs or INTs or RATs.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [[1,2],[3,4]];
+/**/  mat(L);
+matrix(QQ,
+ [[1, 2],
+  [3, 4]])
+/**/  mat(ZZ,L);
+matrix(ZZ,
+ [[1, 2],
+  [3, 4]])
+
+/**/  P ::= QQ[x,y];
+/**/  M := mat(P,L); print M;
+matrix( /*RingWithID(3, "QQ[x,y]")*/
+ [[1, 2],
+  [3, 4]])
+/**/  RingOf(M);
+RingWithID(3, "QQ[x,y]")
+
+/**/ M := IdentityMat(ZZ,2);
+/**/ matrix(QQ, M);
+matrix(QQ,
+ [[1, 0],
+  [0, 1]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewMat.html">NewMat</A>
+<li><a href="cmdColMat.html">ColMat</A>
+<li><a href="cmdRowMat.html">RowMat</A>
+<li><a href="cmdDiagMat.html">DiagMat</A>
+<li><a href="cmdMakeMatByRowsMakeMatByCols.html">MakeMatByRows, MakeMatByCols</A>
+<li><a href="cmdConcatHor.html">ConcatHor</A>
+<li><a href="cmdConcatVer.html">ConcatVer</A>
+<li><a href="cmdBlockMat.html">BlockMat</A>
+<li><a href="partCommandsandFunctionsforMAT.html">Commands and Functions for MAT</A>
+</ul>
+</div>
+
+</body>
+</html>

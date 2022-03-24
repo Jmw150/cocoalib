@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LogCardinality</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LogCardinality">up</a> <a href="cmdlog[OBSOLESCENT].html">previous</a>  <a href="cmdLPosn.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LogCardinality<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+extension degree of a finite field</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LogCardinality(Fp: RING): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the extension degree of a finite field over its
+prime field, or equivalently the log (base p) of its cardinality.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Fp ::= ZZ/(7);
+/**/  use Fpx ::= Fp[x];
+/**/  Fq := Fpx/ideal(x^2+1);
+/**/  LogCardinality(Fq);
+2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsFiniteField.html">IsFiniteField</A>
+<li><a href="cmdcharacteristic.html">characteristic</A>
+</ul>
+</div>
+
+</body>
+</html>

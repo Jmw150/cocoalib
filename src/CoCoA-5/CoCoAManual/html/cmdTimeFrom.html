@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>TimeFrom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#TimeFrom">up</a> <a href="cmdThmProve[PROTOTYPE].html">previous</a>  <a href="cmdTimeOfDay.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>TimeFrom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+time elapsed since a given moment</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+TimeFrom(StartPoint: RAT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a string indicating the number of CPU seconds consumed
+since <tt><b style="background:#bbeeee">StartPoint</b></tt>; the value in <tt><b style="background:#bbeeee">StartPoint</b></tt> should be the value produced
+by the function <A HREF="cmdCpuTime.html">
+    <tt>CpuTime</tt>
+  </A> at the point where timing should commence.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  t0 := CpuTime();
+/**/  N := factorial(10000000);
+/**/  PrintLn "Time to compute N: ",TimeFrom(t0);
+Time to compute N: 7.538
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

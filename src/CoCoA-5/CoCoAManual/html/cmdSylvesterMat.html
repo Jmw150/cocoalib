@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SylvesterMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SylvesterMat">up</a> <a href="cmdSwinnertonDyerPoly.html">previous</a>  <a href="cmdSymbolRange.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SylvesterMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the Sylvester matrix of two polynomials</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SylvesterMat(F: RINGELEM, G: RINGELEM, X: RINGELEM): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the Sylvester matrix of the polynomials F and G
+with respect to the indeterminate X.  This is the matrix used to
+calculate the resultant.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[p,q,x];
+/**/  F := x^3+p*x-q;  G := deriv(F, x);
+/**/  SylvesterMat(F, G, x);
+matrix( /*RingWithID(36, "QQ[p,q,x]")*/
+ [[1, 0, p, -q, 0],
+  [0, 1, 0, p, -q],
+  [3, 0, p, 0, 0],
+  [0, 3, 0, p, 0],
+  [0, 0, 3, 0, p]])
+
+/**/  det(SylvesterMat(F, G, x)) = resultant(F, G, x);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdresultant.html">resultant</A>
+</ul>
+</div>
+
+</body>
+</html>

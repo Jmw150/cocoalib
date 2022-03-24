@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>subst</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#subst">up</a> <a href="cmdsubsets.html">previous</a>  <a href="cmdsubstring.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>subst<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+substitute values for indeterminates</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+subst(E: OBJECT, X, F): OBJECT
+subst(E: OBJECT,[[X_1, F_1],...,[X_r, F_r]]): OBJECT
+  where each X or X_i is an indeterminate
+  and each F or F_i is a RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first form of this function substitutes <tt><b style="background:#bbeeee">F_i</b></tt> for <tt><b style="background:#bbeeee">X_i</b></tt> in the
+expression E.  The second form is a shorthand for the first in the
+case of a single indeterminate.  When substituting for the
+indeterminates in order, it is easier to use <A HREF="cmdeval.html">
+    <tt>eval</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z,t];
+/**/  F := x +y +z +t^2;
+/**/  subst(F, x, -2);
+t^2 +y +z -2
+
+/**/  subst(F, [[x,x^2], [y,y^3], [z,t^5]]);
+t^5 +y^3 +x^2 +t^2
+
+/**/  eval(F, [x^2,y^3,t^5]); -- the same thing as above
+t^5 +y^3 +x^2 +t^2
+
+/**/  MySubst := [[y,1], [t, 3*z-x]];
+/**/  subst(x*y*z*t, MySubst);  -- substitute into the function x*y*z*t
+-x^2*z +3*x*z^2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdeval.html">eval</A>
+<li><a href="partEvaluationofPolynomials.html">Evaluation of Polynomials</A>
+<li><a href="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+<li><a href="cmdQZP.html">QZP</A>
+<li><a href="cmdRingElem.html">RingElem</A>
+<li><a href="cmdZPQ.html">ZPQ</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IdentityMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IdentityMat">up</a> <a href="cmdIdealOfProjectivePoints.html">previous</a>  <a href="cmdif.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IdentityMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the identity matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IdentityMat(R: RING, N: INT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the NxN identity matrix with entries in <tt><b style="background:#bbeeee">R</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ Id := IdentityMat(QQ,3);  Id;
+matrix(QQ,
+ [[1, 0, 0],
+  [0, 1, 0],
+  [0, 0, 1]])
+/**/ type(Id[1,1]);
+RINGELEM
+/**/ RingOf(Id[1,1]);
+QQ
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

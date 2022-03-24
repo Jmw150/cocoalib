@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LPosn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LPosn">up</a> <a href="cmdLogCardinality.html">previous</a>  <a href="cmdLPP.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LPosn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the position of the leading power-product in a ModuleElem</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LPosn(V: MODULEELEM): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the position of the leading power-product of <tt><b style="background:#bbeeee">V</b></tt>.
+<br><br>
+This function used to be called <tt><b style="background:#bbeeee">LPos</b></tt> up to version 5.0.3.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];  -- the default term-ordering is DegRevLex
+/**/  R4 := NewFreeModule(R,4); -- the default module ordering is TOPos
+/**/  LPosn(ModuleElem(R4, [0, x, y^2, x^2]));
+4
+/**/  LPP(ModuleElem(R4, [0, x, y^2, x^2]));
+x^2
+/**/  LT(ModuleElem(R4, [0, x, y^2, x^2]));
+[0, 0, 0, x^2]
+
+
+  use R ::= QQ[x,y], PosTo;
+  LT(Vector(x,y^2));
+Vector(x, 0)
+-------------------------------
+  LPP(Vector(x,y^2));
+x
+-------------------------------
+  LPosn(Vector(x,y^2));
+1
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdLF.html">LF</A>
+<li><a href="cmdLM.html">LM</A>
+<li><a href="cmdLPP.html">LPP</A>
+<li><a href="cmdLT.html">LT</A>
+</ul>
+</div>
+
+</body>
+</html>

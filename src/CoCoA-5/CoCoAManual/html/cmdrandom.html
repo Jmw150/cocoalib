@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>random</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#random">up</a> <a href="cmdRadicalOfUnmixed.html">previous</a>  <a href="cmdrandomize[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>random<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+random integer</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+random(X: INT, Y: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function returns a random integer between <tt><b style="background:#bbeeee">X</b></tt> and <tt><b style="background:#bbeeee">Y</b></tt>, inclusive.  The range
+<font color=#0000aa>|X-Y|</font> should be less than <font color=#0000aa>2^33</font> to ensure a uniform distribution.
+<br><br>
+NOTE: every time you restart CoCoA the sequence of random numbers will
+be the same (as happens in many programming languages).  You can change
+this by using <A HREF="cmdreseed.html">
+    <tt>reseed</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  random(1,100);
+6
+
+/**/  random(-10^4,0);
+-3263
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRandomSubset.html">RandomSubset</A>
+<li><a href="cmdRandomSubsetIndices.html">RandomSubsetIndices</A>
+<li><a href="cmdRandomTuple.html">RandomTuple</A>
+<li><a href="cmdRandomTupleIndices.html">RandomTupleIndices</A>
+<li><a href="cmdRandomSmallPrime.html">RandomSmallPrime</A>
+<li><a href="cmdreseed.html">reseed</A>
+</ul>
+</div>
+
+</body>
+</html>

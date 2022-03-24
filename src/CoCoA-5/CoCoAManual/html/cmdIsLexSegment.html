@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsLexSegment</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsLexSegment">up</a> <a href="cmdIsLattice.html">previous</a>  <a href="cmdIsMaximal.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsLexSegment<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if an ideal is lex-segment</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsLexSegment(I: IDEAL): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the monomial ideal I is a lex-segment ideal.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x*y^3, y^4, x^3, x^2*y, x^2*z);
+/**/  IsLexSegment(I);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsStable.html">IsStable</A>
+<li><a href="cmdIsStronglyStable.html">IsStronglyStable</A>
+<li><a href="cmdLexSegmentIdeal.html">LexSegmentIdeal</A>
+</ul>
+</div>
+
+</body>
+</html>

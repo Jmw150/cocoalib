@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GetCol</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GetCol">up</a> <a href="cmdGet[OBSOLETE].html">previous</a>  <a href="cmdGetCols.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GetCol<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert a column of a matrix into a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GetCol(M: MAT, K: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function makes a list containing the entries of the <tt><b style="background:#bbeeee">K</b></tt>-th column of <tt><b style="background:#bbeeee">M</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  M := mat([[1,2], [3,4]]);
+/**/  GetCol(M,2);
+[2, 4]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGetRow.html">GetRow</A>
+<li><a href="cmdGetCols.html">GetCols</A>
+</ul>
+</div>
+
+</body>
+</html>

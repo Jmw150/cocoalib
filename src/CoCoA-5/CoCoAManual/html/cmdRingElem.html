@@ -1,0 +1,118 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RingElem</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RingElem">up</a> <a href="cmdrgin.html">previous</a>  <a href="cmdRingElemListRingElems.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RingElem<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert an expression into a RINGELEM</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RingElem(R: RING, E: STRING): RINGELEM
+RingElem(R: RING, E: RINGELEM): RINGELEM
+RingElem(R: RING, E: INT): RINGELEM
+RingElem(R: RING, E: RAT): RINGELEM
+RingElem(R: RING, E:[STRING, INT, .., INT]): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function converts the expression <tt><b style="background:#bbeeee">E</b></tt> into a RINGELEM in <tt><b style="background:#bbeeee">R</b></tt>,
+if possible.  These functions areuseful for operating with different rings.
+<br><br>
+If <tt><b style="background:#bbeeee">E</b></tt> is a <tt><b style="background:#bbeeee">STRING</b></tt> it evaluates <tt><b style="background:#bbeeee">E</b></tt> in <tt><b style="background:#bbeeee">R</b></tt>,
+(with no need for <tt><b style="background:#bbeeee">use R</b></tt>).  The expression <tt><b style="background:#bbeeee">E</b></tt> may contain
+arithmetic operations and parentheses (but no programming variables or
+function calls).  Use <A HREF="cmdRingElemListRingElems.html">
+    <tt>RingElemList, RingElems</tt>
+  </A> to read many
+(comma-separated) ringelems into a list.
+<br><br>
+If <tt><b style="background:#bbeeee">E</b></tt> is a RINGELEM it is equivalent to applying the 
+<A HREF="cmdCanonicalHom.html">
+    <tt>CanonicalHom</tt>
+  </A> from <tt><b style="background:#bbeeee">RingOf(E)</b></tt> to <tt><b style="background:#bbeeee">R</b></tt>
+(for other homomorphisms see <A HREF="toc.html#RINGHOM">
+    <tt>RINGHOM</tt>
+  </A>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ P ::= ZZ/(5)[x,y];  S ::= QQ[x,y,z[1..4]];  K := NewFractionField(S);
+/**/ QR := NewQuotientRing(S, "x^2-3, y^2-5");
+
+/**/  -- STRING
+/**/  RingElem(P, "7*x");  --> 7*x as an element of P
+2*x
+/**/  RingElem(S, "7*x");  --> 7*x as an element of S
+7*x
+/**/  RingElem(S, "((7/3)*z[2] - 1)^2" ); -- expr without function calls
+(49/9)*z[2]^2 +(-14/3)*z[2] +1
+/**/  RingElem(K, "(x^2-x*y)/(x*y-y^2)");
+x/y
+/**/ RingElem(QR, "(x+y)^3");
+(18*x +14*y)
+
+/**/  -- RINGELEM (via CanonicalHom)
+/**/  use S;
+/**/  f := 2*x-3;
+-- /**/  1/f; --> !!! ERROR !!! as expected: f in P is not invertible
+/**/  1/RingElem(K, f); -- f in K is invertible
+1/(2*x -3)
+
+/**/  use P;
+/**/  -- INT and RAT
+/**/  RingElem(P, 7);
+2
+/**/  RingElem(P, 3/2);
+-1
+
+/**/  -- LIST for indexed indets
+/**/  i := 2;  RingElem(S, ["z",i]); 
+z[2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRingElemListRingElems.html">RingElemList, RingElems</A>
+<li><a href="cmdRingOf.html">RingOf</A>
+<li><a href="cmdAsINT.html">AsINT</A>
+<li><a href="cmdAsRAT.html">AsRAT</A>
+<li><a href="cmdIndetName.html">IndetName</A>
+<li><a href="cmdIndetSubscripts.html">IndetSubscripts</A>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+<li><a href="cmdsprint.html">sprint</A>
+</ul>
+</div>
+
+</body>
+</html>

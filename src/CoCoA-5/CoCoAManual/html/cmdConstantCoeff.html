@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ConstantCoeff</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ConstantCoeff">up</a> <a href="cmdConcatVerList.html">previous</a>  <a href="cmdcontent.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ConstantCoeff<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+constant coefficient of a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ConstantCoeff(F: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the constant coefficient of a polynomial.
+The result is in the coefficient ring, and may be zero.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y];
+/**/  f := x^3+3*x*y-4*y+5;
+/**/  ConstantCoeff(f);
+5
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCoeffEmbeddingHom.html">CoeffEmbeddingHom</A>
+<li><a href="cmdcoefficients.html">coefficients</A>
+<li><a href="cmdCoefficientsWRT.html">CoefficientsWRT</A>
+<li><a href="cmdCoeffListWRT.html">CoeffListWRT</A>
+<li><a href="cmdLC.html">LC</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MaxBy</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MaxBy">up</a> <a href="cmdmax.html">previous</a>  <a href="cmdMaxChains.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MaxBy<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+a maximum element of a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MaxBy(L: LIST, LessThanFunc: FUNCTION)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a maximum of the elements of the list <tt><b style="background:#bbeeee">L</b></tt>
+with respect to the comparisons made by <tt><b style="background:#bbeeee">LessThanFunc</b></tt>.
+<br><br>
+The comparison function <tt><b style="background:#bbeeee">LessThanFunc</b></tt> takes two arguments and returns <tt><b style="background:#bbeeee">true</b></tt>
+if the first argument is less than the second, otherwise it returns <tt><b style="background:#bbeeee">false</b></tt>.
+<br><br>
+NOTE: to call <tt><b style="background:#bbeeee">MaxBy(L,LessThanFunc)</b></tt> inside a function you will need
+to make the name <tt><b style="background:#bbeeee">LessThanFunc</b></tt> accessible using <tt><b style="background:#bbeeee">TopLevel LessThanFunc;</b></tt><br><br>
+NOTE: if both <tt><b style="background:#bbeeee">LessThanFunc(A, B)</b></tt> and <tt><b style="background:#bbeeee">LessThanFunc(B, A)</b></tt> return
+<tt><b style="background:#bbeeee">true</b></tt>, then <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt> are viewed as being equal:
+for example, when comparing two polynomials by their <tt><b style="background:#bbeeee">LPP</b></tt> only.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Define ByLength(S, T)    -- define the sorting function
+/**/    Return len(S) < len(T);
+/**/  EndDefine;
+
+/**/  L := ["bird", "mouse", "cat", "elephant"];
+/**/  MaxBy(L, ByLength);
+elephant
+
+/**/  use QQ[x,y];
+/**/  Define ByLPP(S, T)  return LPP(S) < LPP(T);  EndDefine;
+/**/  L := [x^2*y -y -3, x^5 -1, x^5 -y^2 +3];
+/**/  MaxBy(L, ByLPP);
+x^5 -1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMinBy.html">MinBy</A>
+<li><a href="cmdfunc.html">func</A>
+<li><a href="cmdSortBy.html">SortBy</A>
+<li><a href="cmdSortedBy.html">SortedBy</A>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

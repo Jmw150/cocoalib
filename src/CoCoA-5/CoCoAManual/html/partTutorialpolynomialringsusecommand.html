@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: polynomial rings, use command</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutoriallists.html">previous</a> <a href="partTutorialpolynomials.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.8 Tutorial: polynomial rings, use command</b></font>
+</td></tr></table>
+
+When you want to do a computation in CoCoA-5, the first thing you
+need to do is tell CoCoA-5 in which ring to compute.  The <A HREF="cmduse.html">
+    <tt>use</tt>
+  </A>
+command informs CoCoA-5 about this.  The most convenient method does
+two things at once: it creates the polynomial ring, and then chooses
+that ring as the "current ring".
+<br><br>
+Once the correct current ring has been selected, you may type in
+polynomials using a natural syntax; note that you must use <tt><b style="background:#bbeeee">*</b></tt> to
+denote all products (e.g. between coefficients and indeterminates,
+or even between powers of indeterminates).
+<br><br>
+The most common coefficient fields are the rationals (denoted by <tt><b style="background:#bbeeee">QQ</b></tt>)
+and small prime finite fields (denoted by <tt><b style="background:#bbeeee">ZZ/(p)</b></tt>).
+
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[x,y];  // polys in x,y with coefficients in QQ
+/**/ (x+y)^2;
+x^2 + 2*x*y + y^2
+/**/ use ZZ/(2)[a,b];   // polys in a,b with coefficients in ZZ/(2)
+/**/ (a+b)^2;
+a^2 + b^2
+/**/ use QQ[x,y,z],lex;  // polys in x,y,z, coeffs in QQ, term order "lex"
+/**/ x+y^2;
+x + y^2
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RingsOf</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RingsOf">up</a> <a href="cmdRingSet[OBSOLETE].html">previous</a>  <a href="cmdRingZZ.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RingsOf<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of the rings of an object</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RingsOf(E: LIST|RINGELEM|IDEAL|MAT|MODULE|MODULEELEM): LIST of RING and TYPE
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of the RINGs (or types, if not
+dependent from a RING) on which the object E is dependent.
+Similar to <A HREF="cmdRingOf.html">
+    <tt>RingOf</tt>
+  </A>, this function also works on lists
+and returns the set of ring environments of all entries.
+...needless to say that it may be quite slow on big inputs!
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  L1 := [x, y];
+/**/  L2 := [x, y, 0, 5/4];
+/**/  Z3 := NewZZmod(3);
+/**/  use S ::= Z3[a,b];
+/**/  RingsOf(L1);
+[RingDistrMPolyClean(QQ, 3)]
+
+/**/  RingsOf(L2);
+[RingDistrMPolyClean(QQ, 3), INT, RAT]
+
+/**/  RingsOf([L2, a+b]);
+[RingDistrMPolyClean(QQ, 3), INT, RAT, RingDistrMPolyClean(FFp(3), 2)]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCurrentRing.html">CurrentRing</A>
+<li><a href="cmdRingOf.html">RingOf</A>
+</ul>
+</div>
+
+</body>
+</html>

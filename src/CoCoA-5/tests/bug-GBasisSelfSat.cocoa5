@@ -1,0 +1,12 @@
+//use P ::= QQ[x,y,z];
+use P ::= ZZ/(32003)[x,y,z];
+SetVerbosityLevel(200);
+
+I := ideal(x^5  +z,  x^4  +z,  x^3 +y);
+
+t := CpuTime(); g1 := GBasis(ideal(gens(I))); TimeFrom(t);
+t := CpuTime(); g2 := GBasisSelfSat(ideal(gens(I))); TimeFrom(t);
+
+ideal(g1) = ideal(g2);
+println "GBasis:        ", g1;
+println "GBasisSelfSat: ", g2;

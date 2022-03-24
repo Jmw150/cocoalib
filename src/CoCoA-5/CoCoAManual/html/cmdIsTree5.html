@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsTree5</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsTree5">up</a> <a href="cmdIsTermOrdering.html">previous</a>  <a href="cmdIsTrueGCDDomain.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsTree5<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if a facet complex is a tree</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsTree5(L: LIST): [BOOL, LIST ]
+IsTree5(L: LIST, "NOOPT"): [BOOL, LIST]
+IsTree5(L: LIST, "OPT"): [BOOL, LIST]
+IsTree5(L: LIST, "CS_NOOPT"): [BOOL, LIST]
+IsTree5(L: LIST, "CS_OPT"): [BOOL, LIST]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function is implemented in CoCoALib.
+<br><br>
+This function tests whether the facet complex described by the
+list L of square free power products is a tree, plus a list which:
+<br><br>
+- is empty if L is a tree
+<br><br>
+- contains three elements of a cycle of L if L is not a tree.
+<br><br>
+Four options <tt><b style="background:#bbeeee">NOOPT</b></tt>,<tt><b style="background:#bbeeee">OPT</b></tt>,<tt><b style="background:#bbeeee">CS_NOOPT</b></tt>,<tt><b style="background:#bbeeee">CS_OPT</b></tt> are available as second
+argument, specifying different algorithms; the default is <tt><b style="background:#bbeeee">CS_OPT</b></tt>.
+<br><br>
+For a full description of the algorithms we refer to the paper by
+M. Caboara, S. Faridi, and P. Selinger, "Simplicial cycles and
+the computation of simplicial trees", Journal of Symbolic Computation,
+vol.42/1-2, pp.77-88 (2006).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  use R ::= QQ[x,y,z,t];
+  D := [x*y, y*z, z*t, t*x];
+  IsTree5(D);
+[false, [xy, xt, yt]]
+-------------------------------
+  IsTree5([xy, yz, zt]);
+[true, [ ]]
+-------------------------------
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

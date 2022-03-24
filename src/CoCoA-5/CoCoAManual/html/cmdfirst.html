@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>first</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#first">up</a> <a href="cmdfields.html">previous</a>  <a href="cmdFirstNonZero.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>first<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the first N elements of a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+first(L: LIST): OBJECT
+first(L: LIST, N: INT): OBJECT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+In the first form the function returns the first element of the list
+<tt><b style="background:#bbeeee">L</b></tt>, same as <tt><b style="background:#bbeeee">L[1]</b></tt>.
+In the second form, it returns the list of the first <tt><b style="background:#bbeeee">N</b></tt> elements of <tt><b style="background:#bbeeee">L</b></tt>,
+same as <tt><b style="background:#bbeeee">[ L[i] | i in 1..N ]</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [1,2,3,4,5];
+/**/  first(L);
+1
+
+/**/  first(L,3);
+[1, 2, 3]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdlast.html">last</A>
+<li><a href="cmdtail.html">tail</A>
+</ul>
+</div>
+
+</body>
+</html>

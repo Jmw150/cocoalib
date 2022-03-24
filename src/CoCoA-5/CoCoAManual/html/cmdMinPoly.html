@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MinPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MinPoly">up</a> <a href="cmdminors.html">previous</a>  <a href="cmdMinPolyQuot.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MinPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+minimal polynomial of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MinPoly(M: MAT, X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Thanks to Maria-Laura Torrente.
+<br><br>
+This function returns the minimal polynomial of the matrix <tt><b style="background:#bbeeee">M</b></tt> in the
+indeterminate <tt><b style="background:#bbeeee">X</b></tt> (with <tt><b style="background:#bbeeee">M</b></tt> a square matrix whose entries lie
+in the coefficient ring of <tt><b style="background:#bbeeee">X</b></tt>, or in the same ring as <tt><b style="background:#bbeeee">X</b></tt> but not
+dependent on <tt><b style="background:#bbeeee">X</b></tt>).
+See also <A HREF="cmdCharPoly.html">
+    <tt>CharPoly</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  MinPoly(matrix([[0,0,1],[0,0,0],[0,0,0]]), x);
+x^2
+/**/  CharPoly(matrix([[0,0,1],[0,0,0],[0,0,0]]), x);
+x^3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCharPoly.html">CharPoly</A>
+</ul>
+</div>
+
+</body>
+</html>

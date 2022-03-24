@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ContentWRT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ContentWRT">up</a> <a href="cmdContentFreeFactor.html">previous</a>  <a href="cmdContFrac.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ContentWRT<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+content of a polynomial wrt and indet or a list of indets</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ContentWRT(F: RINGELEM, X: RINGELEM): RINGELEM
+ContentWRT(F: RINGELEM, L: LIST of RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the (polynomial) content of <tt><b style="background:#bbeeee">F</b></tt> (i.e. a gcd of its
+coefficients) seen as a polynomial in the indeterminate <tt><b style="background:#bbeeee">X</b></tt>, or as a
+polynomial in all the indeterminates in <tt><b style="background:#bbeeee">L</b></tt>.
+<br><br>
+The returned value is a RingElem in RingOf(F).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[x,y,z];
+/**/ f := x^3*z + x*y*z^3 + 2*z;
+/**/ Cx :=  CoefficientsWRT(f, x);
+/**/ indent(Cx);
+[
+  record[PP := 1, coeff := 2*z],
+  record[PP := x, coeff := y*z^3],
+  record[PP := x^3, coeff := z]
+]
+/**/ ContentWRT(f, x);
+z
+/**/ ContentWRT(f, [x]);
+z
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCoefficientsWRT.html">CoefficientsWRT</A>
+<li><a href="cmdcontent.html">content</A>
+<li><a href="cmdmonomials.html">monomials</A>
+</ul>
+</div>
+
+</body>
+</html>

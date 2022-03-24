@@ -1,0 +1,43 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Introduction to RING</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c9">up</a> <span class="grayed">previous</span> <a href="partPolynomialRings.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.9.1 Introduction to RING</b></font>
+</td></tr></table>
+
+Rings, and especially polynomial rings, play a central role in CoCoA.
+<br><br>
+The user can define many rings, but at any time a single <b>current ring</b>
+is active within the system.
+<br><br>
+Once a ring has been defined, the system can handle the following
+mathematical objects defined over that ring:
+
+  <pre>
+ * elements of the ring
+ * ideals
+ * matrices
+ * lists of objects
+ * modules (submodules of a free module)
+ * rings
+</pre>
+
+Variables containing ring-dependent objects such as polynomials,
+ideals, and matrices are <b>labeled</b> by their ring.
+Any operation on them is performed in their ring, independently of
+what the current ring is.
+
+</div>
+
+</body>
+</html>

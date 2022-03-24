@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>lcm</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#lcm">up</a> <a href="cmdLC.html">previous</a>  <a href="cmdlen.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>lcm<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+least common multiple</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+lcm(M: INT, N: INT): INT
+lcm(L: LIST of INT): INT
+
+lcm(F: RINGELEM, G: RINGELEM): RINGELEM
+lcm(L: LIST of RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the least common multiple of its arguments,
+or of the elements in the list <tt><b style="background:#bbeeee">L</b></tt>.
+For the calculation of the GCDs and LCMs of polynomials, the
+coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  F := x^2-y^2;
+/**/  G := (x+y)^3;
+/**/  lcm(F, G);
+x^4 +2*x^3*y -2*x*y^3 -y^4
+
+/**/  IsDivisible(F*G, It);
+true
+
+/**/  lcm(F, G) * gcd(F,G) = F*G;
+true
+
+/**/  lcm([3*4,3*8,6*16]);
+96
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddiv.html">div</A>
+<li><a href="cmdmod.html">mod</A>
+<li><a href="cmdgcd.html">gcd</A>
+</ul>
+</div>
+
+</body>
+</html>

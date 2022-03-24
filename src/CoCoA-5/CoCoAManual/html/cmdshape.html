@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>shape</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#shape">up</a> <a href="cmdSetVerbosityLevel.html">previous</a>  <a href="cmdsign.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>shape<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+extended list of types involved in an expression</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+shape(E: LIST): LIST (of TYPE)
+shape(E: RECORD): RECORD (of TYPE)
+shape(E:OTHER): TYPE</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">shape</b></tt> behaves like <A HREF="cmdtype.html">
+    <tt>type</tt>
+  </A> except for LIST and RECORD,
+where <tt><b style="background:#bbeeee">shape</b></tt> recurses into the structure.
+
+  <pre>
+LIST:  gives [shape(obj) | obj in E]
+
+RECORD: gives record[field1 := shape(E.field1), ... ]
+        retaining the original field names
+</pre>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  L := [1,[1,"a"], x^2-x];
+/**/  shape(L);
+[INT, [INT, STRING], RINGELEM]
+
+/**/  R := record[name := "test", contents := L];
+/**/  shape(R);
+record[contents := [INT, [INT, STRING], RINGELEM], name := STRING]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdtype.html">type</A>
+</ul>
+</div>
+
+</body>
+</html>

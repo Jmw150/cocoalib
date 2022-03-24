@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsZeroDim</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsZeroDim">up</a> <a href="cmdIsZeroDet.html">previous</a>  <a href="cmdIsZeroDivisor.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsZeroDim<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether an ideal is zero-dimensional</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsZeroDim(I: IDEAL): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether its argument is zero-dimensional.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  IsZeroDim(ideal(x));
+false
+/**/  IsZeroDim(ideal(x^3, y^4-x ,z-3));
+true
+/**/  IsZeroDim(ideal(x^2, x*y^3));
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddim.html">dim</A>
+</ul>
+</div>
+
+</body>
+</html>

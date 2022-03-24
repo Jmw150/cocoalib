@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RealRootsApprox</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RealRootsApprox">up</a> <a href="cmdRealRoots.html">previous</a>  <a href="cmdrecord.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RealRootsApprox<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+approximations to the real roots of a univariate poly</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RealRootsApprox(F: RINGELEM): LIST
+RealRootsApprox(F: RINGELEM, Precision: RAT): LIST
+RealRootsApprox(F: RINGELEM, Precision: RAT, Interval:[RAT, RAT]): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes rational approximations to the real roots of a
+univariate polyomial (with rational coefficients).
+<br><br>
+An optional second argument specifies the maximum separation between
+the approximations produced and the corresponding exact root.  An
+optional third argument specifies a closed interval in which to search
+for roots.
+<br><br>
+NOTE: the value of <tt><b style="background:#bbeeee">F</b></tt> at an approximate root may not be small;
+see also <A HREF="cmdApproxSolve.html">
+    <tt>ApproxSolve</tt>
+  </A> which uses a heuristic to produce approximate
+roots such that the evaluation is also "small".
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x];
+/**/  RealRootsApprox(x^2-2);
+[-3037000499/2147483648, 3037000499/2147483648]
+
+/**/  RR := RealRootsApprox(x^2-2, 10^(-15), [0, 2]);
+/**/  FloatStr(RR[1], 15); --> print as a decimal, easier to read
+1.41421356237310*10^0
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdApproxSolve.html">ApproxSolve</A>
+<li><a href="cmdRealRoots.html">RealRoots</A>
+<li><a href="cmdRootBound.html">RootBound</A>
+</ul>
+</div>
+
+</body>
+</html>

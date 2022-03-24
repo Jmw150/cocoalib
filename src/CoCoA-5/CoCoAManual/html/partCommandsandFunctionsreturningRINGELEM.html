@@ -1,0 +1,586 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Commands and Functions returning RINGELEM</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c11">up</a> <a href="partCommandsandFunctionsforRINGELEM.html">previous</a> <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.11.4 Commands and Functions returning RINGELEM</b></font>
+</td></tr></table>
+
+<CENTER>
+<TABLE BORDER=1>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdabs.html">abs</A>
+  </TD><TD>
+absolute value of a number
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrCharPoly.html">ArrCharPoly</A>
+  </TD><TD>
+characteristic polynomial of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrPoincarePoly.html">ArrPoincarePoly</A>
+  </TD><TD>
+Poincare polynomial of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdArrTuttePoly.html">ArrTuttePoly</A>
+  </TD><TD>
+Tutte polynomial of an arrangement of hyperplanes
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdbinomial.html">binomial</A>
+  </TD><TD>
+binomial coefficient
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCanonicalRepr.html">CanonicalRepr</A>
+  </TD><TD>
+representative of a class in a quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCharPoly.html">CharPoly</A>
+  </TD><TD>
+characteristic polynomial of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdChebyshevPoly.html">ChebyshevPoly</A>
+  </TD><TD>
+Orthogonal Polynomials: Chebyshev, Hermite, Laguerre
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdClearDenom.html">ClearDenom</A>
+  </TD><TD>
+clear common denominator of a polynomial with rational coeffs
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoeffHeight.html">CoeffHeight</A>
+  </TD><TD>
+the maximum of the absolute values of the coefficients of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoeffListWRT.html">CoeffListWRT</A>
+  </TD><TD>
+list of coefficients of a polynomial wrt an indet
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoeffListWRTSupport.html">CoeffListWRTSupport</A>
+  </TD><TD>
+list of coefficients of a polynomial wrt a power-product basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCoeffOfTerm.html">CoeffOfTerm</A>
+  </TD><TD>
+coefficient of a term of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCommonDenom.html">CommonDenom</A>
+  </TD><TD>
+Common denominator of a polynomial with rational coefficients
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdComputeElimFirst.html">ComputeElimFirst</A>
+  </TD><TD>
+ComputeElimFirst
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdConstantCoeff.html">ConstantCoeff</A>
+  </TD><TD>
+constant coefficient of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcontent.html">content</A>
+  </TD><TD>
+content of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdContentWRT.html">ContentWRT</A>
+  </TD><TD>
+content of a polynomial wrt and indet or a list of indets
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcyclotomic.html">cyclotomic</A>
+  </TD><TD>
+n-th cyclotomic polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdden.html">den</A>
+  </TD><TD>
+denominator
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdDensePoly.html">DensePoly</A>
+  </TD><TD>
+the sum of all power-products of a given degree
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdDenSigma.html">DenSigma</A>
+  </TD><TD>
+den of ideal, wrt to ordering sigma
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdderiv.html">deriv</A>
+  </TD><TD>
+the derivative of a polynomial or rational function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddet.html">det</A>
+  </TD><TD>
+the determinant of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdDF.html">DF</A>
+  </TD><TD>
+the degree form of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdDicksonPoly.html">DicksonPoly</A>
+  </TD><TD>
+Dickson polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddiscriminant.html">discriminant</A>
+  </TD><TD>
+the discriminant of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdeigenfactors.html">eigenfactors</A>
+  </TD><TD>
+eigenfactors of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdEvalQuasiPoly.html">EvalQuasiPoly</A>
+  </TD><TD>
+Evaluate a quasi-polynomial at an integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFirstNonZero.html">FirstNonZero</A>
+  </TD><TD>
+the first non-zero entry in a MODULEELEM
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFirstNonZeroPosn.html">FirstNonZeroPosn</A>
+  </TD><TD>
+the position of the first non-zero entry in a MODULEELEM
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFixedDivisor.html">FixedDivisor</A>
+  </TD><TD>
+compute (integer) fixed divisor for polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrobeniusNormSq.html">FrobeniusNormSq</A>
+  </TD><TD>
+Frobenius norm of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdgcd.html">gcd</A>
+  </TD><TD>
+greatest common divisor
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdgraeffe.html">graeffe</A>
+  </TD><TD>
+graeffe transformation (squares the roots)
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGraverBasis.html">GraverBasis</A>
+  </TD><TD>
+Graver basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHermitePoly.html">HermitePoly</A>
+  </TD><TD>
+Orthogonal Polynomials: Chebyshev, Hermite, Laguerre
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertPoly.html">HilbertPoly</A>
+  </TD><TD>
+the Hilbert polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdhomog.html">homog</A>
+  </TD><TD>
+homogenize wrt an indeterminate
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHomogCompt.html">HomogCompt</A>
+  </TD><TD>
+homogeneous part of given degree
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdImplicitHypersurface.html">ImplicitHypersurface</A>
+  </TD><TD>
+implicitization of hypersurface
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdindet.html">indet</A>
+  </TD><TD>
+individual indeterminates
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIndetsProd.html">IndetsProd</A>
+  </TD><TD>
+(product of) indeterminates actually in a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdInterpolate.html">Interpolate</A>
+  </TD><TD>
+interpolating polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdinterreduced.html">interreduced</A>
+  </TD><TD>
+interreduce a list of polynomials
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdInverseSystem.html">InverseSystem</A>
+  </TD><TD>
+Inverse system of an ideal of derivations
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdJanetBasis.html">JanetBasis</A>
+  </TD><TD>
+the Janet basis of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLaguerrePoly.html">LaguerrePoly</A>
+  </TD><TD>
+Orthogonal Polynomials: Chebyshev, Hermite, Laguerre
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLC.html">LC</A>
+  </TD><TD>
+the leading coefficient of a polynomial or ModuleElem
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdlcm.html">lcm</A>
+  </TD><TD>
+least common multiple
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLF.html">LF</A>
+  </TD><TD>
+the leading form of a polynomial or an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLinKerBasis.html">LinKerBasis</A>
+  </TD><TD>
+find the kernel of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLM.html">LM</A>
+  </TD><TD>
+the leading monomial of a polynomial or ModuleElem
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLPP.html">LPP</A>
+  </TD><TD>
+the leading power-product of a polynomial or ModuleElem
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLT.html">LT</A>
+  </TD><TD>
+the leading term of an object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMakeTerm.html">MakeTerm</A>
+  </TD><TD>
+returns a monomial (power-product) with given exponents
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinPoly.html">MinPoly</A>
+  </TD><TD>
+minimal polynomial of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinPolyQuot.html">MinPolyQuot</A>
+  </TD><TD>
+minimal polynomial in quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmonic.html">monic</A>
+  </TD><TD>
+divide polynomials by their leading coefficients
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNF.html">NF</A>
+  </TD><TD>
+normal form
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzDiagInvariants.html">NmzDiagInvariants</A>
+  </TD><TD>
+ring of invariants of a diagonalizable group action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzEhrhartRing.html">NmzEhrhartRing</A>
+  </TD><TD>
+Ehrhart ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzFiniteDiagInvariants.html">NmzFiniteDiagInvariants</A>
+  </TD><TD>
+ring of invariants of a finite group action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzIntClosureMonIdeal.html">NmzIntClosureMonIdeal</A>
+  </TD><TD>
+integral closure of a monomial ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzIntClosureToricRing.html">NmzIntClosureToricRing</A>
+  </TD><TD>
+integral closure of a toric ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzIntersectionValRings.html">NmzIntersectionValRings</A>
+  </TD><TD>
+intersection of ring of valuations
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzNormalToricRing.html">NmzNormalToricRing</A>
+  </TD><TD>
+normalization of a toric ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzTorusInvariants.html">NmzTorusInvariants</A>
+  </TD><TD>
+ring of invariants of torus action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNR.html">NR</A>
+  </TD><TD>
+normal reduction
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdnum.html">num</A>
+  </TD><TD>
+numerator
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdone.html">one</A>
+  </TD><TD>
+one of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+  </TD><TD>
+Special characters equivalent to commands
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdpfaffian.html">pfaffian</A>
+  </TD><TD>
+the Pfaffian of a skew-symmetric matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPosetCharPoly.html">PosetCharPoly</A>
+  </TD><TD>
+characteristic polynomial of a poset from the relations of the poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPosetPoincarePoly.html">PosetPoincarePoly</A>
+  </TD><TD>
+Poincare polynomial of a poset from the relations of the poset
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdpower.html">power</A>
+  </TD><TD>
+compute a power
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdprim.html">prim</A>
+  </TD><TD>
+primitive part of a polynomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPthRoot.html">PthRoot</A>
+  </TD><TD>
+Compute p-th root
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQZP.html">QZP</A>
+  </TD><TD>
+change field for polynomials and ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdradical.html">radical</A>
+  </TD><TD>
+radical of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRandomLinearForm.html">RandomLinearForm</A>
+  </TD><TD>
+random linear form in polynomial ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRatReconstructPoly.html">RatReconstructPoly</A>
+  </TD><TD>
+Rational reconstruction of polynomial coefficents
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdReducedGBasis.html">ReducedGBasis</A>
+  </TD><TD>
+reduced Groebner basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdresultant.html">resultant</A>
+  </TD><TD>
+the resultant of two polynomials
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingElem.html">RingElem</A>
+  </TD><TD>
+convert an expression into a RINGELEM
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingElemListRingElems.html">RingElemList, RingElems</A>
+  </TD><TD>
+convert expressions into a LIST of RINGELEM
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRootBoundTransform.html">RootBoundTransform</A>
+  </TD><TD>
+transform of a polynomial, helpful for checking RootBound
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdScalarProduct.html">ScalarProduct</A>
+  </TD><TD>
+scalar product
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSwinnertonDyerPoly.html">SwinnertonDyerPoly</A>
+  </TD><TD>
+compute Swinnerton-Dyer polynomial with given roots
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSymmetricPolys.html">SymmetricPolys</A>
+  </TD><TD>
+list of symmetric polynomials
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdUniversalGBasis.html">UniversalGBasis</A>
+  </TD><TD>
+universal Groebner basis of the input ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdzero.html">zero</A>
+  </TD><TD>
+zero of a ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdZPQ.html">ZPQ</A>
+  </TD><TD>
+change field for polynomials and ideals
+  </TD></TR>
+
+</TABLE>
+</CENTER>
+<BR><BR>
+
+</div>
+
+</body>
+</html>

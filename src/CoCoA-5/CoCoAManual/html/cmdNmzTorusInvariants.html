@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NmzTorusInvariants</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NmzTorusInvariants">up</a> <a href="cmdNmzSetVerbosityLevel.html">previous</a>  <a href="cmdNmzVerbosityLevel.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NmzTorusInvariants<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+ring of invariants of torus action</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NmzTorusInvariants(M: MAT, R: Ring): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Let <tt><b style="background:#bbeeee">T=(K^*)^r</b></tt> be the r-dimensional torus acting on the polynomial ring
+<tt><b style="background:#bbeeee">R=K[X_1,...,X_n]</b></tt> diagonally.  Such an action can be described as follows:
+there are integers <font color=#0000aa>a_ij, i=1,...,r, j=1,...,n</font> such that <font color=#0000aa>(l_1,...,l_r)</font> in <tt><b style="background:#bbeeee">T</b></tt>
+acts by the substitution  <font color=#0000aa>X_j</font> maps to <font color=#0000aa>l_1^{a_{1j}} * ... * l_r^{a_{rj}} * Xj</font> for j=1,...,n.
+
+The function takes the matrix <font color=#0000aa>M = (a_{ij})</font> and the ring <tt><b style="background:#bbeeee">R</b></tt> as input.
+It computes the ring of invariants <font color=#0000aa>R^T = {f in R | lf = f for all l in T}</font>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/     use R::=QQ[x,y,z,w];
+/**/     T := matrix([[-1,-1,2,0],[1,1,-2,-1]]);
+/**/     NmzTorusInvariants(T,R);
+[x^2*z, x*y*z, y^2*z]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNmzComputation.html">NmzComputation</A>
+<li><a href="cmdNmzDiagInvariants.html">NmzDiagInvariants</A>
+<li><a href="cmdNmzFiniteDiagInvariants.html">NmzFiniteDiagInvariants</A>
+<li><a href="cmdNmzSetVerbosityLevel.html">NmzSetVerbosityLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

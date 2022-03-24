@@ -1,0 +1,93 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>repeat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#repeat">up</a> <a href="cmdremove.html">previous</a>  <a href="cmdres.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>repeat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+loop command</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+repeat C until B
+repeat C endrepeat
+(where C is a sequence of commands and B is BOOL)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+In the first form, the command sequence <tt><b style="background:#bbeeee">C</b></tt> is repeated until <tt><b style="background:#bbeeee">B</b></tt>
+evaluates to <tt><b style="background:#bbeeee">false</b></tt>.
+Unlike the <A HREF="cmdwhile.html">
+    <tt>while</tt>
+  </A> command, <tt><b style="background:#bbeeee">C</b></tt> is executed at least once.
+<br><br>
+NOTE: there is no <tt><b style="background:#bbeeee">endrepeat</b></tt> following the condition <tt><b style="background:#bbeeee">B</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/      Define GCD_Euclid(A, B)
+/**/        Repeat
+/**/          R := mod(A, B);
+/**/          A := B;
+/**/          B := R;
+/**/         Until B = 0;
+/**/        Return A;
+/**/      EndDefine;
+
+/**/  GCD_Euclid(6,15);
+3
+
+/**/  N := 0;
+/**/  repeat
+/**/    N := N+1;
+/**/    PrintLn N;
+/**/    If N > 5 Then Break; EndIf;
+/**/  endrepeat;
+1
+2
+3
+4
+5
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfor.html">for</A>
+<li><a href="cmdforeach.html">foreach</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+<li><a href="cmdwhile.html">while</A>
+</ul>
+</div>
+
+</body>
+</html>

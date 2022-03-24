@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RingElemList, RingElems</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RingElemList, RingElems">up</a> <a href="cmdRingElem.html">previous</a>  <a href="cmdRingEnv[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RingElemList, RingElems<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert expressions into a LIST of RINGELEM</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RingElems(R: RING, S: STRING): LIST of RINGELEM
+RingElemList(R: RING, S: STRING): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions convert the string <tt><b style="background:#bbeeee">S</b></tt> into a LIST of RINGELEM in <tt><b style="background:#bbeeee">R</b></tt>;
+the only difference is that <tt><b style="background:#bbeeee">RingElemList</b></tt> expects the list of values
+in the string to be inside square brackets.  The successive values in <tt><b style="background:#bbeeee">S</b></tt>
+must be comma separated.
+<br><br>
+The expressions in <tt><b style="background:#bbeeee">S</b></tt> may contain arithmetic operations and parentheses
+(but no programming variables nor function calls).  These functions are
+useful for operating with different rings (without needing to call the
+<A HREF="cmduse.html">
+    <tt>use</tt>
+  </A> command).
+<br><br><tt><b style="background:#bbeeee">RingElems</b></tt> from version 5.3.0; <tt><b style="background:#bbeeee">RingElemList</b></tt> from version 5.4.0.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ P ::= ZZ/(5)[x,y];   S ::= QQ[x,y,z[1..4]];
+
+/**/  RingElems(P, "x^2, (x-3*y)^5");  --> elements of P
+[x^2,  x^5 +2*y^5]
+/**/  RingElemList(S, "[x^2, (x-3*y)^5]");  --> elements of S
+[x^2,  x^5 -15*x^4*y +90*x^3*y^2 -270*x^2*y^3 +405*x*y^4 -243*y^5]
+
+-- even for making ideals in new rings:
+/**/  I := ideal(RingElems(NewPolyRing(QQ, "i"), "i^2 +1"));  I;
+ideal(i^2 +1)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRingOf.html">RingOf</A>
+<li><a href="cmdRingElem.html">RingElem</A>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+<li><a href="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+<li><a href="cmdsprint.html">sprint</A>
+</ul>
+</div>
+
+</body>
+</html>

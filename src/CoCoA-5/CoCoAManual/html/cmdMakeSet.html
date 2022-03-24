@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MakeSet</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MakeSet">up</a> <a href="cmdMakeMatByRowsMakeMatByCols.html">previous</a>  <a href="cmdMakeTerm.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MakeSet<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+remove duplicates from a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MakeSet(L: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list obtained by removing duplicates from <tt><b style="background:#bbeeee">L</b></tt>.
+<br><br>
+NOTE: to test two sets for equality use the function <A HREF="cmdEqSet.html">
+    <tt>EqSet</tt>
+  </A>
+instead of a normal equality test (because the latter yields false if
+the elements are in a different order).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  MakeSet([2,2,2,1,2,1,1,3,3]);
+[2, 1, 3]
+/**/  MakeSet([2,2,2,1,2,1,1,3,3]) = [1,2,3];
+false
+/**/  EqSet([2,2,2,1,2,1,1,3,3],  [1,2,3]);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdEqSet.html">EqSet</A>
+<li><a href="cmdintersection.html">intersection</A>
+<li><a href="cmdIntersectionList.html">IntersectionList</A>
+<li><a href="cmdremove.html">remove</A>
+</ul>
+</div>
+
+</body>
+</html>

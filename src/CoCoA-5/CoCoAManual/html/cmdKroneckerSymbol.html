@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>KroneckerSymbol</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#KroneckerSymbol">up</a> <a href="cmdKroneckerProd.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>KroneckerSymbol<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Kronecker symbol of R mod M</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+KroneckerSymbol(R: INT, M: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the kronecker symbol of <tt><b style="background:#bbeeee">R</b></tt> modulo <tt><b style="background:#bbeeee">M</b></tt>.
+If <tt><b style="background:#bbeeee">M</b></tt> is prime then this value is 0 when <tt><b style="background:#bbeeee">R</b></tt> is divisible
+by <tt><b style="background:#bbeeee">M</b></tt>, and otherwise is 1 when <tt><b style="background:#bbeeee">R</b></tt> is a square modulo
+<tt><b style="background:#bbeeee">M</b></tt> (i.e. a quadratic reside), and -1 when it is not a square.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  KroneckerSymbol(1,3);
+1
+/**/  KroneckerSymbol(-1,7);
+-1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsSquare.html">IsSquare</A>
+</ul>
+</div>
+
+</body>
+</html>

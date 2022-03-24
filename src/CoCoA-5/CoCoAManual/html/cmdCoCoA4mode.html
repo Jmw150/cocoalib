@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CoCoA-4 mode</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CoCoA-4 mode">up</a> <a href="cmdCloseLog.html">previous</a>  <a href="cmdCocoaLimits.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CoCoA-4 mode<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Backward compatibility mode for CoCoA-4</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+  *** E ***
+
+where <tt><b style="background:#bbeeee">E</b></tt> is a CoCoA-4 expression.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+CoCoA-5 is not fully backward compatible with CoCoA-4, i.e. some
+CoCoA-4 programs will be rejected by CoCoA-5.  CoCoA-4 mode helps ease
+the transition to CoCoA-5.
+<br><br>
+In CoCoA-4 it was not necessary to write explicitly the product between
+two indeterminates; in CoCoA-5 this is obligatory.
+<br><br>
+The expression <tt><b style="background:#bbeeee">E</b></tt> may also contain function calls, but only if the
+function names begin with a capital letter.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  f := 2*x^2*y - 3*x*y*z - 4*y^2*z + 5*y*z^2 + 6*z^3;
+/**/  g := ***2x^2y - 3xyz - 4y^2z + 5yz^2 + 6z^3***; --> C4 mode
+/**/  f = g;
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partChangesintheCoCoAlanguage.html">Changes in the CoCoA language</A>
+<li><a href="cmdnot.html">not</A>
+<li><a href="cmdand.html">and</A>
+<li><a href="cmdor.html">or</A>
+</ul>
+</div>
+
+</body>
+</html>

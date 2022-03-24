@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewFreeModule</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewFreeModule">up</a> <a href="cmdNewFractionField.html">previous</a>  <a href="cmdNewId[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewFreeModule<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a new FreeModule</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NewFreeModule(R: RING, N: INT): MODULE
+NewFreeModule(R: RING, Shifts: MAT): MODULE</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a free module of rank <tt><b style="background:#bbeeee">N</b></tt> over <tt><b style="background:#bbeeee">R</b></tt>; for
+the second form <tt><b style="background:#bbeeee">N</b></tt> is taken to be the number of columns in <tt><b style="background:#bbeeee">Shifts</b></tt>.
+<br><br>
+NOTE: as for rings, calling twice <tt><b style="background:#bbeeee">NewFreeModule</b></tt> will produce
+two different modules, even with identical input: equality test is
+performed on the pointers.
+<br><br>
+Starting from version CoCoA-5.0.4, this function does accept shifts.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  F := NewFreeModule(R, 3);
+/**/  zero(F);
+[0, 0, 0]
+/**/ type(zero(F));  -- is NOT a LIST
+MODULEELEM
+/**/ CanonicalBasis(F);
+[[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+
+/**/ F := NewFreeModule(R, matrix([[1],[2],[3]])); -- shifts
+/**/ [wdeg(e) | e in gens(F)];
+[[1], [2], [3]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBaseRing.html">BaseRing</A>
+<li><a href="cmdCanonicalBasis.html">CanonicalBasis</A>
+<li><a href="cmdRingOf.html">RingOf</A>
+</ul>
+</div>
+
+</body>
+</html>

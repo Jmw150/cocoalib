@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GBasis</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GBasis">up</a> <span class="grayed">previous</span> <a href="cmdGBasisByHomog.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GBasis<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+calculate a Groebner basis</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GBasis(I: IDEAL|MODULE): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list whose components form a Groebner basis for
+the ideal (or module) <tt><b style="background:#bbeeee">I</b></tt> with respect to the term-ordering of the
+polynomial ring of <tt><b style="background:#bbeeee">I</b></tt>.
+<br><br>
+If <tt><b style="background:#bbeeee">I</b></tt> is a variable then the result is stored in <tt><b style="background:#bbeeee">I</b></tt> for later use.
+<br><br>
+For the reduced Groebner basis, use the command <A HREF="cmdReducedGBasis.html">ReducedGBasis</A>.
+<br><br>
+The coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use R ::= QQ[x,y];
+/**/ I := ideal(x^4-x^2, x^3-y);
+/**/ GBasis(I);
+[x*y -y^2,  x^2 -y^2,  y^3 -y]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGBasisTimeout.html">GBasisTimeout</A>
+</ul>
+</div>
+
+</body>
+</html>

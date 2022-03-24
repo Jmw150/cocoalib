@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>if</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#if">up</a> <a href="cmdIdentityMat.html">previous</a>  <a href="cmdILogBase.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>if<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+conditional statement</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+If B_1 Then C_1 EndIf
+If B_1 Then C_1 Else D EndIf
+If B_1 Then C_1 Elif B_2 Then C_2 Elif ... EndIf
+If B_1 Then C_1 Elif B_2 Then C_2 Elif ... Else D EndIf
+
+where the B_j are boolean expressions,
+and the C_j and D are command sequences.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+If <tt><b style="background:#bbeeee">B_n</b></tt> is the first in the sequence of the <tt><b style="background:#bbeeee">B_j</b></tt> to evaluate to <tt><b style="background:#bbeeee">true</b></tt>,
+then <tt><b style="background:#bbeeee">C_n</b></tt> is executed.  If none of the <tt><b style="background:#bbeeee">B_j</b></tt> evaluates to <tt><b style="background:#bbeeee">true</b></tt>,
+then <tt><b style="background:#bbeeee">D</b></tt> is executed if present otherwise nothing is done.
+<br><br>
+The construct, <tt><b style="background:#bbeeee">Elif B_j Then C_j</b></tt> can be repeated any number of times.
+<br><br>
+NOTE: the obsolete CoCoA-4 keyword <tt><b style="background:#bbeeee">Elsif</b></tt> is no longer allowed.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Define MySign(A)
+/**/    If A > 0 Then Return 1;
+/**/    Elif A = 0 Then Return 0;
+/**/    Else Return -1;
+/**/    EndIf;
+/**/  EndDefine;
+
+/**/  MySign(3);
+1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBool01.html">Bool01</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+</ul>
+</div>
+
+</body>
+</html>

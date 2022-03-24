@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewWeylAlgebra</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewWeylAlgebra">up</a> <a href="cmdNewRingTwinFloat.html">previous</a>  <a href="cmdNewZZmod.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewWeylAlgebra<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a new Weyl Algebra</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NewWeylAlgebra(K: RING, Indets: STRING): RING
+NewWeylAlgebra(K: RING, Indets: STRING, ..): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Create a new Weyl Algebra.
+<br><br>
+NOTE: calling twice <tt><b style="background:#bbeeee">NewWeylAlgebra</b></tt> will produce
+two different rings, even with identical input: equality test is
+performed on the pointers.  See <A HREF="cmdRingID.html">
+    <tt>RingID</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ NewWeylAlgebra(QQ,"x,y");
+RingWithID(3, "QQ[x,y,dx,dy]")
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

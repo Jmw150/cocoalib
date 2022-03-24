@@ -1,0 +1,53 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Range Operator</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c4">up</a> <a href="partSelectionOperators.html">previous</a> <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.4.5 Range Operator</b></font>
+</td></tr></table>
+
+If <tt><b style="background:#bbeeee">M</b></tt> and <tt><b style="background:#bbeeee">N</b></tt> are of type INT, then the expression:  <tt><b style="background:#bbeeee">M .. N</b></tt> returns
+<br><br>
+      * the list <tt><b style="background:#bbeeee">[M, M+1, ... , N]</b></tt> if <font color=#0000aa>M &lt;= N;</font><br><br>
+      * the empty list, <tt><b style="background:#bbeeee">[]</b></tt>, otherwise.
+<br><br>
+NOTE: see example for how to select a sub-range of a list
+<br><br>
+NOTE: CoCoA does not allow <tt><b style="background:#bbeeee">N..M</b></tt> to produce lists longer than <font color=#0000aa>10^7</font> values.
+<br><br>
+If <tt><b style="background:#bbeeee">x</b></tt> and <tt><b style="background:#bbeeee">y</b></tt> are indeterminates in a ring, then <tt><b style="background:#bbeeee">x .. y</b></tt>
+gives the indeterminates between <tt><b style="background:#bbeeee">x</b></tt> and <tt><b style="background:#bbeeee">y</b></tt> in the order they appear
+in the definition of the ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  1..10;
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+/**/  use R ::= QQ[x,y,z,a,b,c,d];
+/**/  z..c;
+[z, a, b, c]
+
+/**/ L := [11, 22, 33, 44, 55];
+/**/ PartOfL := L[2]..L[4];  --> probably *NOT* what you want!
+/**/ PartOfL := [ L[k] | k in 2..4 ]; --> OK, this is RIGHT!
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

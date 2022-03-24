@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>tag</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#tag">up</a> <span class="grayed">previous</span> <a href="cmdtagged.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>tag<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the tag string of an object</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+tag(E: OBJECT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+If E is a tagged object, this function returns the tag of E;
+otherwise, it returns the empty string.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := tagged(3,"MyTag");
+/**/  type(L);
+TAGGED("$TopLevel.MyTag")
+
+/**/  tag(L);
+MyTag
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partPrintingaTaggedObject.html">Printing a Tagged Object</A>
+<li><a href="cmdtagged.html">tagged</A>
+<li><a href="cmduntagged.html">untagged</A>
+</ul>
+</div>
+
+</body>
+</html>

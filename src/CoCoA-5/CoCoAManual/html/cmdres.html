@@ -1,0 +1,87 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>res</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#res">up</a> <a href="cmdrepeat.html">previous</a>  <a href="cmdreseed.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>res<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+free resolution</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+res(M: IDEAL): LIST
+res(M: MODULE): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the minimal free resolution of <tt><b style="background:#bbeeee">M</b></tt>.
+<tt><b style="background:#bbeeee">res</b></tt> only works in the homogeneous context, and the coefficient ring
+must be a field.
+<br><br>
+NOTE: the current implementation (CoCoA-5.1.0) is very naive so it
+might be very slow (better slow than nothing?).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x, y, z^2);
+/**/  PrintRes(R/I);
+0 --> R(-4) --> R(-2)(+)R(-3)^2 --> R(-1)^2(+)R(-2) --> R
+/**/  indent(Res(R/I),2);
+[
+  RingWithID(20, "RingWithID(3)/ideal(x, y, z^2)"),
+  ideal(
+    y,
+    x,
+    z^2
+  ),
+  SubmoduleRows(F, matrix([
+    [x, -y, 0],
+    [0, z^2, -x],
+    [z^2, 0, -y]
+  ])),
+  SubmoduleRows(F, matrix([
+    [z^2, y, -x]
+  ]))
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPrintBettiDiagram.html">PrintBettiDiagram</A>
+<li><a href="cmdPrintBettiMatrix.html">PrintBettiMatrix</A>
+<li><a href="cmdPrintRes.html">PrintRes</A>
+</ul>
+</div>
+
+</body>
+</html>

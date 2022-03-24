@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PlayCantStop</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PlayCantStop">up</a> <a href="cmdPkgName.html">previous</a>  <a href="cmdPlotPoints.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PlayCantStop<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+First game in CoCoA</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PlayCantStop(Player1: STRING, Player2: STRING, ...)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This is an interactive game!  (see <A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A>).
+<br><br>
+Rules at <tt><b style="background:#bbeeee">https://boardgamegeek.com/boardgame/41/cant-stop</b></tt>
+In brief, this is actually in the <b>mountain</b> scenario:
+you have 3 sherpas which are climbing a mountain.
+After each 4-die roll, if you can, you move your sherpas up.
+Then you decide if you stop and estabish your base camps for following turns, 
+or if you chance your luck, and roll the 4 dice again and again.
+If you cannot move, your sherpas fall off the mountain, and that ends
+your turn.
+<br><br>
+The game can be played with human players and/or computer players.
+The computer players are:
+<tt><b style="background:#bbeeee">ComputerTest</b></tt>: stupid strategy;
+<tt><b style="background:#bbeeee">ComputerAnna1</b></tt>: close to 7 and 50% strategy;
+<tt><b style="background:#bbeeee">ComputerAnna</b></tt>: more human-like choices ;-).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+--  PlayCantStop("Dave", "Diane", "Joy", "Cole");
+--  4 humans
+--  PlayCantStop("ComputerAnna", "ComputerTest", "Anna");
+--  2 computer2 + 1 human
+--  PlayCantStop("ComputerAnna", "ComputerTest", "ComputerAnna1");
+--  3 computers ;-)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdSleepFor.html">SleepFor</A>
+<li><a href="cmdGetLine.html">GetLine</A>
+</ul>
+</div>
+
+</body>
+</html>

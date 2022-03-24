@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RationalSolve</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RationalSolve">up</a> <a href="cmdrank[OBSOLESCENT].html">previous</a>  <a href="cmdRationalSolveHomog.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RationalSolve<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Rational solutions for 0-dim polynomial system</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RationalSolve(L: LIST of RINGELEM): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes all rational solutions (aka. points)
+of a 0-dimensional polynomial system <tt><b style="background:#bbeeee">L</b></tt>; approximate
+real solutions can be computed using <A HREF="cmdApproxSolve.html">
+    <tt>ApproxSolve</tt>
+  </A>.
+Projective solutions of a homogenous system can be obtained
+using <A HREF="cmdRationalSolveHomog.html">
+    <tt>RationalSolveHomog</tt>
+  </A>.
+<br><br>
+Result is a <tt><b style="background:#bbeeee">record</b></tt> saying which indeterminates are "active",
+and list of the solution points.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  L := [x^3-y^2+z-1, x-2, (y-3)*(y+2)];
+/**/  RationalSolve(L);
+record[AffinePts := [[2, -2, -3], [2, 3, 2]],  indets := [x, y, z]]
+
+/**/  L := [x^2+y^2-1, x*y-1];  -- indet z not used
+/**/  RationalSolve(L);
+record[AffinePts := [],  indets := [x, y]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdApproxSolve.html">ApproxSolve</A>
+<li><a href="cmdLinSolve.html">LinSolve</A>
+<li><a href="cmdRationalSolveHomog.html">RationalSolveHomog</A>
+</ul>
+</div>
+
+</body>
+</html>

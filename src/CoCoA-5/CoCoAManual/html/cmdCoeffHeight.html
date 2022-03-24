@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CoeffHeight</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CoeffHeight">up</a> <a href="cmdCoeffEmbeddingHom.html">previous</a>  <a href="cmdcoefficients.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CoeffHeight<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the maximum of the absolute values of the coefficients of a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CoeffHeight(F: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the maximum of the absolute values of the
+coefficients of <tt><b style="background:#bbeeee">F</b></tt>; naturally, the coefficient ring must be
+arithmetically ordered.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[x,y];
+/**/ f := (2*x-3*y)^2;
+/**/ f;
+4*x^2 -12*x*y +9*y^2
+/**/ CoeffHeight(f);
+12
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRootBound.html">RootBound</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>It</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#It">up</a> <a href="cmdIsZZ.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>It<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+variable containing the last result</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+It
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">It</b></tt> is a top-level <b>system variable</b> containing the last result computed
+but not assigned.  It is the CoCoA equivalent to <tt><b style="background:#bbeeee">last</b></tt> in GAP.
+<br><br>
+When CoCoA evaluates a <b>standalone expression</b>, the result is assigned to
+the system variable named <tt><b style="background:#bbeeee">It</b></tt> (and then printed as if in a <A HREF="cmdprintln.html">println</A>
+command).  You may use <tt><b style="background:#bbeeee">It</b></tt> in expressions just like any other variable.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  1+1; -- standalone expression ==> result is saved in "It".
+2
+/**/  It;
+2
+
+/**/  It+1;
+3
+/**/  It;
+3
+
+/**/  X := 17;  -- assignment is not a standalone expression, "It" is unchanged
+/**/  It;
+3
+/**/  X+It;
+20
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdprint.html">print</A>
+<li><a href="cmdprintln.html">println</A>
+<li><a href="toc.html#Evaluation and Assignment">Evaluation and Assignment</A>
+</ul>
+</div>
+
+</body>
+</html>

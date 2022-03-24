@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>OpenIFile</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#OpenIFile">up</a> <a href="cmdone.html">previous</a>  <a href="cmdOpenIString.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>OpenIFile<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+open input file</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+OpenIFile(S: STRING): ISTREAM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function opens the file with name <tt><b style="background:#bbeeee">S</b></tt> for input.
+Input from that file can then be read with <A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A>.
+<br><br>
+NOTE: it is better to use <A HREF="cmdsource.html">
+    <tt>source</tt>
+  </A> to read CoCoA commands from a file.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  D := OpenOFile("my-test");  -- open "my-test" for output from CoCoA
+/**/  Print "hello world\nhello!!!" On D;   -- print string into "mytest"
+/**/  Close(D);
+/**/  D := OpenIFile("my-test");  -- open "my-test" for input to CoCoA
+/**/  GetLine(D);
+hello world
+/**/  GetLine(D);
+hello!!!
+/**/  Close(D);
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdclose.html">close</A>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+<li><a href="cmdOpenOFile.html">OpenOFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+<li><a href="cmdOpenOString.html">OpenOString</A>
+<li><a href="cmdOpenSocket.html">OpenSocket</A>
+<li><a href="cmdsource.html">source</A>
+</ul>
+</div>
+
+</body>
+</html>

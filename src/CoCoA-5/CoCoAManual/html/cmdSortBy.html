@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SortBy</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SortBy">up</a> <a href="cmdsort.html">previous</a>  <a href="cmdsorted.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SortBy<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+sort a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SortBy(ref L: LIST, LessThanFunc: FUNCTION)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This procedure sorts the elements of the list in <tt><b style="background:#bbeeee">L</b></tt> into
+increasing order with respect to the comparisons made by <tt><b style="background:#bbeeee">LessThanFunc</b></tt>;
+it overwrites <tt><b style="background:#bbeeee">L</b></tt> and returns nothing.
+<br><br>
+The comparison function <tt><b style="background:#bbeeee">LessThanFunc</b></tt> takes two arguments
+and must return <tt><b style="background:#bbeeee">true</b></tt> if the first argument is less than the
+second, otherwise it must return <tt><b style="background:#bbeeee">false</b></tt>.
+<br><br>
+If you want to call <tt><b style="background:#bbeeee">SortBy(ref L,LessThanFunc)</b></tt> inside a function, and
+you have defined <tt><b style="background:#bbeeee">LessThanFunc</b></tt> at top level (rather than as an
+anonymous function), then you need to ensure that the name <tt><b style="background:#bbeeee">LessThanFunc</b></tt>
+is visible using <tt><b style="background:#bbeeee">TopLevel LessThanFunc;</b></tt><br><br>
+NOTE: if both <tt><b style="background:#bbeeee">LessThanFunc(A, B)</b></tt> and <tt><b style="background:#bbeeee">LessThanFunc(B, A)</b></tt> return
+<tt><b style="background:#bbeeee">true</b></tt>, then <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt> are viewed as being equivalent.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Define LessThanLen(S, T)    -- define the sorting function
+/**/    Return len(S) < len(T);
+/**/  EndDefine;
+
+/**/  L := ["bird", "mouse", "cat", "elephant"];
+/**/  SortBy(ref L, LessThanLen);
+/**/  L;
+["cat", "bird", "mouse", "elephant"]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfunc.html">func</A>
+<li><a href="cmdMinBy.html">MinBy</A>
+<li><a href="cmdMaxBy.html">MaxBy</A>
+<li><a href="cmdsort.html">sort</A>
+<li><a href="cmdsorted.html">sorted</A>
+<li><a href="cmdSortedBy.html">SortedBy</A>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

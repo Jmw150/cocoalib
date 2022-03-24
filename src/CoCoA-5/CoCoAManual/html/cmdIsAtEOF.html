@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsAtEOF</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsAtEOF">up</a> <a href="cmdIsArrFree.html">previous</a>  <a href="cmdIsCommutative.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsAtEOF<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if input stream has reached end of input</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsAtEOF(in: ISTREAM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the input stream <tt><b style="background:#bbeeee">in</b></tt> has reached end of input.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Istring := OpenIString("just one line");
+/**/  GetLine(Istring);
+just one line
+/**/  IsAtEOF(Istring);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGetLine.html">GetLine</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+</ul>
+</div>
+
+</body>
+</html>

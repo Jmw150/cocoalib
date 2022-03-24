@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>product</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#product">up</a> <a href="cmdPrintSectionalMatrix.html">previous</a>  <a href="cmdprotect.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>product<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the product of the elements of a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+product(L: LIST): OBJECT
+product(L: LIST, InitVal: OBJECT): OBJECT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the product of the objects in the list <tt><b style="background:#bbeeee">L</b></tt> (together
+with rightmost factor <tt><b style="background:#bbeeee">InitVal</b></tt>, if specified).  If the list <tt><b style="background:#bbeeee">L</b></tt> may be
+empty, you must specify also <tt><b style="background:#bbeeee">InitVal</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  product([3, x, y^2]);
+3*x*y^2
+
+/**/  product(1..40) = factorial(40);
+true
+
+/**/  product([], y);
+y
+/**/  product([3, x], y);
+3*x*y
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partAlgebraicOperators.html">Algebraic Operators</A>
+<li><a href="cmdsum.html">sum</A>
+</ul>
+</div>
+
+</body>
+</html>

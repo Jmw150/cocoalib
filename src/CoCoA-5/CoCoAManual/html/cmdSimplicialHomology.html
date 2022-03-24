@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SimplicialHomology</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SimplicialHomology">up</a> <a href="cmdSimplexInfo.html">previous</a>  <a href="cmdsize[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SimplicialHomology<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+simplicial homology of a top simplices list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SimplicialHomology(A: LIST): RECORD
+SimplicialHomology(A: LIST, B: LIST): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the simplicial homology of a simplicial complex
+described by a list of top faces.
+With 2nd argument only with the second list of vertices.
+<br><br>
+Package GeomModelling, by Elisa Palezzato.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x[1..5]], DegLex;  --> DegLex ?
+
+/**/  L := [x[1]*x[2]*x[3], x[2]*x[3]*x[4], x[3]*x[4]*x[5]]; -- list top faces
+/**/  indent(SimplicialHomology(L));
+record[
+  H_0 := record[betti := 1, lambda := []],
+  H_i := [record[betti := 0, lambda := []]],
+  H_max := record[betti := 0, lambda := []]
+]
+-- 1 connected component (betti in H_0)
+
+/**/  L := [x[1]*x[2]*x[3], x[2]*x[3]*x[4]]; -- list top faces
+/**/  -- indent(SimplicialHomology(L)); --!!! ERROR !!! as expected: missing x[5]
+
+/**/  L := [x[1]*x[2]*x[3], x[2]*x[3]*x[4], x[5]];
+/**/  indent(SimplicialHomology(L));
+record[
+  H_0 := record[betti := 2, lambda := []],
+  H_i := [record[betti := 0, lambda := []]],
+  H_max := record[betti := 0, lambda := []]
+]
+-- 2 connected components
+
+/**/  L := [x[1]*x[2]*x[3], x[2]*x[3]*x[4]];
+/**/  indent( SimplicialHomology(L, [x[1], x[2], x[3], x[4]]) );
+record[
+  H_0 := record[betti := 1, lambda := []],
+  H_i := [record[betti := 0, lambda := []]],
+  H_max := record[betti := 0, lambda := []]
+]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

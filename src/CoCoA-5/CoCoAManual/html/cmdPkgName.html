@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PkgName</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PkgName">up</a> <a href="cmdpfaffian.html">previous</a>  <a href="cmdPlayCantStop.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PkgName<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the name of a package</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PkgName(): STRING
+S.PkgName(): STRING
+
+where S is the identifier or alias for a package.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the (long) name of a package.  The first form
+returns <tt><b style="background:#bbeeee">$coclib</b></tt> and the second returns the name of the package
+whose name or alias is S.  This function is useful as a shorthand,
+when S is an alias, for the full name of a package.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+  GB.PkgName();
+$gb
+-------------------------------
+  $gb.PkgName();
+$gb
+-------------------------------
+  PkgName();
+$coclib
+-------------------------------
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

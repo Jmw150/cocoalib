@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GenericPoints</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GenericPoints">up</a> <a href="cmdgcd.html">previous</a>  <a href="cmdGenRepr.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GenericPoints<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+random projective points</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GenericPoints(R: RING, NumPoints: INT): LIST
+GenericPoints(R: RING, NumPoints: INT, RandomRange: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">GenericPoints</b></tt> returns a list of NumPoints generic projective points
+with integer coordinates; it is not guaranteed that these points are
+distinct.  RandomRange specifies the largest value any coordinate may
+take.  If the second argument is omitted, the largest value possible
+is 100 (or P-1 where P is the characteristic of the coefficient ring).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];  GenericPoints(R,7);
+[[1, 0], [0, 1], [1, 1], [12, 59], [6, 63], [12, 80], [17, 63]]
+
+/**/  GenericPoints(R,7,500);
+[[1, 0], [0, 1], [1, 1], [220, 162], [206, 452], [98, 106], [403, 449]]
+
+/**/  use R ::= ZZ/(5)[x,y,z];
+/**/  GenericPoints(R,7);
+[[1, 0, 0], [0, 1, 0], [0, 0, 1], [1, 1, 1], [2, 1, 1], [2, 2, 4], [3, 1, 3]]
+
+/**/  GenericPoints(R,7,500);
+[[1, 0, 0], [0, 1, 0], [0, 0, 1], [1, 1, 1], [1, 4, 2], [1, 3, 2], [2, 3, 3]]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

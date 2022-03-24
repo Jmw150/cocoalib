@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>print</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#print">up</a> <a href="cmdprimorial.html">previous</a>  <a href="cmdprinton.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>print<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+print the value of an expression</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+print E_1, ..., E_n
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command displays the value of each of the expressions <tt><b style="background:#bbeeee">E_i</b></tt>.
+To insert a newline write <tt><b style="background:#bbeeee">\n</b></tt>.
+<br><br>
+The similar command <A HREF="cmdprintln.html">
+    <tt>println</tt>
+  </A> is equivalent to <tt><b style="background:#bbeeee">print</b></tt>
+followed by a newline.
+<br><br>
+See <A HREF="cmdprinton.html">
+    <tt>print on</tt>
+  </A> for printing on file.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  for I := 1 To 10 Do  print I^2, " ";  endfor;
+1 4 9 16 25 36 49 64 81 100
+
+/**/  print "a\nb";
+a
+b
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdprinton.html">print on</A>
+<li><a href="cmdprintln.html">println</A>
+<li><a href="cmdformat.html">format</A>
+<li><a href="cmdindent.html">indent</A>
+<li><a href="cmdlatex.html">latex</A>
+<li><a href="cmdsprint.html">sprint</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+</ul>
+</div>
+
+</body>
+</html>

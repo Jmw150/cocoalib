@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>tagged</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#tagged">up</a> <a href="cmdtag.html">previous</a>  <a href="cmdtail.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>tagged<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+tag an object for pretty printing</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+tagged(E: OBJECT, S: STRING): TAGGED(S)</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the object E, tagged with the string S.
+Tagging is used for pretty printing of objects.  See the reference
+listed below.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [1,2,3];
+/**/  M := tagged(L,"MyTag");
+/**/  type(L);
+LIST
+
+/**/  type(M);
+TAGGED("$TopLevel.MyTag")
+
+/**/  type(untagged(M));
+LIST
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partPrintingaTaggedObject.html">Printing a Tagged Object</A>
+<li><a href="cmdtag.html">tag</A>
+<li><a href="cmduntagged.html">untagged</A>
+</ul>
+</div>
+
+</body>
+</html>

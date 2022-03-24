@@ -1,0 +1,106 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>OpenLog</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#OpenLog">up</a> <a href="cmdOpenIString.html">previous</a>  <a href="cmdOpenOFile.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>OpenLog<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+open a log of a CoCoA session</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+OpenLog(D: DEVICE)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function opens the output device D and starts to record the
+output from a CoCoA session on D.  The <A HREF="cmdCloseLog.html">
+    <tt>CloseLog</tt>
+  </A> closes the
+device D and stops recording the CoCoA session on D.
+<br><br>
+At present the choices for the device D are an output file (see
+<A HREF="cmdOpenOFile.html">
+    <tt>OpenOFile</tt>
+  </A>) or an output string (see <A HREF="cmdOpenOString.html">
+    <tt>OpenOString</tt>
+  </A>).  Several output
+devices may be open at a time.  If the panel option <tt><b style="background:#bbeeee">Echo</b></tt> is set to
+<tt><b style="background:#bbeeee">true</b></tt>, both the input and output of the CoCoA session are logged;
+otherwise, just the output is logged.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  D := OpenOFile("MySession");
+  OpenLog(D);
+  1+1;
+2
+-------------------------------
+  G := 1;
+  Set Echo;
+  2+2;
+2 + 2
+4
+-------------------------------
+  F := 2;
+F := 2
+  CloseLog(D);
+CloseLog(D)
+  UnSet Echo;
+SET(Echo, false)
+
+-- The contents of "MySession":
+2
+-------------------------------
+2 + 2
+4
+-------------------------------
+F := 2
+CloseLog(D)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenOFile.html">OpenOFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+<li><a href="cmdOpenOString.html">OpenOString</A>
+</ul>
+</div>
+
+</body>
+</html>

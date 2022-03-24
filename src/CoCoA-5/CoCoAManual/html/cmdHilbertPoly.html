@@ -1,0 +1,87 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HilbertPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HilbertPoly">up</a> <a href="cmdHilbertMat.html">previous</a>  <a href="cmdHilbertSeries.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HilbertPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the Hilbert polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HilbertPoly(R: (Poly or Quotient)RING): RINGELEM in the ring QQt
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the Hilbert polynomial for R as a polynomial in
+the standard CoCoA ring <tt><b style="background:#bbeeee">QQt</b></tt> (= QQ[t]).
+<br><br>
+The weights of the indeterminates of <tt><b style="background:#bbeeee">R</b></tt> must all be 1, and the
+coefficient ring must be a field.
+<br><br>
+If the input is not homogeneous, the Hilbert polynomial of the
+corresponding leading term (initial) ideal or module is calculated.
+For the Hilbert *function*, see <A HREF="cmdHilbertFn.html">
+    <tt>HilbertFn</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[w,x,y,z];
+/**/  I := ideal(z^2-x*y, x*z^2+w^3);
+/**/  HilbertFn(R/I);
+H(0) = 1
+H(1) = 4
+H(t) = 6*t-3   for t >= 2
+
+/**/  F := HilbertPoly(R/I);
+/**/  F;  -- a polynomial in the ring Qt
+6*t-3
+
+/**/ T := indet(RingOf(F), 1);
+/**/ subst(F, T, 3);
+15
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdEvalHilbertFn.html">EvalHilbertFn</A>
+<li><a href="cmdHilbertFn.html">HilbertFn</A>
+<li><a href="cmdHVector.html">HVector</A>
+<li><a href="cmdHilbertSeries.html">HilbertSeries</A>
+<li><a href="cmdRingQQt.html">RingQQt</A>
+</ul>
+</div>
+
+</body>
+</html>

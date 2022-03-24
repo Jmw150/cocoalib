@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsInvertible</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsInvertible">up</a> <a href="cmdIsIntegralDomain.html">previous</a>  <a href="cmdIsIrred.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsInvertible<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if a RINGELEM is invertible</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsInvertible(f: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the argument <tt><b style="background:#bbeeee">f</b></tt> is invertible in
+<tt><b style="background:#bbeeee">RingOf(f)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  Q := R/ideal(x^2+1);
+/**/  use Q;
+/**/  IsInvertible(x-2);
+true
+/**/ 1/(x-2);
+((-1/5)*x -2/5)
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

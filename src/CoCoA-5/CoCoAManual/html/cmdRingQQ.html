@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RingQQ</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RingQQ">up</a> <a href="cmdRingOf.html">previous</a>  <a href="cmdRingQQt.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RingQQ<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the ring of rationals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RingQQ(): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the ring of rationals.
+It is particularly useful when you want to use <tt><b style="background:#bbeeee">QQ</b></tt>
+(which is a pre-defined top-level <b>variable</b>) inside a function.
+<br><br>
+NOTE: calling <tt><b style="background:#bbeeee">RingQQ</b></tt> twice gives the same identical ring,
+whereas calling <A HREF="cmdNewPolyRing.html">
+    <tt>NewPolyRing</tt>
+  </A> and <A HREF="cmdNewFractionField.html">
+    <tt>NewFractionField</tt>
+  </A>
+return each time a new ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  QQ = RingQQ();
+
+/**/  Two := RingElem(RingQQ(), 2);   Two;
+2
+/**/  type(Two);
+RINGELEM;
+/**/  IsQQ(RingOf(Two));
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+<li><a href="cmdQQ.html">QQ</A>
+<li><a href="cmdRingQQt.html">RingQQt</A>
+<li><a href="cmdRingZZ.html">RingZZ</A>
+</ul>
+</div>
+
+</body>
+</html>

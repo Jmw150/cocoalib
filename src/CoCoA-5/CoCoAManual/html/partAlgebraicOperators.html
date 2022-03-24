@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Algebraic Operators</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c4">up</a> <a href="partCoCoAOperatorsintroduction.html">previous</a> <a href="partRelationalOperators.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.4.2 Algebraic Operators</b></font>
+</td></tr></table>
+
+The algebraic operators are:
+
+  <pre>
+      +  -  *  /  :  ^
+</pre>
+
+The following table shows which operations the system can perform
+between two objects of the same or of different types; the first
+column lists the type of the first operand and the first row lists the
+type of the second operand. So, for example, the symbol <tt><b style="background:#bbeeee">:</b></tt> in the box
+on the seventh row and fourth column means that it is possible to
+divide an ideal by a polynomial.
+
+  <pre>
+          INT    RAT  RINGELEM  MODULEELEM IDEAL MODULE MAT LIST
+INT       +-*/^  +-*/   +-*/      *         *     *      *   *
+RAT       +-*/^  +-*/   +-*/      *         *     *      *   *
+RINGELEM  +-*/^  +-*/   +-*/      *         *     *      *   *
+MODULEELEM *     *      *         +-
+IDEAL     *^     *      *                   +*:   *
+MODULE    *      *      *                   *     +:
+MAT       *^     *      *                                +-*
+LIST      *      *      *                                    +-
+
+                           Algebraic operators
+</pre>
+
+Remarks:
+<br><br>
+  * Let F and G be two polynomials. If F is a multiple of G, then
+    F/G is the polynomial obtained from the division of F by G,
+    otherwise F/G is a rational function (common factors are
+    simplified). The functions <A HREF="cmddiv.html">
+    <tt>div</tt>
+  </A> and <A HREF="cmdmod.html">
+    <tt>mod</tt>
+  </A> can be used to get the
+    quotient and the remainder of a polynomial division.
+<br><br>
+  * Let <font color=#0000aa>L_1</font> and <font color=#0000aa>L_2</font> be two lists of the same length. Then <font color=#0000aa>L_1 + L_2</font> is
+    the list obtained by adding <font color=#0000aa>L_1</font> to <font color=#0000aa>L_2</font> componentwise.
+<br><br>
+  * If I and J are both ideals or both modules, then <font color=#0000aa>I : J</font> is the
+    ideal consisting of all polynomials f such that fg is in I for all
+    g in J.
+
+</div>
+
+</body>
+</html>

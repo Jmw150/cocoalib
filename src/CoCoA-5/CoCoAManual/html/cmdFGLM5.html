@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FGLM5</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FGLM5">up</a> <a href="cmdFactorMultiplicity.html">previous</a>  <a href="cmdfibonacci.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FGLM5<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+perform a FGLM Groebner Basis conversion</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FGLM5(GBOld: LIST, M: MAT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function is implemented in ApCoCoALib by Stefan Kaspar.
+<br><br>
+The function <tt><b style="background:#bbeeee">FGLM5</b></tt> calls the CoCoAServer to perform a
+FGLM Groebner Basis conversion.  Please note that the ideal generated
+by the given Groebner Basis must be zero-dimensional.  The Groebner
+Basis contained in list <tt><b style="background:#bbeeee">GBOld</b></tt> will be converted into a Groebner Basis
+with respect to term ordering <tt><b style="background:#bbeeee">Ord(M)</b></tt>, i.e. M must be a matrix
+specifying a term ordering.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  use QQ[x, y, z], DegRevLex;
+  GBOld := *** [z^4 -3z^3 - 4yz + 2z^2 - y + 2z - 2, yz^2 + 2yz - 2z^2
+  + 1, y^2 - 2yz + z^2 - z, x + y - z] ***;
+  M := LexMat(3);
+  GBNew := FGLM5(GBOld, M);
+  use QQ[x, y, z], Ord(M);
+  -- New basis (Lex)
+  BringIn(GBNew);
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsConstant</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsConstant">up</a> <a href="cmdIsCommutative.html">previous</a>  <a href="cmdIsContained.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsConstant<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if a ringelem is in the coefficient ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsConstant(X: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the value of <tt><b style="background:#bbeeee">X</b></tt> in a polynomial ring
+actually lies in the image of the coefficient ring.  It is equivalent to
+checking that the degree is 0 (or the support comprises just the PP 1).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  QQx ::= QQ[x];
+/**/  use QQx[y,z];
+/**/  IsConstant(y+1);
+false
+/**/  IsConstant(x+1);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdindets.html">indets</A>
+</ul>
+</div>
+
+</body>
+</html>

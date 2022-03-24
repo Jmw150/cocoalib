@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>StronglyStableIdeal</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#StronglyStableIdeal">up</a> <a href="cmdStdDegRevLexMat.html">previous</a>  <a href="cmdSturmSeq.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>StronglyStableIdeal<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+strongly stable ideal containing L</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+StronglyStableIdeal(L: LIST of power-products): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the smallest strongly stable ideal containing the
+power-products in L.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  L := [x*y^2*z];
+/**/  StableIdeal(L);
+ideal(x^4, x^3*y, x^2*y^2, x*y^3, x*y^2*z)
+
+/**/  StronglyStableIdeal(L);
+ideal(x^4, x^3*y, x^2*y^2, x*y^3, x^3*z, x^2*y*z, x*y^2*z)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsStronglyStable.html">IsStronglyStable</A>
+<li><a href="cmdLexSegmentIdeal.html">LexSegmentIdeal</A>
+<li><a href="cmdStableIdeal.html">StableIdeal</A>
+</ul>
+</div>
+
+</body>
+</html>

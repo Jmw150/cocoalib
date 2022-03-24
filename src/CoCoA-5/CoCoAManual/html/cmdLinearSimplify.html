@@ -1,0 +1,59 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LinearSimplify</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LinearSimplify">up</a> <a href="cmdLF.html">previous</a>  <a href="cmdLinKer.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LinearSimplify<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+simplifying linear substitution for a univariate poly over QQ</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LinearSimplify(F: RINGELEM): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a <tt><b style="background:#bbeeee">RECORD[LinearChange, SimplePoly]</b></tt>
+where <tt><b style="background:#bbeeee">LinearChange</b></tt> is a linear change of variable
+and <tt><b style="background:#bbeeee">SimplePoly</b></tt> is simple (in a heuristic sense).
+The composition <tt><b style="background:#bbeeee">SimplePoly(LinearChange)</b></tt> is equal the
+univariate polynomial <tt><b style="background:#bbeeee">F</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x];
+/**/  LinearSimplify((123*x-456)^9-1);
+record[LinearChange := 123*x - 456, SimplePoly := x^9 - 1]
+
+/**/  LinearSimplify(x^9-1); -- the heuristic finds no useful simplification
+record[LinearChange := x, SimplePoly := x^9 - 1]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

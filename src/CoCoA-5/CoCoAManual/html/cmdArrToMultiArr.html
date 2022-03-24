@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ArrToMultiArr</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ArrToMultiArr">up</a> <a href="cmdArrSignedGraphical.html">previous</a>  <a href="cmdArrTuttePoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ArrToMultiArr<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+multiarrangement from an arrangement and a list of multiplicities</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ArrToMultiArr(A: LIST, L: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function constructs the multiarrangement obtained from the
+arrangement A with respect to the list of multiplicities L.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y,z];
+/**/ A := [x, y, z];
+/**/ ArrToMultiArr(A, [1, 3, 2]);
+[[x,  1],  [y,  3],  [z,  2]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMultiArrToArr.html">MultiArrToArr</A>
+<li><a href="cmdMultiArrRestrictionZiegler.html">MultiArrRestrictionZiegler</A>
+</ul>
+</div>
+
+</body>
+</html>

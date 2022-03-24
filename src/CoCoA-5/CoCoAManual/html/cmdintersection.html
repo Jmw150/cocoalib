@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>intersection</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#intersection">up</a> <a href="cmdinterreduced.html">previous</a>  <a href="cmdIntersectionList.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>intersection<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+intersect lists, ideals, or modules</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+intersection(A: LIST,  B: LIST):  LIST
+intersection(A: IDEAL, B: LIST):  LIST
+intersection(A: LIST,  B: IDEAL): LIST
+intersection(A: IDEAL, B: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the intersection of <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt>.
+<br><br>
+The coefficient ring must be a field.
+<br><br>
+NOTE: To compute the intersection of ideals corresponding to
+zero-dimensional schemes, see the commands <A HREF="cmdGBM.html">
+    <tt>GBM</tt>
+  </A> and <A HREF="cmdHGBM.html">
+    <tt>HGBM</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  intersection(ideal(x,y,z), ideal(x*y));
+ideal(x*y)
+
+/**/  intersection(["a","b","c"], ["b","c","d"]);
+["b", "c"]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGBM.html">GBM</A>
+<li><a href="cmdHGBM.html">HGBM</A>
+<li><a href="cmdIntersectionList.html">IntersectionList</A>
+</ul>
+</div>
+
+</body>
+</html>

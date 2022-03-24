@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>TimeOfDay</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#TimeOfDay">up</a> <a href="cmdTimeFrom.html">previous</a>  <a href="cmdTmpNBM[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>TimeOfDay<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the current time</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+TimeOfDay(): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the current time as an INT in the form
+<font color=#0000aa>HHMMSS = HH*10000+MM*100+SS</font> using a 24-hour clock.
+<br><br>
+NOTE: from version 5.0.4 this information is no longer given by
+the function <A HREF="cmddate.html">
+    <tt>date</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  TimeOfDay();  -- 09:08:13
+90813
+/**/  date();       -- 2013-05-30
+20130530
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddate.html">date</A>
+</ul>
+</div>
+
+</body>
+</html>

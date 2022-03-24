@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CRT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CRT">up</a> <a href="cmdCpuTime.html">previous</a>  <a href="cmdCRTPoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CRT<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Chinese Remainder Theorem</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CRT(R1: INT, M1: INT, R2: INT, M2: INT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function combines two residue-modulus pairs <tt><b style="background:#bbeeee">(R1,M1)</b></tt> and <tt><b style="background:#bbeeee">(R2,M2)</b></tt>
+using the Chinese Remainder Theorem to produce a single residue-modulus
+pair <tt><b style="background:#bbeeee">(R,M)</b></tt> such that <tt><b style="background:#bbeeee">R = R1 mod M1</b></tt> and <tt><b style="background:#bbeeee">R = R2 mod M2</b></tt>, and <tt><b style="background:#bbeeee">|R| < M</b></tt>.
+The moduli <tt><b style="background:#bbeeee">M1</b></tt> and <tt><b style="background:#bbeeee">M2</b></tt> must be coprime (hence <tt><b style="background:#bbeeee">M = M1*M2</b></tt>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  CRT(2,3, 4,5);
+record[modulus := 15, residue := -1]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCRTPoly.html">CRTPoly</A>
+<li><a href="cmdRatReconstructByContFrac.html">RatReconstructByContFrac</A>
+<li><a href="cmdRatReconstructByLattice.html">RatReconstructByLattice</A>
+</ul>
+</div>
+
+</body>
+</html>

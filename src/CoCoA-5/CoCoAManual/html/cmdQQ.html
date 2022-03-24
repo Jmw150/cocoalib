@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>QQ</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#QQ">up</a> <span class="grayed">previous</span> <a href="cmdQQEmbeddingHom.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>QQ<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the ring of rationals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+QQ: RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This system variable is constant; its value is the field of rationals.
+Its name is protected so that it cannot be re-assigned to any other
+value.
+<br><br>
+NOTE: this is a (protected) <b>variable</b>, so in <tt><b style="background:#bbeeee">define/endefine</b></tt> 
+use <A HREF="cmdRingQQ.html">
+    <tt>RingQQ</tt>
+  </A> instead (or import it with <A HREF="cmdTopLevel.html">
+    <tt>TopLevel</tt>
+  </A>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ;
+
+/**/  type(5);
+INT
+/**/  type(RingElem(QQ, 5));
+RINGELEM
+
+/**/  QQ = RingQQ();
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdZZ.html">ZZ</A>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+<li><a href="cmdRingQQ.html">RingQQ</A>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

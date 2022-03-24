@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>String Literals</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c4">up</a> <span class="grayed">previous</span> <a href="partStringOperations.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.4.1 String Literals</b></font>
+</td></tr></table>
+
+A string literal consists of a sequence of characters between double
+quotes ("...").
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ PrintLn "The primes up to 10 are ", [n in 1..10 | IsPrime(n)];
+The primes up to 10 are [2, 3, 5, 7]
+
+/**/ Print "The quick brown fox", "jumped over the lazy dog.";
+The quick brown foxjumped over the lazy dog
+</pre></td></tr></table>
+
+
+To put special characters in CoCoA string literals use the appropriate
+<b>escape sequence</b>.  Here is a summary:
+  <tt><b style="background:#bbeeee">\"</b></tt>  produces a double-quote character;
+  <tt><b style="background:#bbeeee">\n</b></tt>  produces a newline character;
+  <tt><b style="background:#bbeeee">\\</b></tt>  produces a backslash character;
+  <tt><b style="background:#bbeeee">\t</b></tt>  produces a TAB character;
+  <tt><b style="background:#bbeeee">\r</b></tt>  produces a carriage-return character.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ Print "line 1\nline 2";
+line 1
+line 2
+/**/  Print "A string containing \"quote marks\".";
+A string containing "quote marks".
+</pre></td></tr></table>
+
+
+WARNING: CoCoA still accepts an <b>obsolescent</b> syntax for string
+literals (between single-quotes); do not use this!
+
+</div>
+
+</body>
+</html>

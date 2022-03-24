@@ -1,0 +1,63 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsQuotientRing</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsQuotientRing">up</a> <a href="cmdisqrt[OBSOLETE].html">previous</a>  <a href="cmdIsRadical.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsQuotientRing<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether a ring is a quotient ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsQuotientRing(R: RING): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether a ring is a quotient ring; it returns <tt><b style="background:#bbeeee">true</b></tt>
+if the ring is a quotient ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  S := R/ideal(x);
+/**/  IsQuotientRing(S);
+true;
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdDefiningIdeal.html">DefiningIdeal</A>
+</ul>
+</div>
+
+</body>
+</html>

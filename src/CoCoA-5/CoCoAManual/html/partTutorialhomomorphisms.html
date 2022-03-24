@@ -1,0 +1,61 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: homomorphisms</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialdefiningnewfunctionsadvanced.html">previous</a> <a href="partTutorialprogramminganddebugging.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.12 Tutorial: homomorphisms</b></font>
+</td></tr></table>
+
+CoCoA-5 lets you create ring homomorphisms; these are useful for
+various purposes such as "moving" a value from one ring to another.
+<br><br>
+A homomorphism from a polynomial ring must state what the images
+of the indeterminates are.  If the codomain is also a polynomial
+ring with the same ring of coefficients then use <A HREF="cmdPolyAlgebraHom.html">
+    <tt>PolyAlgebraHom</tt>
+  </A>,
+otherwise use <A HREF="cmdPolyRingHom.html">
+    <tt>PolyRingHom</tt>
+  </A> giving also the homomorphism saying
+how the coefficient ring is mapped. 
+<br><br>
+Some "special" homomorphisms can be created easily via dedicated functions.
+If there is a canonical homomorphism between the rings then this
+may be specified using <A HREF="cmdCanonicalHom.html">
+    <tt>CanonicalHom</tt>
+  </A>.
+For the homomorphism which embed the coefficent ring into a polynomial
+ring use <A HREF="cmdCoeffEmbeddingHom.html">
+    <tt>CoeffEmbeddingHom</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ P1 ::= QQ[x,y];   // polys in x,y with coefficients in QQ
+/**/ P2 ::= QQ[a,b];   // polys in a,b with coefficients in QQ
+/**/ use P2; IndetImages := [a^2, b^3];
+/**/ phi := PolyAlgebraHom(P1, P2, IndetImages);
+/**/ use P1;
+/**/ f := 2*x^2 + 3*y + 4;
+/**/ phi(f);
+2*a^4 + 3*b^3 + 4
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

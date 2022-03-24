@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LM</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LM">up</a> <a href="cmdLinSolve.html">previous</a>  <a href="cmdlog[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LM<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the leading monomial of a polynomial or ModuleElem</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LM(X: RINGELEM): RINGELEM
+LM(X: MODULEELEM): MODULEELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the leading monomial of <tt><b style="background:#bbeeee">X</b></tt>.  The monomial
+includes the coefficient.  To get the leading term of <tt><b style="background:#bbeeee">P</b></tt>, (which does
+not included the coefficient), use <A HREF="cmdLT.html">
+    <tt>LT</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  LM(3*x^2*y + y);
+3*x^2*y
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdLC.html">LC</A>
+<li><a href="cmdLF.html">LF</A>
+<li><a href="cmdLPP.html">LPP</A>
+<li><a href="cmdLT.html">LT</A>
+</ul>
+</div>
+
+</body>
+</html>

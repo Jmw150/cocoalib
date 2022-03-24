@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>content</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#content">up</a> <a href="cmdConstantCoeff.html">previous</a>  <a href="cmdContentFreeFactor.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>content<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+content of a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+content(F: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the content of <tt><b style="background:#bbeeee">F</b></tt>.
+The returned value is a RingElem in <tt><b style="background:#bbeeee">CoeffRing(RingOf(F))</b></tt>.
+<br><br>
+If the coefficient ring is a (true) GCD domain, the result is the standard
+content (i.e. a gcd of its coefficients).
+<br><br>
+If the coefficient ring is a fraction field of a (true) GCD domain <tt><b style="background:#bbeeee">R</b></tt>
+then the result is a fraction <tt><b style="background:#bbeeee">c</b></tt> such that <tt><b style="background:#bbeeee">f/c</b></tt>
+is a primitive polynomial with coefficients in <tt><b style="background:#bbeeee">R</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[x,y,z];
+/**/ F := 1234*x^3*z + 3456*x*y*z^3 + 5678*y^2*z;
+/**/ content(F);
+2
+/**/ RingOf(It);
+QQ
+/**/ content(4*x/5 + 2);
+2/5
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdContentWRT.html">ContentWRT</A>
+<li><a href="cmdcoefficients.html">coefficients</A>
+<li><a href="cmdIsTrueGCDDomain.html">IsTrueGCDDomain</A>
+<li><a href="cmdprim.html">prim</A>
+</ul>
+</div>
+
+</body>
+</html>

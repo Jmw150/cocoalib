@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ArrGraphical</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ArrGraphical">up</a> <a href="cmdArrFlats.html">previous</a>  <a href="cmdArrLattice.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ArrGraphical<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+graphical arrangement</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ArrGraphical(S: RING, edgesG: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function constructs the graphical arrangement with respect to the
+list of edges edgesG of the graph G in the polynomial ring S.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use S::=QQ[x,y,z];	
+/**/ ArrGraphical(S, [[1,2],[1,3]]);
+[x -y,  x -z]
+
+/**/ use S::=QQ[x[1..3]];	
+/**/ ArrGraphical(S, [[1,2],[1,3]]);
+[x[1] -x[2],  x[1] -x[3]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>discriminant</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#discriminant">up</a> <a href="cmddim.html">previous</a>  <a href="cmddistrib.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>discriminant<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the discriminant of a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+discriminant(F: RINGELEM): RINGELEM
+discriminant(F: RINGELEM, X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions compute the discriminant of a non-constant polynomial ``F``
+with respect to the indeterminate ``X``; in the first form ``F`` must be
+univariate, and ``X`` is taken to be its indeterminate.
+<br><br>
+The discriminant is defined as
+
+  <pre>
+(-1)^(N*(N-1)/2)*det(M)/M[1,1]
+</pre>
+
+where <tt><b style="background:#bbeeee">M := SylvesterMat(F, deriv(F,X), X)</b></tt>
+and  <tt><b style="background:#bbeeee">N := deg(F, X)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Use R ::= QQ[x,y];
+/**/  discriminant(x^2+3*y^2, x);
+-12*y^2
+
+/**/  discriminant(x^2+3*y^2, y);
+-12*x^2
+
+/**/  discriminant((x+1)^20+2);
+54975581388800000000000000000000
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdresultant.html">resultant</A>
+</ul>
+</div>
+
+</body>
+</html>

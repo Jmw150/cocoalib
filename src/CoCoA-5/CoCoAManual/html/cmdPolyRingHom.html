@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PolyRingHom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PolyRingHom">up</a> <a href="cmdPolyAlgebraHom.html">previous</a>  <a href="cmdPosetCharPoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PolyRingHom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+homomorphism of polynomial rings</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PolyRingHom(R: RING, S: RING, CoeffHom: RINGHOM, images: LIST): RINGHOM
+PolyRingHom(R: RING, S: RING, CoeffHom: RINGHOM, images: STRING): RINGHOM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions create the homomorphism of (polynomial) algebras between
+<tt><b style="background:#bbeeee">R</b></tt> and <tt><b style="background:#bbeeee">S</b></tt>.  The homomorphism is uniquely defined by the images
+of the indeterminates of <tt><b style="background:#bbeeee">R</b></tt> and the homomorphism mapping <tt><b style="background:#bbeeee">CoeffRing(R)</b></tt> into <tt><b style="background:#bbeeee">S</b></tt>.
+If <tt><b style="background:#bbeeee">CoeffHom</b></tt> is trivial, consider using <A HREF="cmdPolyAlgebraHom.html">
+    <tt>PolyAlgebraHom</tt>
+  </A> instead.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ R ::= QQ[x,y];
+/**/ S ::= QQ[a,b,c];
+/**/ SmodJ := NewQuotientRing(S, "a^2-1");
+
+/**/ phi := PolyRingHom(R, SmodJ, CanonicalHom(QQ,SmodJ), "a,b");
+/**/ use R;
+/**/ phi(x); --> round brackets in output indicate class in SmodJ
+(a)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoRINGHOM.html">Introduction to RINGHOM</A>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+<li><a href="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+</ul>
+</div>
+
+</body>
+</html>

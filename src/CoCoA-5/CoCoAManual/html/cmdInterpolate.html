@@ -1,0 +1,90 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>Interpolate</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#Interpolate">up</a> <a href="cmdinsert[OBSOLESCENT].html">previous</a>  <a href="cmdinterreduce.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>Interpolate<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+interpolating polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+Interpolate(Points: LIST, Values: LIST): RINGELEM
+
+where Points is a list of lists of coefficients representing a set of
+<b>distinct</b> points and Values is a list of the same size containing
+numbers from the coefficient ring.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function returns a multivariate polynomial which takes given
+values at a given set of points.
+<br><br>
+NOTE:
+<br><br>
+ * the current ring must have at least as many indeterminates as the
+   dimension of the space in which the points lie;
+<br><br>
+ * the base field for the space in which the points lie is taken to be
+   the coefficient ring, which should be a field;
+<br><br>
+ * in the polynomials returned, the first coordinate in the space is
+   taken to correspond to the first indeterminate, the second to the
+   second, and so on;
+<br><br>
+ * if the number of points is large, say 100 or more, the returned
+   value can be very large.  To avoid possible problems when printing
+   such values as a single item we recommend printing out the elements
+   one at a time as in this example:
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  X := Interpolate(Pts, Vals);
+  foreach element in X do
+    println element;
+  endforeach;
+
+  use QQ[x,y];
+  Points := [[1/2, 2], [3/4, 4], [5, 6/11], [-1/2, -2]];
+  Values := [1/2,1/3,1/5,-1/2];
+  F := Interpolate(Points, Values);
+  F;
+-46849/834000y^2 - 1547/52125x + 13418/52125y + 46849/208500
+-------------------------------
+  [Eval(F, P) | P in Points] = Values;  -- check
+true
+-------------------------------
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

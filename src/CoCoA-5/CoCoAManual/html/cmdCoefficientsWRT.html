@@ -1,0 +1,95 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CoefficientsWRT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CoefficientsWRT">up</a> <a href="cmdcoefficients.html">previous</a>  <a href="cmdCoeffListWRT.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CoefficientsWRT<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of coeffs and PPs of a poly wrt indet or list of indets</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CoefficientsWRT(F: RINGELEM, X: RINGELEM): LIST of RECORD
+CoefficientsWRT(F: RINGELEM, S: LIST of RINGELEM): LIST of RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first function returns the list of the coefficients and power-products
+of <tt><b style="background:#bbeeee">F</b></tt> seen as a polynomial in <tt><b style="background:#bbeeee">X</b></tt> (with respect to (WRT) <tt><b style="background:#bbeeee">X</b></tt>);
+the second function does the same but viewing <tt><b style="background:#bbeeee">F</b></tt>
+as a polynomial in all the indeterminates in the set <tt><b style="background:#bbeeee">S</b></tt>.
+
+NOTE: coefficients in the result are RINGELEM belonging to <tt><b style="background:#bbeeee">RingOf(F)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  f := x^3*z+x*y+x*z+y+2*z;
+/**/  Cx :=  CoefficientsWRT(f, x);  -- same as...
+/**/  Cx :=  CoefficientsWRT(f, [x]);
+/**/ indent(Cx);
+[
+  record[PP := x^3, coeff := z],
+  record[PP := x, coeff := y +z],
+  record[PP := 1, coeff := y +2*z]
+]
+/**/  f = sum([M.coeff * M.PP | M in Cx]);
+true
+/**/ Foreach M in Cx Do Print "  +(", M.coeff, ")*", M.PP; EndForeach;
+  +(y +2*z)*1  +(y +z)*x  +(z)*x^3
+
+/**/  Cxz :=  CoefficientsWRT(f, [x,z]);
+/**/  indent(Cxz);
+[
+  record[PP := x^3*z, coeff := 1],
+  record[PP := x*z, coeff := 1],
+  record[PP := x, coeff := y],
+  record[PP := z, coeff := 2],
+  record[PP := 1, coeff := y]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partCoefficientRings.html">Coefficient Rings</A>
+<li><a href="cmdCoeffListWRT.html">CoeffListWRT</A>
+<li><a href="cmdcoefficients.html">coefficients</A>
+<li><a href="cmdCoeffOfTerm.html">CoeffOfTerm</A>
+<li><a href="cmdContentWRT.html">ContentWRT</A>
+<li><a href="cmdLC.html">LC</A>
+<li><a href="cmdmonomials.html">monomials</A>
+<li><a href="cmdsupport.html">support</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>eigenfactors</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#eigenfactors">up</a> <a href="cmdE_[OBSOLETE].html">previous</a>  <a href="cmdeigenvectors.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>eigenfactors<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+eigenfactors of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+eigenfactors(M: MAT, X: RINGELEM): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">M</b></tt> must be a square matrix, and <tt><b style="background:#bbeeee">X</b></tt> an indeterminate.
+<br><br>
+This function determines the eigenfactors of <tt><b style="background:#bbeeee">M</b></tt>, i.e. the
+irreducible factors of <A HREF="cmdCharPoly.html">
+    <tt>CharPoly</tt>
+  </A> of <tt><b style="background:#bbeeee">M</b></tt> as polynomials in <tt><b style="background:#bbeeee">X</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  M := mat([[0,2,0,0],[1,0,0,0],[0,0,0,2],[0,0,1,1]]);
+/**/  eigenfactors(M, x);
+[x+1,  x-2,  x^2-2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdeigenvectors.html">eigenvectors</A>
+</ul>
+</div>
+
+</body>
+</html>

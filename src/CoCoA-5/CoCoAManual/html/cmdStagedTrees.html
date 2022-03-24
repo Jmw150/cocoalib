@@ -1,0 +1,91 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>StagedTrees</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#StagedTrees">up</a> <a href="cmdStableIdeal.html">previous</a>  <a href="cmdStandardInput.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>StagedTrees<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+staged trees from Statistics</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+StagedTrees(L: LIST of power-products): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns all possible staged trees associated to an
+interpolating polynomial.
+<br><br>
+See BigGoeRicSmi paper (TODO details)
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[a,b,x,y,z,w];
+/**/  c_T := a*(x*(z+w)+y) + b*(x+y);
+/**/  trees := StagedTrees(c_T);
+/**/  PrintTrees(trees);
+-- number of trees = 2 -----------------------
+-------- tree 1 ----------------------------------
+-- florets: [[x, y], [a, b], [z, w]]
+< 
+ x < 
+      a < 
+           z 
+           w 
+      b 
+ y < 
+      a 
+      b 
+-------- tree 2 ----------------------------------
+-- florets: [[a, b], [x, y], [z, w]]
+< 
+ a < 
+      x < 
+           z 
+           w 
+      y 
+ b < 
+      x 
+      y 
+-------- end trees -------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsStable.html">IsStable</A>
+<li><a href="cmdLexSegmentIdeal.html">LexSegmentIdeal</A>
+<li><a href="cmdStronglyStableIdeal.html">StronglyStableIdeal</A>
+</ul>
+</div>
+
+</body>
+</html>

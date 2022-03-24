@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>reseed</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#reseed">up</a> <a href="cmdres.html">previous</a>  <a href="cmdReset[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>reseed<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+reseed the pseudo-random number generator</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+reseed(N: INT): VOID</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+CoCoA offers a pseudo-random number generator (see <A HREF="cmdrandom.html">
+    <tt>random</tt>
+  </A>); however,
+each time you start CoCoA it will produce the same random values.  The
+procedure <tt><b style="background:#bbeeee">reseed</b></tt> puts the pseudo-random number generator into a state
+determined solely by the given seed value <tt><b style="background:#bbeeee">N</b></tt>.  This procedure can be
+used to make CoCoA generate different random values on different runs,
+e.g. if reseeded with a value which depends on the current time.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  reseed(123);
+/**/  random(0,9);
+7
+/**/  reseed(1000000*date()+TimeOfDay());   --> time-dependent seed value
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrandom.html">random</A>
+</ul>
+</div>
+
+</body>
+</html>

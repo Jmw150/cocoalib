@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RootBoundTransform</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RootBoundTransform">up</a> <a href="cmdRootBound.html">previous</a>  <a href="cmdround.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RootBoundTransform<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+transform of a polynomial, helpful for checking RootBound</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RootBoundTransform(F: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function <tt><b style="background:#bbeeee">RootBoundTransform</b></tt> computes a simple transform of a
+univariate polynomial (of degree at least 1) with rational coefficents.
+The transform is <tt><b style="background:#bbeeee">a[d]*x^d - a[d-1]*x^(d-1) - ... - a[0]</b></tt> where
+<tt><b style="background:#bbeeee">a[k]</b></tt> denotes the absolute value of the coefficient of <tt><b style="background:#bbeeee">x^k</b></tt> in <tt><b style="background:#bbeeee">F</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x];
+/**/  RootBoundTransform(-3*x^3+x^2-2);
+3*x^3 -x^2 -2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdgraeffe.html">graeffe</A>
+<li><a href="cmdRootBound.html">RootBound</A>
+</ul>
+</div>
+
+</body>
+</html>

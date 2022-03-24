@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>implicit</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#implicit">up</a> <a href="cmdimage[OBSOLESCENT].html">previous</a>  <a href="cmdImplicitHypersurface.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>implicit<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+implicitization</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+implicit(SubalgebraGens: LIST): IDEAL
+implicit(R: RING, SubalgebraGens: LIST): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the implicitization of the subalgebra generated
+by the list <tt><b style="background:#bbeeee">SubalgebraGens</b></tt>.
+<br><br>
+If provided with a ring <tt><b style="background:#bbeeee">R</b></tt>, the result is in <tt><b style="background:#bbeeee">R</b></tt>,
+otherwise it is in a newly created ring.
+<br><br>
+NOTE: Some cases have been optimized:
+if the input is a list of power-products then use <A HREF="cmdtoric.html">
+    <tt>toric</tt>
+  </A>.
+if you know the answer is a hypersurface then use <A HREF="cmdImplicitHypersurface.html">
+    <tt>ImplicitHypersurface</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use S ::= QQ[s,t];
+/**/  implicit([s^3, s^2*t, s*t^2, t^3]);
+ideal(x[3]^2 -x[2]*x[4], x[2]*x[3] -x[1]*x[4], x[2]^2 -x[1]*x[3])
+
+/**/  P ::= QQ[x,y,z,w];
+/**/  implicit(P, [s^3, s^2*t, s*t^2, t^3]);
+ideal(z^2 -y*w, y*z -x*w, y^2 -x*z)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdImplicitHypersurface.html">ImplicitHypersurface</A>
+<li><a href="cmdker.html">ker</A>
+</ul>
+</div>
+
+</body>
+</html>

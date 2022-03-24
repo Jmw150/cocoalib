@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>TVecPrintRes</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#TVecPrintRes">up</a> <a href="cmdTVecPoints.html">previous</a>  <a href="cmdTVecToHF.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>TVecPrintRes<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+resolution associated to type vector</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+TVecPrintRes(TV: LIST)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function prints the resolution associated to the type vector <tt><b style="background:#bbeeee">TV</b></tt>,
+i.e. of the ideal of a K-configuration described by <tt><b style="background:#bbeeee">TV</b></tt>.
+<br><br>
+See <A HREF="cmdTVecFromHF.html">
+    <tt>TVecFromHF</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Use P ::= QQ[x,y,z,t];
+/**/  HF := HilbertFn(P/Ideal(x, y^3, z^2-t*x));  HF;
+/**/  TV := TVecFromHF(HF);  TV;
+/**/  TVecPrintRes(TV);
+0 --> R(-5)(+)R(-6) --> R(-3)(+)R^2(-4)(+)R^2(-5) --> R(-1)(+)R(-2)(+)R(-3)(+)R(-4) --> R
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdTVecFromHF.html">TVecFromHF</A>
+<li><a href="cmdTVecPoints.html">TVecPoints</A>
+<li><a href="cmdTVecToHF.html">TVecToHF</A>
+</ul>
+</div>
+
+</body>
+</html>

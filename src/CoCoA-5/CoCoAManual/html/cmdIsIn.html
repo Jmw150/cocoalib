@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsIn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsIn">up</a> <a href="cmdIsHomog.html">previous</a>  <a href="cmdIsIndet.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsIn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if one object is contained in another</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+X  IsIn  Y        (return BOOL)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The semantics of <tt><b style="background:#bbeeee">IsIn</b></tt> is explained in the following table:
+
+  <pre>
+   --------------------------------------------------------------------
+  | OBJECT     IsIn  LIST    checks if the list contains the object.   |
+  | RINGELEM   IsIn  IDEAL   checks for ideal membership.              |
+  | MODULEELEM IsIn  MODULE  checks for module membership.             |
+  | STRING     IsIn  STRING  checks if the first string is a substring |
+  |                          of the second one.                        |
+   --------------------------------------------------------------------
+NOTE: if RINGELEM (or MODULEELEM) is in an IDEAL (or MODULE), a
+  representation in terms of the generators is given by <A HREF="cmdGenRepr.html">
+    <tt>GenRepr</tt>
+  </A>.
+</pre>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGenRepr.html">GenRepr</A>
+</ul>
+</div>
+
+</body>
+</html>

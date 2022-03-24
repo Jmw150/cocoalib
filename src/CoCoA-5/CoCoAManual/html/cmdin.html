@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>in</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#in">up</a> <a href="cmdImportByRefImportByValue.html">previous</a>  <a href="cmdincrdecr.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>in<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list element selector in list constructor</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+[X in L | B: BOOL]
+[E | X in L]
+[E | X in L and B]
+  where L: LIST, B: BOOL, E: expression
+  returns LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+See <A HREF="partListConstructors.html">List Constructors</A> for a full description.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  [N in 1..10 | IsPrime(N)];
+[2, 3, 5, 7]
+
+/**/  [N^2 | N in 1..10 and IsPrime(N)];
+[4, 9, 25, 49]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partListConstructors.html">List Constructors</A>
+<li><a href="cmdIsIn.html">IsIn</A>
+</ul>
+</div>
+
+</body>
+</html>

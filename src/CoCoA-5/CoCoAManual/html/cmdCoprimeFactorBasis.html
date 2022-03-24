@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CoprimeFactorBasis</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CoprimeFactorBasis">up</a> <a href="cmdcontinue.html">previous</a>  <a href="cmdcount.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CoprimeFactorBasis<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+determine coprime factor base for a set of integers or ring elements</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CoprimeFactorBasis(L: LIST of INT): LIST of INT
+CoprimeFactorBasis(L: LIST of RINGELEM): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a coprime factor base for a set of integers
+or ring elements from a (true) GCD domain.
+<br><br>
+Given a set of values <font color=#0000aa>N = [ N_1,...N_k ]</font> we seek a factor base
+<font color=#0000aa>G = [ G_1,...,G_s ]</font> of pairwise coprime values such that each
+<font color=#0000aa>N_i</font> is a product of powers of the <font color=#0000aa>G_j</font>.
+<br><br>
+In general there are many different such sets <font color=#0000aa>G</font> for a given set <font color=#0000aa>N</font>.
+Such sets are sometimes called "GCD-free bases" for <font color=#0000aa>N</font>.
+<br><br>
+The factor base produced by these functions may not be of least cardinality.
+A least cardinality base can be obtained by performing all possible GCD and
+exact division operations iteratively.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  CoprimeFactorBasis([factorial(20), factorial(10)]);
+[46189, 4, 14175]
+/**/  use QQ[x,y];
+/**/  CoprimeFactorBasis([x^2*y^4, x^3*y^6]);
+[x*y^2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdgcd.html">gcd</A>
+</ul>
+</div>
+
+</body>
+</html>

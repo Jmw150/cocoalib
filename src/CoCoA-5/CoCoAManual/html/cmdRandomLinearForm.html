@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RandomLinearForm</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RandomLinearForm">up</a> <a href="cmdrandomized[OBSOLETE].html">previous</a>  <a href="cmdRandomPermutation.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RandomLinearForm<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+random linear form in polynomial ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RandomLinearForm(R: RING, n: INT): RINGELEM
+RandomLinearForm(R: RING): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first function returns a non-zero random linear form in the polynomial
+ring <tt><b style="background:#bbeeee">R</b></tt>, with integer coefficients in the range <tt><b style="background:#bbeeee">-n..n</b></tt>.
+<br><br>
+The second function is for polynomial rings <tt><b style="background:#bbeeee">R</b></tt> with finite characteristic
+<tt><b style="background:#bbeeee">p</b></tt>, it returns a random linear form with integer coefficients in the
+range <tt><b style="background:#bbeeee">0..p-1</b></tt>.
+<br><br><b>NOTE: If the ring has weighted degrees, the weights are ignored:</b>
+consider applying <A HREF="cmdHomogCompt.html">
+    <tt>HomogCompt</tt>
+  </A> to the linear form produced.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ R ::= ZZ/(101)[a,b,c,d,e,f];
+/**/ RandomLinearForm(R, 1);
+-a -c +d -e -f
+/**/ RandomLinearForm(R);
+49*a +37*b +36*c +12*d -37*e +34*f
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrandom.html">random</A>
+<li><a href="cmdHomogCompt.html">HomogCompt</A>
+</ul>
+</div>
+
+</body>
+</html>

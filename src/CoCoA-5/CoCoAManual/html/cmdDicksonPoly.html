@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>DicksonPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#DicksonPoly">up</a> <a href="cmdDiagMat.html">previous</a>  <a href="cmddiff.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>DicksonPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Dickson polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+DicksonPoly(X: RINGELEM, N: INT, ALPHA: RINGELEM): RINGELEM
+DicksonPoly2(X: RINGELEM, N: INT, ALPHA: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions return the Dickson polynomials (of 1st and 2nd type
+respectively) of degree <tt><b style="background:#bbeeee">N</b></tt> in <tt><b style="background:#bbeeee">X</b></tt> with parameter <tt><b style="background:#bbeeee">ALPHA</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x, alpha];
+/**/  DicksonPoly(x, 3, alpha);
+x^3 -3*x*alpha
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewZZmod</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewZZmod">up</a> <a href="cmdNewWeylAlgebra.html">previous</a>  <a href="cmdNextPrimeNextProbPrime.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewZZmod<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a new finite ring (integers mod N)</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NewZZmod(N: INT): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Create a new finite ring/field being the integers modulo <tt><b style="background:#bbeeee">n</b></tt>;
+with <A HREF="cmduse.html">
+    <tt>use</tt>
+  </A> or <tt><b style="background:#bbeeee">::=</b></tt> you can alternatively write
+the convenient notation <tt><b style="background:#bbeeee">ZZ/(n)</b></tt>.
+<br><br>
+NOTE: calling twice <tt><b style="background:#bbeeee">NewZZmod</b></tt> will produce
+two different rings, even with identical input: equality test is
+performed on the pointers: see <A HREF="cmdRingID.html">
+    <tt>RingID</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  p := NextProbPrime(1000000);
+/**/  Fp := NewZZmod(p);
+/**/  use Fp[x]; -- same as "use ZZ/(p)[x];"
+
+/**/ Characteristic(Fp);
+1000003
+
+/**/  n := 6;
+/**/  R := NewZZmod(n);
+/**/  use R[x];  -- same as "use ZZ/(6)[x];"
+/**/  product([x-i | i in 1..6]);
+x^6 +3*x^5 +x^4 +3*x^3 -2*x^2
+/**/  (x-3)*(x-2);
+x^2 +x
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRingID.html">RingID</A>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+</ul>
+</div>
+
+</body>
+</html>

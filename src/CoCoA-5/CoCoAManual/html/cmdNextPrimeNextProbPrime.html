@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NextPrime, NextProbPrime</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NextPrime, NextProbPrime">up</a> <a href="cmdNewZZmod.html">previous</a>  <a href="cmdNF.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NextPrime, NextProbPrime<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+find the next prime number</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NextPrime(N: INT): INT
+NextProbPrime(N: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first function computes the smallest prime number greater than <tt><b style="background:#bbeeee">N</b></tt>.
+If <tt><b style="background:#bbeeee">N</b></tt> is too large then an error is signalled.  The upper
+limit depends on the computer you are using; it is probably <font color=#0000aa>2^31</font>
+or <font color=#0000aa>2^63</font>.
+<br><br>
+The second function computes the smallest probable prime number greater than <tt><b style="background:#bbeeee">N</b></tt>.  
+To be absolutely certain the number produced is prime,
+you must call <A HREF="cmdIsPrime.html">
+    <tt>IsPrime</tt>
+  </A> on it, but this may be very costly.
+<br><br>
+The functions give errors if handed negative arguments.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  NextPrime(1000);
+1009
+/**/ NextProbPrime(10^50);
+100000000000000000000000000000000000000000000000151
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsPrime.html">IsPrime</A>
+<li><a href="cmdPrevPrimePrevProbPrime.html">PrevPrime, PrevProbPrime</A>
+</ul>
+</div>
+
+</body>
+</html>

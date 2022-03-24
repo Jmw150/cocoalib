@@ -1,0 +1,116 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>for</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#for">up</a> <a href="cmdFoldToListInput.html">previous</a>  <a href="cmdforeach.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>for<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+loop command</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+For I := N_1 To N_2 Do C EndFor
+For I := N_1 To N_2 Step D Do C EndFor
+
+where I is the loop variable, N_1, N_2, and D are integer expressions,
+and C is a sequence of commands.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+In the first form, the loop variable <tt><b style="background:#bbeeee">I</b></tt> is assigned the values
+<tt><b style="background:#bbeeee">N_1, N_1+1, ...,N_2</b></tt> in succession.  After each assignment,
+the command sequence <tt><b style="background:#bbeeee">C</b></tt> is executed.  If <tt><b style="background:#bbeeee">N_2 < N_1</b></tt>, then
+the command sequence <tt><b style="background:#bbeeee">C</b></tt> is not executed.
+<br><br>
+The second form is almost the same, except that <tt><b style="background:#bbeeee">I</b></tt> is assigned the
+values <tt><b style="background:#bbeeee">N_1, N_1+D, N_1+2D</b></tt>, and so on, until the limit <tt><b style="background:#bbeeee">N_2</b></tt> is
+passed.  If <tt><b style="background:#bbeeee">N_2 - N_1</b></tt> has opposite sign to <tt><b style="background:#bbeeee">D</b></tt>, then the command
+sequence <tt><b style="background:#bbeeee">C</b></tt> is not executed.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  for N := 1 to 5 do print 2^N, " "; endfor;
+2 4 8 16 32
+
+/**/  for n := 1 to 20 step 3 do print n, " "; endfor;
+1 4 7 10 13 16 19
+
+/**/  for N := 10 to 1 step -2 do print N, " "; endfor;
+10 8 6 4 2
+
+/**/  for N := 5 to 3 do print N, " "; endfor;  -- no output
+</pre></td></tr></table>
+
+Loops can be nested.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/   define MySort(ref L)
+/**/     for i := 1 to len(L)-1 do
+/**/       MaxPos := i;
+/**/       for j := i+1 to len(L) do
+/**/         if L[j] < L[MaxPos] then MaxPos := j; endif;
+/**/       endfor;
+/**/       if MaxPos <> i then
+/**/         swap(ref L[i], ref L[MaxPos]);
+/**/       endif;
+/**/     endfor;
+/**/   enddefine;
+
+/**/  M := [5,3,1,4,2];
+/**/  MySort(ref M);
+/**/  M;
+[1, 2, 3, 4, 5]
+</pre></td></tr></table>
+
+NOTE: we used <tt><b style="background:#bbeeee">ref L</b></tt> so that the function can change the value
+of the variable referenced by <tt><b style="background:#bbeeee">L</b></tt>.  See <A HREF="cmdref.html">
+    <tt>ref</tt>
+  </A>.
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdforeach.html">foreach</A>
+<li><a href="cmdrepeat.html">repeat</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+<li><a href="cmdwhile.html">while</A>
+</ul>
+</div>
+
+</body>
+</html>

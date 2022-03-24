@@ -1,0 +1,53 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>cyclotomic</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#cyclotomic">up</a> <a href="cmdCurrentTypes.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>cyclotomic<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+n-th cyclotomic polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+cyclotomic(n: INT, x: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the <tt><b style="background:#bbeeee">n</b></tt>-th cyclotomic polynomial (in the
+indeterminate <tt><b style="background:#bbeeee">x</b></tt>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[z];
+/**/  cyclotomic(4,z);
+z^2 + 1
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

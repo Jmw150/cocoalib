@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ArrExponents</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ArrExponents">up</a> <a href="cmdArrDerModule.html">previous</a>  <a href="cmdArrFlats.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ArrExponents<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+exponents of a free arrangement of hyperplanes</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ArrExponents(Q: RINGELEM): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of exponents of a free arrangement of hyperplanes from its defining equation Q.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y];	
+/**/ A := [x, x-y, y]; -- free
+/**/ Q_A := product(A);	
+/**/ ArrExponents(Q_A);
+[1,  2]
+	
+/**/ use QQ[x,y,z];    
+/**/ A := [x, x+z, y, 2*y-3*z]; -- not free
+/**/ IsArrFree(product(A)); --> false
+-- /**/ ArrExponents(product(A));  --> !!! ERROR !!! as expected, not free
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdArrDerModule.html">ArrDerModule</A>
+<li><a href="cmdIsArrFree.html">IsArrFree</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewLine [OBSOLESCENT]</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewLine [OBSOLESCENT]">up</a> <a href="cmdNewId[OBSOLETE].html">previous</a>  <a href="cmdNewList.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewLine [OBSOLESCENT]<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+[OBSOLESCENT] string containing a newline</i> </small></b></font>
+</td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function is <b>OBSOLESCENT</b> and exists only for backward
+compatibility with old CoCoA code.
+It returns a string containing just a newline; in CoCoA-5 it is
+simpler to write <tt><b style="background:#bbeeee">\n</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  str1 := "Line 1" + NewLine() + "Line 2"; --> old CoCoA-4 way
+/**/  str2 := "Line 1\nLine 2";                --> more compact in CoCoA-5
+/**/  str1 = str2;
+true
+/**/ Print str2;
+Line 1
+Line2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partStringLiterals.html">String Literals</A>
+<li><a href="cmdprintln.html">println</A>
+<li><a href="cmdascii.html">ascii</A>
+</ul>
+</div>
+
+</body>
+</html>

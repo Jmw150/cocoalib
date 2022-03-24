@@ -1,0 +1,87 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>sorted</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#sorted">up</a> <a href="cmdSortBy.html">previous</a>  <a href="cmdSortedBy.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>sorted<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+sort a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+sorted(L: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of the sorted elements of L without
+affecting L, itself.
+<br><br>
+For more on the default comparisons, see <A HREF="partRelationalOperators.html">Relational Operators</A>
+in the chapter on operators.
+For sorting with respect to your own ordering, see <A HREF="cmdSortBy.html">
+    <tt>SortBy</tt>
+  </A>, <A HREF="cmdSortedBy.html">
+    <tt>SortedBy</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [3,2,1];
+/**/  sorted(L);
+[1, 2, 3]
+
+/**/  use R ::= QQ[x,y,z];
+/**/  L := [x,y,z];
+/**/  sorted(L);
+[z, y, x]
+
+/**/  sorted([y, x, z, x^2]);
+[z, y, x, x^2]
+
+/**/  sorted([3, 1, 1, 2]);
+[1, 1, 2, 3]
+
+/**/  sorted(["b","c","a"]);
+["a", "b", "c"]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partRelationalOperators.html">Relational Operators</A>
+<li><a href="cmdSortBy.html">SortBy</A>
+<li><a href="cmdSortedBy.html">SortedBy</A>
+<li><a href="cmdsort.html">sort</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsMinusOne</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsMinusOne">up</a> <a href="cmdIsMaximal.html">previous</a>  <a href="cmdIsMultiArrFree.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsMinusOne<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether an object is -1</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsOne(X: OBJECT): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether its argument is -1; the argument can be
+of almost any type for which <b>-1</b> makes sense.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  IsMinusOne(23);
+false
+/**/  IsMinusOne(3/-3);
+true
+/**/  use R ::= QQ[x,y,z];
+/**/  IsMinusOne(-x/x);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsOne.html">IsOne</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsInRadical</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsInRadical">up</a> <a href="cmdIsInjective.html">previous</a>  <a href="cmdIsInSubalgebra[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsInRadical<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if a polynomial (or ideal) is in a radical</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsInRadical(F: RINGELEM, I: IDEAL): BOOL
+IsInRadical(J: IDEAL, I: IDEAL): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the first argument, a polynomial or an
+ideal, is contained in the radical of the second argument, an ideal.
+<br><br>
+This function is much faster than asking <tt><b style="background:#bbeeee">F IsIn Radical(I);</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  I := ideal(x^6*y^4, z);
+/**/  IsInRadical(x*y, I);
+true
+/**/  IsInRadical(ideal(x,y), I);
+false
+/**/  MinPowerInIdeal(x*y, I);
+6
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMinPowerInIdeal.html">MinPowerInIdeal</A>
+<li><a href="cmdradical.html">radical</A>
+</ul>
+</div>
+
+</body>
+</html>

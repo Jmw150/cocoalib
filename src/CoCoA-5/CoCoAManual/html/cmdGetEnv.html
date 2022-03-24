@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GetEnv</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GetEnv">up</a> <a href="cmdGetCols.html">previous</a>  <a href="cmdGetErrMesg.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GetEnv<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+access shell variables</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GetEnv(S: STRING): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the value of system shell variable whose name
+is <tt><b style="background:#bbeeee">S</b></tt>.
+<br><br>
+CoCoA is normally started by its own shell script; so we recommend
+using "export" to make your shell variables visible to CoCoA.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  GetEnv("HOME");
+/Users/bigatti
+
+/**/  GetEnv("SHELL");
+/bin/bash
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdVersionInfo.html">VersionInfo</A>
+<li><a href="cmdSystemCommand.html">SystemCommand</A>
+</ul>
+</div>
+
+</body>
+</html>

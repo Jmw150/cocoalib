@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsInImage</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsInImage">up</a> <a href="cmdIsIndetPosPower.html">previous</a>  <a href="cmdIsInjective.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsInImage<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if a RINGELEM is in image of RINGHOM</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsInImage(phi: RINGHOM, f: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function checks if <tt><b style="background:#bbeeee">f</b></tt> is in the image of <tt><b style="background:#bbeeee">phi</b></tt>
+(better use <A HREF="cmdpreimage0.html">
+    <tt>preimage0</tt>
+  </A> directly).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  QQxyz ::= QQ[x,y,z];
+/**/  QQab  ::= QQ[a,b];
+
+/**/  use QQab;
+/**/  phi := PolyAlgebraHom(QQxyz, QQab, [a+1, a*b+3, b^2]);
+
+/**/  IsInImage(phi, b);
+false
+/**/  preimage0(phi, b);
+0
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsSurjective.html">IsSurjective</A>
+<li><a href="cmdpreimage0.html">preimage0</A>
+</ul>
+</div>
+
+</body>
+</html>

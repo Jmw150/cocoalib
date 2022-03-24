@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>sprint</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#sprint">up</a> <a href="cmdspaces.html">previous</a>  <a href="cmdSprintTrunc.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>sprint<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert to a string</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+sprint(E: OBJECT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function takes any CoCoA expression and converts its value to a
+string.  One use is to check for extremely long output before printing
+in a CoCoA window; see also <A HREF="cmdfold.html">
+    <tt>fold</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  I := ideal(x,y);
+/**/  J := sprint(I);
+/**/  I;
+ideal(x, y)
+
+/**/  J;        -- The output for I and J looks the same, but ...
+ideal(x, y)
+/**/  type(I);  -- I is an ideal, and
+IDEAL
+/**/  type(J);  -- J is just the string "ideal(x, y)".
+STRING
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfold.html">fold</A>
+<li><a href="cmdSprintTrunc.html">SprintTrunc</A>
+<li><a href="cmdprint.html">print</A>
+<li><a href="cmdprintln.html">println</A>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+</ul>
+</div>
+
+</body>
+</html>

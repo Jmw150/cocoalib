@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>print on</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#print on">up</a> <a href="cmdprint.html">previous</a>  <a href="cmdPrintBettiDiagram.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>print on<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+print to an output stream</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+print  E: OBJECT  on  OUT: OSTREAM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command prints the value of expression <tt><b style="background:#bbeeee">E</b></tt> to the output stream <tt><b style="background:#bbeeee">OUT</b></tt>.
+Currently, the command can be used to print to files, strings, or the
+CoCoA window.  In the first two cases, the appropriate device must be
+opened with <A HREF="cmdOpenOFile.html">
+    <tt>OpenOFile</tt>
+  </A> or <A HREF="cmdOpenOString.html">
+    <tt>OpenOString</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  file := OpenOFile("my-test");  -- open "my-test" for output from CoCoA
+/**/  println "hello world" on file;   -- print string into "mytest"
+/**/  close(file);  -- close the file
+</pre></td></tr></table>
+
+See <A HREF="cmdOpenOFile.html">
+    <tt>OpenOFile</tt>
+  </A> for an example using output strings.
+For printing to the CoCoA window, just use <tt><b style="background:#bbeeee">println E</b></tt>.
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenOFile.html">OpenOFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+<li><a href="cmdOpenOString.html">OpenOString</A>
+<li><a href="cmdprint.html">print</A>
+<li><a href="cmdprintln.html">println</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+</ul>
+</div>
+
+</body>
+</html>

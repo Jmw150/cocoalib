@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsZeroDivisor</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsZeroDivisor">up</a> <a href="cmdIsZeroDim.html">previous</a>  <a href="cmdIsZZ.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsZeroDivisor<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether a RINGELEM is a zero-divisor</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsZeroDivisor(X: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether its argument is a zero-divisor.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  R := NewQuotientRing(P, ideal(x*y));
+/**/  IsZeroDivisor(RingElem(R,x));
+true
+/**/  colon(ideal(zero(R)), ideal(RingElem(R,x)));
+ideal((y))
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcolon.html">colon</A>
+</ul>
+</div>
+
+</body>
+</html>

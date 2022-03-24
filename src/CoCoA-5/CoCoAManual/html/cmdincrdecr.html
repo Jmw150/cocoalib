@@ -1,0 +1,60 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>incr, decr</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#incr, decr">up</a> <a href="cmdin.html">previous</a>  <a href="cmdindent.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>incr, decr<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+increment/decrement a counter</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+incr(ref X: INT)
+decr(ref X: INT)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">incr(ref X)</b></tt> adds 1 to the value of <tt><b style="background:#bbeeee">X</b></tt>.
+<tt><b style="background:#bbeeee">decr(ref X)</b></tt> subtracts 1 from the value of <tt><b style="background:#bbeeee">X</b></tt>.
+<br><br>
+These functions are useful when counting objects or adjusting pointers.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ L := [(10^k-1)/9 | k in 1..99];
+/**/ NPrimes := 0;
+/**/ Foreach N in L Do
+/**/   If IsPrime(N) Then incr(ref NPrimes); EndIf;
+/**/ EndForeach;
+/**/ PrintLn "The list L contains ", NPrimes, " primes.";
+The list L contains 3 primes.
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

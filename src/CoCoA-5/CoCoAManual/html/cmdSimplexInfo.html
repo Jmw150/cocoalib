@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SimplexInfo</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SimplexInfo">up</a> <a href="cmdSimplestRatBetween.html">previous</a>  <a href="cmdSimplicialHomology.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SimplexInfo<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Stanley-Reisner ideal, AlexanderDual complex, ideal of top simplices</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SimplexInfo(A: LIST): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function compute the Stanley-Reisner ideal, the Alexander Dual
+complex and ideal of a simplicial complex described by a list of top
+faces.
+<br><br>
+Package <tt><b style="background:#bbeeee">GeomModelling</b></tt>, by Elisa Palezzato.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x[1..5]], DegLex;
+/**/  L := [x[1]*x[2]*x[3], x[2]*x[3]*x[4], x[3]*x[4]*x[5]]; -- list top faces
+/**/  indent(SimplexInfo(L));
+record[
+  AlexanderDualCOMPLEX := [x[2]*x[3]*x[5], x[2]*x[3]*x[4], x[1]*x[3]*x[4]],
+  AlexanderDualIdeal := ideal(x[4]*x[5], x[1]*x[5], x[1]*x[2]),
+  Delta := [x[1]*x[2]*x[3], x[2]*x[3]*x[4], x[3]*x[4]*x[5]],
+  StanleyReisnerIdeal := ideal(x[1]*x[4], x[1]*x[5], x[2]*x[5])
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdFVector.html">FVector</A>
+<li><a href="cmdSimplicialHomology.html">SimplicialHomology</A>
+</ul>
+</div>
+
+</body>
+</html>

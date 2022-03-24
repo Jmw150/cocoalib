@@ -1,0 +1,61 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Coefficient Rings</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c9">up</a> <a href="partPolynomialRings.html">previous</a> <a href="partIndeterminates.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.9.3 Coefficient Rings</b></font>
+</td></tr></table>
+
+The coefficient ring for a CoCoA polynomial ring may be any ring <tt><b style="background:#bbeeee">R</b></tt>:
+
+  <pre>
+ 1. ZZ: (arbitrarily large) integer numbers;
+ 2. QQ: (arbitrarily large) rational numbers;
+ 3. ZZ/(N);
+ 4. R[a,b,c];
+ 5. K(a,b,c);  ....
+</pre>
+
+The first two types of coefficients are based on the GNU-gmp library.
+Some operations work only when coefficients are in a field
+(a meaningful error message will be thrown).
+<br><br>
+NOTE: inside <tt><b style="background:#bbeeee">define/enddefine</b></tt> the top-level variables 
+<A HREF="cmdZZ.html">
+    <tt>ZZ</tt>
+  </A> and <A HREF="cmdQQ.html">
+    <tt>QQ</tt>
+  </A> are not directly visible.
+Use <tt><b style="background:#bbeeee">RingZZ()</b></tt> or <tt><b style="background:#bbeeee">RingQQ()</b></tt> instead (or import them
+with <A HREF="cmdTopLevel.html">
+    <tt>TopLevel</tt>
+  </A>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  R ::= QQ[x,y];    R;
+/**/  S ::= ZZ/(5)[t];  S;
+/**/  -- NOTE: "::=" for special syntax C[X], ":=" for normal function call
+/**/  QQi ::= QQ[i];
+/**/  K := NewQuotientRing(QQi, "i^2+1");
+/**/  U ::= K[u,v];     U;
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

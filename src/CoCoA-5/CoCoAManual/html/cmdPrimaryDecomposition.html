@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PrimaryDecomposition</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PrimaryDecomposition">up</a> <a href="cmdprim.html">previous</a>  <a href="cmdPrimaryDecomposition0[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PrimaryDecomposition<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+primary decomposition of an ideal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PrimaryDecomposition(I: IDEAL): LIST of IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the primary decomposition of the ideal I.
+Currently it responds ONLY for zero-dimensional ideals
+(Abbott, Bigatti, Palezzato, Robbiano
+"Computing and Using Minimal Polynomials"<tt><b style="background:#bbeeee">https://arxiv.org/abs/1702.07262</b></tt>
+-- implemented by E.Palezzato and A.Bigatti),
+or squarefree monomial ideals (using the Alexander dual technique).
+See <A HREF="cmdFrbPrimaryDecomposition.html">
+    <tt>FrbPrimaryDecomposition</tt>
+  </A> for monomial ideals.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  PrimaryDecomposition(ideal(x*y, y*z, z*x));
+[ideal(y, z), ideal(x, z), ideal(x, y)]
+
+/**/  PD := PrimaryDecomposition(ideal(x -z,  y^2 -1,  z^2));  PD;
+[ideal(y +1,  x -z,  y^2 -1,  z^2),  ideal(y -1,  x -z,  y^2 -1,  z^2)]
+
+/**/ [IdealOfGBasis(Q) | Q in PD];  // remove some redundant generators
+[ideal(y +1,  x -z,  z^2),  ideal(y -1,  x -z,  z^2)]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPrimaryDecompositionGTZ0.html">PrimaryDecompositionGTZ0</A>
+<li><a href="cmdFrbPrimaryDecomposition.html">FrbPrimaryDecomposition</A>
+<li><a href="cmdEquiIsoDec.html">EquiIsoDec</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MinGens</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MinGens">up</a> <a href="cmdMinGBoverZZ[PROTOTYPE].html">previous</a>  <a href="cmdMinGensGeneral[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MinGens<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of minimal generators</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MinGens(M: IDEAL|MODULE): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+If <tt><b style="background:#bbeeee">M</b></tt> is a homogeneous ideal or module, this function returns
+a list of minimal generators for <tt><b style="background:#bbeeee">M</b></tt> (not necessarily a subset
+of <tt><b style="background:#bbeeee">gens(M)</b></tt>).
+<br><br>
+For non-homogeneous input use <A HREF="cmdMinSubsetOfGens.html">
+    <tt>MinSubsetOfGens</tt>
+  </A>.
+<br><br>
+NOTE: the coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x-y, (x-y)^4, z+y, (z+y)^2);
+/**/  MinGens(I);
+[y + z, x + z]
+
+/**/  R3 := NewFreeModule(R, 3);
+/**/  MGens := matrix(R, [[x,y,z], [x^2,0,z^2], [2*x^2,x*y,z^2+x*z]]);
+/**/  M := SubmoduleRows(R3, MGens);
+/**/  gens(M);
+[[x, y, z], [x^2, 0, z^2], [2*x^2, x*y, x*z +z^2]]
+/**/  MinGens(M);
+[[x, y, z], [0, x*y, x*z -z^2]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIdealOfMinGens.html">IdealOfMinGens</A>
+<li><a href="cmdSubmoduleOfMinGens.html">SubmoduleOfMinGens</A>
+<li><a href="cmdMinSubsetOfGens.html">MinSubsetOfGens</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FactorMultiplicity</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FactorMultiplicity">up</a> <a href="cmdFactorINT.html">previous</a>  <a href="cmdFGLM5.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FactorMultiplicity<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+multiplicity of a factor of an integer</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FactorMultiplicity(b: INT, N: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function counts how many times the integer base <tt><b style="background:#bbeeee">b</b></tt> 
+divides the integer <tt><b style="background:#bbeeee">N</b></tt>.
+<br><br>
+NOTE: <tt><b style="background:#bbeeee">N</b></tt> must be non-zero, and <tt><b style="background:#bbeeee">b > 1</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  FactorMultiplicity(2, 20); // largest k s.t. 2^k divides 20
+2
+/**/  FactorMultiplicity(5, 20); // largest k s.t. 5^k divides 20
+1
+/**/  FactorMultiplicity(7, 20); // largest k s.t. 7^k divides 20
+0
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsDivisible.html">IsDivisible</A>
+<li><a href="cmdFactorINT.html">FactorINT</A>
+</ul>
+</div>
+
+</body>
+</html>

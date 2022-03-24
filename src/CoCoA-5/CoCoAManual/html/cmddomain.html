@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>domain</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#domain">up</a> <a href="cmdDivAlg.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>domain<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+domain of a homomorphism</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+domain(phi: RINGHOM): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the domain of the homomorphism <tt><b style="background:#bbeeee">phi</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  P := NewPolyRing(RingQQ(), "alpha,beta");
+/**/  phi := CanonicalHom(RingZZ(), P);
+/**/  domain(phi);
+ZZ
+/**/  psi := CoeffEmbeddingHom(P);
+/**/  domain(psi);
+QQ
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcodomain.html">codomain</A>
+<li><a href="partCommandsandFunctionsforRINGHOM.html">Commands and Functions for RINGHOM</A>
+<li><a href="partCommandsandFunctionsreturningRINGHOM.html">Commands and Functions returning RINGHOM</A>
+</ul>
+</div>
+
+</body>
+</html>

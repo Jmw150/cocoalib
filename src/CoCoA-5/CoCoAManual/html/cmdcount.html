@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>count</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#count">up</a> <a href="cmdCoprimeFactorBasis.html">previous</a>  <a href="cmdcovers.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>count<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+count the objects in a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+count(L: LIST, E: OBJECT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function counts the number of occurrences of the object <tt><b style="background:#bbeeee">E</b></tt> in the
+list <tt><b style="background:#bbeeee">L</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [1,2,3,2,[2,3]];
+/**/  count(L,2);
+2
+
+/**/  count(L,[2,3]);
+1
+
+/**/  count(L,"a");
+0
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddistrib.html">distrib</A>
+<li><a href="cmdlen.html">len</A>
+</ul>
+</div>
+
+</body>
+</html>

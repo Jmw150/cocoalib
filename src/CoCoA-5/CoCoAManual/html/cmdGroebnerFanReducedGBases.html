@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GroebnerFanReducedGBases</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GroebnerFanReducedGBases">up</a> <a href="cmdGroebnerFanIdeals.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GroebnerFanReducedGBases<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Groebner fan reduced GBases</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GroebnerFanReducedGBases(I: IDEAL): LIST of IDEAL
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list of all reduced GBases.  It is good for
+<b>visualizing</b> small examples; however, for further computations
+with the different bases it is better to use <A HREF="cmdGroebnerFanIdeals.html">
+    <tt>GroebnerFanIdeals</tt>
+  </A>
+or <A HREF="cmdCallOnGroebnerFanIdeals.html">
+    <tt>CallOnGroebnerFanIdeals</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use R ::= QQ[a,b,c];
+/**/ I := ideal(b^2-1, a^2+c-1, c^2-b);
+/**/ indent(GroebnerFanReducedGBases(I));
+[
+  [c^2 -b, b^2 -1, a^2 +c -1],
+  [b -c^2, a^2 +c -1, c^4 -1],
+  [c +a^2 -1, b -a^4 +2*a^2 -1, a^8 -4*a^6 +6*a^4 -4*a^2],
+  [c +a^2 -1, b^2 -1, a^4 -b -2*a^2 +1]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCallOnGroebnerFanIdeals.html">CallOnGroebnerFanIdeals</A>
+<li><a href="cmdGroebnerFanIdeals.html">GroebnerFanIdeals</A>
+</ul>
+</div>
+
+</body>
+</html>

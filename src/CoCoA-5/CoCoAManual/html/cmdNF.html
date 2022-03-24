@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NF</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NF">up</a> <a href="cmdNextPrimeNextProbPrime.html">previous</a>  <a href="cmdNFsAreZero[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NF<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+normal form</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NF(F: RINGELEM, I: IDEAL): RINGELEM
+NF(V: MODULEELEM, M: MODULE): MODULEELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first function returns the normal form of F with respect to I.
+It also computes a Groebner basis of I if that basis has not been
+computed previously.
+<br><br>
+The second function returns the normal form of V with respect to M. It
+also computes a Groebner basis of M if that basis has not been
+computed previously.
+<br><br>
+Currently only full reduction is computed: each monomial in
+the result cannot be reduced.
+(CoCoA-4 allowed setting the flag FullRed, of the panel GROEBNER,
+so that only the leading term is reduced)
+<br><br>
+Currently polynomial ideals are implemented only with coeffs
+in a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(z);
+/**/  NF(x^2+x*y+x*z+y^2+y*z+z^2, I);
+x^2 +x*y +y^2
+
+/**/  I := ideal(z-1);
+/**/  NF(x^2+x*y+x*z+y^2+y*z+z^2, I);
+x^2 +x*y +y^2 +x +y +1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdDivAlg.html">DivAlg</A>
+<li><a href="cmdGenRepr.html">GenRepr</A>
+<li><a href="cmdIsIn.html">IsIn</A>
+<li><a href="cmdNR.html">NR</A>
+</ul>
+</div>
+
+</body>
+</html>

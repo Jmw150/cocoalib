@@ -1,0 +1,92 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MakeTermOrdMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MakeTermOrdMat">up</a> <a href="cmdMakeTermOrd[OBSOLESCENT].html">previous</a>  <a href="cmdMantissaAndExponent10.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MakeTermOrdMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Make a term order matrix from a given matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MakeTermOrdMat(DegVec: MAT): MAT
+MakeTermOrdMat(DegVec: MAT, GrDim: INT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a (square) matrix of integers defining a term
+ordering; the output matrix is built from <tt><b style="background:#bbeeee">DegVec</b></tt>.  The first <tt><b style="background:#bbeeee">GrDim</b></tt>
+rows are left unchanged; if <tt><b style="background:#bbeeee">GrDim</b></tt> is not given then it is taken to be 0.
+<br><br>
+The input matrix <tt><b style="background:#bbeeee">DegVec</b></tt> must have rational entries; the first <tt><b style="background:#bbeeee">GrDim</b></tt>
+rows must have non-negative integer entries, and they must be linearly
+independent.
+<br><br>
+If <tt><b style="background:#bbeeee">DegVec</b></tt> is not square then rows are appended or eliminated as necessary.
+<br><br>
+NOTE: this function was called <tt><b style="background:#bbeeee">CompleteToOrd</b></tt> up to version CoCoA-5.1.2.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  DegVec := matrix([[1,2,3,4]]);
+/**/  MakeTermOrdMat(DegVec);
+ [[1, 2, 3, 4],
+  [0, 0, 0, -1],
+  [0, 0, -1, 0],
+  [0, -1, 0, 0]])
+
+/**/  MakeTermOrdMat(RowMat([1,2,0,0]));
+ [[1, 2, 0, 0],
+  [0, 0, 1, 1],
+  [0, 0, 0, -1],
+  [0, -1, 0, 0]])
+
+/**/  MakeTermOrdMat(matrix([[1,2,0,0],[0,0,3,4]]),2);
+matrix(ZZ,
+ [[1, 2, 0, 0],
+  [0, 0, 3, 4],
+  [0, 0, 0, -1],
+  [0, -1, 0, 0]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdLexMat.html">LexMat</A>
+<li><a href="cmdRevLexMat.html">RevLexMat</A>
+<li><a href="cmdStdDegLexMat.html">StdDegLexMat</A>
+<li><a href="cmdStdDegRevLexMat.html">StdDegRevLexMat</A>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+</ul>
+</div>
+
+</body>
+</html>

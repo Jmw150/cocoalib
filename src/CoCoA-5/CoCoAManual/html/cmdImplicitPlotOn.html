@@ -1,0 +1,91 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ImplicitPlotOn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ImplicitPlotOn">up</a> <a href="cmdImplicitPlot.html">previous</a>  <a href="cmdImportByRefImportByValue.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ImplicitPlotOn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+outputs the zero locus of a bivariate polynomial to a file</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ImplicitPlotOn(F: POLY, Xrange: LIST, Yrange: LIST, PlotFileName: STRING)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function is the same as <A HREF="cmdImplicitPlot.html">
+    <tt>ImplicitPlot</tt>
+  </A> with a fourth
+argument giving the name of the file to print on.
+<br><br>
+NOTE: the last argument is a <tt><b style="background:#bbeeee">STRING</b></tt>, the name of the file, and not
+an <tt><b style="background:#bbeeee">OSTREAM</b></tt>, as for <A HREF="cmdprinton.html">
+    <tt>print on</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  F := x^2 + y^2 - 100;
+/**/  G := ((x+y)^2-1)*(x^2-36);
+/**/  H := ((64*y^2-36*x^2)*(36*y^2-64*x^2)*(100*x^2-y^2)-1) * F - 1000^2 * G;
+
+/**/  ImplicitPlotOn(F, [-16,16], [-16,16], "PLOT-circle");
+Plotting points...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+640 plotted points have been placed in the file circle
+
+/**/  ImplicitPlotOn(G, [-16,16], [-16,16], "PLOT-lines");
+Plotting points...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+1502 plotted points have been placed in the file lines
+
+/**/  ImplicitPlotOn(H, [-16,16], [-16,16], "PLOT-curve");
+Plotting points...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+2790 plotted points have been placed in the file curve
+</pre></td></tr></table>
+
+After having produced the plot files using CoCoA-4,
+start "gnuplot" and then give it the following commands:
+
+  <pre>  plot "circle"
+  replot "lines"
+  replot "curve"</pre>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdImplicitPlot.html">ImplicitPlot</A>
+<li><a href="cmdPlotPointsOn.html">PlotPointsOn</A>
+</ul>
+</div>
+
+</body>
+</html>

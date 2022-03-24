@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RegularityIndex</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RegularityIndex">up</a> <a href="cmdreg.html">previous</a>  <a href="cmdRelNotes.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RegularityIndex<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+regularity index of a Hilbert function or series</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RegularityIndex(R: (Poly or Quotient)RING): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the regularity index of a Hilbert function.
+The input might be expressed as a Hilbert function or as the
+corresponding Hilbert series (computed with standard weights).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  Quot := R/ideal(x^3, y^2);
+/**/  HilbertFn(Quot);
+H(0) = 1
+H(1) = 3
+H(2) = 5
+H(t) = 6   for t >= 3
+/**/  RegularityIndex(HilbertFn(Quot));
+3
+/**/  RegularityIndex(HilbertSeries(Quot));
+3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdHilbertFn.html">HilbertFn</A>
+<li><a href="cmdHilbertSeries.html">HilbertSeries</A>
+</ul>
+</div>
+
+</body>
+</html>

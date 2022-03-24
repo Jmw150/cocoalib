@@ -1,0 +1,112 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MSatLinSolve</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MSatLinSolve">up</a> <a href="cmdMonsInIdeal.html">previous</a>  <a href="cmdMultiArrDerMod[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MSatLinSolve<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MSatLinSolve(Env: RECORD): MATRIX</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function calls the <A HREF="partMathSAT.html">
+    <tt>MathSAT</tt>
+  </A> implementation of the simplex method.
+The argument <tt><b style="background:#bbeeee">Env</b></tt> may contain the following fields: <tt><b style="background:#bbeeee">leq0</b></tt>, <tt><b style="background:#bbeeee">neq0</b></tt>,
+<tt><b style="background:#bbeeee">eq0</b></tt>, <tt><b style="background:#bbeeee">lt0</b></tt>; each field must have as value a matrix with rational entries,
+where each row of the matrix corresponds to a linear condition.  The matrices
+must all have the same number of columns.
+<br><br>
+The work for this communication has been partly supported by the
+European Union Horizon 2020 research and innovation programme
+under grant agreement No H2020-FETOPEN-2015-CSA 712689:
+SC-square <tt><b style="background:#bbeeee">http://www.sc-square.org</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ LinSys := 
+/**/   record[leq0 := matrix([[1,2,3, 4],  //   x +2*y +3*z +4 <= 0
+/**/                          [9,8,7, 0]]),// 9*x +8*y +7*z    <= 0
+/**/          neq0 := matrix([[1,0,0, 0]]) //   x              <> 0
+/**/         ];
+/**/ soln := MSatLinSolve(LinSys);  soln;
+matrix(QQ,
+ [[1],
+  [4/5],
+  [-11/5]])
+/**/ // verify:
+/**/ soln1 := ConcatVer(soln, matrix([[1]])); //-->  [[1], [4/5], [-11/5], [1]]
+/**/ LinSys.leq0 * soln1;  // is <= 0
+matrix(QQ,
+ [[0],
+  [0]])
+/**/ LinSys.neq0 * soln1;  // is <> 0
+matrix(QQ,
+ [[1]])
+/**/ // now we add new contraints:
+/**/ LinSys.eq0 := RowMat([1,1,0, 4]);   //  x +y +4 = 0
+/**/ LinSys.lt0 := RowMat([0,1,0, 0]);   //     y    < 0
+/**/ soln := MSatLinSolve(LinSys);  soln;
+matrix(QQ,
+ [[-2],
+  [-2],
+  [-2/7]])
+/**/ // verify:
+/**/ soln1 := ConcatVer(soln, RowMat([1]));  //-->  [[-2], [-2], [-2/7], [1]]
+/**/ LinSys.leq0 * soln1;  // <= 0
+matrix(QQ,
+ [[-20/7],
+  [-36]])
+/**/ LinSys.neq0 * soln1;  // <> 0
+matrix(QQ,
+ [[-2]])
+/**/ LinSys.eq0  * soln1;  //  = 0
+matrix(QQ,
+ [[0]])
+/**/ LinSys.lt0  * soln1;  //  < 0
+matrix(QQ,
+ [[-2]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdLinSolve.html">LinSolve</A>
+<li><a href="partMathSAT.html">MathSAT</A>
+</ul>
+</div>
+
+</body>
+</html>

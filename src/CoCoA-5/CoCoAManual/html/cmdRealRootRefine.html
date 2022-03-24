@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RealRootRefine</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RealRootRefine">up</a> <a href="cmdReadExpr[OBSOLESCENT].html">previous</a>  <a href="cmdRealRoots.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RealRootRefine<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+refine a real root of a univariate polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RealRootRefine(Root: RECORD, Precision: RAT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes a refinement of a real root of a univariate
+polynomial over <tt><b style="background:#bbeeee">QQ</b></tt> to the desired precision (width of isolating
+interval).  The starting root must be a record produced by <A HREF="cmdRealRoots.html">
+    <tt>RealRoots</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x];
+/**/  RR := RealRoots(x^2-2);
+/**/  RealRootRefine(RR[1], 1/2);
+record[CoeffList := [-1, 0, 2], inf := -3/2, sup := -5/4]
+
+/**/  RR := [RealRootRefine(Root, 10^(-20)) | Root in RR];
+/**/  FloatStr(RR[1].inf);
+-1.414213562*10^0
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRealRoots.html">RealRoots</A>
+<li><a href="cmdRealRootsApprox.html">RealRootsApprox</A>
+<li><a href="cmdRootBound.html">RootBound</A>
+</ul>
+</div>
+
+</body>
+</html>

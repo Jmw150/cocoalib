@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HasGBasis</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HasGBasis">up</a> <a href="cmdHadamardBoundSq.html">previous</a>  <a href="cmdHColon.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HasGBasis<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if the argument has a pre-computed GBasis</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HasGBasis(I: IDEAL): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+After the <A HREF="cmdGBasis.html">
+    <tt>GBasis</tt>
+  </A> of <tt><b style="background:#bbeeee">I</b></tt> is (explicitly or implicitly)
+computed, it is stored within <tt><b style="background:#bbeeee">I</b></tt> for future use.
+This function says whether the GBasis of <tt><b style="background:#bbeeee">I</b></tt> has been stored.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x^20 -x*y -1, x^10*y^10 -x*z -1,  x^10*z^10 -x*z -1);
+/**/  HasGBasis(I);
+false
+/**/  t0 := CpuTime(); GB := GBasis(I); TimeFrom(t0);
+0.948
+/**/  HasGBasis(I);
+true
+/**/  t0 := CpuTime(); GB := GBasis(I); TimeFrom(t0);
+0.007
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIdealOfGBasis.html">IdealOfGBasis</A>
+</ul>
+</div>
+
+</body>
+</html>

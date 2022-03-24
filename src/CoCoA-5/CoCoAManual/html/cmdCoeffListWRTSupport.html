@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CoeffListWRTSupport</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CoeffListWRTSupport">up</a> <a href="cmdCoeffListWRT.html">previous</a>  <a href="cmdCoeffOfTerm.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CoeffListWRTSupport<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of coefficients of a polynomial wrt a power-product basis</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CoeffListWRTSupport(f: RINGELEM, basis: RINGELEM): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of the coefficients of <tt><b style="background:#bbeeee">f</b></tt> relative to
+the basis of power-products given by the support of <tt><b style="background:#bbeeee">basis</b></tt>.  The
+elements of the list belong to the coefficient ring of the ring of <tt><b style="background:#bbeeee">f</b></tt>.
+<br><br>
+NOTE: the returned list is <b>reversed</b> with respect to the order of
+the power-products in <tt><b style="background:#bbeeee">basis</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  f := 5*y^2 + (3*x-1)*y;
+/**/  basis := (1+x+y)^2;
+/**/  CoeffListWRTSupport(f, basis);
+[0,  -1,  0,  5,  3,  0]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcoefficients.html">coefficients</A>
+<li><a href="cmdCoeffListWRT.html">CoeffListWRT</A>
+<li><a href="cmdsupport.html">support</A>
+</ul>
+</div>
+
+</body>
+</html>

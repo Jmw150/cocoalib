@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsCoprime</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsCoprime">up</a> <a href="cmdIsContained.html">previous</a>  <a href="cmdIsDefined.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsCoprime<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if t1 is coprime with t2</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsCoprime(t1: RINGELEM, t2: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether two POWER-PRODUCTS <tt><b style="background:#bbeeee">t1</b></tt> and <tt><b style="background:#bbeeee">t2</b></tt>
+are coprime.  (".. is coprime with ..").
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y,z];
+/**/ IsCoprime(x*y, y*z);
+false
+/**/ IsCoprime(x*y, z);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsDivisible.html">IsDivisible</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NumIndets</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NumIndets">up</a> <a href="cmdNumGens.html">previous</a>  <a href="cmdNumPartitions.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NumIndets<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+number of indeterminates</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NumIndets(R: RING): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the number of indeterminates of the ring <tt><b style="background:#bbeeee">R</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  S ::= QQ[x,y];
+/**/  R ::= QQ[x,y,z];
+/**/  NumIndets(R);
+3
+/**/  NumIndets(S);
+2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdindet.html">indet</A>
+<li><a href="cmdIndetSubscripts.html">IndetSubscripts</A>
+<li><a href="cmdIndetIndex.html">IndetIndex</A>
+<li><a href="cmdIndetName.html">IndetName</A>
+<li><a href="cmdindets.html">indets</A>
+</ul>
+</div>
+
+</body>
+</html>

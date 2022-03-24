@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>OpenOFile</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#OpenOFile">up</a> <a href="cmdOpenLog.html">previous</a>  <a href="cmdOpenOString.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>OpenOFile<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+open output file</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+OpenOFile(S: STRING): OSTREAM
+OpenOFile(S: STRING,"w" or "W"): OSTREAM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function opens the file with name <tt><b style="background:#bbeeee">S</b></tt>---creating it if it
+does not already exist---for output.
+It immediately erases the file with name <tt><b style="background:#bbeeee">S</b></tt>.  Then the function
+<A HREF="cmdprinton.html">
+    <tt>print on</tt>
+  </A> is then used for appending output to <tt><b style="background:#bbeeee">S</b></tt>
+until it is closed.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  file := OpenOFile("my-test");  -- open "my-test" for output from CoCoA
+/**/  print "hello world! " on file; -- print string into "my-test"
+/**/  print " test" on file;         -- append to the file "my-test"
+/**/  close(file);  -- close the file
+/**/  file := OpenOFile("my-test");  -- clear "my-test" and re-open it
+/**/  print "goodbye" on file; -- "mytest" now consists only of the string "goodbye"
+/**/  close(file);
+/**/  file := OpenIFile("my-test");  -- open "my-test" for input
+/**/  GetLine(file);
+goodbye
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdclose.html">close</A>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+<li><a href="cmdOpenOString.html">OpenOString</A>
+<li><a href="cmdsource.html">source</A>
+</ul>
+</div>
+
+</body>
+</html>

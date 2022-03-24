@@ -1,0 +1,122 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SeparatorsOfProjectivePoints</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SeparatorsOfProjectivePoints">up</a> <a href="cmdSeparatorsOfPoints.html">previous</a>  <a href="cmdSetCol.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SeparatorsOfProjectivePoints<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+separators for projective points</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SeparatorsOfProjectivePoints(Points: LIST): LIST
+
+where Points is a list of lists of coefficients representing a set of
+<b>distinct</b> points in projective space.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function computes separators for the points: that is, for each
+point a homogeneous polynomial is determined whose value is non-zero at
+that point and zero at all the others.  (Actually, choosing the values
+listed in Points as representatives for the homogeneous coordinates of
+the corresponding points in projective space, the non-zero value will
+be 1.)  The separators yielded are reduced with respect to the reduced
+Groebner basis which would be found by <A HREF="cmdIdealOfProjectivePoints.html">
+    <tt>IdealOfProjectivePoints</tt>
+  </A>.
+<br><br>
+NOTE:
+<br><br>
+ * the current ring must have at least one more indeterminate than the
+   dimension of the projective space in which the points lie, i.e. at
+   least as many indeterminates as the length of an element of
+   the input, Points;
+<br><br>
+ * the base field for the space in which the points lie is taken to be
+   the coefficient ring, which should be a field;
+<br><br>
+ * in the polynomials returned the first coordinate in the space is
+   taken to correspond to the first indeterminate, the second to the
+   second, and so on;
+<br><br>
+ * the separators are in the same order as the points (i.e. the first
+   separator is the one corresponding the first point, and so on);
+<br><br>
+ * if the number of points is large, say 100 or more, the returned
+   value can be very large.  To avoid possible problems when printing
+   such values as a single item we recommend printing out the elements
+   one at a time as in this example:
+
+  <pre>
+     S := SeparatorsOfProjectivePoints(Pts);
+     foreach sep in S do
+       println sep;
+     endforeach;
+</pre>
+
+For separators of points in affine space, see
+<A HREF="cmdSeparatorsOfPoints.html">
+    <tt>SeparatorsOfPoints</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  use R ::= QQ[x,y,z];
+  Points := [[0,0,1],[1/2,1,1],[0,1,0]];
+  S := SeparatorsOfProjectivePoints(Points);
+  S;
+[-2x + z, 2x, -2x + y]
+-------------------------------
+  [[Eval(F, P) | P in Points] | F in S];   -- verify separators
+[[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGenericPoints.html">GenericPoints</A>
+<li><a href="cmdIdealAndSeparatorsOfPoints.html">IdealAndSeparatorsOfPoints</A>
+<li><a href="cmdIdealAndSeparatorsOfProjectivePoints.html">IdealAndSeparatorsOfProjectivePoints</A>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdIdealOfProjectivePoints.html">IdealOfProjectivePoints</A>
+<li><a href="cmdInterpolate.html">Interpolate</A>
+<li><a href="cmdSeparatorsOfPoints.html">SeparatorsOfPoints</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PosetDual</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PosetDual">up</a> <a href="cmdPosetCharPoly.html">previous</a>  <a href="cmdPosetJoin.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PosetDual<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+dual of a poset from the relations of the poset</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PosetDual(relP: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the dual from the list relP of the strict relations in a poset.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+// POSET:
+//         3   4
+//          \ /
+//           2
+//           |
+//           1
+/**/ relP := [[1,  2], [2, 3],  [2,  4]];
+/**/ PosetDual(relP);
+[[2,  1],  [3,  2],  [4,  2]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPosetJoin.html">PosetJoin</A>
+<li><a href="cmdPosetMeet.html">PosetMeet</A>
+</ul>
+</div>
+
+</body>
+</html>

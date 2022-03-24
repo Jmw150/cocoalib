@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SymbolRange</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SymbolRange">up</a> <a href="cmdSylvesterMat.html">previous</a>  <a href="cmdSymmetricPolys.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SymbolRange<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+range of symbols for the indeterminates of a PolyRing</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SymbolRange(H: STRING, lo: INT, hi: INT): LIST of RECORD
+SymbolRange(H: STRING, lo: LIST of INT, hi: LIST of INT): LIST of RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function is designed to work well with <A HREF="cmdNewPolyRing.html">
+    <tt>NewPolyRing</tt>
+  </A>.
+It returns the list of the symbols with head given by the string <tt><b style="background:#bbeeee">H</b></tt>
+and the range of indices.
+A symbol is represented as a record with <tt><b style="background:#bbeeee">head</b></tt> (as produced by <A HREF="cmdIndetName.html">
+    <tt>IndetName</tt>
+  </A>)
+and <tt><b style="background:#bbeeee">indices</b></tt> (as produced by <A HREF="cmdIndetSubscripts.html">
+    <tt>IndetSubscripts</tt>
+  </A>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  P := NewPolyRing(QQ, SymbolRange("x", 0,4));
+/**/  indets(P);
+[x[0], x[1], x[2], x[3], x[4]]
+
+/**/  P2 := NewPolyRing(QQ, SymbolRange("mu", [3,1], [5,2]));
+/**/  indets(P2);
+[mu[3,1],  mu[3,2],  mu[4,1],  mu[4,2],  mu[5,1],  mu[5,2]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+<li><a href="cmdindet.html">indet</A>
+<li><a href="cmdIndetSubscripts.html">IndetSubscripts</A>
+<li><a href="cmdIndetIndex.html">IndetIndex</A>
+<li><a href="cmdIndetName.html">IndetName</A>
+<li><a href="cmdNumIndets.html">NumIndets</A>
+</ul>
+</div>
+
+</body>
+</html>

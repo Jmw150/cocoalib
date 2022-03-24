@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>BaseRing</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#BaseRing">up</a> <span class="grayed">previous</span> <a href="cmdBBasis5.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>BaseRing<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the base ring of a ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+BaseRing(RmodI: (Quotient)RING): RING
+BaseRing(K: (Fraction Field)RING): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function gives the "base ring" of a given ring; e.g. if <tt><b style="background:#bbeeee">K</b></tt>
+was constructed as the fraction field of <tt><b style="background:#bbeeee">R</b></tt> then <tt><b style="background:#bbeeee">BaseRing(K)</b></tt>
+produces <tt><b style="background:#bbeeee">R</b></tt>, if <tt><b style="background:#bbeeee">K</b></tt> was constructed as a quotient <tt><b style="background:#bbeeee">R/I</b></tt> then
+<tt><b style="background:#bbeeee">BaseRing(K)</b></tt> produces <tt><b style="background:#bbeeee">R</b></tt> (see also <A HREF="cmdDefiningIdeal.html">
+    <tt>DefiningIdeal</tt>
+  </A>).
+<br><br>
+All rings in CoCoA are derived from <tt><b style="background:#bbeeee">ZZ</b></tt> via various steps;
+<tt><b style="background:#bbeeee">BaseRing</b></tt> gives the ring which is one step closer to <tt><b style="background:#bbeeee">ZZ</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Fpx ::= ZZ/(7)[x];
+/**/  Fp := BaseRing(Fpx); --> ZZ/(7)
+/**/  BaseRing(Fp) = ZZ;
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewFractionField.html">NewFractionField</A>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+<li><a href="cmdDefiningIdeal.html">DefiningIdeal</A>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+</ul>
+</div>
+
+</body>
+</html>

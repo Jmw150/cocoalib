@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GensAsCols, GensAsRows</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GensAsCols, GensAsRows">up</a> <a href="cmdgens.html">previous</a>  <a href="cmdGensJacobian.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GensAsCols, GensAsRows<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+matrix of generators of a module</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GensAsRows(M: MODULE): MAT
+GensAsCols(M: MODULE): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions returns a matrix which generate the module M
+with the components as row (or colums) of a matrix.
+<br><br>
+The generators are not necessarily minimal.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  R3 := NewFreeModule(R, 3);
+/**/  L := [[x,y,z], [x-1,0,z]];
+/**/  M := SubmoduleRows(R3, mat(L));
+/**/  gens(M);
+[[x, y, z], [x -1, 0, z]]
+/**/ shape(It);
+[MODULEELEM, MODULEELEM]
+
+/**/ GensAsRows(M);
+matrix( /*RingDistrMPolyClean(QQ, 3)*/
+ [[x, y, z],
+  [x -1, 0, z]])
+
+/**/ GensAsCols(M);
+matrix( /*RingDistrMPolyClean(QQ, 3)*/
+ [[x, x -1],
+  [y, 0],
+  [z, z]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdgens.html">gens</A>
+<li><a href="cmdSubmoduleColsSubmoduleRows.html">SubmoduleCols, SubmoduleRows</A>
+</ul>
+</div>
+
+</body>
+</html>

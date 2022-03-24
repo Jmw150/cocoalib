@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FrbPrimaryDecomposition</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FrbPrimaryDecomposition">up</a> <a href="cmdFrbMaximalStandardMonomials.html">previous</a>  <a href="cmdFrobeniusMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FrbPrimaryDecomposition<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Primary decomposition of monomial ideals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FrbPrimaryDecomposition(I: IDEAL): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Using the <A HREF="partFrobby.html">
+    <tt>Frobby</tt>
+  </A> C++ library by Bjarke Roune.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x^2, x*y^2, z^2);
+/**/  FrbPrimaryDecomposition(I);
+[ideal(x^2, y^2, z^2), ideal(x, z^2)]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partFrobby.html">Frobby</A>
+<li><a href="cmdFrbAssociatedPrimes.html">FrbAssociatedPrimes</A>
+<li><a href="cmdFrbIrreducibleDecomposition.html">FrbIrreducibleDecomposition</A>
+<li><a href="cmdPrimaryDecomposition.html">PrimaryDecomposition</A>
+</ul>
+</div>
+
+</body>
+</html>

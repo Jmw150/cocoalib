@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>List Constructors</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c5">up</a> <a href="partIntroductiontoLIST.html">previous</a> <a href="partCommandsandFunctionsforLIST.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.5.2 List Constructors</b></font>
+</td></tr></table>
+
+These operators create new lists.
+
+  <pre>
+A..B
+[A,B,C,...]
+[X in L: LIST | Condn: BOOL]: LIST
+[E:expression | X in L]: LIST
+[E:expression | X in L: LIST and Condn: BOOL]: LIST</pre>
+<tt><b style="background:#bbeeee">A..B</b></tt> creates the list of (consecutive) integers from <tt><b style="background:#bbeeee">A</b></tt> to <tt><b style="background:#bbeeee">B</b></tt>;
+    both ends are included.
+<br><br><tt><b style="background:#bbeeee">[A,B,C,...]</b></tt> makes a list containing the values <tt><b style="background:#bbeeee">A</b></tt>, <tt><b style="background:#bbeeee">B</b></tt>, <tt><b style="background:#bbeeee">C</b></tt> and so on,
+    in that order.  In particular, <tt><b style="background:#bbeeee">[]</b></tt> creates the empty list.
+<br><br><tt><b style="background:#bbeeee">[X in L | Condn]</b></tt> makes a list of those elements in <tt><b style="background:#bbeeee">L</b></tt> for which
+    condition <tt><b style="background:#bbeeee">Condn</b></tt> is true; the entries in <tt><b style="background:#bbeeee">L</b></tt> are considered in order.
+<br><br><tt><b style="background:#bbeeee">[E | X in L]</b></tt> evaluates the expression <tt><b style="background:#bbeeee">E</b></tt> for each <tt><b style="background:#bbeeee">X</b></tt> in <tt><b style="background:#bbeeee">L</b></tt>, and collects
+    the results in a new list; the entries in <tt><b style="background:#bbeeee">L</b></tt> are considered in order.
+<br><br><tt><b style="background:#bbeeee">[E | X in L and Condn]</b></tt> evaluates the expression <tt><b style="background:#bbeeee">E</b></tt> for each <tt><b style="background:#bbeeee">X</b></tt> in <tt><b style="background:#bbeeee">L</b></tt> which
+    satisfies the condition <tt><b style="background:#bbeeee">Condn</b></tt>, and collects the results in a new list;
+    the entries in <tt><b style="background:#bbeeee">L</b></tt> are considered in order.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  [];  --> empty list
+[]
+/**/  1..4;
+[1, 2, 3, 4]
+/**/  [3,1,4,2];
+[3, 1, 4, 2]
+/**/  [N in 1..10 | IsPrime(N)];
+[2, 3, 5, 7]
+/**/  [N^2 | N in 1..4];
+[1, 4, 9, 16]
+/**/  [N^2 | N in 1..10 and IsPrime(N)];
+[4, 9, 25, 49]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

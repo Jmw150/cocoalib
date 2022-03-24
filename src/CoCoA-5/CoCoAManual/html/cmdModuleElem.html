@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ModuleElem</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ModuleElem">up</a> <a href="cmdMod2Rat[OBSOLETE].html">previous</a>  <a href="cmdModuleOf.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ModuleElem<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a module element</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ModuleElem(M: MODULE, L: LIST): MODULEELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the MODULEELEM (called <tt><b style="background:#bbeeee">Vector</b></tt> in CoCoA-4)
+in the module <tt><b style="background:#bbeeee">M</b></tt> whose components are the components of the list <tt><b style="background:#bbeeee">L</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  R3 := NewFreeModule(R,3);
+/**/  V := ModuleElem(R3, [1, x, x^2]);  V;
+[1, x, x^2]
+/**/  type(V);
+MODULEELEM
+/**/  zero(R3);
+[0, 0, 0]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdSubmoduleColsSubmoduleRows.html">SubmoduleCols, SubmoduleRows</A>
+</ul>
+</div>
+
+</body>
+</html>

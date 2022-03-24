@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ConcatHor</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ConcatHor">up</a> <a href="cmdConcatDiag.html">previous</a>  <a href="cmdConcatHorList.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ConcatHor<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a simple block matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ConcatHor(A: MAT, B: MAT): MAT
+
+where A and B have the same number of rows
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function creates a horizontally stacked block matrix.  The
+two entries are matrices with the same number of rows.
+<tt><b style="background:#bbeeee">ConcatHor(A, B)</b></tt> will return a matrix of the form
+
+  <pre>
+                | A B |
+</pre>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  A := mat([[1,2,3],   [4,5,6]]);
+/**/  B := mat([[101,102], [103,104]]);
+/**/  ConcatHor(A, B);
+matrix(QQ,
+ [[1, 2, 3, 101, 102],
+  [4, 5, 6, 103, 104]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBlockMat.html">BlockMat</A>
+<li><a href="cmdMakeMatByRowsMakeMatByCols.html">MakeMatByRows, MakeMatByCols</A>
+<li><a href="cmdConcatAntiDiag.html">ConcatAntiDiag</A>
+<li><a href="cmdConcatDiag.html">ConcatDiag</A>
+<li><a href="cmdConcatHorList.html">ConcatHorList</A>
+<li><a href="cmdConcatVer.html">ConcatVer</A>
+<li><a href="cmdRowMat.html">RowMat</A>
+</ul>
+</div>
+
+</body>
+</html>

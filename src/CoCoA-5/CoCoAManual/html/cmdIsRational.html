@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsRational</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsRational">up</a> <a href="cmdIsRadical.html">previous</a>  <a href="cmdIsSigmaGoodPrime.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsRational<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if a RINGELEM is rational</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsRational(ref n: RAT, f: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the argument <tt><b style="background:#bbeeee">f</b></tt> is rational and
+convert it into a RAT.
+To convert <tt><b style="background:#bbeeee">f</b></tt> straight away use <tt><b style="background:#bbeeee">AsRAT(f)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use R ::= QQ[x];
+/**/ f := x-x-3;  f;  type(f);
+-3
+RINGELEM
+/**/ IsRational(ref a, x-x-3);
+true
+/**/ a;  type(a);
+-3
+RAT
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAsINT.html">AsINT</A>
+<li><a href="cmdAsRAT.html">AsRAT</A>
+<li><a href="cmdIsInteger.html">IsInteger</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>deg</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#deg">up</a> <a href="cmdDefiningIdeal.html">previous</a>  <a href="cmdden.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>deg<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the standard degree of a polynomial or moduleelem</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+deg(F: RINGELEM): INT
+deg(F: RINGELEM, X: RINGELEM): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first form of this function returns the <b>standard degree</b> of <tt><b style="background:#bbeeee">F</b></tt>
+(see <A HREF="cmdwdeg.html">
+    <tt>wdeg</tt>
+  </A> for the <b>weighted degree</b>).
+The second form returns the exponent of the indeterminate <tt><b style="background:#bbeeee">X</b></tt> in <tt><b style="background:#bbeeee">F</b></tt>.
+<br><br>
+For the degree of a ring or quotient, see <A HREF="cmdmultiplicity.html">
+    <tt>multiplicity</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  deg(x*y^2+y);
+3
+/**/  deg(x*y^2+y, x);
+1
+/**/  Ws := RowMat([2,3,1]);
+/**/  P := NewPolyRing(QQ, "x,y,z", MakeTermOrdMat(Ws), 1);
+/**/  use P;
+/**/  deg(x*y^2+y);
+3
+/**/  wdeg(x*y^2+y);
+[8]
+/**/  deg(x*y^2+y, x);
+1
+/**/  deg(x*y^2+y, y);
+2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdwdeg.html">wdeg</A>
+<li><a href="cmdexponents.html">exponents</A>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+<li><a href="cmdmultiplicity.html">multiplicity</A>
+</ul>
+</div>
+
+</body>
+</html>

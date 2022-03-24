@@ -1,0 +1,63 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ArrDeletion</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ArrDeletion">up</a> <a href="cmdArrCone.html">previous</a>  <a href="cmdArrDerMod[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ArrDeletion<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+deletes a hyperplane from a list of hyperplanes</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ArrDeletion(A: LIST, H: RINGELEM): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of hyperplanes obtained by deleting
+the hyperplane <tt><b style="background:#bbeeee">H</b></tt> from the list <tt><b style="background:#bbeeee">A</b></tt> of hyperplanes.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y];
+/**/ A := [x, x-1, y];
+/**/ ArrDeletion(A, x-1);
+[x,  y]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdArrRestriction.html">ArrRestriction</A>
+</ul>
+</div>
+
+</body>
+</html>

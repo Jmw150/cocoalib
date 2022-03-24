@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: defining new functions</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialpolynomials.html">previous</a> <a href="partTutorialdefiningnewfunctionsadvanced.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.10 Tutorial: defining new functions</b></font>
+</td></tr></table>
+
+To define a new function in CoCoA use the command <A HREF="cmddefine.html">
+    <tt>define</tt>
+  </A>.
+<br><br>
+When defining a new function you must pick a new name for the function,
+and state what arguments/parameters it expects.  The parameters and
+variables used inside the function are different from any variables
+outside it (even if the names look the same).
+<br><br>
+Strictly there is a difference between "functions" and "procedures":
+the former always return values, while the latter never return values.
+In CoCoA there is hardly any distinction: the only difference is the
+use of the <A HREF="cmdreturn.html">
+    <tt>return</tt>
+  </A> command inside the fn-proc.
+
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+  /**/ -- Define new fn "SimpleFn" with just 1 parameter:
+  /**/ define SimpleFn(N) return N^2+1; enddefine;
+  /**/ SimpleFn(3);
+  10
+
+  /**/ define OneStep(N)
+  /**/   if IsEven(N) then return N/2;
+  /**/   else return 3*N+1;
+  /**/   endif;
+  /**/ enddefine;
+  /**/ OneStep(5);
+  16
+
+  /**/ define MaxAbs(X, Y)  -->  2 parameters
+  /**/   return max(abs(X), abs(Y));
+  /**/ enddefine;
+  /**/ MaxAbs(2, -3);
+  3
+
+  /**/ -- Next defn is a "procedure" (returns no value)
+  /**/ define CheckIsPositive(X)
+  /**/   if X <= 0 then println "NOT POSITIVE"; endif
+  /**/ enddefine
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FixedDivisor</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FixedDivisor">up</a> <a href="cmdFirstNonZeroPosn.html">previous</a>  <a href="cmdflatten.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FixedDivisor<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+compute (integer) fixed divisor for polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FixedDivisor(F: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the integer fixed divisor of the polynomial <tt><b style="background:#bbeeee">F</b></tt>;
+that is the gcd of all <tt><b style="background:#bbeeee">F(n)</b></tt> as <tt><b style="background:#bbeeee">n</b></tt> runs through all integers.
+<br><br>
+The polynomial <tt><b style="background:#bbeeee">F</b></tt> must have rational coefficients, and all values
+<tt><b style="background:#bbeeee">F(n)</b></tt> must be integers.  Current bug: <tt><b style="background:#bbeeee">F</b></tt> must be univariate.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  f := (x-1)*(x-2)*(x-3);
+/**/  FixedDivisor(f);
+3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcontent.html">content</A>
+</ul>
+</div>
+
+</body>
+</html>

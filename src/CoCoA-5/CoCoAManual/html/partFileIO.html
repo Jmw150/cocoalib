@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>File IO</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c8">up</a> <a href="partStandardIO.html">previous</a> <a href="partStringIO.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.8.3 File IO</b></font>
+</td></tr></table>
+
+***** NOT YET UPDATED TO CoCoA-5: follow with care *****
+<br><br>
+To print CoCoA output to a file, one first opens the file
+with <A HREF="cmdOpenOFile.html">
+    <tt>OpenOFile</tt>
+  </A> then prints to the file using <A HREF="cmdprinton.html">
+    <tt>print on</tt>
+  </A>.
+<br><br>
+To receive verbatim input from a file, one first opens the file with
+<A HREF="cmdOpenIFile.html">
+    <tt>OpenIFile</tt>
+  </A>, then reads lines from the file with <A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  D := OpenOFile("my-file"); -- open text file with name "my-file",
+/**/                             -- creating it if necessary
+/**/  Print "hello world" On D; -- append "hello world" to my-file
+/**/  Close(D); -- close the file
+/**/  D := OpenIFile("my-file"); -- open "my-file"
+/**/  GetLine(D);
+hello world
+/**/  Close(D);
+</pre></td></tr></table>
+
+To read and execute a sequence of CoCoA commands from a text file, one
+uses the <A HREF="cmdsource.html">
+    <tt>source</tt>
+  </A> command.  For instance, if the
+file <tt><b style="background:#bbeeee">MyFile.coc</b></tt> contains a list of CoCoA commands, then
+
+  <pre>
+  Source "MyFile.cocoa";
+</pre>
+
+reads and executes the commands.
+
+</div>
+
+</body>
+</html>

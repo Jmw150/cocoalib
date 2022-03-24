@@ -1,0 +1,98 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>use</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#use">up</a> <a href="cmduntagged.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>use<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+command for making a ring active</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+use R
+use RingDefn
+use R ::= RingDefn
+
+where R is a RING, and RingDefn is a ring definition.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command works only at top-level; it makes a ring active,
+i.e. it makes that ring the <b>current ring</b>.
+The command will also let you create a new ring, and make it active
+immediately <tt><b style="background:#bbeeee">use NewR ::= RingDefn;</b></tt> where <tt><b style="background:#bbeeee">RingDefn</b></tt> is
+a ring definition; this is a shorthand for
+<tt><b style="background:#bbeeee">NewR ::= RingDefn;  use NewR;</b></tt><br><br>
+This command cannot be called inside a function, and it is never
+necessary (if you write clean programs ;-).
+See also <A HREF="cmdRingElem.html">
+    <tt>RingElem</tt>
+  </A> for reading elements without <tt><b style="background:#bbeeee">use</b></tt>.
+In CoCoA-5 you can define new rings, return rings, assign rings and
+pass rings as arguments (this was not possible in CoCoA-4).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use S ::= QQ[x,y,z];
+/**/  Print CurrentRing;
+RingDistrMPolyClean(QQ, 3)
+/**/  indets(CurrentRing);
+[x, y, z]
+
+/**/  use QQ[u];  -- can be used w/out a ring identifier
+/**/  indets(CurrentRing);
+[u]
+
+/**/  define SumInAnotherRing(N)
+/**/    K := NewRingTwinFloat(128); -- 128 bits of precision
+/**/    P ::= K[x[1..N]], Lex;
+/**/    return sum(indets(P));
+/**/  enddefine;
+
+/**/  SumInAnotherRing(4);
+x[1] +x[2] +x[3] +x[4]
+/**/  CoeffRing(RingOf(It));
+RingTwinFloat(AccuracyBits=128, BufferBits=128, NoiseBits=32)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoRINGHOM.html">Introduction to RINGHOM</A>
+<li><a href="cmdCurrentRing.html">CurrentRing</A>
+<li><a href="cmdRingOf.html">RingOf</A>
+<li><a href="cmdRingElem.html">RingElem</A>
+</ul>
+</div>
+
+</body>
+</html>

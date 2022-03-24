@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsProbPrime</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsProbPrime">up</a> <a href="cmdIsPrime.html">previous</a>  <a href="cmdIsPthPower.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsProbPrime<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if an integer is a probable prime</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsProbPrime(N: INT): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns <tt><b style="background:#bbeeee">true</b></tt> if its integer argument passes a fairly
+stringent primality test; otherwise it returns <tt><b style="background:#bbeeee">false</b></tt>.  There is a very
+small chance of the function returning <tt><b style="background:#bbeeee">true</b></tt> even when the argument is
+composite; however, if it returns <tt><b style="background:#bbeeee">false</b></tt>, we are certain that the
+argument is composite.  Some people call it a "compositeness test".
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  IsProbPrime(2);
+true
+
+/**/  IsProbPrime(1111111111111111111);
+true
+
+/**/  [N in 1..1111 | IsProbPrime((10^N-1)/9)]; -- only five values are known
+[2, 19, 23, 317, 1031]                          -- next might be 49081
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsPrime.html">IsPrime</A>
+<li><a href="cmdNextPrimeNextProbPrime.html">NextPrime, NextProbPrime</A>
+<li><a href="cmdPrevPrimePrevProbPrime.html">PrevPrime, PrevProbPrime</A>
+</ul>
+</div>
+
+</body>
+</html>

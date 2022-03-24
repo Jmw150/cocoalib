@@ -1,0 +1,95 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>BringIn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#BringIn">up</a> <a href="cmdbreak.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>BringIn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+bring in objects from another ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+BringIn(E: OBJECT): OBJECT
+BringIn(R: RING, E: OBJECT): OBJECT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function maps a polynomial (or a list, matrix of these) into the
+current ring, or the ring <tt><b style="background:#bbeeee">R</b></tt>, preserving the names of the indeterminates.
+Honestly, this is not-so-clean shortcut for creating and calling a
+homomorphism.  (<A HREF="partIntroductiontoRINGHOM.html">
+    <tt>Introduction to RINGHOM</tt>
+  </A>)
+<br><br>
+NOTE: this function is not implemented on IDEAL because might be
+misleading: one might expect that bringing an ideal from <tt><b style="background:#bbeeee">K[x,y]</b></tt>
+into <tt><b style="background:#bbeeee">K[x]</b></tt> means eliminating <tt><b style="background:#bbeeee">y</b></tt>.  For this operation
+call <A HREF="cmdelim.html">
+    <tt>elim</tt>
+  </A>.
+Instead, if you want to map the generators of the ideal type
+<tt><b style="background:#bbeeee">ideal(BringIn(R, gens(I)))</b></tt>.
+<br><br>
+-- Changing characteristic from non-0 to 0 is NOT YET IMPLEMENTED in CoCoA-5
+When mapping from a ring of finite characteristic to one of zero
+characteristic then consistent choices of image for the coefficients
+are made (i.e. if two coefficients are equal mod p then their images
+will be equal).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  RR ::= QQ[x[1..4],z,y];
+/**/  SS ::= ZZ[z,y,x[1..2]];
+/**/  use RR;
+/**/  F := (x[1]-y-z)^2;  F;
+x[1]^2 -2*x[1]*z +z^2 -2*x[1]*y +2*z*y +y^2
+/**/  BringIn(SS, F);
+z^2 +2*z*y +y^2 -2*z*x[1] -2*y*x[1] +x[1]^2
+
+/**/  use R ::= QQ[x,y,z];
+/**/  F := (1/2)*x^3 + (34/567)*x*y*z - 890; -- poly with rational coefficients
+/**/  use S ::= ZZ/(101)[x,y,z];
+/**/  BringIn(F);
+-50*x^3 -19*x*y*z +19
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoRINGHOM.html">Introduction to RINGHOM</A>
+<li><a href="cmdPolyAlgebraHom.html">PolyAlgebraHom</A>
+<li><a href="cmdQZP.html">QZP</A>
+<li><a href="cmdZPQ.html">ZPQ</A>
+</ul>
+</div>
+
+</body>
+</html>

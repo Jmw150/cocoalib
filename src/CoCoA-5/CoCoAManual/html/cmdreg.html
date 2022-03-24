@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>reg</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#reg">up</a> <a href="cmdRefineGCDFreeBasis[OBSOLETE].html">previous</a>  <a href="cmdRegularityIndex.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>reg<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Castelnuovo-Mumford regularity of a module</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+reg(I: IDEAL): INT
+reg(R: (Quotient)RING): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions compute the Castelnuovo-Mumford regularity of an ideal.
+The implementation of <tt><b style="background:#bbeeee">Reg</b></tt> using Bermejo-Gimenez Algorithm.
+<br><br>
+Implemented by Eduardo Saenz-de-Cabezon (updated to CoCoA-5 by Anna M. Bigatti).
+<br><br>
+NOTE: this is different from <A HREF="cmdRegularityIndex.html">
+    <tt>RegularityIndex</tt>
+  </A>, the regularity
+of a Hilbert Function.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x^3, y^2);
+/**/  reg(I);
+4
+/**/  reg(R/I);
+3
+/**/  PrintRes(I);
+0 --> R(-5) --> R(-2)(+)R(-3)
+
+/**/  PrintBettiDiagram(I);
+        0    1
+---------------
+  2:    1    -
+  3:    1    -
+  4:    -    1
+---------------
+Tot:    2    1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdres.html">res</A>
+<li><a href="cmdPrintRes.html">PrintRes</A>
+<li><a href="cmdPrintBettiDiagram.html">PrintBettiDiagram</A>
+<li><a href="cmdPrintBettiMatrix.html">PrintBettiMatrix</A>
+<li><a href="cmdRegularityIndex.html">RegularityIndex</A>
+</ul>
+</div>
+
+</body>
+</html>

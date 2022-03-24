@@ -1,0 +1,87 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LinKerBasis</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LinKerBasis">up</a> <a href="cmdLinKer.html">previous</a>  <a href="cmdLinKerModP[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LinKerBasis<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+find the kernel of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LinKerBasis(M: MAT): LIST of RINGELEM
+LinKerBasis(L: LIST): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list whose components are lists representing
+a basis for the kernel of the matrix <tt><b style="background:#bbeeee">M</b></tt> or for the solutions of the
+linear system given by linear polynomials <tt><b style="background:#bbeeee">L</b></tt>.  
+<br><br>
+NOTE: calling the function twice on the same input will not necessarily
+produce the same output, though in each case, a basis for the kernel
+is produced.
+<br><br>
+NOTE: this function works only on matrices whose entries are in a field
+(from version CoCoA-5.0.3).  See <A HREF="cmdLinKerZZ.html">
+    <tt>LinKerZZ</tt>
+  </A> for computing a
+ZZ-basis for the kernel of <tt><b style="background:#bbeeee">M</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  L := [x+y+z,  y-z];
+/**/  LinKerBasis(L);
+[[-2,  1,  1]]
+
+/**/  M := mat([[1,2,3,4],[5,6,7,8],[9,10,11,12]]);
+/**/  LinKerBasis(M);
+[[-1, 2, -1, 0], [-2, 3, 0, -1]]
+
+/**/  K := NewFractionField(NewPolyRing(QQ, "a,b"));
+/**/  use K;
+/**/  M := mat([[1,2,3,a],[5,6,7,a*b]]);
+/**/  LinKerBasis(M);
+[[-1, 2, -1, 0], [(a*b -3*a)/2, (-a*b +5*a)/4, 0, -1]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdLinKer.html">LinKer</A>
+<li><a href="cmdLinKerZZ.html">LinKerZZ</A>
+<li><a href="cmdLinSolve.html">LinSolve</A>
+</ul>
+</div>
+
+</body>
+</html>

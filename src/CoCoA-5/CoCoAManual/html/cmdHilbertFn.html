@@ -1,0 +1,93 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HilbertFn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HilbertFn">up</a> <a href="cmdHilbertBasisKer.html">previous</a>  <a href="cmdHilbertMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HilbertFn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the Hilbert function</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HilbertFn(R: RING|IDEAL): TAGGED("$hp.Hilbert")
+HilbertFn(R: RING|IDEAL, N: INT): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The first form of this function computes the Hilbert function for R.
+The second form computes the N-th value of the Hilbert function.  The
+weights of the indeterminates of R must all be 1.  If the input is not
+homogeneous, the Hilbert function of the corresponding leading term
+(initial) ideal or module is calculated.  For repeated evaluations of
+the Hilbert function, use <A HREF="cmdEvalHilbertFn.html">
+    <tt>EvalHilbertFn</tt>
+  </A> instead
+of <tt><b style="background:#bbeeee">HilbertFn(R, N)</b></tt> in order to speed up execution.
+<br><br>
+The coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[t,x,y,z];
+/**/  HilbertFn(R/ideal(z^2-x*y, x*z^2+t^3));
+H(0) = 1
+H(1) = 4
+H(t) = 6*t -3   for t >= 2
+
+/**/  R2 := NewFreeModule(R, 2);
+/**/  MGens := matrix(R, [[x^3,y^3], [x*y^2,0], [0,z^3]]);
+/**/  M := SubmoduleRows(R2, MGens);
+/**/  HilbertFn(M);
+H(0) = 0
+H(1) = 0
+H(2) = 0
+H(3) = 3
+H(4) = 12
+H(t) = (1/3)*t^3 +(3/2)*t^2 +(-101/6)*t +35   for t >= 5
+
+/**/  HilbertFn(M,3);
+3
+/**/  HilbertFn(M,5);
+30
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdEvalHilbertFn.html">EvalHilbertFn</A>
+<li><a href="cmdHilbertPoly.html">HilbertPoly</A>
+<li><a href="cmdHVector.html">HVector</A>
+<li><a href="cmdHilbertSeries.html">HilbertSeries</A>
+</ul>
+</div>
+
+</body>
+</html>

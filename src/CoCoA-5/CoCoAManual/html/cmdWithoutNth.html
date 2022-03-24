@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>WithoutNth</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#WithoutNth">up</a> <a href="cmdwhile.html">previous</a>  <a href="cmdWLog[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>WithoutNth<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+removes the N-th component from a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+WithoutNth(L: LIST, N: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list obtained by removing the <tt><b style="background:#bbeeee">N</b></tt>-th component
+of the list <tt><b style="background:#bbeeee">L</b></tt>.  The list <tt><b style="background:#bbeeee">L</b></tt> itself is not changed; compare with
+<A HREF="cmdremove.html">
+    <tt>remove</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [1,2,3,4,5];
+/**/  WithoutNth(L,3);
+[1, 2, 4, 5]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdremove.html">remove</A>
+</ul>
+</div>
+
+</body>
+</html>

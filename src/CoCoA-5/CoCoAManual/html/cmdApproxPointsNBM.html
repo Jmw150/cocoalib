@@ -1,0 +1,94 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ApproxPointsNBM</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ApproxPointsNBM">up</a> <a href="cmdapply[OBSOLESCENT].html">previous</a>  <a href="cmdApproxSolve.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ApproxPointsNBM<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Numerical Border Basis of ideal of points</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ApproxPointsNBM(P: RING, Pts: MAT, Toler: MAT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a record containing four fields: namely,
+<tt><b style="background:#bbeeee">QuotientBasis</b></tt>, <tt><b style="background:#bbeeee">BBasis</b></tt>, <tt><b style="background:#bbeeee">AlmostVanishing</b></tt> and <tt><b style="background:#bbeeee">StableBBasisFound</b></tt>.
+<br><br>
+The field <tt><b style="background:#bbeeee">QuotientBasis</b></tt> contains a factor-closed set of
+power-products, and the field <tt><b style="background:#bbeeee">AlmostVanishing</b></tt> contains a list
+of "almost vanishing" polynomials.  If the cardinality of the field
+<tt><b style="background:#bbeeee">QuotientBasis</b></tt> is equal to the number of points, it is in fact a
+"quotient basis" of the ideal of points, and in this case a
+border basis founded on it is also returned in the field <tt><b style="background:#bbeeee">BBasis</b></tt>
+and the field <tt><b style="background:#bbeeee">StableBBasisFound</b></tt> is set to <tt><b style="background:#bbeeee">true</b></tt> (otherwise
+it is <tt><b style="background:#bbeeee">false</b></tt>).
+<br><br>
+The first argument is a list of points in k-dimensional space, and the
+second argument is the list of k positive tolerances (one for each
+dimension).  So that the answer can be represented, the current ring
+must have at least k indeterminates; the term ordering is ignored as
+it plays no role in determining the border basis.
+<br><br>
+Verbosity range 80-95 (80, 90, 95).
+<br><br>
+Thanks to John Abbott and Maria-Laura Torrente for the implementation.
+For a full description of the algorithms we refer to the paper C.Fassino
+<b>Almost Vanishing Polynomials for Sets of Limited Precision Points</b>
+ (Journal of Symbolic Computation 45 (2010), 19--37).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ P ::= QQ[x,y];
+/**/ Eps := [0.1, 0.1];
+/**/ Points := [[10, 0], [-10, 0], [0, 10], [0, -10], [7, 7], [-7, -7]];
+/**/ indent(ApproxPointsNBM(P, mat(Points), RowMat(Eps)));
+record[
+  AlmostVanishing := [x^2 +(2/49)*x*y +y^2 -100,
+                      x*y^2 +(49/51)*y^3 +(-4900/51)*y, y^4 +51*x*y -100*y^2],
+  BBasis := [x^2 +(2/49)*x*y +y^2 -100, x*y^2 +(49/51)*y^3 +(-4900/51)*y,
+             x^2*y +(49/51)*y^3 +(-4900/51)*y, y^4 +51*x*y -100*y^2, x*y^3 -49*x*y],
+  QuotientBasis := [1, y, x, y^2, x*y, y^3],
+  StableBBasisFound := true
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdStableBBasis5.html">StableBBasis5</A>
+</ul>
+</div>
+
+</body>
+</html>

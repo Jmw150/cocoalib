@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>DenSigma</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#DenSigma">up</a> <a href="cmdDensePoly.html">previous</a>  <a href="cmddepth.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>DenSigma<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+den of ideal, wrt to ordering sigma</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+DenSigma(I: IDEAL): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the sigma-denominator of the ideal <tt><b style="background:#bbeeee">I</b></tt>,
+that is the common denominator of all polynomials in the sigma-reduced
+GBasis.
+<br><br>
+See article Abbott, Bigatti, Robbiano
+"Ideals modulo p"
+(<tt><b style="background:#bbeeee">https://arxiv.org/abs/1801.06112</b></tt>)
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y,z];
+/**/ I := ideal(2*x*y^2 -1, 3*x^3*y -1);
+/**/ ReducedGBasis(I);
+[x*y^2 -1/2,  x^2 +(-2/3)*y,  y^3 +(-3/4)*x]
+/**/ DenSigma(I);
+12
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCommonDenom.html">CommonDenom</A>
+<li><a href="cmdIsSigmaGoodPrime.html">IsSigmaGoodPrime</A>
+</ul>
+</div>
+
+</body>
+</html>

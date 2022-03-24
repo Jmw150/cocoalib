@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CheckArgTypes</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CheckArgTypes">up</a> <a href="cmdChebyshevPoly.html">previous</a>  <a href="cmdciao.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CheckArgTypes<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Check types in a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CheckArgTypes(Ltype: LIST of TYPE, Larg: LIST)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function provides a basic type checking for user defined functions:
+it checks whether the TYPEs of the elements in the third
+argument, a list, correspond to the types in the second list.
+If so, it returns nothing, otherwise returns an error.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  -- the following returns an error for the 2nd argument (INT)
+/**/  -- CheckArgTypes([RAT, RINGELEM, MAT], [2/3, 20, LexMat(3)]);
+--> !!! ERROR !!! as expected:  Arg 2 is INT but must be RINGELEM
+
+/**/  -- the following returns nothing
+/**/  CheckArgTypes([RAT, [INT,RAT,RINGELEM], MAT], [2/3, 20, LexMat(3)]);
+
+/**/  -- an example of use for type checking
+/**/  Define Pow(F, N)
+/**/    CheckArgTypes([[INT,RAT,RINGELEM,IDEAL,MAT], INT], [F, N]);
+/**/    Return F^N;
+/**/  EndDefine; -- Pow
+/**/  use QQ[x];
+/**/  Pow(x, 3);
+x^3
+/**/  -- Pow(2, x); --> !!! ERROR !!! as expected: Arg 2 is RINGELEM but must be INT
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>StandardOutput</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#StandardOutput">up</a> <a href="cmdStandardInput.html">previous</a>  <a href="cmdstarting.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>StandardOutput<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+an OSTREAM for writing to the standard output</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+StandardOutput(): OSTREAM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns an <tt><b style="background:#bbeeee">OSTREAM</b></tt> for printing on the standard output
+(usually this is the computer screen).
+<br><br>
+This function may not work well if you are running CoCoA inside a GUI.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  UserOutput := StandardOutput();
+/**/  println "Hello" on UserOutput;  -- same as println "Hello";
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdprinton.html">print on</A>
+<li><a href="cmdOpenOFile.html">OpenOFile</A>
+<li><a href="cmdOpenOString.html">OpenOString</A>
+<li><a href="cmdStandardInput.html">StandardInput</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>KroneckerProd</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#KroneckerProd">up</a> <a href="cmdker.html">previous</a>  <a href="cmdKroneckerSymbol.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>KroneckerProd<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the Kronecker product of two matrices</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+KroneckerProd(M: MATRIX, N: MATRIX): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the Kronecker (tensor) product of two matrices.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z,w];
+/**/  KroneckerProd(mat(R, [[1,-1],[2,-2],[3,-3]]), mat(R, [[x,y],[z,w]]));
+matrix( /*RingWithID(42, "QQ[x,y,z,w]")*/
+ [[x, y, -x, -y],
+  [z, w, -z, -w],
+  [2*x, 2*y, -2*x, -2*y],
+  [2*z, 2*w, -2*z, -2*w],
+  [3*x, 3*y, -3*x, -3*y],
+  [3*z, 3*w, -3*z, -3*w]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

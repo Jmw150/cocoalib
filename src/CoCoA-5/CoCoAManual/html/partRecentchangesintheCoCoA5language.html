@@ -1,0 +1,52 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Recent changes in the CoCoA-5 language</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c11">up</a> <a href="partChangesintheCoCoAlanguage.html">previous</a> <a href="partObsoleteandobsolescentfunctions.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.11.2 Recent changes in the CoCoA-5 language</b></font>
+</td></tr></table>
+
+There are a few changes in the language even from the first versions
+of CoCoA-5.
+<br><br>
+The operator <tt><b style="background:#bbeeee">Not</b></tt> has been replaced by the function <tt><b style="background:#bbeeee">not(...)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/*5.0.9*/ If Not X IsIn L Then ... EndIf;
+/*5.1.0*/ If not(X IsIn L) Then ... EndIf;
+</pre></td></tr></table>
+
+The anonymous function called <tt><b style="background:#bbeeee">lambda</b></tt> is now called <A HREF="cmdfunc.html">
+    <tt>func</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/*5.0.9*/  square := Lambda(x) Return x^2; EndLambda;
+/*5.1.0*/  square := Func(x) Return x^2; EndFunc;
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

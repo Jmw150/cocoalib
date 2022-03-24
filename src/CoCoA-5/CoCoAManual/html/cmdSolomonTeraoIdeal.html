@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SolomonTeraoIdeal</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SolomonTeraoIdeal">up</a> <a href="cmdSmoothFactor[OBSOLESCENT].html">previous</a>  <a href="cmdsort.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SolomonTeraoIdeal<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Solomon-Terao ideal of an arrangement of hyperplanes wrt a poly</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SolomonTeraoIdeal(A: LIST, f: RINGELEM): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the Solomon-Terao ideal of the list A of hyperplanes of an arrangement respect to a polynomial f.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y];	
+/**/ A := [x, y, x-y];
+/**/ f := x^2+y^2;
+/**/ SolomonTeraoIdeal(A, f);
+ideal(2*x^2 +2*y^2,  2*x*y^2 -2*y^3)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdOrlikTeraoIdeal.html">OrlikTeraoIdeal</A>
+<li><a href="cmdArtinianOrlikTeraoIdeal.html">ArtinianOrlikTeraoIdeal</A>
+</ul>
+</div>
+
+</body>
+</html>

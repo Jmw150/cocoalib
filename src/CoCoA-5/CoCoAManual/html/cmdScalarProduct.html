@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ScalarProduct</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ScalarProduct">up</a> <a href="cmdsaturate.html">previous</a>  <a href="cmdScientificStr.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ScalarProduct<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+scalar product</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ScalarProduct(L: LIST, M: LIST): INT, RAT, or RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the sum of the product of the components of <tt><b style="background:#bbeeee">L</b></tt>
+and <tt><b style="background:#bbeeee">M</b></tt>; precisely (len(L)=len(M)):
+<br><br>
+  ScalarProduct(L, M) = sum([ L[I]*M[I] | I in 1..len(L) ]).
+<br><br>
+The function works whenever the product of the components of <tt><b style="background:#bbeeee">L</b></tt> and <tt><b style="background:#bbeeee">M</b></tt>
+are defined (see <A HREF="partAlgebraicOperators.html">Algebraic Operators</A>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  ScalarProduct([1,2,3], [5,0,-1]);
+2
+
+/**/  use QQ[x,y,z];
+/**/  ScalarProduct([x,y,z], [5,0,-1]);
+5*x -z
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partAlgebraicOperators.html">Algebraic Operators</A>
+</ul>
+</div>
+
+</body>
+</html>

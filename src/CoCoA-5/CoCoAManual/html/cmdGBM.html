@@ -1,0 +1,90 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GBM</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GBM">up</a> <a href="cmdGBasisTimeout.html">previous</a>  <a href="cmdgcd.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GBM<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+intersection of ideals for zero-dimensional schemes</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GBM(L: LIST): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function computes the intersection of ideals corresponding to
+zero-dimensional schemes: GBM is for affine schemes, and <A HREF="cmdHGBM.html">
+    <tt>HGBM</tt>
+  </A> for
+projective schemes.  The list L must be a list of ideals.  The function
+<A HREF="cmdIntersectionList.html">
+    <tt>IntersectionList</tt>
+  </A> should be used for computing the intersection of a
+collection of general ideals.
+<br><br>
+The name GBM comes from the name of the algorithm used: Generalized
+Buchberger-Moeller.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  I1 := IdealOfPoints(P, mat([[1,2,1], [0,1,0]])); -- a simple affine scheme
+/**/  I2 := IdealOfPoints(P, mat([[1,1,1], [2,0,1]]))^2;-- another affine scheme
+
+***** NOT YET IMPLEMENTED *****
+  GBM([I1, I2]);                                  -- intersect the ideals
+ideal(xz + yz - z^2 - x - y + 1,
+ z^3 - 2z^2 + z,
+ yz^2 - 2yz - z^2 + y + 2z - 1,
+ y^2z - y^2 - yz + y,
+ xy^2 + y^3 - 2x^2 - 5xy - 5y^2 + 2z^2 + 8x + 10y - 4z - 6,
+ x^2y - y^3 + 2x^2 + 2xy + 4y^2 - 3z^2 - 8x - 8y + 6z + 5,
+ x^3 + y^3 - 7x^2 - 5xy - 4y^2 + 5z^2 + 16x + 10y - 10z - 7,
+ y^4 - 2y^3 - 4x^2 - 8xy - 3y^2 + 4z^2 + 16x + 16y - 8z - 12)
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIdealAndSeparatorsOfPoints.html">IdealAndSeparatorsOfPoints</A>
+<li><a href="cmdIdealAndSeparatorsOfProjectivePoints.html">IdealAndSeparatorsOfProjectivePoints</A>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdIdealOfProjectivePoints.html">IdealOfProjectivePoints</A>
+<li><a href="cmdHGBM.html">HGBM</A>
+</ul>
+</div>
+
+</body>
+</html>

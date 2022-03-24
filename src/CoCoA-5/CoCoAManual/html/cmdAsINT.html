@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>AsINT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#AsINT">up</a> <a href="cmdascii.html">previous</a>  <a href="cmdAsRAT.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>AsINT<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert into an INT</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+AsINT(N: INT): INT
+AsINT(N: RAT): INT
+AsINT(N: RINGELEM): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+If the argument is an integer value this function returns this value as
+an INT, otherwise it throws an error.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y];
+/**/  type(LC(3*x-y));
+RINGELEM
+/**/ type(AsINT(LC(3*x-y)));
+INT
+-- /**/ type(AsINT(LC((3/2)*x-y)));  --> !!! ERROR !!! as expected
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAsRAT.html">AsRAT</A>
+</ul>
+</div>
+
+</body>
+</html>

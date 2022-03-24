@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HilbertSeriesShifts</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HilbertSeriesShifts">up</a> <a href="cmdHilbertSeriesMultiDeg.html">previous</a>  <a href="cmdhomog.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HilbertSeriesShifts<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the Hilbert-Poincare series</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HilbertSeriesShifts(M: MODULE, ShiftsList: LIST): TAGGED("$hp.PSeries")</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the Hilbert-Poincare series
+(single-graded) module <tt><b style="background:#bbeeee">M</b></tt> with shifts <tt><b style="background:#bbeeee">sh</b></tt>.
+<br><br>
+This function is only a handy shortcut to avoid creating the proper
+free module with shifts <tt><b style="background:#bbeeee">sh</b></tt>.
+<br><br>
+NOTE: tagged objects cannot be usefully compared for equality with
+untagged values.
+<br><br>
+For more information, see the article: A.M. Bigatti, "Computations of
+Hilbert-Poincare Series" J. Pure Appl. Algebra, 119/3 (1997),
+237--253.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  F := NewFreeModule(P, ColMat([2,0]));  -- P(-2) (+) P(0)
+/**/  M := SubmoduleRows(F, mat([[x,y^3], [x-z,0]]));
+/**/  HilbertSeries(M);
+(2*t^3) / (1-t)^3
+/**/  HilbertSeriesShifts(M, [3,1]);
+(2*t^4) / (1-t)^3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddim.html">dim</A>
+<li><a href="cmdHilbertFn.html">HilbertFn</A>
+<li><a href="cmdHVector.html">HVector</A>
+<li><a href="cmdmultiplicity.html">multiplicity</A>
+<li><a href="cmdGradingMat.html">GradingMat</A>
+</ul>
+</div>
+
+</body>
+</html>

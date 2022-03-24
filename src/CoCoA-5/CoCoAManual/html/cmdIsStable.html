@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsStable</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsStable">up</a> <a href="cmdIsSquare.html">previous</a>  <a href="cmdIsStdGraded.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsStable<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if an ideal is stable</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsStable(I: IDEAL): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the monomial ideal I is stable.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x*y^3, y^4, x^3, x^2*y, x^2*z);
+/**/  IsStable(I);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsLexSegment.html">IsLexSegment</A>
+<li><a href="cmdIsStronglyStable.html">IsStronglyStable</A>
+<li><a href="cmdLexSegmentIdeal.html">LexSegmentIdeal</A>
+</ul>
+</div>
+
+</body>
+</html>

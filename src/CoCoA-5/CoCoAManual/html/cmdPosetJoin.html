@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PosetJoin</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PosetJoin">up</a> <a href="cmdPosetDual.html">previous</a>  <a href="cmdPosetMeet.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PosetJoin<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+join between two elements of a poset from the relations of the poset</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PosetJoin(relP: LIST, N: INT,  M: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the join (i.e. the least upper bound)
+between the two elements <tt><b style="background:#bbeeee">N</b></tt>, <tt><b style="background:#bbeeee">M</b></tt> in the poset <tt><b style="background:#bbeeee">P</b></tt>
+from the list <tt><b style="background:#bbeeee">relP</b></tt> of its strict relations.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+// POSET:
+//         3   4
+//          \ /
+//           2
+//           |
+//           1
+/**/ relP := [[1,  2], [2, 3],  [2,  4]];
+/**/ PosetJoin(relP, 3, 4);
+[] --> if it does not exist!
+
+/**/ PosetJoin(relP, 2, 4);
+[4]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPosetDual.html">PosetDual</A>
+<li><a href="cmdPosetMeet.html">PosetMeet</A>
+</ul>
+</div>
+
+</body>
+</html>

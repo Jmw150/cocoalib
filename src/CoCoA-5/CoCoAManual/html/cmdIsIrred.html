@@ -1,0 +1,55 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsIrred</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsIrred">up</a> <a href="cmdIsInvertible.html">previous</a>  <a href="cmdIsLattice.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsIrred<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+check if a RINGELEM is irreducible</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsIrred(f: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the argument <tt><b style="background:#bbeeee">f</b></tt> is irreducible in
+<tt><b style="background:#bbeeee">RingOf(f)</b></tt>.  The coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ FFp := NewZZmod(7);
+/**/ use FFp[x];
+/**/ f := x^9+x+1;
+/**/ IsIrred(f);
+true
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

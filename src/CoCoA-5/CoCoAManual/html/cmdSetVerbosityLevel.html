@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SetVerbosityLevel</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SetVerbosityLevel">up</a> <a href="cmdSetStackSize.html">previous</a>  <a href="cmdshape.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SetVerbosityLevel<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+set the verbosity level</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SetVerbosityLevel(N: INT)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function sets the verbosity level: various functions defined in
+CoCoALib and in the CoCoA packages print out some internal progress
+messages when the global <A HREF="cmdVerbosityLevel.html">
+    <tt>VerbosityLevel</tt>
+  </A> is higher than some
+value (see their specific manual entries for the relevant values, anyway
+not less than 10).
+<br><br>
+This may also be applied in user defined functions: values 1-9 may
+be used without triggering any verbosity from CoCoA.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  SetVerbosityLevel(100);
+/**/  use QQ[x,y,z];  GB := GBasis(ideal(x^3 -x*y +1, x*y^2 -y -2));
+myDoGBasis[1]: New poly in GB: len(GB) = 1 len(pairs) = 1
+myDoGBasis[1]: New poly in GB: len(GB) = 2 len(pairs) = 1
+myDoGBasis[1]: New poly in GB: len(GB) = 3 len(pairs) = 2
+myDoGBasis[1]: New poly in GB: len(GB) = 4 len(pairs) = 2
+myDoGBasis[1]: New poly in GB: len(GB) = 5 len(pairs) = 2
+
+/**/  SetVerbosityLevel(0);  --> unset verbosity
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdVerbosityLevel.html">VerbosityLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

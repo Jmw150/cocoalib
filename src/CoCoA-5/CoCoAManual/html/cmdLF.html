@@ -1,0 +1,90 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LF</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LF">up</a> <a href="cmdLexSegmentIdeal.html">previous</a>  <a href="cmdLinearSimplify.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LF<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the leading form of a polynomial or an ideal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LF(I: IDEAL): IDEAL
+LF(F: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+For a polynomial <tt><b style="background:#bbeeee">F</b></tt> this function returns the leading form, i.e. the
+sum of all summands having highest degree.  It throws an error if the
+argument is zero or if the <A HREF="cmdGradingDim.html">
+    <tt>GradingDim</tt>
+  </A> of the polynomial
+ring is 0 (use <A HREF="cmdDF.html">
+    <tt>DF</tt>
+  </A> to allow these cases).
+<br><br>
+For an ideal <tt><b style="background:#bbeeee">I</b></tt> this function returns the ideal of all the <tt><b style="background:#bbeeee">LF(f)</b></tt>
+for <tt><b style="background:#bbeeee">f in I</b></tt>.  It throws an error if the <A HREF="cmdGradingDim.html">
+    <tt>GradingDim</tt>
+  </A> of the polynomial
+ring is 0.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  LF(x^2 -x*y +2*x -1);
+x^2 -x*y
+
+/**/  use R ::= QQ[x,y], Lex;  -- GradingDim is 0: everything is homogeneous
+-- /**/  LF(x-1); --> !!! ERROR !!! as expected: instead of x-1
+
+/**/  P := NewPolyRing(QQ, IndetSymbols(R), mat([[1,4],[1,0]]), 1);
+/**/  Use P;
+/**/  LF(x^2 - x*y);
+-x*y
+/**/  LF(x^4 + x^2 - y);
+ x^4 -y
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdDF.html">DF</A>
+<li><a href="cmdIsHomog.html">IsHomog</A>
+<li><a href="cmdLC.html">LC</A>
+<li><a href="cmdLM.html">LM</A>
+<li><a href="cmdLPP.html">LPP</A>
+<li><a href="cmdLT.html">LT</A>
+</ul>
+</div>
+
+</body>
+</html>

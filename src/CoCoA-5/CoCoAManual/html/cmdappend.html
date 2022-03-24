@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>append</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#append">up</a> <a href="cmdand.html">previous</a>  <a href="cmdapply[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>append<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+append an object to a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+append(ref L: LIST, E: OBJECT)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Append the object <tt><b style="background:#bbeeee">E</b></tt> to the list <tt><b style="background:#bbeeee">L</b></tt>; this call returns nothing!
+<br><br>
+NOTE: the old CoCoA-4 syntax <tt><b style="background:#bbeeee">Append(L, E)</b></tt> is still allowed, but
+produces a warning; replace the call by <tt><b style="background:#bbeeee">append(ref L, E)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[t,x,y,z];
+/**/  L := [1,2,3];
+/**/  append(ref L, 4);
+/**/  L;
+[1, 2, 3, 4]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdref.html">ref</A>
+<li><a href="cmdconcat.html">concat</A>
+<li><a href="cmdConcatLists.html">ConcatLists</A>
+<li><a href="cmdremove.html">remove</A>
+</ul>
+</div>
+
+</body>
+</html>

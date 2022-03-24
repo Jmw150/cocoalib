@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Assignment</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c5">up</a> <a href="partEvaluation.html">previous</a> <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.5.2 Assignment</b></font>
+</td></tr></table>
+
+An assignment command has the form
+
+  <pre>
+  L := E
+</pre>
+
+where <tt><b style="background:#bbeeee">L</b></tt> is a variable and <tt><b style="background:#bbeeee">E</b></tt> is an expression.
+The assignment command binds the result of the evaluation of the
+expression <tt><b style="background:#bbeeee">E</b></tt> to <tt><b style="background:#bbeeee">L</b></tt> in the working memory.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  M := 5;  N := 8;
+/**/  T := M+N;
+/**/  println T;
+13
+/**/  T := T+1;  -- evaluate RHS first, then assign value to T
+/**/  println T;
+14
+
+/**/  L := [1,2,3];
+/**/  L[2] := 0; -- assign to an entry in a list
+/**/  println L;
+[1, 0, 3]
+
+/**/  use QQ[x,y,z];
+/**/  P := record[F := x*z];
+/**/  P.Degree := deg(P.F); -- assign to a field in a record
+/**/  P;
+record[Degree := 2, F := x*z]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ElimMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ElimMat">up</a> <a href="cmdElimHomogMat.html">previous</a>  <a href="cmdEmbeddingHom.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ElimMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+matrix for elimination ordering</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ElimMat(ElimInd: LIST of INT, N: INT): MAT
+ElimMat(ElimInd: LIST of INT, W: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns an <tt><b style="background:#bbeeee">NxN</b></tt> matrix representing a term ordering
+for eliminating the indeterminates with indices in <tt><b style="background:#bbeeee">ElimInd</b></tt>.
+<br><br>
+In the second form, a weight matrix <tt><b style="background:#bbeeee">W</b></tt> is given; these weights are
+placed immediately below the first elimination row.
+<br><br>
+NOTE: This function used to have swapped arguments up to version
+5.1.4. (e.g.<tt><b style="background:#bbeeee">ElimMat(3, [2,3])</b></tt>)
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  ElimMat([2,3], 3);
+matrix(ZZ,
+ [[0, 1, 1],
+  [1, 1, 1],
+  [0, 0, -1]])
+
+/**/  ElimMat([2,3], mat([[1,5,2]]));
+matrix(ZZ,
+ [[0, 1, 1],
+  [1, 5, 2],
+  [0, 0, -1]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdelim.html">elim</A>
+<li><a href="cmdElimHomogMat.html">ElimHomogMat</A>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+</ul>
+</div>
+
+</body>
+</html>

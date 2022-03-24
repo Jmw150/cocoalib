@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SturmSeq</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SturmSeq">up</a> <a href="cmdStronglyStableIdeal.html">previous</a>  <a href="cmdSubalgebraHom.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SturmSeq<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Sturm sequence of a univariate polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SturmSeq(f: RINGELEM): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a scaled Sturm sequence of the univariate polynomial
+<tt><b style="background:#bbeeee">f</b></tt> which must have rational coefficients.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  f := 3*x^3-5*x^2+7*x-11;
+/**/  SturmSeq(f);
+[3*x^3 -5*x^2 +7*x -11,  9*x^2 -10*x +7,  -38*x +131,  -1]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRealRoots.html">RealRoots</A>
+<li><a href="cmdNumRealRoots.html">NumRealRoots</A>
+</ul>
+</div>
+
+</body>
+</html>

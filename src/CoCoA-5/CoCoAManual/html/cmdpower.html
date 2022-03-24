@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>power</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#power">up</a> <a href="cmdPosetRank.html">previous</a>  <a href="cmdPowerMod.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>power<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+compute a power</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+power(X: INT, E: INT): INT
+power(X: RAT, E: INT): RAT
+power(X: RINGELEM, E: INT): RINGELEM
+power(X: MAT, E: INT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function calculates powers; it is the same as the infix "hat" operator.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  power(2,3);
+8
+/**/  use QQ[x];
+/**/  power(x+1,2);
+x^2 +2*x +1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPowerMod.html">PowerMod</A>
+<li><a href="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+</ul>
+</div>
+
+</body>
+</html>

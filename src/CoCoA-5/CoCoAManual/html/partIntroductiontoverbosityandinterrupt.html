@@ -1,0 +1,35 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Introduction to verbosity and interrupt</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c7">up</a> <span class="grayed">previous</span> <a href="partCommandsandFunctionsimplementingVerbosity.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.7.1 Introduction to verbosity and interrupt</b></font>
+</td></tr></table>
+
+Various functions defined in CoCoALib and in the CoCoA packages print
+out some internal progress when the global <A HREF="cmdVerbosityLevel.html">
+    <tt>VerbosityLevel</tt>
+  </A>
+is higher than some value (see their specific manual for the values,
+anyway not less than 10).  See also <A HREF="cmdSetVerbosityLevel.html">
+    <tt>SetVerbosityLevel</tt>
+  </A>.
+<br><br>
+A computation which appears to take too long may be interrupted by
+typing <tt><b style="background:#bbeeee">C-c</b></tt> (control-c), or, in Emacs, <tt><b style="background:#bbeeee">C-c C-c</b></tt>.
+The state of the memory after an interrupt is as it was before calling
+the interrupted function, thanks to the exception-safe design of CoCoALib.
+
+</div>
+
+</body>
+</html>

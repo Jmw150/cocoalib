@@ -1,0 +1,98 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>TopLevel</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#TopLevel">up</a> <a href="cmdTmpNBM[OBSOLETE].html">previous</a>  <a href="cmdTopLevelFunctions.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>TopLevel<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+make a top-level variable accessible inside a function</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+TopLevel X;
+  where <tt><b style="background:#bbeeee">X</b></tt> is the name of a top level variable or function.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command makes a top-level variable accessible from inside a
+function.  For instance, it is useful for making the rings <A HREF="cmdQQ.html">
+    <tt>QQ</tt>
+  </A> and
+<A HREF="cmdZZ.html">
+    <tt>ZZ</tt>
+  </A> accessible, and also if a top-level function is to be passed as
+a parameter (e.g. to the function <A HREF="cmdSortBy.html">
+    <tt>SortBy</tt>
+  </A>).  It is poor style to
+use <tt><b style="background:#bbeeee">TopLevel</b></tt> for purposes other than these.
+<br><br>
+See also the commands <A HREF="cmdImportByRefImportByValue.html">
+    <tt>ImportByRef, ImportByValue</tt>
+  </A> if you want to
+access a non-top-level variable inside an anonymous function.
+<br><br>
+NOTE: Package variables should be accessed directly, via their fully
+qualified names.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  define BeautifulRing(N)
+/**/    TopLevel QQ;
+/**/    R ::= QQ[b[1..N]];
+/**/    return R;
+/**/  enddefine;
+
+
+/**/  define CompareLen(X,Y) return len(X) < len(Y); EndDefine;
+
+/**/  define LongestName(ListOfNameAndValue)
+/**/    TopLevel CompareLen;  --> to pass it as paremeter to SortBy
+/**/    names := [entry[1] | entry in ListOfNameAndValue];
+/**/    SortBy(ref names, CompareLen);
+/**/    return last(names);
+/**/  EndDefine;
+
+/**/  L := [["ABC",1],["XYZT",2]];
+/**/  LongestName(L);
+XYZT
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfunc.html">func</A>
+<li><a href="cmdImportByRefImportByValue.html">ImportByRef, ImportByValue</A>
+</ul>
+</div>
+
+</body>
+</html>

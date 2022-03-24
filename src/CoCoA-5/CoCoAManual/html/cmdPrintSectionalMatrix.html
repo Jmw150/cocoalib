@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PrintSectionalMatrix</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PrintSectionalMatrix">up</a> <a href="cmdPrintRes.html">previous</a>  <a href="cmdproduct.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PrintSectionalMatrix<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+print sectional matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PrintSectionalMatrix(I: IDEAL): MAT
+PrintSectionalMatrix(P/I: RING): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function prints the sectional matrix of <tt><b style="background:#bbeeee">I</b></tt> or <tt><b style="background:#bbeeee">P/I</b></tt>.
+See <A HREF="cmdSectionalMatrix.html">
+    <tt>SectionalMatrix</tt>
+  </A> for more information.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use P ::= QQ[x,y,z];
+/**/ I := ideal(x^4 -x*y^3,  x*y -z^2,  x*z^2 -y^3);
+/**/ SectionalMatrix(P/I);
+matrix(ZZ,
+ [[1, 1, 0, 0, 0, 0, 0, 0],
+  [1, 2, 2, 1, 0, 0, 0, 0],
+  [1, 3, 5, 6, 5, 3, 2, 2]])
+
+/**/ PrintSectionalMatrix(P/I);
+  0  1  2  3  4  5  6  7
+  -  -  -  -  -  -  -  -
+  1  1  0  0  0  0  0  0
+  1  2  2  1  0  0  0  0
+  1  3  5  6  5  3  2  2
+
+/**/ PrintSectionalMatrix(I);
+  0  1  2  3   4   5   6   7
+  -  -  -  -   -   -   -   -
+  0  0  1  1   1   1   1   1
+  0  0  1  3   5   6   7   8
+  0  0  1  4  10  18  26  34
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdSectionalMatrix.html">SectionalMatrix</A>
+</ul>
+</div>
+
+</body>
+</html>

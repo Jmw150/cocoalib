@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CRTPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CRTPoly">up</a> <a href="cmdCRT.html">previous</a>  <a href="cmdCurrentRing.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CRTPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Chinese Remainder Theorem on polynomial coefficients</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CRTPoly(f1: RINGELEM, M1: INT, f2: RINGELEM, M2: INT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function combines residue-modulus pairs <tt><b style="background:#bbeeee">(f1,M1)</b></tt> and <tt><b style="background:#bbeeee">(f2,M2)</b></tt>
+using the Chinese Remainder Theorem to produce a single
+residue-modulus pair <tt><b style="background:#bbeeee">(f,M)</b></tt> such that 
+<tt><b style="background:#bbeeee">f</b></tt> is a polynomial (with coefficients in <tt><b style="background:#bbeeee">QQ</b></tt>),
+<tt><b style="background:#bbeeee">f = f1 mod M1</b></tt> and <tt><b style="background:#bbeeee">f = f2 mod M2</b></tt>,
+and all coefficients of <tt><b style="background:#bbeeee">f</b></tt> are smaller than <tt><b style="background:#bbeeee">M</b></tt>.
+The moduli <tt><b style="background:#bbeeee">M1</b></tt> and <tt><b style="background:#bbeeee">M2</b></tt> must be coprime (hence <tt><b style="background:#bbeeee">M = M1*M2</b></tt>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y];
+/**/  CRTPoly(x-y, 331, x+y, 10093);
+record[modulus := 3340783, residue := x +676232*y]
+/**/ mod(676232, 331);
+330
+/**/ mod(676232, 10093);
+1
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCRT.html">CRT</A>
+<li><a href="cmdRatReconstructPoly.html">RatReconstructPoly</A>
+</ul>
+</div>
+
+</body>
+</html>

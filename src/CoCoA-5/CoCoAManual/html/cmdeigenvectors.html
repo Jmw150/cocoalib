@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>eigenvectors</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#eigenvectors">up</a> <a href="cmdeigenfactors.html">previous</a>  <a href="cmdElapsedTime.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>eigenvectors<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+eigenvalues and eigenvectors of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+eigenvectors(M: MAT, X: RINGELEM): LIST of RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+<tt><b style="background:#bbeeee">M</b></tt> must be a matrix of numbers, and <tt><b style="background:#bbeeee">X</b></tt> an indeterminate.
+<br><br>
+This function determines the eigenvalues of <tt><b style="background:#bbeeee">M</b></tt>, and for each eigenvalue
+gives a basis of the corresponding eigenspace -- note that the basis is
+probably not orthogonal.  For irrational eigenvalues, the minimal
+polynomial of the eigenvalue is given (as a polynomial in <tt><b style="background:#bbeeee">X</b></tt>), along with
+the eigenvectors expressed in terms of a root of the minimal polynomial
+(represented as <tt><b style="background:#bbeeee">X</b></tt>).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  M := mat([[1,2,3],[4,5,6],[7,8,9]]);
+/**/  eigenvectors(M, x);
+[record[MinPoly := x, eigenspace := matrix(QQ,
+ [[-1],
+  [2],
+  [-1]])],
+record[MinPoly := x^2 -15*x -18,
+eigenspace := [[1, (1/8)*x +1/4, (1/4)*x -1/2]]]
+]
+
+/**/  M := mat([[0,2,0,0],[1,0,0,0],[0,0,0,2],[0,0,1,0]]);
+  eigenvectors(M, x); -- two irrational eigenvalues, each with eigenspace of dimension 2
+[record[MinPoly := x^2 -2, eigenspace := [[1, (1/2)*x, 0, 0], [0, 0, 1, (1/2)*x]]]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdeigenfactors.html">eigenfactors</A>
+</ul>
+</div>
+
+</body>
+</html>

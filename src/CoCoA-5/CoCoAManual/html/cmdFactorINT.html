@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FactorINT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FactorINT">up</a> <a href="cmdfactorial.html">previous</a>  <a href="cmdFactorMultiplicity.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FactorINT<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+find prime factors of an integer</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FactorINT(N: INT): RECORD
+FactorINT_TrialDiv(N: INT, MaxPrime: INT): RECORD
+FactorINT_PollardRho(N: INT, Niters: INT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions find the (small) prime factors of an integer.  <tt><b style="background:#bbeeee">FactorINT</b></tt> 
+tries to find all factors (usually prime); it may take a very long time!
+<tt><b style="background:#bbeeee">FactorINT_TrialDiv</b></tt> does trial division by all primes up to <tt><b style="background:#bbeeee">MaxPrime</b></tt>;
+be wary of giving large values for <tt><b style="background:#bbeeee">MaxPrime</b></tt>.
+<tt><b style="background:#bbeeee">FactorINT_PollardRho</b></tt> performs <tt><b style="background:#bbeeee">Niters</b></tt> of the Pollard-Rho algorithm;
+if no factor was found, the result is an empty factorization.  The factor
+found may not be prime!  Be wary of specifying large values for <tt><b style="background:#bbeeee">Niters</b></tt>.
+<br><br>
+From version 5.0.4, to comply with the naming conventions, the fields are
+called <tt><b style="background:#bbeeee">factors</b></tt> and <tt><b style="background:#bbeeee">multiplicities</b></tt> instead of <tt><b style="background:#bbeeee">Factors</b></tt>
+and <tt><b style="background:#bbeeee">Exponents</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  FactorINT_TrialDiv(100,3);
+record[factors := [2], multiplicities := [2], RemainingFactor := 25]
+
+/**/  FactorINT(123456789);
+record[factors := [3, 3607, 3803], multiplicities := [2, 1, 1], RemainingFactor := 1]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsPrime.html">IsPrime</A>
+<li><a href="cmdIsProbPrime.html">IsProbPrime</A>
+<li><a href="cmdCoprimeFactorBasis.html">CoprimeFactorBasis</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ExternalLibs</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ExternalLibs">up</a> <a href="cmdExt.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ExternalLibs<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Linked external libraries</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ExternalLibs(): LIST of STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of the names of the linked libraries.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ ExternalLibs();
+["GMP",  "Normaliz",  "Frobby",  "Gfan",  "CDD",  "MathSAT"]
+/**/ indent(VersionInfo().ExternalLibs);
+[
+  record[name := "GMP", version := "60102"],
+  record[name := "Normaliz", version := "30102"],
+  (...)
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdVersionInfo.html">VersionInfo</A>
+</ul>
+</div>
+
+</body>
+</html>

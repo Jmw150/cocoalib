@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RandomSubset</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RandomSubset">up</a> <a href="cmdRandomSparseNonSing01Mat.html">previous</a>  <a href="cmdRandomSubsetIndices.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RandomSubset<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+random subset</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RandomSubset(L: LIST): LIST
+RandomSubset(L: LIST, K: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a random subset of <tt><b style="background:#bbeeee">L</b></tt>; in the second form
+it ensures that the cardinality of the subset is <tt><b style="background:#bbeeee">K</b></tt>.
+<br><br>
+The function can be quite useful for testing properties on some
+subsets of a large list when testing on all of them would be
+unfeasible in time and memory (see also <A HREF="cmdsubsets.html">
+    <tt>subsets</tt>
+  </A>).
+<br><br>
+NOTE: the resulting list is sorted as in <tt><b style="background:#bbeeee">L</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ RandomSubset(["a","b","c","d","e","f","g","h"], 5);
+["a", "c", "d", "f", "h"]
+
+/**/ indent([RandomSubset(1..1000, 10) | i in 1..4]);
+[
+  [160, 182, 215, 219, 349, 588, 628, 811, 886, 905],
+  [23, 103, 315, 451, 531, 539, 571, 846, 858, 876],
+  [24, 230, 240, 278, 380, 421, 495, 505, 665, 788],
+  [81, 274, 299, 378, 414, 616, 828, 844, 870, 946]
+]
+/**/ binomial(1000, 10);  --> too many to fit in memory ;-)
+263409560461970212832400
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrandom.html">random</A>
+<li><a href="cmdsubsets.html">subsets</A>
+<li><a href="cmdRandomSubsetIndices.html">RandomSubsetIndices</A>
+<li><a href="cmdRandomTuple.html">RandomTuple</A>
+<li><a href="cmdRandomTupleIndices.html">RandomTupleIndices</A>
+</ul>
+</div>
+
+</body>
+</html>

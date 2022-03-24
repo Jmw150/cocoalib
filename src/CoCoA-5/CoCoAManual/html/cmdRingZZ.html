@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RingZZ</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RingZZ">up</a> <a href="cmdRingsOf.html">previous</a>  <a href="cmdrk.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RingZZ<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the ring of integers</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RingZZ(): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the ring of integers.
+It is useful when you want to use <A HREF="cmdZZ.html">
+    <tt>ZZ</tt>
+  </A> inside <tt><b style="background:#bbeeee">define/enddefine</b></tt>.
+<br><br>
+NOTE: calling <tt><b style="background:#bbeeee">RingZZ</b></tt> twice gives the same identical ring,
+whereas calling <A HREF="cmdNewPolyRing.html">
+    <tt>NewPolyRing</tt>
+  </A> or <A HREF="cmdNewFractionField.html">
+    <tt>NewFractionField</tt>
+  </A>
+return each time a new ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Two := RingElem(RingZZ(), 2);   Two;
+2
+/**/  type(Two);
+RINGELEM;
+/**/  IsZZ(RingOf(Two));
+true
+/**/  IsQQ(RingOf(Two));
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+<li><a href="cmdRingQQt.html">RingQQt</A>
+<li><a href="cmdRingQQ.html">RingQQ</A>
+<li><a href="cmdZZ.html">ZZ</A>
+</ul>
+</div>
+
+</body>
+</html>

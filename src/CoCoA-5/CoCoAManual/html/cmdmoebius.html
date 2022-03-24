@@ -1,0 +1,60 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>moebius</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#moebius">up</a> <a href="cmdModuleOf.html">previous</a>  <a href="cmdmonic.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>moebius<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Moebius function of a poset</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+moebius(relP: LIST): LIST of INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list <tt><b style="background:#bbeeee">L</b></tt> such that <tt><b style="background:#bbeeee">L[i]</b></tt> is the
+moebius function value of the node i in the poset from the list <tt><b style="background:#bbeeee">relP</b></tt>
+of the strict relations in the poset.
+<br><br><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+// POSET:
+//         3   4
+//          \ /
+//           2
+//           |
+//           1
+/**/ relP := [[1,  2], [2, 3],  [2,  4]];
+/**/ moebius(relP);
+[1,  -1,  0,  0]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

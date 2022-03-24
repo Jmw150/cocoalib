@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>Order Comparison Operators</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#Order Comparison Operators">up</a> <a href="cmdor.html">previous</a>  <a href="cmdOrdMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>Order Comparison Operators<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+less than, greater than, ...</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+A < B       less than
+A > B       greater than
+A <= B      less than or equal
+A >= B      greater than or equal
+  return BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These ordering operators perform the corresponding comparison between
+<tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt>.  They will signal an error if <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt> are not comparable
+(e.g. of different types, or if the type does not have a natural
+ordering).  Polynomials which are just power-products are ordered using
+the power-product ordering.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ 1 > 1/2;
+true
+/**/  "abc" < "def"; -- lex ordering for strings
+true
+/**/  use QQ[x,y];
+/**/  x < y;   -- x and y are viewed as power-products
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdEqualityOperator.html">Equality Operator</A>
+<li><a href="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+</ul>
+</div>
+
+</body>
+</html>

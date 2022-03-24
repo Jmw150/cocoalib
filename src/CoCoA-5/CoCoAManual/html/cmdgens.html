@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>gens</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#gens">up</a> <a href="cmdGenRepr.html">previous</a>  <a href="cmdGensAsColsGensAsRows.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>gens<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of generators of an ideal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+gens(I: IDEAL): LIST
+gens(M: MODULE): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list of polynomials which generate the ideal
+I or the module M.  The list is not necessarily minimal.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(y^2-x^3, x*y);
+/**/  gens(I);
+[-x^3 +y^2, x*y]
+
+/**/  gens(I^2);
+[x^6 -2x^3*y^2 +y^4, -x^4*y +x*y^3, x^2*y^2]
+
+/**/  R3 := NewFreeModule(R, 3);
+/**/  e := gens(R3);  // canonical basis
+/**/  e[2];
+[0, 1, 0]
+
+/**/  M := SubmoduleRows(R3, mat([[x,y,z], [x-1,0,z]]));
+/**/  gens(M);
+[[x, y, z], [x -1, 0, z]]
+/**/  shape(It);
+[MODULEELEM, MODULEELEM]
+/**/  GensAsRows(M);
+matrix( /*RingDistrMPolyClean(QQ, 3)*/
+ [[x, y, z],
+  [x -1, 0, z]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGensAsColsGensAsRows.html">GensAsCols, GensAsRows</A>
+<li><a href="cmdIdealOfMinGens.html">IdealOfMinGens</A>
+<li><a href="cmdSubmoduleOfMinGens.html">SubmoduleOfMinGens</A>
+</ul>
+</div>
+
+</body>
+</html>

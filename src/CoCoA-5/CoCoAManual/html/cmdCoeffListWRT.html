@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CoeffListWRT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CoeffListWRT">up</a> <a href="cmdCoefficientsWRT.html">previous</a>  <a href="cmdCoeffListWRTSupport.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CoeffListWRT<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list of coefficients of a polynomial wrt an indet</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CoeffListWRT(F: RINGELEM, X: RINGELEM): LIST of RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of the coefficients of <tt><b style="background:#bbeeee">F</b></tt> seen as a univariate
+polynomial in <tt><b style="background:#bbeeee">X</b></tt>, an indeterminate or a list of indeterminates
+(with respect to (WRT) <tt><b style="background:#bbeeee">X</b></tt>).
+All entries in the returned list are RingElems belonging to <tt><b style="background:#bbeeee">RingOf(F)</b></tt>.
+<br><br>
+NOTE: the returned list is <b>reversed</b> from the CoCoA-4 analogue
+<tt><b style="background:#bbeeee">Coefficients(F,X)</b></tt> thus to re-use old code you should call
+<tt><b style="background:#bbeeee">reversed(CoeffListWRT(F,X))</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  F := 5*y^2 + (3*x^2-x)*y;
+/**/  L := CoeffListWRT(F, y);  Print L;
+[0, 3*x^2 -x, 5]
+/**/  F = sum([L[d+1]*y^d | d in 0..(len(L)-1)]);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdcoefficients.html">coefficients</A>
+<li><a href="cmdCoefficientsWRT.html">CoefficientsWRT</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ZZ</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ZZ">up</a> <a href="cmdZPQ.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ZZ<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the ring of integers</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ZZ: RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This system variable is constant; its value is the ring of integers.
+Its name is protected so that it cannot be re-assigned to any other value.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  type(5);
+INT
+/**/  type(RingElem(ZZ, 5));
+RINGELEM
+
+/**/  P ::= ZZ/(101)[x,y,z]; -- coeffs in quotient ring
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdQQ.html">QQ</A>
+<li><a href="partQuotientRings.html">Quotient Rings</A>
+</ul>
+</div>
+
+</body>
+</html>

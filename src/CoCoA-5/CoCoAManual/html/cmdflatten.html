@@ -1,0 +1,86 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>flatten</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#flatten">up</a> <a href="cmdFixedDivisor.html">previous</a>  <a href="cmdFloatApprox.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>flatten<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+flatten a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+flatten(L: LIST): LIST
+flatten(L: LIST, N: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Components of lists may be lists themselves, i.e., lists may be
+nested.  With one argument this function returns the list obtained
+from the list <tt><b style="background:#bbeeee">L</b></tt> by removing all nesting, bringing all elements <b>to
+the top level</b>.  With the optional second argument, <tt><b style="background:#bbeeee">N</b></tt>, nesting is
+removed down <tt><b style="background:#bbeeee">N</b></tt> levels.
+<br><br>
+Thus, the elements of <tt><b style="background:#bbeeee">M := flatten(L,1)</b></tt> are formed as follows:
+go through the elements of <tt><b style="background:#bbeeee">L</b></tt> one at a time; if an element is
+not a list, add it to <tt><b style="background:#bbeeee">M</b></tt>; if an element is a list, add all of its
+elements to <tt><b style="background:#bbeeee">M</b></tt>.
+<br><br>
+Higher levels are recursive: <tt><b style="background:#bbeeee">flatten(L, N) = flatten(flatten(L, N-1),1)</b></tt>.
+For <tt><b style="background:#bbeeee">N</b></tt> large enough <tt><b style="background:#bbeeee">flatten(L, N)</b></tt> gives the same result as <tt><b style="background:#bbeeee">flatten(L)</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  flatten([1,["a","b",[2,3,4],"c","d"],5,6]);
+[1, "a", "b", 2, 3, 4, "c", "d", 5, 6]
+
+/**/  L := [1,2, [3,4], [5, [6,7,[8,9]]]];
+/**/  flatten(L,1);
+[1, 2, 3, 4, 5, [6, 7, [8, 9]]]
+
+/**/  flatten(It,1);
+[1, 2, 3, 4, 5, 6, 7, [8, 9]]
+
+/**/  flatten(L,2);  -- same as flatten(flatten(L,1),1)
+[1, 2, 3, 4, 5, 6, 7, [8, 9]]
+
+/**/  flatten(L,3);  -- same as flatten(L)
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdConcatLists.html">ConcatLists</A>
+</ul>
+</div>
+
+</body>
+</html>

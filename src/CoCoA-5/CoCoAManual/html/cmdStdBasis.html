@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>StdBasis</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#StdBasis">up</a> <a href="cmdstarting.html">previous</a>  <a href="cmdStdDegLexMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>StdBasis<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Standard basis</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+StdBasis(I: IDEAL): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+A <b>standard basis</b> of the ideal <tt><b style="background:#bbeeee">I</b></tt> is a set of polynomials
+whose initial forms generate the <b>tangent cone</b> of <tt><b style="background:#bbeeee">I</b></tt>
+(see <A HREF="cmdTgCone.html">
+    <tt>TgCone</tt>
+  </A> for more details).
+<br><br>
+The implementation is based on Lazard's method 
+(see Kreuzer-Robbiano, Computational Commutative Algebra 2, pg.463).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x^2*z-2*y, x^3+y^2-y*z);
+StdBasis(I);
+[(-1/2)*x^2*z +y, (1/2)*x^2*y*z +(-1/2)*x^2*z^2 +x^3]
+/**/  TgCone(I);
+ideal(y, x^3)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdTgCone.html">TgCone</A>
+<li><a href="cmdPrimaryHilbertSeries.html">PrimaryHilbertSeries</A>
+</ul>
+</div>
+
+</body>
+</html>

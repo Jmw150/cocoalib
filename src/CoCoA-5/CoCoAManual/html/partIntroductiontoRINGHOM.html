@@ -1,0 +1,63 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Introduction to RINGHOM</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c10">up</a> <span class="grayed">previous</span> <a href="partCompositionofRINGHOM.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.10.1 Introduction to RINGHOM</b></font>
+</td></tr></table>
+
+A value of type INT or RAT can be automatically mapped into
+any ring.  The way to "move" a RINGELEM value from one ring to
+another is to apply a ring homomorphism; the homomorphism can also
+transform the value as it is mapped.  <b>Think mathematically!</b> ;-)
+<br><br>
+Common ways to create a ring homomorphism include <A HREF="cmdCanonicalHom.html">
+    <tt>CanonicalHom</tt>
+  </A>,
+<A HREF="cmdPolyRingHom.html">
+    <tt>PolyRingHom</tt>
+  </A> and <A HREF="cmdPolyAlgebraHom.html">
+    <tt>PolyAlgebraHom</tt>
+  </A>.
+<br><br>
+The syntax mimics that of a function call (as in mathematical formulas).
+Given a RINGHOM <tt><b style="background:#bbeeee">phi</b></tt> just type
+  <tt><b style="background:#bbeeee">phi(x)</b></tt>        if <tt><b style="background:#bbeeee">x</b></tt> is a RINGELEM,
+  <tt><b style="background:#bbeeee">phi(x)</b></tt>        if <tt><b style="background:#bbeeee">x</b></tt> is a LIST or MAT; applies <tt><b style="background:#bbeeee">phi</b></tt> to each entry.
+An ideal cannot be mapped directly, you must instead map the generators
+individually: e.g.<tt><b style="background:#bbeeee">ideal(phi(gens(I)))</b></tt>.
+<br><br>
+There are also a few handy shortcuts which automatically determine and
+apply a homomorphism.  The functions <A HREF="cmdmatrix.html">
+    <tt>matrix</tt>
+  </A> and <A HREF="cmdRingElem.html">
+    <tt>RingElem</tt>
+  </A> will map
+the argument into the given ring (e.g.<tt><b style="background:#bbeeee">matrix(R, M)</b></tt> maps <tt><b style="background:#bbeeee">M</b></tt> into a
+new matrix in the ring <tt><b style="background:#bbeeee">R</b></tt>).  Another shortcut is <A HREF="cmdBringIn.html">
+    <tt>BringIn</tt>
+  </A> (easy, but slow).
+<br><br>
+NOTE: all CoCoA functions should be smart enough to take into account
+the RING in which their value was defined, for example
+<A HREF="cmdGBasis.html">
+    <tt>GBasis</tt>
+  </A>, <A HREF="cmdLT.html">
+    <tt>LT</tt>
+  </A>, <A HREF="cmdwdeg.html">
+    <tt>wdeg</tt>
+  </A>,...
+
+</div>
+
+</body>
+</html>

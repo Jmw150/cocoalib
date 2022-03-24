@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>error</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#error">up</a> <a href="cmdEquiIsoDec.html">previous</a>  <a href="cmdEulerTotient.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>error<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+throw an error message</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+error(S: STRING): ERROR</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function throws an error containing the given message.
+For backward compatibility the function may also be called using
+the name <tt><b style="background:#bbeeee">Error</b></tt><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ Define T(N)
+/**/   If type(N) <> INT Then error("Argument must be an integer."); EndIf;
+/**/   Return mod(N,5);
+/**/ EndDefine;
+
+/**/  T(7);
+2
+
+-- /**/ T(1/3); --> !!! ERROR !!! as expected:  "Argument must be an integer."
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdtry.html">try</A>
+<li><a href="cmdGetErrMesg.html">GetErrMesg</A>
+</ul>
+</div>
+
+</body>
+</html>

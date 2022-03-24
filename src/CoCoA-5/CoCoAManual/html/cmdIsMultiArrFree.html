@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsMultiArrFree</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsMultiArrFree">up</a> <a href="cmdIsMinusOne.html">previous</a>  <a href="cmdIsNumber[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsMultiArrFree<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if the multiarrangement is free</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsMultiArrFree(MultiA: LIST): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the multiarrangement MultiA is free.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y];	
+/**/ MultiA := [[x,1], [x-y,3], [y,2]];
+/**/ IsMultiArrFree(MultiA);    
+true
+
+/**/ use QQ[x,y,z];	
+/**/ MultiA := [[x,1], [x-y,3], [z,2], [x+y-z,3]];
+/**/ IsMultiArrFree(MultiA);    
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMultiArrDerModule.html">MultiArrDerModule</A>
+<li><a href="cmdMultiArrExponents.html">MultiArrExponents</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>BinomialRepr, BinomialReprShift</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#BinomialRepr, BinomialReprShift">up</a> <a href="cmdbinomial.html">previous</a>  <a href="cmdblock.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>BinomialRepr, BinomialReprShift<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+binomial representation of integers</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+BinomialRepr(N: INT, K: INT): LIST of INT
+BinomialReprShift(N: INT, K: INT, Up: INT, Down: INT): INT
+
+where N and K are positive.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function <tt><b style="background:#bbeeee">BinomialRepr</b></tt> computes the <tt><b style="background:#bbeeee">K</b></tt>-binomial
+representation of <tt><b style="background:#bbeeee">N</b></tt>, also called <i>Macaulay representation</i>,
+i.e. the unique expression
+
+  <pre>
+  N = binomial(N(K),K) + binomial(N(K-1),K-1) + ... + binomial(N(L),L)
+</pre>
+
+where <font color=#0000aa>N(K) > ... > N(L) >= 1</font>, for some L.
+The value returned is the list <tt><b style="background:#bbeeee">[N(t) | t in 1..K]</b></tt>
+where N(t)=0 for all <font color=#0000aa>t < L</font>.
+<br><br>
+The function call <tt><b style="background:#bbeeee">BinomialReprShift(N,K,up,down)</b></tt> computes the integer
+
+  <pre>
+  binomial(N(K)  +up,    K+down) +
+  binomial(N(K-1)+up,(K-1)+down) +
+  ... +
+  binomial(N(L)  +up,    L+down)
+</pre>
+
+It is useful in generalizations of Macaulay's theorem characterizing
+Hilbert functions.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  BinRep := BinomialRepr(13,4);
+/**/  BinRep;
+[1, 3, 4, 5]
+
+/**/  BinomialReprShift(13,4,1,1);
+16
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdbinomial.html">binomial</A>
+</ul>
+</div>
+
+</body>
+</html>

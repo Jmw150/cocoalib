@@ -1,0 +1,91 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>AlmostQR</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#AlmostQR">up</a> <a href="cmdAllReducedGroebnerBases[OBSOLETE].html">previous</a>  <a href="cmdand.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>AlmostQR<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+QR decomposition of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+AlmostQR(M: MAT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the decomposition of the matrix into an
+orthogonal and an upper triangular matrix with 1 on the diagonal.
+[<b>orthogonal</b> meaning that <font color=#0000aa>Q<sup>T</sup> * Q</font> is a diagonal matrix]
+<br><br>
+The auxiliary (possibly slow!) function <tt><b style="background:#bbeeee">Mat.SimplifySquareFactorsInAQR</b></tt>
+modifies <tt><b style="background:#bbeeee">Q</b></tt> and <tt><b style="background:#bbeeee">R</b></tt> in the decomposition so that the entries of the
+diagonal matrix <font color=#0000aa>Q<sup>T</sup> * Q</font> are squarefree rationals.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ M := matrix([ [4, -2, 3],  [3, 2, -2],  [0, 0, 3] ]);
+/**/ Dec := AlmostQR(M);
+/**/ indent(Dec);
+record[
+  Q := matrix(QQ,
+ [[4, -42/25, 0],
+  [3, 56/25, 0],
+  [0, 0, 3]]),
+  R := matrix(QQ,
+ [[1, -2/25, 6/25],
+  [0, 1, -17/14],
+  [0, 0, 1]])
+]
+
+/**/  $mat.SimplifySquareFactorsInAQR(ref Dec);
+/**/  indent(Dec);
+record[
+  Q := matrix(QQ,
+ [[4/5, -3/5, 0],
+  [3/5, 4/5, 0],
+  [0, 0, 1]]),
+  R := matrix(QQ,
+ [[5, -2/5, 6/5],
+  [0, 14/5, -17/5],
+  [0, 0, 3]]),
+  SqDiag := [1,  1,  1]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partMatrixNormalForm.html">Matrix Normal Form</A>
+</ul>
+</div>
+
+</body>
+</html>

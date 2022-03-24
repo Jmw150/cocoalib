@@ -1,0 +1,103 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>syz</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#syz">up</a> <a href="cmdSystemCommand.html">previous</a>  <a href="cmdSyzOfGens.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>syz<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+syzygy modules</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+syz(L: LIST of RINGELEM): MODULE
+syz(M: IDEAL|MODULE, Index: INT): MODULE</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+In the first two forms this function computes the syzygy module of a list
+of polynomials or module elements.
+<tt><b style="background:#bbeeee">SyzOfGens(I)</b></tt> is the same as <tt><b style="background:#bbeeee">syz(gens(I))</b></tt>.
+<br><br>
+In the last form this function returns the specified syzygy module of
+the minimal free resolution of <tt><b style="background:#bbeeee">M</b></tt> which must be homogeneous.  As a side
+effect, it computes the Groebner basis of <tt><b style="background:#bbeeee">M</b></tt>.   (***** NOT YET IMPLEMENTED *****)
+<br><br>
+The coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  indent(syz([x^2-y-1, y^3-z, x^2-y, y^3-z]));
+SubmoduleRows(F, matrix(
+  [y^3 -z, 0, 0, -x^2 +y +1],
+  [0, 1, 0, -1],
+  [x^2 -y, 0, -x^2 +y +1, 0],
+  [0, 0, y^3 -z, -x^2 +y]
+))
+-------------------------------
+/**/  I := ideal(x, x, y);
+/**/  syz(gens(I));
+submodule(FreeModule(..), [[1, -1, 0], [0, y, -x]])
+/**/  SyzOfGens(I);
+submodule(FreeModule(..), [[1, -1, 0], [0, y, -x]])
+
+  syz(I, 1);      -- NOT YET IMPLEMENTED
+Module([[x, -y]])
+-------------------------------
+  I := ideal(x^2-yz, xy-z^2, xyz);    -- NOT YET IMPLEMENTED
+  syz(I,0);
+Module([x^2 - yz], [xy - z^2], [xyz])
+-------------------------------
+  syz(I,1);    -- NOT YET IMPLEMENTED
+  Module([-x^2 + yz, xy - z^2, 0], [xz^2, -yz^2, -y^2 + xz], [z^3, 0,
+-xy + z^2], [0, z^3, -x^2 + yz])
+-------------------------------
+  syz(I,2);
+Module([0, z, -x, y], [-z^2, -x, y, -z])
+-------------------------------
+  syz(I,3);
+Module([[0]])
+-------------------------------
+  Res(I);
+0 --> R(-6)^2 --> R(-4)(+)R(-5)^3 --> R(-2)^2(+)R(-3)
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdres.html">res</A>
+<li><a href="cmdSyzOfGens.html">SyzOfGens</A>
+</ul>
+</div>
+
+</body>
+</html>

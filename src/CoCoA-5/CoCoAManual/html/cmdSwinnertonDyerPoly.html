@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SwinnertonDyerPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SwinnertonDyerPoly">up</a> <a href="cmdSwapRows.html">previous</a>  <a href="cmdSylvesterMat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SwinnertonDyerPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+compute Swinnerton-Dyer polynomial with given roots</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SwinnertonDyerPoly(x: RINGELEM, RootList: LIST of INT): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the Swinnerton-Dyer polynomial whose roots are
+the sum of all square-roots of the elements in <tt><b style="background:#bbeeee">RootList</b></tt>.  The result
+is irreducible if <tt><b style="background:#bbeeee">RootList</b></tt> contains distinct prime numbers.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x];
+/**/  SwinnertonDyerPoly(x,[2,3]); --> roots are +/- sqrt(2) +/- sqrt(3)
+x^4 -10*x^2 +1
+/**/  SwinnertonDyerPoly(x, [2,2,2]);  -- you may also repeat the roots
+x^8 -24*x^6 +120*x^4 -224*x^2 +144
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfactor.html">factor</A>
+<li><a href="cmdRealRoots.html">RealRoots</A>
+<li><a href="cmdresultant.html">resultant</A>
+</ul>
+</div>
+
+</body>
+</html>

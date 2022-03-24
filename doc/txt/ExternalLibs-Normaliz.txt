@@ -1,0 +1,135 @@
+      ExternalLibs-Normaliz
+      Copyright (c)  2010-2022 Anna Bigatti, Christof Soeger
+      GNU Free Documentation License, Version 1.2
+%!includeconf: ../aux-txt2tags/config.t2t
+      TeXTitle{ExternalLibs-Normaliz}{Anna Bigatti, Christof Soeger}
+
+
+== User documentation ==
+%======================================================================
+
+**Normaliz** is a tool for computations in affine monoids, vector
+configurations, lattice polytopes, and rational cones.
+
+Here we should include the manual for the normaliz flags/functions,
+but we wait until **libnormaliz** interface is more stable.  For the
+moment look at the examples for available functions on
+``NormalizCone``s and setting flags.
+
+=== Examples ===
+- [ex-Normaliz1.C ../../examples/index.html#ex-Normaliz1.C]
+- [ex-Normaliz2.C ../../examples/index.html#ex-Normaliz2.C]
+
+
+=== Download and compile Normaliz ===
+
+ | [**libnormaliz** website https://www.normaliz.uni-osnabrueck.de/]
+
+Download and compile **Normaliz** following the instructions from the website.
+
+First time
+``` git clone https://github.com/Normaliz/Normaliz.git
+Update (from the Normaliz git folder)
+``` git pull
+
+==== Compilation suggestions ====
+
+If you want to use a personal installation of GMP
+(see [[ExternalLibs-GMP]])
+
+(**2022-02-10** -- normaliz-3.9.2)
+```
+./configure --disable-openmp --with-gmp=$HOME/MySoftware
+make -j6
+```
+Then ``libnormaliz.a`` is in ``.libs`` and that's all CoCoA needs.
+
+*NOTE*: I get the error
+``` clang: error: no such file or directory: '/usr/local/lib/libgmp.dylib'
+and cannot run ``make check``, but is *not a problem*:
+CoCoA just needs ``libnormaliz.a``.
+
+Type ``./configure --help`` for more configuration flags
+
+
+==== Compilation suggestions for desperate cases ====
+
+I still have problems on MSWindows/cygwin.
+Thanks to Winfried Bruns' support, this is what worked out in my desperate case:
+I added in ``source/Makefile.configuration``
+``-L/home/cocoa/GMP/lib/`` and ``-I/home/cocoa/GMP/include``
+then executed in ``source``:
+``` make -f Makefile.classic OPENMP=no NAKED=yes
+This produced ``libnormaliz.a`` in ``libnormaliz/``.
+Then I did
+```
+mkdir .libs
+mv libnormaliz/libnormaliz.a ./libs/
+```
+
+=== Compile CoCoALib with Normaliz ===
+
+Then configure and compile **CoCoALib** typing
+``` 
+cd CoCoALib-0.99
+./configure --with-libnormaliz=<your_path_to>/libnormaliz.a
+make
+```
+
+
+== Maintainer documentation ==
+%======================================================================
+
+==== Some old instructions -- might still be useful? ====
+
+*2020-03-20*
+
+I had problems so I did this
+```
+./configure --with-gmp=/Users/bigatti/0.99/gmp-6.1.2/ --enable-openmp=no --enable-shared=no --enable-fast-install=no --disable-libtool-lock 
+  <adjusted gmp path for include and lib in source/Makefile >
+cd source
+make
+```
+Then I have ``libnormaliz.a`` in ``.libs`` and that's all I need for cocoa.
+
+*OLD* (but I don't dare deleting it yet)
+
+I had problems following the given instructions, so I
+added
+```
+GMPFLAGS = -I /Users/bigatti/0.99/gmp-6.1.2/ -L/Users/bigatti/0.99/gmp-6.1.2/.libs -lgmpxx -lgmp
+
+BOOSTFLAGS = -I /Users/bigatti/0.99/boost_1_61_0/ -L/Users/bigatti/0.99/boost_1_61_0/libs
+```
+to ``source/Makefile.configuration`` and then
+compiled with 
+```OPENMP=no  make -f Makefile.classic
+Then I get the error
+```
+ld: library not found for -lcrt0.o
+```
+which is solved by removing ``-static`` from the last command, for example:
+```
+g++  -I /Users/bigatti/0.99/gmp-6.1.0/ -L/Users/bigatti/0.99/gmp-6.1.0/.libs -lgmpxx -lgmp -I /Users/bigatti/0.99/boost_1_61_0/ -L/Users/bigatti/0.99/boost_1_61_0/libs -std=c++11 -Wall -pedantic -O3 -funroll-loops -g        -Wno-unknown-pragmas   -I .  normaliz.o libnormaliz/libnormaliz.a  -I /Users/bigatti/0.99/gmp-6.1.0/ -L/Users/bigatti/0.99/gmp-6.1.0/.libs -lgmpxx -lgmp -I /Users/bigatti/0.99/boost_1_61_0/ -L/Users/bigatti/0.99/boost_1_61_0/libs -o normaliz
+```
+
+
+== Bugs, shortcomings and other ideas ==
+%======================================================================
+
+
+
+
+== Main changes ==
+%======================================================================
+
+**2011**
+- 26 July: new libnormaliz configuration (still a private copy)
+
+
+**2010**
+- 1 October: first inclusion
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

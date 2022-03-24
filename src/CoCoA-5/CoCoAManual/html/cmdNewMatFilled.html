@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewMatFilled</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewMatFilled">up</a> <a href="cmdNewMat.html">previous</a>  <a href="cmdNewPolyRing.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewMatFilled<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+matrix filled with value</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NewMatFilled(M: INT, N: INT, Val: INT|RAT|RINGELEM): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns an <tt><b style="background:#bbeeee">MxN</b></tt> matrix, filled with <tt><b style="background:#bbeeee">Val</b></tt>.  If <tt><b style="background:#bbeeee">Val</b></tt>
+is an integer or rational, the ring of the matrix is <A HREF="cmdQQ.html">
+    <tt>QQ</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use S ::= QQ[x,y,z];
+/**/  NewMatFilled(1,3,x);
+matrix( /*RingDistrMPolyClean(QQ, 3)*/
+ [[x, x, x]])
+
+/**/  NewMatFilled(1,3, 0);
+matrix(QQ,
+ [[0, 0, 0]])
+/**/  ZeroMat(QQ, 1, 3); --> same as NewMatFilled(1,3, 0)
+matrix(QQ,
+ [[0, 0, 0]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewMat.html">NewMat</A>
+<li><a href="cmdZeroMat.html">ZeroMat</A>
+<li><a href="cmdmatrix.html">matrix</A>
+</ul>
+</div>
+
+</body>
+</html>

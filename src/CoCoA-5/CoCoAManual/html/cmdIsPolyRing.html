@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsPolyRing</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsPolyRing">up</a> <a href="cmdIsOne.html">previous</a>  <a href="cmdIsPosetGraded.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsPolyRing<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether a ring is a polynomial ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsPolyRing(R: RING): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether its argument is a polynomial ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y];
+/**/  IsPolyRing(P);
+true
+/**/  PmodI := NewQuotientRing(P,ideal([x])); // NO, but isom to QQ[y]
+false
+/**/  IsPolyRing(QQ);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsQuotientRing.html">IsQuotientRing</A>
+<li><a href="cmdNewPolyRing.html">NewPolyRing</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,466 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Commands and Functions returning BOOL</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c1">up</a> <a href="partCommandsandFunctionsforBOOL.html">previous</a> <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.1.3 Commands and Functions returning BOOL</b></font>
+</td></tr></table>
+
+<CENTER>
+<TABLE BORDER=1>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdand.html">and</A>
+  </TD><TD>
+boolean "and" operator
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAreGensMonomial.html">AreGensMonomial</A>
+  </TD><TD>
+checks if given gens are monomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAreGensSqFreeMonomial.html">AreGensSqFreeMonomial</A>
+  </TD><TD>
+checks if given gens are squarefree monomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdEqSet.html">EqSet</A>
+  </TD><TD>
+checks if the set of elements in two lists are equal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdEqualityOperator.html">Equality Operator</A>
+  </TD><TD>
+test whether two values are equal or not
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHasGBasis.html">HasGBasis</A>
+  </TD><TD>
+checks if the argument has a pre-computed GBasis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsAntiSymmetric.html">IsAntiSymmetric</A>
+  </TD><TD>
+checks if a matrix is anti-symmetric
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsArrCentral.html">IsArrCentral</A>
+  </TD><TD>
+checks if the arrangement is central
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsArrFree.html">IsArrFree</A>
+  </TD><TD>
+checks if the arrangement is free
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsAtEOF.html">IsAtEOF</A>
+  </TD><TD>
+checks if input stream has reached end of input
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsCommutative.html">IsCommutative</A>
+  </TD><TD>
+test whether a ring is commutative
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsConstant.html">IsConstant</A>
+  </TD><TD>
+checks if a ringelem is in the coefficient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsContained.html">IsContained</A>
+  </TD><TD>
+checks if A is Contained in B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsCoprime.html">IsCoprime</A>
+  </TD><TD>
+checks if t1 is coprime with t2
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsDiagonal.html">IsDiagonal</A>
+  </TD><TD>
+checks if a matrix is diagonal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsDivisible.html">IsDivisible</A>
+  </TD><TD>
+checks if A is divisible by B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsElem.html">IsElem</A>
+  </TD><TD>
+checks if A is an element of B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsEmpty.html">IsEmpty</A>
+  </TD><TD>
+checks if a list is empty
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsEvenIsOdd.html">IsEven, IsOdd</A>
+  </TD><TD>
+test whether an integer is even or odd
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsEvenPolyIsOddPoly.html">IsEvenPoly, IsOddPoly</A>
+  </TD><TD>
+test whether a polynomial is even or odd as a function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsFactorClosed.html">IsFactorClosed</A>
+  </TD><TD>
+test whether a list of PPs is factor closed
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsField.html">IsField</A>
+  </TD><TD>
+test whether a ring is a field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsFiniteField.html">IsFiniteField</A>
+  </TD><TD>
+test whether a ring is a finite field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsFractionField.html">IsFractionField</A>
+  </TD><TD>
+test whether a ring is a fraction field
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsHomog.html">IsHomog</A>
+  </TD><TD>
+test whether given polynomials are homogeneous
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsIn.html">IsIn</A>
+  </TD><TD>
+check if one object is contained in another
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsIndet.html">IsIndet</A>
+  </TD><TD>
+check if argument is an indeterminate
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsIndetPosPower.html">IsIndetPosPower</A>
+  </TD><TD>
+check if argument is a power of an indeterminate
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsInImage.html">IsInImage</A>
+  </TD><TD>
+check if a RINGELEM is in image of RINGHOM
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsInjective.html">IsInjective</A>
+  </TD><TD>
+check if a RINGHOM is injective
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsInRadical.html">IsInRadical</A>
+  </TD><TD>
+check if a polynomial (or ideal) is in a radical
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsInteger.html">IsInteger</A>
+  </TD><TD>
+check if a RINGELEM is integer
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsIntegralDomain.html">IsIntegralDomain</A>
+  </TD><TD>
+test whether a ring is integral
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsInvertible.html">IsInvertible</A>
+  </TD><TD>
+check if a RINGELEM is invertible
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsIrred.html">IsIrred</A>
+  </TD><TD>
+check if a RINGELEM is irreducible
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsLattice.html">IsLattice</A>
+  </TD><TD>
+checks if the poset is a lattice
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsLexSegment.html">IsLexSegment</A>
+  </TD><TD>
+checks if an ideal is lex-segment
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsMaximal.html">IsMaximal</A>
+  </TD><TD>
+maximality test
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsMinusOne.html">IsMinusOne</A>
+  </TD><TD>
+test whether an object is -1
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsMultiArrFree.html">IsMultiArrFree</A>
+  </TD><TD>
+checks if the multiarrangement is free
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsOne.html">IsOne</A>
+  </TD><TD>
+test whether an object is one
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPolyRing.html">IsPolyRing</A>
+  </TD><TD>
+test whether a ring is a polynomial ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPosetGraded.html">IsPosetGraded</A>
+  </TD><TD>
+checks if the poset is graded
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPositiveGrading.html">IsPositiveGrading</A>
+  </TD><TD>
+check if a matrix defines a positive grading
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPrimary.html">IsPrimary</A>
+  </TD><TD>
+primary test
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPrime.html">IsPrime</A>
+  </TD><TD>
+prime integer test
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsProbPrime.html">IsProbPrime</A>
+  </TD><TD>
+checks if an integer is a probable prime
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPthPower.html">IsPthPower</A>
+  </TD><TD>
+p-th power test
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsQQ.html">IsQQ</A>
+  </TD><TD>
+test whether a ring is the ring of rationals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsQuotientRing.html">IsQuotientRing</A>
+  </TD><TD>
+test whether a ring is a quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsRadical.html">IsRadical</A>
+  </TD><TD>
+check if an IDEAL is radical
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsRational.html">IsRational</A>
+  </TD><TD>
+check if a RINGELEM is rational
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsSigmaGoodPrime.html">IsSigmaGoodPrime</A>
+  </TD><TD>
+check if INT is good prime for IDEAL 
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsSqFree.html">IsSqFree</A>
+  </TD><TD>
+check if an INT or RINGELEM is square-free
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsSquare.html">IsSquare</A>
+  </TD><TD>
+check if an INT is a square
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsStable.html">IsStable</A>
+  </TD><TD>
+checks if an ideal is stable
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsStdGraded.html">IsStdGraded</A>
+  </TD><TD>
+checks if the grading is standard
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsStronglyStable.html">IsStronglyStable</A>
+  </TD><TD>
+checks if an ideal is strongly stable
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsSubset.html">IsSubset</A>
+  </TD><TD>
+checks if the elements of one list are a subset of another
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsSurjective.html">IsSurjective</A>
+  </TD><TD>
+check if a RINGHOM is surjective
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsSymmetric.html">IsSymmetric</A>
+  </TD><TD>
+checks if a matrix is symmetric
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsTerm.html">IsTerm</A>
+  </TD><TD>
+checks if the argument is a term
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsTermOrdering.html">IsTermOrdering</A>
+  </TD><TD>
+check if a matrix defines a term-ordering
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsTrueGCDDomain.html">IsTrueGCDDomain</A>
+  </TD><TD>
+test whether a ring is a true GCD domain
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZero.html">IsZero</A>
+  </TD><TD>
+test whether an object is zero
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZeroColIsZeroRow.html">IsZeroCol, IsZeroRow</A>
+  </TD><TD>
+test whether a column(row) is zero
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZeroDet.html">IsZeroDet</A>
+  </TD><TD>
+test whether determinant is zero
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZeroDim.html">IsZeroDim</A>
+  </TD><TD>
+test whether an ideal is zero-dimensional
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZeroDivisor.html">IsZeroDivisor</A>
+  </TD><TD>
+test whether a RINGELEM is a zero-divisor
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZZ.html">IsZZ</A>
+  </TD><TD>
+test whether a ring is the ring of integers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdnot.html">not</A>
+  </TD><TD>
+boolean "not" operator
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdor.html">or</A>
+  </TD><TD>
+boolean "or" operator
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdOrderComparisonOperators.html">Order Comparison Operators</A>
+  </TD><TD>
+less than, greater than, ...
+  </TD></TR>
+
+</TABLE>
+</CENTER>
+<BR><BR>
+
+</div>
+
+</body>
+</html>

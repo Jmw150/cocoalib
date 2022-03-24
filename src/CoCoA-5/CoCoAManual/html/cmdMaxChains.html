@@ -1,0 +1,58 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MaxChains</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MaxChains">up</a> <a href="cmdMaxBy.html">previous</a>  <a href="cmdMayerVietorisTreeN1.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MaxChains<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+computes all the maximal chains from the relations of the poset</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MaxChains(relP: LIST): LIST of LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of all maximal chains from the list relP of the strict relations in a poset.
+<br><br><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+// POSET:
+//         3   4
+//          \ /
+//           2
+//           |
+//           1
+/**/ relP := [[1,  2], [2, 3],  [2,  4]];
+/**/ MaxChains(relP);
+[[1,  2,  3],  [1,  2,  4]]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

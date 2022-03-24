@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ChebyshevPoly</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ChebyshevPoly">up</a> <a href="cmdCharPoly.html">previous</a>  <a href="cmdCheckArgTypes.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ChebyshevPoly<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Orthogonal Polynomials: Chebyshev, Hermite, Laguerre</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ChebyshevPoly(N: INT, X: RINGELEM): RINGELEM
+ChebyshevPoly2(N: INT, X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function <tt><b style="background:#bbeeee">ChebyshevPoly</b></tt> returns the Chebyshev polynomial (of 1st
+type) with index <tt><b style="background:#bbeeee">N</b></tt>, in the indeterminate <tt><b style="background:#bbeeee">X</b></tt>.  The function
+<tt><b style="background:#bbeeee">ChebyshevPoly2</b></tt> returns the Chebyshev polynomial of 2nd type.
+<br><br>
+These functions also work if <tt><b style="background:#bbeeee">X</b></tt> is not an indeterminate: the result
+is then the evaluation of the polynomial at the given value.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x];
+/**/  ChebyshevPoly(3,x);
+4*x^3 -3*x
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdHermitePoly.html">HermitePoly</A>
+<li><a href="cmdLaguerrePoly.html">LaguerrePoly</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>String Operations</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c4">up</a> <a href="partStringLiterals.html">previous</a> <a href="partCommandsandFunctionsforSTRING.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.4.2 String Operations</b></font>
+</td></tr></table>
+
+CoCoA offers only a few operations on strings: length, concatenation,
+comparison, substring containment and indexing.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ str := "Hello" + "World!";  --> string concatenation
+/**/ Print str;
+HelloWorld!
+/**/ len(str);       --> length in characters
+11
+/**/ "Abc" < str;    --> lexicographical comparison
+true
+/**/ str[1];         --> character indexing, indexes start from 1
+H
+</pre></td></tr></table>
+
+
+The operator <A HREF="cmdIsIn.html">
+    <tt>IsIn</tt>
+  </A> can be used to test if one string is
+a substring of another.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  mesg := "Banana";
+/**/  "ana" IsIn mesg;
+true
+/**/  "Ana" IsIn mesg;  --> substring must be an exact match
+false
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

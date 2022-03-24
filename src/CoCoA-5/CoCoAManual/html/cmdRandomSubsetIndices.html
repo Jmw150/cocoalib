@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RandomSubsetIndices</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RandomSubsetIndices">up</a> <a href="cmdRandomSubset.html">previous</a>  <a href="cmdRandomTuple.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RandomSubsetIndices<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+indices for random subset</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RandomSubsetIndices(N: INT): LIST
+RandomSubsetIndices(N: INT, K: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions return a random subset of <tt><b style="background:#bbeeee">1..N</b></tt>; the second form
+ensures that the cardinality is <tt><b style="background:#bbeeee">K</b></tt>.  See also <A HREF="cmdRandomSubset.html">
+    <tt>RandomSubset</tt>
+  </A>.
+<br><br>
+NOTE: the resulting list is sorted.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ RandomSubsetIndices(10);
+[1, 3, 4, 5, 8, 10]
+/**/ RandomSubsetIndices(10, 3);
+[2,  3,  6]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdrandom.html">random</A>
+<li><a href="cmdsubsets.html">subsets</A>
+<li><a href="cmdRandomPermutation.html">RandomPermutation</A>
+<li><a href="cmdRandomSubset.html">RandomSubset</A>
+<li><a href="cmdRandomTuple.html">RandomTuple</A>
+<li><a href="cmdRandomTupleIndices.html">RandomTupleIndices</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IntersectionList</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IntersectionList">up</a> <a href="cmdintersection.html">previous</a>  <a href="cmdinverse.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IntersectionList<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+intersect lists, ideals, or modules</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IntersectionList(L: LIST of LIST): LIST
+IntersectionList(L: LIST of IDEAL): IDEAL
+IntersectionList(L: LIST of MODULE): MODULE</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the intersection of all elements in <tt><b style="background:#bbeeee">L</b></tt>.
+Generalizes <A HREF="cmdintersection.html">
+    <tt>intersection</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  Points := [[0,0],[1,0],[0,1],[1,1]]; -- a list of points in the plane
+/**/  IntersectionList([ ideal(x-P[1]*z, y-P[2]*z)  |  P in Points]);
+ideal(y^2 - y*z, x^2 - x*z)
+
+/**/ IntersectionList([ 1..7, 3..10, 0..5 ]);
+[3, 4, 5]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdintersection.html">intersection</A>
+<li><a href="cmdIdealOfProjectivePoints.html">IdealOfProjectivePoints</A>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdHGBM.html">HGBM</A>
+<li><a href="cmdintersection.html">intersection</A>
+</ul>
+</div>
+
+</body>
+</html>

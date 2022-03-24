@@ -1,0 +1,98 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GenRepr</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GenRepr">up</a> <a href="cmdGenericPoints.html">previous</a>  <a href="cmdgens.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GenRepr<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+representation in terms of generators</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GenRepr(X: RINGELEM, I: IDEAL): LIST of RINGELEM
+GenRepr(X: MODULEELEM, I: MODULE): LIST of RINGELEM
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list giving a representation of <tt><b style="background:#bbeeee">X</b></tt> in terms of
+<tt><b style="background:#bbeeee">gens(I)</b></tt>: if <tt><b style="background:#bbeeee">X</b></tt> is in <tt><b style="background:#bbeeee">I</b></tt>, then <tt><b style="background:#bbeeee">GenRepr</b></tt> returns
+a list <tt><b style="background:#bbeeee">[F_1,...,F_t]</b></tt> such that (<tt><b style="background:#bbeeee">[G_1,...,G_t] = gens(I)</b></tt>)
+
+  <pre>
+             X = F_1*G_1 + ... + F_t*G_t.
+</pre>
+
+If X is not in I, then <tt><b style="background:#bbeeee">GenRepr</b></tt> returns the empty list, [].
+<br><br>
+NOTE: for a representation in terms of <tt><b style="background:#bbeeee">GBasis(I)</b></tt> call <tt><b style="background:#bbeeee">DivAlg(X, GBasis(I))</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  I := ideal(x*y -2, x^2 -x*y);
+/**/  GenRepr(x -y, I);
+[(-1/2)*x +(1/2)*y, (1/2)*y]
+/**/  ScalarProduct(It, gens(I));
+x -y
+/**/ ReducedGBasisRepr(x -y, I);
+[1, 0]
+/**/  ScalarProduct(It, ReducedGBasis(I));
+x -y
+
+/**/  K := NewFractionField(NewPolyRing(QQ, "a"));
+/**/  use R ::= K[x,y];
+/**/  L := [x+y^2, x^2-x*y];
+/**/  GenRepr((a-2)*L[1] - (x-a)*L[2], ideal(L));
+[a -2, -x +a]
+
+/**/  R3 := NewFreeModule(R,3);
+/**/  V1 := ModuleElem(R3, [x, y, y^2]);
+/**/  V2 := ModuleElem(R3, [x-y, 0, x^2]);
+/**/  V  := x^2*V1 - y^2*V2;
+/**/  M := submodule(R3, [V1, V2]);
+--/**/  GenRepr(V, M); -- ***** NOT YET IMPLEMENTED *****
+--[x^2, -y^2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdDivAlg.html">DivAlg</A>
+<li><a href="cmdIsIn.html">IsIn</A>
+<li><a href="cmdNF.html">NF</A>
+<li><a href="cmdsyz.html">syz</A>
+<li><a href="cmdSyzOfGens.html">SyzOfGens</A>
+</ul>
+</div>
+
+</body>
+</html>

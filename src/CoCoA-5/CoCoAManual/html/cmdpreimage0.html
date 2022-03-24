@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>preimage0</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#preimage0">up</a> <a href="cmdPreImage[OBSOLESCENT].html">previous</a>  <a href="cmdPreprocessPts.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>preimage0<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+preimage of a RINGELEM</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+preimage0(phi: RINGHOM, f: RINGELEM): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a preimage of <tt><b style="background:#bbeeee">f</b></tt> via <tt><b style="background:#bbeeee">phi</b></tt>; if <tt><b style="background:#bbeeee">f</b></tt> is
+not in the image of <tt><b style="background:#bbeeee">phi</b></tt>, the function returns 0.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  QQxyz ::= QQ[x,y,z];
+/**/  QQab  ::= QQ[a,b];
+
+/**/  use QQab;
+/**/  phi := PolyAlgebraHom(QQxyz, QQab, [a+1, a*b+3, b^2]);
+/**/  IsInjective(phi);
+false
+/**/  ker(phi);
+ideal(-x^2*z +y^2 +2*x*z -6*y -z +9)
+/**/  IsSurjective(phi);
+false
+
+/**/  use QQab;
+/**/  preimage0(phi, b);
+0
+
+/**/  preimage0(phi, a^2);
+x^2 -2*x +1
+/**/  phi(It);
+a^2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdker.html">ker</A>
+<li><a href="cmdIsSurjective.html">IsSurjective</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RatReconstructByContFrac</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RatReconstructByContFrac">up</a> <a href="cmdRationalSolveHomog.html">previous</a>  <a href="cmdRatReconstructByLattice.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RatReconstructByContFrac<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+rational reconstruction from modular image</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RatReconstructByContFrac(X: INT, M: INT): RECORD
+RatReconstructByContFrac(X: INT, M: INT, LogToler: INT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions attempt to reconstruct rational numbers from a modular
+image <tt><b style="background:#bbeeee">X mod M</b></tt>.
+The result is a record: the boolean field <tt><b style="background:#bbeeee">failed</b></tt> is <tt><b style="background:#bbeeee">true</b></tt>
+if no <b>convincing</b> result was found; otherwise that field is <tt><b style="background:#bbeeee">false</b></tt>,
+and a second field, called <tt><b style="background:#bbeeee">ReconstructedRat</b></tt>, contains the
+value reconstructed.
+<br><br>
+The algorithms are <b>fault-tolerant</b>: they will succeed provided that
+<tt><b style="background:#bbeeee">X</b></tt> is correct modulo a sufficiently large factor of <tt><b style="background:#bbeeee">M</b></tt>.
+<br><br>
+An optional third argument determines what <b>convincing</b> means: a higher
+value gives a more reliable answer, but may need a larger modulus before the
+answer is found.
+<br><br>
+There are two different underlying heuristic algorithms: a faster one
+based on continued fractions, and a slower one based on 2-dimensional
+lattice reduction (<A HREF="cmdRatReconstructByLattice.html">
+    <tt>RatReconstructByLattice</tt>
+  </A>).  
+See the JSC paper by John Abbott:
+"Fault-tolerant modular reconstruction of rational numbers",
+<tt><b style="background:#bbeeee">http://www.sciencedirect.com/science/article/pii/S0747717116300773</b></tt>;
+a near-final version is at <tt><b style="background:#bbeeee">http://arxiv.org/abs/1303.2965</b></tt>.
+<br><br>
+NOTE: so that the heuristic can work, the modulus must be a bit larger
+than strictly necessary; indeed, reconstruction will always fail if <tt><b style="background:#bbeeee">M</b></tt>
+is too small.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  X := 3333333333;
+/**/  M := 10^10;
+/**/  RatReconstructByContFrac(X,M);
+record[ReconstructedRat := -1/3, failed := false]
+
+/**/  X := 3141592654;
+/**/  M := 10^10;
+/**/  RatReconstructByContFrac(X,M);
+record[failed := true]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRatReconstructWithBounds.html">RatReconstructWithBounds</A>
+<li><a href="cmdRatReconstructByLattice.html">RatReconstructByLattice</A>
+<li><a href="cmdCRT.html">CRT</A>
+</ul>
+</div>
+
+</body>
+</html>

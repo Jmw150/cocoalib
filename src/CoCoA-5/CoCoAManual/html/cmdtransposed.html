@@ -1,0 +1,60 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>transposed</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#transposed">up</a> <a href="cmdtoric.html">previous</a>  <a href="cmdtry.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>transposed<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the transposition of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+transposed(M: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the transpose of the matrix <tt><b style="background:#bbeeee">M</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  M := mat([[1,2,3],[4,5,6]]);
+/**/  M;
+matrix(QQ,
+ [[1, 2, 3],
+  [4, 5, 6]])
+
+/**/  transposed(M);
+matrix(QQ,
+ [[1, 4],
+  [2, 5],
+  [3, 6]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

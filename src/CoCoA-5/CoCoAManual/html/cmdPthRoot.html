@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PthRoot</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PthRoot">up</a> <a href="cmdprotect.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PthRoot<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Compute p-th root</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PthRoot(X: RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the p-th root of a polynomial over a finite
+field.  If no p-th root exists then an error is signalled.  p is
+the characteristic of the field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= ZZ/(7)[x,y];
+/**/  F := x^7-y^14+3;
+/**/  PthRoot(F);
+-y^2+x+3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsFiniteField.html">IsFiniteField</A>
+<li><a href="cmdIsPthPower.html">IsPthPower</A>
+</ul>
+</div>
+
+</body>
+</html>

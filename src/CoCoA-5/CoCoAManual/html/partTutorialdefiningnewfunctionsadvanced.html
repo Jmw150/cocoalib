@@ -1,0 +1,53 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: defining new functions (advanced)</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialdefiningnewfunctions.html">previous</a> <a href="partTutorialhomomorphisms.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.11 Tutorial: defining new functions (advanced)</b></font>
+</td></tr></table>
+
+Please read <A HREF="partTutorialdefiningnewfunctions.html">Tutorial: defining new functions</A> before reading this.
+<br><br>
+Inside a function it is possible to access variables which were
+defined outside it.  The command <A HREF="cmdTopLevel.html">
+    <tt>TopLevel</tt>
+  </A> will make a global
+variable accessible from inside the function, and parameters may be passed
+"by reference".
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+  /**/ define negate(ref X) // pass by reference
+  /**/   X := -X;           // changes value of variable OUTSIDE the fn
+  /**/ enddefine;           // does not "return" a value, so is a procedure!
+  /**/ A := 1;
+  /**/ negate(ref A);  // use "ref" also to call the fn
+  /**/ println A;      // now see that value has changed
+  -1
+
+  /**/ define QQx()
+  /**/   TopLevel QQ;    // make global variable QQ accessible
+  /**/   return NewPolyRing(QQ, "x");
+  /**/ enddefine;
+  /**/ QQx();
+  RingWithID(3, "QQ[x]")  
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

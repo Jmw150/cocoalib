@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NumChambers</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NumChambers">up</a> <a href="cmdNumBChambers.html">previous</a>  <a href="cmdNumCols.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NumChambers<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+number of chambers of an arrangement of hyperplanes</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NumChambers(A: LIST): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the number of chambers from the list A of hyperplanes in the arrangement.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y];	
+/**/ A := [x, x-y, y];
+/**/ NumChambers(A);
+6
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNumBChambers.html">NumBChambers</A>
+</ul>
+</div>
+
+</body>
+</html>

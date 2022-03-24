@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>AffHilbertSeries</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#AffHilbertSeries">up</a> <a href="cmdAffHilbertFn.html">previous</a>  <a href="cmdAffPoincare[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>AffHilbertSeries<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the affine Hilbert-Poincare series</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+AffHilbertSeries(R: (Poly or Quotient)RING): TAGGED("$hp.PSeries")</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the affine Hilbert-Poincare series of <tt><b style="background:#bbeeee">M</b></tt>.
+The grading must be a positive <font color=#0000aa>Z^1</font>-grading (i.e.<A HREF="cmdGradingMat.html">
+    <tt>GradingMat</tt>
+  </A>
+must have a single row with positive entries), and the ordering must
+be degree compatible.
+In the standard case, i.e. the weights of all
+indeterminates are 1, the result is simplified so that the power
+appearing in the denominator is the dimension of <tt><b style="background:#bbeeee">M</b></tt> + 1.
+<br><br>
+It used to be called <tt><b style="background:#bbeeee">AffPoincare</b></tt>.
+<br><br>
+NOTES:
+<br><br>(i) the coefficient ring must be a field.
+<br><br>(ii) these functions produce tagged objects: they cannot safely be
+     (non-)equality to other values.
+<br><br>
+For further details on affine Hilbert functions see the book:
+Kreuzer, Robbiano "Computer Commutative Algebra II", Section 5.6.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  AffHilbertSeries(R/ideal(z^4-1, x*z^4-y-3));
+(1 +x +x^2 +x^3) / (1-x)^2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAffHilbertFn.html">AffHilbertFn</A>
+<li><a href="cmdHilbertSeries.html">HilbertSeries</A>
+</ul>
+</div>
+
+</body>
+</html>

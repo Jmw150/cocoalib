@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ReloadMan</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ReloadMan">up</a> <a href="cmdRelNotes.html">previous</a>  <a href="cmdremove.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ReloadMan<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Reload CoCoAManual/CoCoAHelp.xml</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ReloadMan()
+ReloadMan(ListOfFiles: LIST)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function reloads the xml source of the manual <tt><b style="background:#bbeeee">CoCoAHelp.xml</b></tt>
+(in directory <tt><b style="background:#bbeeee">CoCoAManual</b></tt>) and the optional list of manual extensions:
+it recreates the internal manual <b>index</b> in a running CoCoA-5.
+<br><br>
+Some details: after adding a new entry, the <b>index</b> needs updating.
+But if the change is just in the description of an existing entry (so the
+internal <b>index</b> is still valid) there is no need to reload the manual
+because the descriptions are always read from disk.
+<br><br>
+NOTE: This function is useful for those who develop a CoCoA package
+and want to test/add/offer its manual in proper CoCoA style.  Such
+manual extensions will be included in <tt><b style="background:#bbeeee">CoCoAHelp.xml</b></tt> if the
+package is generously offered for distribution with CoCoA :-)
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ ReloadMan();  // reloads the official manual only
+/**/ // for loading manual extensions, official manual+ file1 + file2:
+/**/ ReloadMan(["path1/file1.xml", "path2/file2.xml"]);
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

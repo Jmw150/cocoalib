@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ComputeElimFirst</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ComputeElimFirst">up</a> <a href="cmdcompts.html">previous</a>  <a href="cmdconcat.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ComputeElimFirst<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+ComputeElimFirst</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ComputeElimFirst(X: RINGELEM, I: IDEAL): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function is experimental and dangerous! No guarantees.
+<br><br>
+Manual is intentionally cryptic.
+If you think this function is useful for you, write email to Anna M. Bigatti.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use ZZ/(32003)[x,y,t];
+/**/  ComputeElimFirst(t, ideal(x^2-t^2, y^3-t^3));
+x^6 -y^6
+
+/**/  Use ZZ/(32003)[x,y,t,h];
+/**/  ComputeElimFirst(t, ideal(x*h-t^2, y*h^2-t^3));
+x^3*h^2 -y^2*h^3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdelim.html">elim</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HVector</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HVector">up</a> <a href="cmdHSaturation.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HVector<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the h-vector of a module or quotient object</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HVector(M: (Poly or Quotient)RING): LIST
+HVector(M: MODULE): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the h-vector of <tt><b style="background:#bbeeee">M</b></tt>, i.e. the coefficients of the
+numerator of the simplified Poincare series for <tt><b style="background:#bbeeee">M</b></tt>.  <tt><b style="background:#bbeeee">M</b></tt> can be a
+module or a quotient.
+<br><br>
+The weights of the indeterminates of the polynomial ring of <tt><b style="background:#bbeeee">M</b></tt> must all
+be 1, and the coefficient ring must be a field.
+<br><br>
+If the input is not homogeneous, the Hilbert function of the
+corresponding leading term (initial) ideal or module is calculated.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[t,x,y,z];
+/**/  HVector(R/ideal(x,y,z)^5);
+[1, 3, 6, 10, 15]
+
+/**/  HilbertSeries(R/ideal(x,y,z)^5);
+(1 + 3t + 6t^2 + 10t^3 + 15t^4) / (1-t)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdHilbertFn.html">HilbertFn</A>
+<li><a href="cmdHilbertSeries.html">HilbertSeries</A>
+</ul>
+</div>
+
+</body>
+</html>

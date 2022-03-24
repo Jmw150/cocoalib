@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>return</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#return">up</a> <a href="cmdresultant.html">previous</a>  <a href="cmdreversereversed.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>return<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+exit from a function</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+return
+return E
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command is used to exit from a procedure/function.  The
+second form returns the value of the expression E to the user.
+As a safety measure all <tt><b style="background:#bbeeee">return</b></tt>s in a function/procedure must
+be of the same kind: either they all return a value (function)
+or none of them returns a value (procedure).
+
+<tt><b style="background:#bbeeee">return</b></tt> has immediate effect even inside loops; compare with <A HREF="cmdbreak.html">
+    <tt>break</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Define Rev(L) -- reverse a list
+/**/    If len(L) < 2 Then Return L; EndIf;
+/**/    M := Rev(Tail(L)); -- recursive function call
+/**/    append(ref M, L[1]);
+/**/    Return M;
+/**/  EndDefine;
+
+/**/  Rev([1,2,3,4]);
+[4, 3, 2, 1]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdbreak.html">break</A>
+<li><a href="cmddefine.html">define</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+</ul>
+</div>
+
+</body>
+</html>

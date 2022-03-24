@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ChainCanonicalHom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ChainCanonicalHom">up</a> <a href="cmdCFApproximants.html">previous</a>  <a href="cmdcharacteristic.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ChainCanonicalHom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+canonical homomorphism</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ChainCanonicalHom(R: RING, S: RING): RINGHOM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the canonical homomorphism from <tt><b style="background:#bbeeee">R</b></tt> to <tt><b style="background:#bbeeee">S</b></tt>,
+where <tt><b style="background:#bbeeee">S</b></tt> has been constructed from <tt><b style="background:#bbeeee">R</b></tt> with a chain of
+ring constructors.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[i];
+/**/  K := NewQuotientRing(P, ideal(i^2+1));
+/**/  R ::= K[x,y,z];
+
+/**/  phi := ChainCanonicalHom(P, R);
+/**/  RingElem(R, "x^2-i*y") / phi(RingElem(P, "(3*i-2)*(5-i)"));
+((-17/338)*i -7/338)*x^2 +((7/338)*i -17/338)*y
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+<li><a href="cmdRingElem.html">RingElem</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>VerbosityLevel</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#VerbosityLevel">up</a> <a href="cmdvaluation[OBSOLETE].html">previous</a>  <a href="cmdVersionInfo.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>VerbosityLevel<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+verbosity level</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+VerbosityLevel(): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the current CoCoA verbosity level.
+<br><br>
+User defined functions may check this value when deciding whether to
+print out some internal progress messages: normally printing should
+happen only if <tt><b style="background:#bbeeee">VerbosityLevel()</b></tt> is higher than some threshold value.
+<br><br>
+Various functions in CoCoALib and in the CoCoA-5 packages do this, but
+they all have threshold values greater than 9.  So threshold values
+from 1 to 9 may be used in user functions without triggering any
+verbosity from CoCoA.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ define SimpleFn(n)
+/**/   if VerbosityLevel() >= 4 then
+/**/     println "SimpleFn: input type is ", type(n);
+/**/   endif;
+/**/   return n^2;
+/**/ enddefine;
+
+/**/  use P ::= QQ[x,y,z];
+/**/  SetVerbosityLevel(9);
+/**/  SimpleFn(ideal(indets(CurrentRing)));
+SimpleFn: input type is IDEAL
+ideal(z^2,  y*z,  x*z,  y^2,  x*y,  x^2)
+
+/**/  SetVerbosityLevel(0);  --> unset verbosity
+/**/  SimpleFn(ideal(indets(CurrentRing)));
+ideal(z^2,  y*z,  x*z,  y^2,  x*y,  x^2)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdSetVerbosityLevel.html">SetVerbosityLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MultiplicationMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MultiplicationMat">up</a> <a href="cmdMultiArrToArr.html">previous</a>  <a href="cmdmultiplicity.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MultiplicationMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+multiplication matrix of a ringelem</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MultiplicationMat(X: RINGELEM, I: IDEAL): MAT
+MultiplicationMat(X: RINGELEM, I: IDEAL, QB: LIST): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function computes the multiplication matrix of a ringelem <tt><b style="background:#bbeeee">f</b></tt>
+modulo a zero-dimensional ideal <tt><b style="background:#bbeeee">I</b></tt> with respect to a quotient
+basis of <tt><b style="background:#bbeeee">I</b></tt>.
+<br><br>
+In the second form it is computed with respect to the given quotient
+basis <tt><b style="background:#bbeeee">QB</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y];
+/**/  I := ideal(x*y +y^2 -x -4*y +3, x^2 -y^2 -4*x +2*y +3, y^3 -4*y^2 +5*y -2);
+/**/  MultiplicationMat(x, I);
+matrix(QQ,
+ [[0, -3, -5, -3],
+  [0, 4, 6, -2],
+  [0, -1, -1, 1],
+  [1, 1, 1, 4]])
+
+/**/  MultiplicationMat(x, I, [one(CurrentRing), x, y, y^2]);
+matrix(QQ,
+ [[0, -3, -3, -5],
+  [1, 4, 1, 1],
+  [0, -2, 4, 6],
+  [0, 1, -1, -1]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

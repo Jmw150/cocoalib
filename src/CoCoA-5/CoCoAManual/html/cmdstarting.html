@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>starting</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#starting">up</a> <a href="cmdStandardOutput.html">previous</a>  <a href="cmdStdBasis.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>starting<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+list functions starting with a given string</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+starting(S: STRING): LIST of RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a list of all CoCoA functions starting with the
+string <tt><b style="background:#bbeeee">S</b></tt>.  This list may also include some undocumented
+functions; be wary of using these (there is probably a reason they
+are not documented!)
+<br><br>
+For each matching name there is a <tt><b style="background:#bbeeee">RECORD</b></tt> comprising two fields:
+<tt><b style="background:#bbeeee">IsExported</b></tt> and <tt><b style="background:#bbeeee">name</b></tt>.  The field <tt><b style="background:#bbeeee">IsExported</b></tt> is <tt><b style="background:#bbeeee">false</b></tt> for
+user-defined and for built-in functions (implemented in C++), and <tt><b style="background:#bbeeee">true</b></tt>
+for functions exported from a CoCoA-5 package.  The field <tt><b style="background:#bbeeee">name</b></tt> contains
+the full name of the function;  for exported functions, this is of the
+form <tt><b style="background:#bbeeee">$PkgName.FnName</b></tt>, where the definition of <tt><b style="background:#bbeeee">FnName</b></tt> can be found
+in the CoCoA-5 package <tt><b style="background:#bbeeee">PkgName.cpkg</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  indent(starting("Subs"));
+[
+  record[IsExported := true, name := "$BackwardCompatible.Subsets"],
+  record[IsExported := true, name := "$BackwardCompatible.Subst"]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPackageOf.html">PackageOf</A>
+<li><a href="cmdprint.html">print</A>
+<li><a href="cmddescribe.html">describe</A>
+</ul>
+</div>
+
+</body>
+</html>

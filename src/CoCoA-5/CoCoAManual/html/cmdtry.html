@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>try</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#try">up</a> <a href="cmdtransposed.html">previous</a>  <a href="cmdtuples.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>try<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+try command sequence, catch any errors</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+Try C1 UponError E Do C2 EndTry
+  where C1, C2 are sequences of commands and E is a variable identifier.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Usually, when an error occurs during the execution of a command, the
+error is automatically propagated out of the nesting of the
+evaluation.  This can be prevented with the use of <tt><b style="background:#bbeeee">Try..UponError</b></tt>.
+<br><br>
+If an error occurs during the execution of the commands <tt><b style="background:#bbeeee">C1</b></tt>, then it is
+captured by the command <tt><b style="background:#bbeeee">UponError</b></tt> and assigned to the variable <tt><b style="background:#bbeeee">E</b></tt>,
+and the commands <tt><b style="background:#bbeeee">C2</b></tt> are executed; the string inside <tt><b style="background:#bbeeee">E</b></tt> may be
+retrieved using <A HREF="cmdGetErrMesg.html">
+    <tt>GetErrMesg</tt>
+  </A>.  If no error occurs then the variable <tt><b style="background:#bbeeee">E</b></tt>
+and the commands <tt><b style="background:#bbeeee">C2</b></tt> are ignored.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  -- Equality function allowing mixed types:
+/**/  Define AreEqual(A,B)
+/**/    Try
+/**/      Return A = B;
+/**/    UponError E Do
+/**/      Return false;
+/**/    EndTry;
+/**/  EndDefine;
+
+/**/  AreEqual(0, "zero");
+false
+/**/  AreEqual(1+2, 3);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmderror.html">error</A>
+<li><a href="cmdGetErrMesg.html">GetErrMesg</A>
+<li><a href="partAllCoCoAcommands.html">All CoCoA commands</A>
+</ul>
+</div>
+
+</body>
+</html>

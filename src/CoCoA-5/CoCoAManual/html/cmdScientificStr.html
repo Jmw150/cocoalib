@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ScientificStr</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ScientificStr">up</a> <a href="cmdScalarProduct.html">previous</a>  <a href="cmdSectionalMatrix.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ScientificStr<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+convert integer/rational to a floating-point string</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ScientificStr(X: INT|RAT|RINGELEM): STRING
+ScientificStr(X: INT|RAT|RINGELEM, Prec: INT): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function converts a rational number <tt><b style="background:#bbeeee">X</b></tt> into a (decimal)
+floating-point string.  The optional second argument <tt><b style="background:#bbeeee">Prec</b></tt> says how many
+decimal digits to include in the mantissa; the default value is 5.
+The exponent is always included (even if it is zero).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  ScientificStr(2/3);       -- last printed digit is rounded
+6.6667*10^(-1)
+
+/**/  ScientificStr(7^510);     -- almost no limit on exponent range
+1.0000*10^431
+
+/**/  ScientificStr(1/81, 35);  -- specify number of digits
+1.2345679012345679012345679012345679*10^(-2)
+
+/**/  ScientificStr(1/2);       -- trailing zeroes are not suppressed
+5.0000*10^(-1)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdDecimalStr.html">DecimalStr</A>
+<li><a href="cmdFloatStr.html">FloatStr</A>
+<li><a href="cmdFloatApprox.html">FloatApprox</A>
+<li><a href="cmdMantissaAndExponent10.html">MantissaAndExponent10</A>
+</ul>
+</div>
+
+</body>
+</html>

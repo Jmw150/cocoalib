@@ -1,0 +1,101 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewPolyRing</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewPolyRing">up</a> <a href="cmdNewMatFilled.html">previous</a>  <a href="cmdNewQuotientRing.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewPolyRing<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a new PolyRing</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NewPolyRing(CoeffRing: RING, IndetNames: STRING/LIST): RING
+NewPolyRing(CoeffRing: RING, IndetNames: STRING/LIST, OrdMat: MAT, GradingDim: INT): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a polynomial ring which can be used as any
+programming variable (assigned with <tt><b style="background:#bbeeee">:=</b></tt>).
+<br><br>
+The <tt><b style="background:#bbeeee">::=</b></tt> syntax starts the input method for a new polynomial ring,
+with the special interpretation of brackets and symbols
+(i.e.<tt><b style="background:#bbeeee">R ::= QQ[x]</b></tt> is not read the same way as <tt><b style="background:#bbeeee">X := L[i]</b></tt>).
+The PP-orderings which can be specified with the <tt><b style="background:#bbeeee">::=</b></tt> syntax are
+<tt><b style="background:#bbeeee">Lex</b></tt> and <tt><b style="background:#bbeeee">Xel</b></tt> (no grading), <tt><b style="background:#bbeeee">DegLex</b></tt> and <tt><b style="background:#bbeeee">DegRevLex</b></tt> (std grading).
+For other PP-orderings you must use the <tt><b style="background:#bbeeee">NewPolyRing</b></tt> function call
+(see also <A HREF="cmdElimMat.html">
+    <tt>ElimMat</tt>
+  </A>).
+<br><br>
+NOTE: calling <tt><b style="background:#bbeeee">NewPolyRing</b></tt> twice with the same arguments gives
+two <b>different rings</b>, therefore incompatible.  See <A HREF="cmdRingID.html">
+    <tt>RingID</tt>
+  </A>.
+<br><br>
+NOTE: the syntax with all indet names in one string is new in CoCoA-5.1.2.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  OrdM := matrix([[2,3,1],[0,0,-1],[0,-1,0]]);
+/**/  P := NewPolyRing(QQ, "x[1],x[2],x[9]", OrdM, 1); -- 3 indeterminates
+/**/  [wdeg(X) | X in indets(P)];
+[[2], [3], [1]]
+
+/**/  P2 := NewPolyRing(RingZZ(), IndetSymbols(P)); -- same indet names as P
+/**/  Indets(P2);
+[x[1], x[2], x[9]]
+
+/**/  R ::= QQ[x,y,alpha]; -- is equivalent to
+/**/  R := NewPolyRing(QQ, "x,y,alpha"); -- in "define/enddefine" use "RingQQ()"
+
+/**/  R ::= QQ[x,y], DegRevLex; -- is equivalent to
+/**/  R := NewPolyRing(QQ, "x,y", StdDegRevLexMat(2), 1);
+
+/**/  P3 := NewPolyRing(P2, SymbolRange("alpha", -2,2));
+/**/  indets(P3);
+[alpha[-2], alpha[-1], alpha[0], alpha[1], alpha[2]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdElimMat.html">ElimMat</A>
+<li><a href="cmdMakeTermOrdMat.html">MakeTermOrdMat</A>
+<li><a href="cmdOrdMat.html">OrdMat</A>
+<li><a href="cmdGradingDim.html">GradingDim</A>
+<li><a href="cmdIndetSymbols.html">IndetSymbols</A>
+<li><a href="cmdSymbolRange.html">SymbolRange</A>
+<li><a href="cmdRingID.html">RingID</A>
+</ul>
+</div>
+
+</body>
+</html>

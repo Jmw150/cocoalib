@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PlotPointsOn</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PlotPointsOn">up</a> <a href="cmdPlotPoints.html">previous</a>  <a href="cmdpoincare[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PlotPointsOn<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+outputs the coordinates of the points to a file</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PlotPointsOn(L: LIST of points, S: STRING)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function is the same as <A HREF="cmdPlotPoints.html">
+    <tt>PlotPoints</tt>
+  </A> with a second
+argument giving the name of the file to print on.
+<br><br>
+NOTE: the last argument is a <tt><b style="background:#bbeeee">STRING</b></tt>, the name of the file, and not
+an <tt><b style="background:#bbeeee">OSTREAM</b></tt>, as for <A HREF="cmdprinton.html">
+    <tt>print on</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  PlotPointsOn([ [1/(X+1/2), X^2-X+14] | X in -10..10], "PLOT-points");
+Plotting points...100%
+21 plotted points have been placed in the file points
+
+/**/  use QQ[x,y];
+/**/  ImplicitPlotOn(x^2*y -(59/4)*x^2 +2*x -1, [-3,3], [0,250], "PLOT-curve");
+Plotting points...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
+735 plotted points have been placed in the file "PLOT-curve"
+</pre></td></tr></table>
+
+After having produced the plot files using CoCoA,
+start "gnuplot" and then give it the following commands:
+
+  <pre>  plot "PLOT-curve"
+  replot "points"</pre>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdImplicitPlot.html">ImplicitPlot</A>
+<li><a href="cmdPlotPoints.html">PlotPoints</A>
+</ul>
+</div>
+
+</body>
+</html>

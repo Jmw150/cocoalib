@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>one</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#one">up</a> <span class="grayed">previous</span> <a href="cmdOpenIFile.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>one<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+one of a ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+one(R: RING): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the multiplicative identity of a ring.
+For when you want to force the integer <tt><b style="background:#bbeeee">1</b></tt> to be a RINGELEM.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ P ::= ZZ/(101)[x,y,z];
+/**/ N := 1;  Print N, " of type ",  type(N);
+1 of type INT
+/**/ N := one(P);  Print N, " of type ",  type(N);
+1 of type RINGELEM
+/**/ N := 300*1;  Print N, " of type ",  type(N);
+300 of type INT
+/**/ N := 300*one(P);  Print N, " of type ",  type(N);
+-3 of type RINGELEM
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdzero.html">zero</A>
+</ul>
+</div>
+
+</body>
+</html>

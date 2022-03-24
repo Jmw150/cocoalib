@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LinKerModP [OBSOLETE]</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LinKerModP [OBSOLETE]">up</a> <a href="cmdLinKerBasis.html">previous</a>  <a href="cmdLinKerZZ.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LinKerModP [OBSOLETE]<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+[OBSOLETE] find the kernel of a matrix mod p</i> </small></b></font>
+</td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+In CoCoA-4 it was difficult to map a matrix into <tt><b style="background:#bbeeee">ZZ/(p)</b></tt>.
+Now, in CoCoA-5, we can map the matrix and then call directly
+<A HREF="cmdLinKer.html">
+    <tt>LinKer</tt>
+  </A> and <A HREF="cmdLinKerBasis.html">
+    <tt>LinKerBasis</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use ZZ/(7);
+/**/  M := mat([[1,2,3,4],[5,6,7,8],[9,10,11,12]]); --> by default over QQ
+/**/  LinKerBasis(M);
+[[-1, 2, -1, 0], [-2, 3, 0, -1]]
+
+/**/  LinKerBasis(matrix(NewZZmod(3), M)); --> map M into ZZ/(3)
+[[-1, -1, -1, 0], [1, 0, 0, -1]]
+
+/**/  LinKer(matrix(CurrentRing, M)); --> map M into CurrentRing ZZ/(7)
+matrix( /*RingWithID(9, "FFp(7)")*/
+ [[-1, -2],
+  [2, 3],
+  [-1, 0],
+  [0, -1]])
+/**/  matrix(CurrentRing, M) * It;
+matrix( /*RingWithID(9,"FFp(7)")*/
+ [[0, 0],
+  [0, 0],
+  [0, 0]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdLinKer.html">LinKer</A>
+<li><a href="cmdLinKerBasis.html">LinKerBasis</A>
+<li><a href="cmdLinSolve.html">LinSolve</A>
+</ul>
+</div>
+
+</body>
+</html>

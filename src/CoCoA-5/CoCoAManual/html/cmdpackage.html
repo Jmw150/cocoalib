@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>package</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#package">up</a> <span class="grayed">previous</span> <a href="cmdPackageOf.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>package<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+keyword marking content of a CoCoA package</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+package PkgName: STRING);
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This is for more advanced use of CoCoA-5, when you have several
+functions for closely related operations.
+<br><br>
+We recommend putting all functions belonging together in a package
+into a single file (whose name should indicate the purpose of the
+package).  Inside the file, at the start write <tt><b style="background:#bbeeee">package</b></tt>
+followed by the package name (usu. the same as as the file name);
+at the end of the file put <tt><b style="background:#bbeeee">EndPackage;</b></tt>.
+<br><br>
+See the entry <A HREF="partFirstExampleofaPackage.html">
+    <tt>First Example of a Package</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ package $demo;
+/**/   export MyFunc;
+/**/   define MyFunc(N) return N+1; enddefine;
+/**/ EndPackage;
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="toc.html#CoCoA Packages">CoCoA Packages</A>
+<li><a href="cmdexport.html">export</A>
+<li><a href="partFirstExampleofaPackage.html">First Example of a Package</A>
+</ul>
+</div>
+
+</body>
+</html>

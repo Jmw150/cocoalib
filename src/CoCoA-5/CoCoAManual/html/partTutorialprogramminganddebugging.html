@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: programming and debugging</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialhomomorphisms.html">previous</a> <a href="partTutorialfeedbackandreportingbugs.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.13 Tutorial: programming and debugging</b></font>
+</td></tr></table>
+
+This tutorial is for those who have little experience in
+programming and debugging.
+<br><br>
+Despite one's best efforts any non-trivial program may easily contain "bugs".
+When this happens one must somehow locate the fault,
+and then find a way to rectify it.
+<br><br>
+The CoCoA interpreter does not offer a special debugger.
+<br><br>
+A good guideline is to split your program into smaller pieces,
+each of which has a clearly defined purpose which can be described succinctly.
+Then these pieces can be tested, and fixed, independently.
+Understanding how to split the program becomes easier with more experience.
+<br><br>
+Try to find a simple input where your program misbehaves:
+this is not always easy, and may require quite some time!
+When you have a manageable troublesome input, you should insert
+some print commands in your code saying where execution has reached,
+and the values of some variables.
+For instance:
+
+  <pre>
+  println "Start of function Blah: input A = ", A, " and B = ", B;
+  ....
+  println "After doing XYZ: poly has degree ", deg(f);
+</pre>
+
+The mistake might in the input, and the program is correct:
+double-check that the input really is what you intended!
+<br><br>
+It may also happen that the problem lies in CoCoA.
+Check carefully the CoCoA manual to see whether the function actually
+does what you think it does!
+If you are quite sure the problem lies inside CoCoA then see
+<A HREF="partTutorialfeedbackandreportingbugs.html">Tutorial: feedback and reporting bugs</A>
+</div>
+
+</body>
+</html>

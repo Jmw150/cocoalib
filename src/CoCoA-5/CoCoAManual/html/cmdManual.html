@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>Manual</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#Manual">up</a> <a href="cmdMantissaAndExponent2.html">previous</a>  <a href="cmdMapDown[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>Manual<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+search online help system</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+? key
+?? key
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These operators are used to search the online help system for
+information matching a keyword (introduced in CoCoA 4.2).
+<br><br>
+The commands have the form <tt><b style="background:#bbeeee">?key</b></tt> and <tt><b style="background:#bbeeee">??key</b></tt> where <tt><b style="background:#bbeeee">key</b></tt> is a
+literal string without quotes.
+The search for the <tt><b style="background:#bbeeee">key</b></tt> is case insensitive and ignores blank space
+before or after <tt><b style="background:#bbeeee">key</b></tt>.  Also, the semicolon usually required at the end
+of a line of CoCoA input is optional.
+<br><br>
+The search system is fairly simple.  The searching algorithm looks through
+the title and keywords of each manual page.  A page matches if <tt><b style="background:#bbeeee">key</b></tt>
+appears as a (case-insensitive) substring of the title/keywords.
+<br><br>
+The <tt><b style="background:#bbeeee">??</b></tt> form prints the list of all matches.
+The <tt><b style="background:#bbeeee">?</b></tt> form prints the page matching exactly if there is one,
+otherwise it prints the list of all matches.
+<br><br><br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ ?approxs
+--============[ ApproxSolve ]=============--
+--> ApproxSolve(L: LIST of RINGELEM): LIST of LIST of RAT
+
+This function returns the list of real solutions (points) of a
+... ... ...
+
+/**/ ?approx
+--====<  No exact match for "approx"  >====--
+All 9 matches for "approx":
+ ? ApproxPointsNBM
+ ? ApproxSolve
+ ... ... ...
+
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>gin</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#gin">up</a> <a href="cmdGFanRelativeInteriorPoint.html">previous</a>  <a href="cmdGinJacobian.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>gin<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+generic initial ideal</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+gin(I: IDEAL): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+These functions return the [probabilistic] gin (generic initial ideal)
+of the ideal <tt><b style="background:#bbeeee">I</b></tt>.
+It is obtained by computing twice the leading term ideal of <font color=#0000aa>g(I)</font>,
+where <font color=#0000aa>g</font> is a random change of coordinates with
+integer coefficients in the range <font color=#0000aa>[-10^6, 10^6]</font>
+using TwinFloats (see <A HREF="cmdNewRingTwinFloat.html">
+    <tt>NewRingTwinFloat</tt>
+  </A>) to allow a much
+wider range of coefficients than a direct computation over the
+rationals (use second argument to see the TwinFloat precision needed).
+<br><br>
+See <A HREF="cmdrgin.html">
+    <tt>rgin</tt>
+  </A> for computing wrt DegRevLex independently of
+the current ring.
+<br><br>
+Verbosity:<br><br>
+with verbosity <tt><b style="background:#bbeeee">>=50</b></tt> it prints<br><br>
+the two random changes of coordinates used<br><br>
+and the <A HREF="cmdNewRingTwinFloat.html">
+    <tt>NewRingTwinFloat</tt>
+  </A> precision used. 
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  gin(ideal(y^2-x*z, x^2*z-y*z^2));  -- computed twice using TwinFloats
+ideal(x^2, x*y^2, y^4)
+
+/**/  SetVerbosityLevel(50); --> get some internal progress information
+/**/  gin(ideal(y^7-x^4*z^3, x^5*z-y*z^5));
+RandIdeal: g = [
+  -439946*x,
+  742383*x -909613*y,
+  129429*x +49607*y +832207*z
+]
+TryPrecisions: -- trying with FloatPrecision 64
+RandIdeal: g = [
+  -187890*x,
+  -127769*x +272107*y,
+  377492*x +778394*y -547019*z
+]
+TryPrecisions: -- trying with FloatPrecision 64
+ideal(x^6, x^5*y^2, x^4*y^4, x^3*y^6, x^2*y^8, x*y^10, y^12)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewRingTwinFloat.html">NewRingTwinFloat</A>
+<li><a href="cmdrgin.html">rgin</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RatReconstructWithBounds</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RatReconstructWithBounds">up</a> <a href="cmdRatReconstructPoly.html">previous</a>  <a href="cmdReadExpr[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RatReconstructWithBounds<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+deterministic rational reconstruction from modular image</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RatReconstructWithBounds(e: INT, P: INT, Q: INT, res: LIST of INT, mod: LIST of INT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function attempts to reconstruct a rational number from a
+collection of residue-modulus pairs <tt><b style="background:#bbeeee">(res[i],mod[i])</b></tt>.  The function
+also requires the input of three bounds: <tt><b style="background:#bbeeee">e</b></tt> is an upper bound on the
+number of bad moduli, and <tt><b style="background:#bbeeee">P</b></tt> and <tt><b style="background:#bbeeee">Q</b></tt> are upper bounds for
+(respectively the numerator and denominator of) the rational to be
+reconstructed.
+<br><br>
+The result is a record: the boolean field <tt><b style="background:#bbeeee">failed</b></tt> is <tt><b style="background:#bbeeee">true</b></tt>
+if no result exists; otherwise it is <tt><b style="background:#bbeeee">false</b></tt>, and a second field,
+called <tt><b style="background:#bbeeee">ReconstructedRat</b></tt>, contains the value reconstructed.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  moduli := [11,13,15,17,19];
+/**/  residues := [-2, -5, 0, 7, 4];
+/**/  RatReconstructWithBounds(1,10,10,residues,moduli);
+record[ReconstructedRat := 1/5, failed := false]
+
+/**/  RatReconstructWithBounds(0,10,10,residues,moduli);
+record[failed := true]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCRT.html">CRT</A>
+<li><a href="cmdRatReconstructByContFrac.html">RatReconstructByContFrac</A>
+<li><a href="cmdRatReconstructByLattice.html">RatReconstructByLattice</A>
+</ul>
+</div>
+
+</body>
+</html>

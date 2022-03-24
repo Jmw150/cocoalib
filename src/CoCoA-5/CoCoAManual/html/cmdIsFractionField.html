@@ -1,0 +1,75 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsFractionField</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsFractionField">up</a> <a href="cmdIsFiniteField.html">previous</a>  <a href="cmdIsHomog.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsFractionField<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+test whether a ring is a fraction field</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsFractionField(R: RING): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether the ring <tt><b style="background:#bbeeee">R</b></tt> is a fraction field,
+i.e. is <A HREF="cmdQQ.html">
+    <tt>QQ</tt>
+  </A> or has been constructed with <A HREF="cmdNewFractionField.html">
+    <tt>NewFractionField</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];  R;
+RingWithID(201, "QQ[x,y]")
+/**/  IsFractionField(R);
+false
+/**/  K := NewFractionField(R);  K;
+RingWithID(202, "FractionField(RingWithID(201))")
+/**/  IsFractionField(K);
+true
+/**/ BaseRing(K);
+RingWithID(201, "QQ[x,y]")
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdNewFractionField.html">NewFractionField</A>
+<li><a href="cmdBaseRing.html">BaseRing</A>
+<li><a href="cmdRingID.html">RingID</A>
+</ul>
+</div>
+
+</body>
+</html>

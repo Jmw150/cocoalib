@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LinSolve</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LinSolve">up</a> <a href="cmdLinSol[OBSOLETE].html">previous</a>  <a href="cmdLM.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LinSolve<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+find a solution to a linear system</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LinSolve(M: MAT, RHS: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function finds a solution <tt><b style="background:#bbeeee">X</b></tt> to the matrix equation <tt><b style="background:#bbeeee">M*X = RHS</b></tt>.
+If more than one solution exists, it returns just one of them.
+If no solution exists then it produces a 0-by-0 matrix.
+To find all solutions, compute the kernel of <tt><b style="background:#bbeeee">M</b></tt> using the function <A HREF="cmdLinKerBasis.html">
+    <tt>LinKerBasis</tt>
+  </A>.
+<br><br>
+NOTE: an easy way of converting a list into a column matrix (for the second
+argument) is to use the function <A HREF="cmdColMat.html">
+    <tt>ColMat</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  M := mat([[3,1,4],[1,5,9],[2,6,5]]);
+/**/  L := [123,456,789];
+/**/  LinSolve(M, ColMat(L));
+mat([
+  [199/5],
+  [742/5],
+  [-181/5]
+])
+
+/**/  M*It;
+mat([
+  [123],
+  [456],
+  [789]
+])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdColMat.html">ColMat</A>
+<li><a href="cmdLinKer.html">LinKer</A>
+<li><a href="cmdLinKerBasis.html">LinKerBasis</A>
+</ul>
+</div>
+
+</body>
+</html>

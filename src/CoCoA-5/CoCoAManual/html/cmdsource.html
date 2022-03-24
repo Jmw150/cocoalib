@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>source</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#source">up</a> <a href="cmdSortedBy.html">previous</a>  <a href="cmdSourceRegion.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>source<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+read commands from a file or device</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+source S: STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command executes all CoCoA commands in the file or device named
+S.  A typical use of <tt><b style="background:#bbeeee">source</b></tt> is to collect user-defined functions and
+variables in a text file, say, <tt><b style="background:#bbeeee">MyFile.coc</b></tt> and then execute:
+
+  <pre>
+    source "MyFile.cocoa5";
+</pre>
+
+or, equivalently, the obsolescent
+
+  <pre>
+    << "MyFile.cocoa5";
+</pre>
+
+Functions and variables read in from a file in this way will erase
+functions and variables with identical names that may already exist.
+This can be avoided by using packages.  Repeatedly used functions can be
+read into CoCoA at start-up by using <tt><b style="background:#bbeeee">source</b></tt> in the
+<tt><b style="background:#bbeeee">userinit.coc</b></tt> file.
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+<li><a href="partIntroductiontoPackages.html">Introduction to Packages</A>
+</ul>
+</div>
+
+</body>
+</html>

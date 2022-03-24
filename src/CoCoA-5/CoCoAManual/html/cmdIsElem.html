@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsElem</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsElem">up</a> <a href="cmdIsDivisible.html">previous</a>  <a href="cmdIsEmpty.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsElem<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if A is an element of B</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsElem(A: RINGELEM, B: IDEAL): BOOL
+IsElem(A: MODULEELEM, B: MODULE): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function tests whether <tt><b style="background:#bbeeee">A</b></tt> is an element of <tt><b style="background:#bbeeee">B</b></tt>.
+Same as the command <A HREF="cmdIsIn.html">
+    <tt>IsIn</tt>
+  </A>, but works on fewer types: it
+is in CoCoA-5 for compatibility with the C++ function in CoCoALib.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  IsElem(x, ideal(x+y, x-y));
+true
+
+/**/  x IsIn ideal(x+y, x-y);
+true
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIsIn.html">IsIn</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>HilbertMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#HilbertMat">up</a> <a href="cmdHilbertFn.html">previous</a>  <a href="cmdHilbertPoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>HilbertMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a Hilbert matrix over QQ</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+HilbertMat(N: INT): MAT over QQ
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the <tt><b style="background:#bbeeee">n</b></tt>-by-<tt><b style="background:#bbeeee">n</b></tt> Hilbert matrix over <tt><b style="background:#bbeeee">QQ</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  HilbertMat(3);
+matrix(QQ,
+ [[1, 1/2, 1/3],
+  [1/2, 1/3, 1/4],
+  [1/3, 1/4, 1/5]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

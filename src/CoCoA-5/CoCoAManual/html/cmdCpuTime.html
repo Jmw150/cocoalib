@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CpuTime</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CpuTime">up</a> <a href="cmdcovers.html">previous</a>  <a href="cmdCRT.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CpuTime<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Counts cpu time</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CpuTime(): RAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a RAT whose value is the user CPU usage in
+seconds since the start of the program: this is the amount of time the
+processor has dedicated to your computation, and may be rather less than
+the real elapsed time if the computer is also busy with other tasks.
+<br><br>
+The most common usage is with <A HREF="cmdTimeFrom.html">
+    <tt>TimeFrom</tt>
+  </A> as shown in the example;
+it automatically computes the time difference and returns it as decimal
+string.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ StartTime := CpuTime(); -- time in seconds since the start (a RAT)
+/**/ --
+/**/ -- .... long computation ....
+/**/ --
+/**/ PrintLn "Computation time: ", TimeFrom(StartTime);
+
+/**/ -- Alternative use: compute TimeTaken as a RAT
+/**/ StartTime := CpuTime();
+/**/ --
+/**/ -- .... long computation ....
+/**/ --
+/**/ EndTime := CpuTime();
+/**/ TimeTaken := EndTime - StartTime;  --> ugly if printed directly
+/**/ PrintLn "Computation time: ", DecimalStr(TimeTaken);
+</pre></td></tr></table>
+
+You can use <A HREF="cmdDecimalStr.html">
+    <tt>DecimalStr</tt>
+  </A> to see the value of <tt><b style="background:#bbeeee">CpuTime</b></tt> in a more easily
+comprehensible form.
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdTimeFrom.html">TimeFrom</A>
+<li><a href="cmdElapsedTime.html">ElapsedTime</A>
+<li><a href="cmdDecimalStr.html">DecimalStr</A>
+</ul>
+</div>
+
+</body>
+</html>

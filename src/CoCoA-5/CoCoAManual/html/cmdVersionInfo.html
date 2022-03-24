@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>VersionInfo</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#VersionInfo">up</a> <a href="cmdVerbosityLevel.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>VersionInfo<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+version and info about CoCoA</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+VersionInfo(): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a record with various information about CoCoA
+and CoCoALib (the mathematical core of CoCoA)
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ indent(VersionInfo(),2);
+record[
+  CoCoALibVersion := "0.99***",
+  CoCoAVersion := "5.*.*",
+  CompilationDate := ....,
+  ...
+  ExternalLibs := [...]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partCoCoALib.html">CoCoALib</A>
+<li><a href="cmdRelNotes.html">RelNotes</A>
+</ul>
+</div>
+
+</body>
+</html>

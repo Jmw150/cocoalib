@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GBasisTimeout</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GBasisTimeout">up</a> <a href="cmdGBasisByHomog.html">previous</a>  <a href="cmdGBM.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GBasisTimeout<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+compute a Groebner basis with a timeout</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GBasisTimeout(I: IDEAL, TimeLimit: INT): LIST
+GBasisTimeout(M: MODULE, TimeLimit: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Same as <A HREF="cmdGBasis.html">
+    <tt>GBasis</tt>
+  </A>, but it will stop with an error if the
+computation is not completed within the specified time limit (in seconds).
+<br><br>
+ONLY PARTIALLY IMPLEMENTED: only for ideals.  It is not yet possible to
+resume the computation; you must restart it from the beginning.
+<br><br>
+For dealing with errors see <A HREF="cmdtry.html">
+    <tt>try</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[t,x,y,z];
+/**/  I := ideal(t^3-x, t^4-y, t^5-z);
+/**/  J := I^5;
+-- /**/ G := GBasisTimeout(J, 0.1);
+--> !!! ERROR !!! as expected: Computation exceeded given time limit
+
+/**/  J := I^5;  G := GBasisTimeout(J, 10); --> OK
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGBasis.html">GBasis</A>
+<li><a href="cmdtry.html">try</A>
+</ul>
+</div>
+
+</body>
+</html>

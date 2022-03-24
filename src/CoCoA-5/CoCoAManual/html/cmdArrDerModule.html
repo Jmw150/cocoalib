@@ -1,0 +1,74 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ArrDerModule</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ArrDerModule">up</a> <a href="cmdArrDerMod[OBSOLESCENT].html">previous</a>  <a href="cmdArrExponents.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ArrDerModule<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+set of generators of the module of logarithmic derivations of an arrangement of hyperplanes</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ArrDerModule(Q: RINGELEM): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the matrix whose columns are a set of generators of the module of logarithmic derivations of an arrangement of hyperplanes described by its defining equation Q.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y];	
+/**/ A := [x, x-y, y];
+/**/ Q_A := product(A);	
+/**/ ArrDerModule(Q_A);
+matrix( /*RingWithID(70, "QQ[x,y]")*/
+ [[x, 0],
+  [y, x*y -y^2]])
+
+/**/ use QQ[x,y,z];    
+/**/ A := [x, x+z, y, 2*y-3*z];
+/**/ ArrDerModule(product(A));
+matrix( /*RingWithID(78, "QQ[x,y,z]")*/
+ [[x, 0, 0, 0],
+  [y, y^2 +(-3/2)*y*z, 0, x*y +y*z],
+  [z, 0, x*y +(-3/2)*x*z +y*z +(-3/2)*z^2, x*z +z^2]])	
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdArrExponents.html">ArrExponents</A>
+<li><a href="cmdIsArrFree.html">IsArrFree</A>
+</ul>
+</div>
+
+</body>
+</html>

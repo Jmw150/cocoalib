@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>sort</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#sort">up</a> <a href="cmdSolomonTeraoIdeal.html">previous</a>  <a href="cmdSortBy.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>sort<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+sort a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+sort(ref L: LIST)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This procedure sorts the elements of the list in <tt><b style="background:#bbeeee">L</b></tt> with respect
+to the default comparisons related to their types; it overwrites <tt><b style="background:#bbeeee">L</b></tt> and
+returns nothing.
+<br><br>
+For more on the default comparisons, see <A HREF="partRelationalOperators.html">Relational Operators</A>
+in the chapter on operators.
+For sorting with respect to your own ordering, see <A HREF="cmdSortBy.html">
+    <tt>SortBy</tt>
+  </A>, <A HREF="cmdSortedBy.html">
+    <tt>SortedBy</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L := [3,2,1];
+/**/  sort(ref L);  -- this returns nothing and modifies L
+/**/  L;
+[1, 2, 3]
+
+/**/  use R ::= QQ[x,y,z];
+/**/  L := [x,y,z];
+/**/  sort(ref L);  -- this returns nothing and modifies L
+/**/  L[1];
+z
+
+/**/  sorted([y, x, x^2]);   -- this returns the sorted list
+[y, x, x^2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partRelationalOperators.html">Relational Operators</A>
+<li><a href="cmdsorted.html">sorted</A>
+<li><a href="cmdSortBy.html">SortBy</A>
+<li><a href="cmdSortedBy.html">SortedBy</A>
+</ul>
+</div>
+
+</body>
+</html>

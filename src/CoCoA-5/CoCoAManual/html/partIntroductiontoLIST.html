@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Introduction to LIST</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c5">up</a> <span class="grayed">previous</span> <a href="partListConstructors.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.5.1 Introduction to LIST</b></font>
+</td></tr></table>
+
+A CoCoA list is a sequence of CoCoA objects between square brackets.
+See also <A HREF="partListConstructors.html">List Constructors</A>.  The objects may be of different
+types, though a well-designed algorithm will likely create lists of
+objects of a single type.
+<br><br>
+In particular, a list may contain other lists.  The empty list is <tt><b style="background:#bbeeee">[]</b></tt>.
+We use square brackets to index into a list.  If <tt><b style="background:#bbeeee">L</b></tt> is a non-empty
+list and <tt><b style="background:#bbeeee">N</b></tt> is an integer (between 1 and <tt><b style="background:#bbeeee">len(L)</b></tt>), then <tt><b style="background:#bbeeee">L[N]</b></tt> is
+the <tt><b style="background:#bbeeee">N</b></tt>-th component of <tt><b style="background:#bbeeee">L</b></tt>; indexes start from 1.
+<br><br>
+If <tt><b style="background:#bbeeee">L</b></tt> contains sublists, we can write <tt><b style="background:#bbeeee">L[N_1, N_2,...,N_s]</b></tt> as
+shorthand for <tt><b style="background:#bbeeee">L[N_1][N_2]...[N_s]</b></tt> (see the example below).
+<br><br>
+Lists are often used to build structured objects of type
+MAT, MODULEELEM, IDEAL, and MODULE.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[t,x,y,z];
+/**/  L := [34*x+y^2, "a string", [], [true, false]]; -- a list
+/**/  L[1];  -- the 1st component
+y^2 +34*x
+/**/  L[2];
+a string
+/**/  L[3];
+[ ]
+/**/  L[4];  -- The 4th component is a list, itself;
+[true, false]
+/**/  L[4][1]; -- its 1st component;
+true
+/**/  L[4,1];  -- the same.
+true
+
+/**/  [1,"a"]+[2,"b"];  -- NOTE: one may add lists if their components
+[3, "ab"]               -- are compatible (see "Algebraic Operators").
+
+/**/  L := [x^2-y, t*y^2-z^3];
+/**/  I := ideal(L);
+/**/  I;
+ideal(x^2 -y, t*y^2 -z^3)
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

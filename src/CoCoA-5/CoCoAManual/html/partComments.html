@@ -1,0 +1,43 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Comments</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c3">up</a> <a href="partReservedNames.html">previous</a> <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.3.4 Comments</b></font>
+</td></tr></table>
+
+End-of-line comments in CoCoA start with either <tt><b style="background:#bbeeee">--</b></tt> or
+<tt><b style="background:#bbeeee">//</b></tt>; all text up to the end of the line is considered comment.
+CoCoA also allows embedded comments; these begin with the symbol
+<tt><b style="background:#bbeeee">/*</b></tt> and end with the symbol <tt><b style="background:#bbeeee">*/</b></tt>.  CoCoA ignores the
+contents of a comment, and treats it as if it were just a space.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  // This is an end-of-line comment
+/**/  Print 1+1; -- a command followed by an end-of-comment
+2
+/**/  A := [1 /*x-coord*/, 2 /*y-coord*/ ]; --> embedded comments
+</pre></td></tr></table>
+<br><br>
+Writing multi-line comment inside <tt><b style="background:#bbeeee">/*</b></tt> and <tt><b style="background:#bbeeee">*/</b></tt>
+is <b>strongly</b> discouraged (even though allowed).
+
+</div>
+
+</body>
+</html>

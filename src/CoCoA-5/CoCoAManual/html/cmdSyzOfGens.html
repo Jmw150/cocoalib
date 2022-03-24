@@ -1,0 +1,80 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SyzOfGens</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SyzOfGens">up</a> <a href="cmdsyz.html">previous</a>  <span class="grayed">next</span>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SyzOfGens<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+syzygy module for a given set of generators</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SyzOfGens(M: IDEAL|MODULE): MODULE</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+If M is an ideal or submodule, this function calculates the syzygy
+module for the given set of generators of M.
+<br><br>
+If M is a quotient of a ring by an ideal I or a quotient of a free
+module by a submodule N, then this function calculates the syzygy
+module for the given set of generators of I or N, respectively.
+<br><br><tt><b style="background:#bbeeee">SyzOfGens(I)</b></tt> is the same as <tt><b style="background:#bbeeee">syz(gens(I))</b></tt>.
+<br><br>
+The coefficient ring must be a field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x, y, x+y);
+/**/  indent(SyzOfGens(I));
+SubmoduleRows(F, matrix([
+  [1, 1, -1],
+  [0, x +y, -y]
+]))
+
+/**/  R3 := NewFreeModule(R, 3);
+/**/  MGens := matrix(R,[[x,y,z], [x-y,0,z], [y^2,y^2,0]]);
+/**/  indent(SyzOfGens(SubmoduleRows(R3, MGens)));
+SubmoduleRows(F, matrix([
+  [y, -y, -1]
+]))
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdsyz.html">syz</A>
+</ul>
+</div>
+
+</body>
+</html>

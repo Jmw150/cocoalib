@@ -1,0 +1,82 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PrintBettiDiagram</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PrintBettiDiagram">up</a> <a href="cmdprinton.html">previous</a>  <a href="cmdPrintBettiMatrix.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PrintBettiDiagram<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+print the diagram of the graded Betti numbers</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PrintBettiDiagram(X: IDEAL or (quotient)RING or MODULE)
+PrintBettiDiagram(X: LIST(res) or RECORD(diagram))
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function prints the ("Macaulay-style") Betti diagram for <tt><b style="background:#bbeeee">M</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[t,x,y,z];
+/**/  I := ideal(x^2-y*t, x*y-z*t, x*y);
+/**/  RES := res(I);
+/**/  PrintRes(RES);
+0 --> R(-5)^2 --> R(-4)^4 --> R(-2)^3
+/**/  B := BettiDiagram(RES);  indent(B);
+record[
+  Diagram := matrix(ZZ,
+ [[3, 0, 0],
+  [0, 4, 2]]),
+  FirstShift := 2
+]
+/**/  PrintBettiDiagram(RES); -- same as PrintBettiDiagram(I or B)
+        0    1    2
+--------------------
+ 2:     3    -    -
+ 3:     -    4    2
+--------------------
+Tot:    3    4    2
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdBettiDiagram.html">BettiDiagram</A>
+<li><a href="cmdBettiMatrix.html">BettiMatrix</A>
+<li><a href="cmdPrintRes.html">PrintRes</A>
+<li><a href="cmdPrintBettiMatrix.html">PrintBettiMatrix</A>
+</ul>
+</div>
+
+</body>
+</html>

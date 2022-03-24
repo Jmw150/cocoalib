@@ -1,0 +1,93 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>alias</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#alias">up</a> <a href="cmdAffPoincare[OBSOLESCENT].html">previous</a>  <a href="cmdaliases.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>alias<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+define aliases for package names</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+alias B_1,...,B_r
+
+where each B_i is a <b>binding</b> of the form: Identifier := $PackageName
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function is for declaring both global and local aliases for
+package names.  Recall that package names are meant to be long in
+order to avoid conflicts between the names of functions that are read
+into a CoCoA session.  However, it is inconvenient to have to type out
+the long package name when referencing a function.  So the user
+chooses an alias to take the place of the package name; the alias is
+just a means to avoid typing.
+<br><br>
+1.  Global aliases.  To avoid typing the full package name as a prefix
+to package functions, one may declare a short global alias during a
+CoCoA session.  A list of the global aliases is produced by the
+function <A HREF="cmdaliases.html">
+    <tt>aliases</tt>
+  </A>.  For examples, see the chapter on packages in the
+manual, in particular the section, <A HREF="partGlobalAliases.html">Global Aliases</A>.  Online, enter
+<tt><b style="background:#bbeeee">?global aliases</b></tt>.
+<br><br>
+2.  Local aliases.  A local alias has the same syntax as a global
+alias, however it appears inside a package definition.  The local
+aliases work only inside the package and do not conflict with any
+global aliases already defined.  In fact, in order to avoid conflicts,
+global aliases are not recognized within a package.  For examples,
+again look in the chapter for packages.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  alias LL := $abcd;
+/**/  aliases();
+
+Coclib       = $coclib
+Approx       = $approx
+(...)
+TP           = $contrib/thmproving
+TV           = $contrib/typevectors
+LL           = $abcd
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdaliases.html">aliases</A>
+<li><a href="partIntroductiontoPackages.html">Introduction to Packages</A>
+</ul>
+</div>
+
+</body>
+</html>

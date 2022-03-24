@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsDivisible</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsDivisible">up</a> <a href="cmdIsDiagonal.html">previous</a>  <a href="cmdIsElem.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsDivisible<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if A is divisible by B</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsDivisible(A: RINGELEM, B: RINGELEM): BOOL
+IsDivisible(A: INT, B: INT): BOOL
+IsDivisible(A: RINGELEM, B: INT): BOOL
+IsDivisible(A: INT, B: RINGELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function says whether <tt><b style="background:#bbeeee">A</b></tt> is divisible by <tt><b style="background:#bbeeee">B</b></tt>; it returns <tt><b style="background:#bbeeee">true</b></tt> if so,
+otherwise <tt><b style="background:#bbeeee">false</b></tt>.  An exception is thrown if the test is in a field; to
+permit testing also field elements use <tt><b style="background:#bbeeee">IsDivisible_AllowFields</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y,z];
+/**/ IsDivisible(x, x^2*(y-1));
+false
+/**/ IsDivisible(x^2*(y-1), x);
+true
+/**/ IsDivisible(9,3);
+true
+/**/ IsDivisible(9,2);
+false
+/**/ IsDivisible(9*x,2); -- 9*x is in QQ[x], so divisible by any constant!!
+true
+/**/ use ZZ[x];
+/**/ IsDivisible(9*x,2);
+false
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdFactorMultiplicity.html">FactorMultiplicity</A>
+<li><a href="cmdIsCoprime.html">IsCoprime</A>
+</ul>
+</div>
+
+</body>
+</html>

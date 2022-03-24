@@ -1,0 +1,628 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Commands and Functions for IDEAL</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c12">up</a> <span class="grayed">previous</span> <a href="partCommandsandFunctionsreturningIDEAL.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.12.1 Commands and Functions for IDEAL</b></font>
+</td></tr></table>
+
+<CENTER>
+<TABLE BORDER=1>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAreGensMonomial.html">AreGensMonomial</A>
+  </TD><TD>
+checks if given gens are monomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAreGensSqFreeMonomial.html">AreGensSqFreeMonomial</A>
+  </TD><TD>
+checks if given gens are squarefree monomial
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBBasis5.html">BBasis5</A>
+  </TD><TD>
+Border Basis of zero dimensional ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBettiDiagram.html">BettiDiagram</A>
+  </TD><TD>
+the diagram of the graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBettiMatrix.html">BettiMatrix</A>
+  </TD><TD>
+the matrix of the graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBettiNumbers.html">BettiNumbers</A>
+  </TD><TD>
+(Multi-)graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCallOnGroebnerFanIdeals.html">CallOnGroebnerFanIdeals</A>
+  </TD><TD>
+apply a function to Groebner fan ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdcolon.html">colon</A>
+  </TD><TD>
+ideal or module quotient
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdComputeElimFirst.html">ComputeElimFirst</A>
+  </TD><TD>
+ComputeElimFirst
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdDenSigma.html">DenSigma</A>
+  </TD><TD>
+den of ideal, wrt to ordering sigma
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddepth.html">depth</A>
+  </TD><TD>
+Depth of a module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdelim.html">elim</A>
+  </TD><TD>
+eliminate variables
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdEquiIsoDec.html">EquiIsoDec</A>
+  </TD><TD>
+equidimensional isoradical decomposition
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbAlexanderDual.html">FrbAlexanderDual</A>
+  </TD><TD>
+Alexander Dual of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbAssociatedPrimes.html">FrbAssociatedPrimes</A>
+  </TD><TD>
+Associated primes of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbIrreducibleDecomposition.html">FrbIrreducibleDecomposition</A>
+  </TD><TD>
+Irreducible decomposition of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbMaximalStandardMonomials.html">FrbMaximalStandardMonomials</A>
+  </TD><TD>
+Maximal standard monomials of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrbPrimaryDecomposition.html">FrbPrimaryDecomposition</A>
+  </TD><TD>
+Primary decomposition of monomial ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrobeniusMat.html">FrobeniusMat</A>
+  </TD><TD>
+matrix of the Frobenius Map
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGBasis.html">GBasis</A>
+  </TD><TD>
+calculate a Groebner basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGBasisByHomog.html">GBasisByHomog</A>
+  </TD><TD>
+calculate a Groebner basis by homogenization
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGBasisTimeout.html">GBasisTimeout</A>
+  </TD><TD>
+compute a Groebner basis with a timeout
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGenRepr.html">GenRepr</A>
+  </TD><TD>
+representation in terms of generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdgens.html">gens</A>
+  </TD><TD>
+list of generators of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdgin.html">gin</A>
+  </TD><TD>
+generic initial ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGroebnerFanIdeals.html">GroebnerFanIdeals</A>
+  </TD><TD>
+all reduced Groebner bases of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGroebnerFanReducedGBases.html">GroebnerFanReducedGBases</A>
+  </TD><TD>
+Groebner fan reduced GBases
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHasGBasis.html">HasGBasis</A>
+  </TD><TD>
+checks if the argument has a pre-computed GBasis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHColon.html">HColon</A>
+  </TD><TD>
+ideal or module quotient
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertFn.html">HilbertFn</A>
+  </TD><TD>
+the Hilbert function
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertSeries.html">HilbertSeries</A>
+  </TD><TD>
+the Hilbert-Poincare series
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdhomog.html">homog</A>
+  </TD><TD>
+homogenize wrt an indeterminate
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHSaturation.html">HSaturation</A>
+  </TD><TD>
+saturation of ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIdealOfGBasis.html">IdealOfGBasis</A>
+  </TD><TD>
+ideal generated by GBasis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIdealOfMinGens.html">IdealOfMinGens</A>
+  </TD><TD>
+ideal generated by minimal generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdindent.html">indent</A>
+  </TD><TD>
+prints in a more readable way
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdInitialIdeal.html">InitialIdeal</A>
+  </TD><TD>
+Initial ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdintersection.html">intersection</A>
+  </TD><TD>
+intersect lists, ideals, or modules
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIntersectionList.html">IntersectionList</A>
+  </TD><TD>
+intersect lists, ideals, or modules
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdInverseSystem.html">InverseSystem</A>
+  </TD><TD>
+Inverse system of an ideal of derivations
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsContained.html">IsContained</A>
+  </TD><TD>
+checks if A is Contained in B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsElem.html">IsElem</A>
+  </TD><TD>
+checks if A is an element of B
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsHomog.html">IsHomog</A>
+  </TD><TD>
+test whether given polynomials are homogeneous
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsIn.html">IsIn</A>
+  </TD><TD>
+check if one object is contained in another
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsInRadical.html">IsInRadical</A>
+  </TD><TD>
+check if a polynomial (or ideal) is in a radical
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsLexSegment.html">IsLexSegment</A>
+  </TD><TD>
+checks if an ideal is lex-segment
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsMaximal.html">IsMaximal</A>
+  </TD><TD>
+maximality test
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsOne.html">IsOne</A>
+  </TD><TD>
+test whether an object is one
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPrimary.html">IsPrimary</A>
+  </TD><TD>
+primary test
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsRadical.html">IsRadical</A>
+  </TD><TD>
+check if an IDEAL is radical
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsSigmaGoodPrime.html">IsSigmaGoodPrime</A>
+  </TD><TD>
+check if INT is good prime for IDEAL 
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsStable.html">IsStable</A>
+  </TD><TD>
+checks if an ideal is stable
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsStronglyStable.html">IsStronglyStable</A>
+  </TD><TD>
+checks if an ideal is strongly stable
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZero.html">IsZero</A>
+  </TD><TD>
+test whether an object is zero
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZeroDim.html">IsZeroDim</A>
+  </TD><TD>
+test whether an ideal is zero-dimensional
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdJanetBasis.html">JanetBasis</A>
+  </TD><TD>
+the Janet basis of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLexSegmentIdeal.html">LexSegmentIdeal</A>
+  </TD><TD>
+lex-segment ideal containing L, or with the same HilbertFn as I
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLF.html">LF</A>
+  </TD><TD>
+the leading form of a polynomial or an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLT.html">LT</A>
+  </TD><TD>
+the leading term of an object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMayerVietorisTreeN1.html">MayerVietorisTreeN1</A>
+  </TD><TD>
+N-1st Betti multidegrees of monomial ideals using Mayer-Vietoris trees
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinGens.html">MinGens</A>
+  </TD><TD>
+list of minimal generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinPolyQuot.html">MinPolyQuot</A>
+  </TD><TD>
+minimal polynomial in quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinPowerInIdeal.html">MinPowerInIdeal</A>
+  </TD><TD>
+the mininum power of a polynomial is an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinSubsetOfGens.html">MinSubsetOfGens</A>
+  </TD><TD>
+list of minimal generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMonsInIdeal.html">MonsInIdeal</A>
+  </TD><TD>
+ideal generated by the monomials in an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMultiplicationMat.html">MultiplicationMat</A>
+  </TD><TD>
+multiplication matrix of a ringelem
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewQuotientRing.html">NewQuotientRing</A>
+  </TD><TD>
+create a new quotient ring
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNF.html">NF</A>
+  </TD><TD>
+normal form
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumGens.html">NumGens</A>
+  </TD><TD>
+number of generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+  </TD><TD>
+Special characters equivalent to commands
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrimaryDecomposition.html">PrimaryDecomposition</A>
+  </TD><TD>
+primary decomposition of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrimaryDecompositionGTZ0.html">PrimaryDecompositionGTZ0</A>
+  </TD><TD>
+primary decomposition of a 0-dimensional ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrimaryHilbertSeries.html">PrimaryHilbertSeries</A>
+  </TD><TD>
+primary
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrintBettiDiagram.html">PrintBettiDiagram</A>
+  </TD><TD>
+print the diagram of the graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrintBettiMatrix.html">PrintBettiMatrix</A>
+  </TD><TD>
+print the matrix of the graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrintBettiNumbers.html">PrintBettiNumbers</A>
+  </TD><TD>
+print the (multi-)graded Betti numbers
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPrintSectionalMatrix.html">PrintSectionalMatrix</A>
+  </TD><TD>
+print sectional matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdproduct.html">product</A>
+  </TD><TD>
+the product of the elements of a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQuotientBasis.html">QuotientBasis</A>
+  </TD><TD>
+vector space basis for zero-dimensional quotient rings
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQuotientBasisSorted.html">QuotientBasisSorted</A>
+  </TD><TD>
+vector space basis for zero-dimensional quotient rings
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdQZP.html">QZP</A>
+  </TD><TD>
+change field for polynomials and ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdradical.html">radical</A>
+  </TD><TD>
+radical of an ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRadicalOfUnmixed.html">RadicalOfUnmixed</A>
+  </TD><TD>
+radical of an unmixed ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdReducedGBasis.html">ReducedGBasis</A>
+  </TD><TD>
+reduced Groebner basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdreg.html">reg</A>
+  </TD><TD>
+Castelnuovo-Mumford regularity of a module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdres.html">res</A>
+  </TD><TD>
+free resolution
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdrgin.html">rgin</A>
+  </TD><TD>
+generic initial ideal wrt StdDegRevLex
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingOf.html">RingOf</A>
+  </TD><TD>
+the ring of the object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingsOf.html">RingsOf</A>
+  </TD><TD>
+list of the rings of an object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsaturate.html">saturate</A>
+  </TD><TD>
+saturation of ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSectionalMatrix.html">SectionalMatrix</A>
+  </TD><TD>
+sectional matrix 
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdStdBasis.html">StdBasis</A>
+  </TD><TD>
+Standard basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsum.html">sum</A>
+  </TD><TD>
+the sum of the elements of a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsyz.html">syz</A>
+  </TD><TD>
+syzygy modules
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSyzOfGens.html">SyzOfGens</A>
+  </TD><TD>
+syzygy module for a given set of generators
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdTgCone.html">TgCone</A>
+  </TD><TD>
+tangent cone
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdThmProve[PROTOTYPE].html">ThmProve [PROTOTYPE]</A>
+  </TD><TD>
+[PROTOTYPE] ThmProve
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdtoric.html">toric</A>
+  </TD><TD>
+saturate toric ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdUniversalGBasis.html">UniversalGBasis</A>
+  </TD><TD>
+universal Groebner basis of the input ideal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdZPQ.html">ZPQ</A>
+  </TD><TD>
+change field for polynomials and ideals
+  </TD></TR>
+
+</TABLE>
+</CENTER>
+<BR><BR>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>EmbeddingHom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#EmbeddingHom">up</a> <a href="cmdElimMat.html">previous</a>  <a href="cmdEqSet.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>EmbeddingHom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+returns the embedding homomorphism of a fraction field</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+EmbeddingHom(K: RING): RINGHOM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the embedding homomorphism of the
+fraction field <tt><b style="background:#bbeeee">K</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y];
+/**/  K := NewFractionField(P);
+/**/  phi := EmbeddingHom(K);  -- phi: P -> K
+/**/  f := 2*x+3*y;
+/**/  phi(f);
+2*x +3*y
+/**/  RingOf(phi(f));
+RingWithID(5, "FractionField(RingWithID(4))")
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCanonicalHom.html">CanonicalHom</A>
+</ul>
+</div>
+
+</body>
+</html>

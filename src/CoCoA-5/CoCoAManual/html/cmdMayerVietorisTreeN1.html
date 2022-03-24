@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MayerVietorisTreeN1</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MayerVietorisTreeN1">up</a> <a href="cmdMaxChains.html">previous</a>  <a href="cmdmin.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MayerVietorisTreeN1<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+N-1st Betti multidegrees of monomial ideals using Mayer-Vietoris trees</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MayerVietorisTreeN1(I: IDEAL): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Implemented in CoCoALib by Eduardo Saenz-de-Cabezon.
+<br><br>
+This function returns the list of multidegrees <tt><b style="background:#bbeeee">M</b></tt> such that the N-1st
+Betti number of a monomial ideal <tt><b style="background:#bbeeee">I</b></tt> at multidegree <tt><b style="background:#bbeeee">M</b></tt> is not zero.
+It is computed via a version of its Mayer-Vietoris tree.
+<br><br>
+The length of this list is the number of irreducible components of I,
+the number of maximal standard monomials, and the number of generators
+of its Alexander Dual.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  I := ideal(x, y, z)^2;
+/**/  MayerVietorisTreeN1(I);
+[x^2*y*z, x*y^2*z, x*y*z^2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partFrobby.html">Frobby</A>
+</ul>
+</div>
+
+</body>
+</html>

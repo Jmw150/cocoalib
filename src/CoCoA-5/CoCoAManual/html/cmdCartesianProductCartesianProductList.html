@@ -1,0 +1,84 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CartesianProduct, CartesianProductList</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CartesianProduct, CartesianProductList">up</a> <a href="cmdCanonicalRepr.html">previous</a>  <a href="cmdCast[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CartesianProduct, CartesianProductList<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Cartesian product of lists</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CartesianProduct(L1: LIST, L2: LIST, L3: LIST, ..): LIST
+CartesianProductList(L: LIST of LIST): LIST
+L1 >< L2
+L1 >< L2 >< ... >< Ln
+
+where each Li is a LIST
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This command returns the list whose elements form the Cartesian product
+of <font color=#0000aa>L_1,...,L_n</font>.
+<br><br>
+For the N-fold product of a list with itself, one may use <A HREF="cmdtuples.html">
+    <tt>tuples</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  L1 := [1,2,3];
+/**/  L2 := ["a","b"];
+/**/  L1 >< L2 >< [5];  -- same as
+/**/  CartesianProduct(L1, L2, [5]);  -- same as
+/**/  CartesianProductList([L1, L2, [5]]);  -- this takes a list of lists
+[[1, "a", 5], [1, "b", 5], [2, "a", 5], [2, "b", 5], [3, "a", 5], [3, "b", 5]]
+-------------------------------
+/**/  ChessBoard := (1..8)><(1..8);  -- Need brackets around 1..8 otherwise
+                                           -- we get a parse error.
+</pre></td></tr></table>
+
+Be careful: in CoCoA the operator <tt><b style="background:#bbeeee">><</b></tt> denotes cartesian product,
+whereas the operator <tt><b style="background:#bbeeee"><></b></tt> is used for <b>not equal</b>.
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partCoCoAOperatorsintroduction.html">CoCoA Operators: introduction</A>
+<li><a href="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+<li><a href="cmdtuples.html">tuples</A>
+<li><a href="cmdEqualityOperator.html">Equality Operator</A>
+</ul>
+</div>
+
+</body>
+</html>

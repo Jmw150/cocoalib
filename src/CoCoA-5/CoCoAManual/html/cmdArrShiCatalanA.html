@@ -1,0 +1,61 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ArrShiCatalanA</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ArrShiCatalanA">up</a> <a href="cmdArrShiB.html">previous</a>  <a href="cmdArrShiCatalanB.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ArrShiCatalanA<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Shi-Catalan arrangement of type A with multiplicities</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ArrShiCatalanA(S: RING, k: INT, L: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function constructs the Shi-Catalan arrangement of type A in the first k variables of the polynomial ring S with multiplicities L[1] and L[2].
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use S::=QQ[x,y,z];	
+/**/ L:=[-1,2];
+/**/ ArrShiCatalanA(S, 3, L);
+[x -y,  x -z,  y -z,  x -y -1,  x -z -1,  y -z -1,  x -y +1,  x -y +2,  x -z +1,  x -z +2,  y -z +1,  y -z +2]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+</ul>
+</div>
+
+</body>
+</html>

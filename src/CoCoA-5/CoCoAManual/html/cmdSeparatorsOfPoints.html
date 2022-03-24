@@ -1,0 +1,117 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SeparatorsOfPoints</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SeparatorsOfPoints">up</a> <a href="cmdseed[OBSOLETE].html">previous</a>  <a href="cmdSeparatorsOfProjectivePoints.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SeparatorsOfPoints<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+separators for affine points</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SeparatorsOfPoints(Points: LIST): LIST
+
+where Points is a list of lists of coefficients representing a set of
+<b>distinct</b> points in affine space.
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+***** NOT YET IMPLEMENTED *****
+<br><br>
+This function computes separators for the points: that is, for each
+point a polynomial is determined whose value is 1 at that point and 0
+at all the others.  The separators yielded are reduced with respect to
+the reduced Groebner basis which would be found by <A HREF="cmdIdealOfPoints.html">
+    <tt>IdealOfPoints</tt>
+  </A>.
+<br><br>
+NOTE:
+<br><br>
+ * the current ring must have at least as many indeterminates as the
+   dimension of the space in which the points lie;
+<br><br>
+ * the base field for the space in which the points lie is taken to be
+   the coefficient ring, which should be a field;
+<br><br>
+ * in the polynomials returned the first coordinate in the space is
+   taken to correspond to the first indeterminate, the second to the
+   second, and so on;
+<br><br>
+ * the separators are in the same order as the points (i.e. the first
+   separator is the one corresponding the first point, and so on);
+<br><br>
+ * if the number of points is large, say 100 or more, the returned
+   value can be very large.  To avoid possible problems when printing
+   such values as a single item we recommend printing out the elements
+   one at a time as in this example:
+
+  <pre>
+     S := SeparatorsOfPoints(Pts);
+     foreach sep in S do
+       println sep;
+     endforeach;
+</pre>
+
+For separators of points in projective space, see
+<A HREF="cmdSeparatorsOfProjectivePoints.html">
+    <tt>SeparatorsOfProjectivePoints</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+***** NOT YET IMPLEMENTED *****
+  use R ::= QQ[x,y];
+  Points := [[1, 2], [3, 4], [5, 6]];
+  S := SeparatorsOfPoints(Points);  -- compute the separators
+  S;
+[1/8y^2 - 5/4y + 3, -1/4y^2 + 2y - 3, 1/8y^2 - 3/4y + 1]
+-------------------------------
+  [[Eval(F, P) | P in Points] | F in S];  -- verify separators
+[[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+-------------------------------
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGenericPoints.html">GenericPoints</A>
+<li><a href="cmdIdealAndSeparatorsOfPoints.html">IdealAndSeparatorsOfPoints</A>
+<li><a href="cmdIdealAndSeparatorsOfProjectivePoints.html">IdealAndSeparatorsOfProjectivePoints</A>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdIdealOfProjectivePoints.html">IdealOfProjectivePoints</A>
+<li><a href="cmdInterpolate.html">Interpolate</A>
+<li><a href="cmdSeparatorsOfProjectivePoints.html">SeparatorsOfProjectivePoints</A>
+</ul>
+</div>
+
+</body>
+</html>

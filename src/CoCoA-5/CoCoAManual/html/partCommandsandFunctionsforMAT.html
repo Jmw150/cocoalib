@@ -1,0 +1,544 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Commands and Functions for MAT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c13">up</a> <a href="partIntroductiontoMAT.html">previous</a> <a href="partCommandsandFunctionsreturningMAT.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.13.2 Commands and Functions for MAT</b></font>
+</td></tr></table>
+
+<CENTER>
+<TABLE BORDER=1>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdadj.html">adj</A>
+  </TD><TD>
+classical adjoint matrix (also known as adjugate)
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdAlmostQR.html">AlmostQR</A>
+  </TD><TD>
+QR decomposition of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdApproxPointsNBM.html">ApproxPointsNBM</A>
+  </TD><TD>
+Numerical Border Basis of ideal of points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBlockMat.html">BlockMat</A>
+  </TD><TD>
+create a block matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdBlockMat2x2.html">BlockMat2x2</A>
+  </TD><TD>
+create a block matrix with 4 matrices
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdCharPoly.html">CharPoly</A>
+  </TD><TD>
+characteristic polynomial of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdConcatAntiDiag.html">ConcatAntiDiag</A>
+  </TD><TD>
+create a simple block matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdConcatDiag.html">ConcatDiag</A>
+  </TD><TD>
+create a simple block matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdConcatHor.html">ConcatHor</A>
+  </TD><TD>
+create a simple block matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdConcatHorList.html">ConcatHorList</A>
+  </TD><TD>
+create a simple block matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdConcatVer.html">ConcatVer</A>
+  </TD><TD>
+create a simple block matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdConcatVerList.html">ConcatVerList</A>
+  </TD><TD>
+create a simple block matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmddet.html">det</A>
+  </TD><TD>
+the determinant of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdeigenfactors.html">eigenfactors</A>
+  </TD><TD>
+eigenfactors of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdeigenvectors.html">eigenvectors</A>
+  </TD><TD>
+eigenvalues and eigenvectors of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdElimHomogMat.html">ElimHomogMat</A>
+  </TD><TD>
+matrix for elimination ordering
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdElimMat.html">ElimMat</A>
+  </TD><TD>
+matrix for elimination ordering
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdeval.html">eval</A>
+  </TD><TD>
+substitute numbers or polynomials for indeterminates
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFGLM5.html">FGLM5</A>
+  </TD><TD>
+perform a FGLM Groebner Basis conversion
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdFrobeniusNormSq.html">FrobeniusNormSq</A>
+  </TD><TD>
+Frobenius norm of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGetCol.html">GetCol</A>
+  </TD><TD>
+convert a column of a matrix into a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGetCols.html">GetCols</A>
+  </TD><TD>
+convert a matrix into a list of lists
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGetRow.html">GetRow</A>
+  </TD><TD>
+convert a row of a matrix into a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGetRows.html">GetRows</A>
+  </TD><TD>
+convert a matrix into a list of lists
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanContainsPositiveVector.html">GFanContainsPositiveVector</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGeneratorsOfLinealitySpace.html">GFanGeneratorsOfLinealitySpace</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGeneratorsOfSpan.html">GFanGeneratorsOfSpan</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetAmbientDimension.html">GFanGetAmbientDimension</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetCodimension.html">GFanGetCodimension</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetDimension.html">GFanGetDimension</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetDimensionOfLinealitySpace.html">GFanGetDimensionOfLinealitySpace</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetFacets.html">GFanGetFacets</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetImpliedEquations.html">GFanGetImpliedEquations</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanGetUniquePoint.html">GFanGetUniquePoint</A>
+  </TD><TD>
+...
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGFanRelativeInteriorPoint.html">GFanRelativeInteriorPoint</A>
+  </TD><TD>
+relative interior point of a cone
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdGraverBasis.html">GraverBasis</A>
+  </TD><TD>
+Graver basis
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHadamardBoundSq.html">HadamardBoundSq</A>
+  </TD><TD>
+Hadamard bound for determinant
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertBasisKer.html">HilbertBasisKer</A>
+  </TD><TD>
+Hilbert basis for a monoid
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdHilbertSeriesMultiDeg.html">HilbertSeriesMultiDeg</A>
+  </TD><TD>
+the Hilbert-Poincare series wrt a multigrading
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIdealOfPoints.html">IdealOfPoints</A>
+  </TD><TD>
+ideal of a set of affine points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIdealOfProjectivePoints.html">IdealOfProjectivePoints</A>
+  </TD><TD>
+ideal of a set of projective points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdinverse.html">inverse</A>
+  </TD><TD>
+multiplicative inverse of matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsAntiSymmetric.html">IsAntiSymmetric</A>
+  </TD><TD>
+checks if a matrix is anti-symmetric
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsDiagonal.html">IsDiagonal</A>
+  </TD><TD>
+checks if a matrix is diagonal
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsPositiveGrading.html">IsPositiveGrading</A>
+  </TD><TD>
+check if a matrix defines a positive grading
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsSymmetric.html">IsSymmetric</A>
+  </TD><TD>
+checks if a matrix is symmetric
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsTermOrdering.html">IsTermOrdering</A>
+  </TD><TD>
+check if a matrix defines a term-ordering
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZero.html">IsZero</A>
+  </TD><TD>
+test whether an object is zero
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZeroColIsZeroRow.html">IsZeroCol, IsZeroRow</A>
+  </TD><TD>
+test whether a column(row) is zero
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdIsZeroDet.html">IsZeroDet</A>
+  </TD><TD>
+test whether determinant is zero
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLinKer.html">LinKer</A>
+  </TD><TD>
+find the kernel of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLinKerBasis.html">LinKerBasis</A>
+  </TD><TD>
+find the kernel of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLinKerZZ.html">LinKerZZ</A>
+  </TD><TD>
+find the kernel of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdLinSolve.html">LinSolve</A>
+  </TD><TD>
+find a solution to a linear system
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMakeTermOrdMat.html">MakeTermOrdMat</A>
+  </TD><TD>
+Make a term order matrix from a given matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdmatrix.html">matrix</A>
+  </TD><TD>
+convert a list into a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdminors.html">minors</A>
+  </TD><TD>
+list of minor determinants of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdMinPoly.html">MinPoly</A>
+  </TD><TD>
+minimal polynomial of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewFreeModule.html">NewFreeModule</A>
+  </TD><TD>
+create a new FreeModule
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNewPolyRing.html">NewPolyRing</A>
+  </TD><TD>
+create a new PolyRing
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzDiagInvariants.html">NmzDiagInvariants</A>
+  </TD><TD>
+ring of invariants of a diagonalizable group action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzFiniteDiagInvariants.html">NmzFiniteDiagInvariants</A>
+  </TD><TD>
+ring of invariants of a finite group action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzHilbertBasis.html">NmzHilbertBasis</A>
+  </TD><TD>
+Hilbert Basis of a monoid
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzHilbertBasisKer.html">NmzHilbertBasisKer</A>
+  </TD><TD>
+Hilbert basis for a monoid
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzIntersectionValRings.html">NmzIntersectionValRings</A>
+  </TD><TD>
+intersection of ring of valuations
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNmzTorusInvariants.html">NmzTorusInvariants</A>
+  </TD><TD>
+ring of invariants of torus action
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumCols.html">NumCols</A>
+  </TD><TD>
+number of columns in a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdNumRows.html">NumRows</A>
+  </TD><TD>
+number of rows in a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdoperatorsshortcuts.html">operators, shortcuts</A>
+  </TD><TD>
+Special characters equivalent to commands
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdpfaffian.html">pfaffian</A>
+  </TD><TD>
+the Pfaffian of a skew-symmetric matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdpower.html">power</A>
+  </TD><TD>
+compute a power
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdPreprocessPts.html">PreprocessPts</A>
+  </TD><TD>
+Reduce redundancy in a set of approximate points
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdproduct.html">product</A>
+  </TD><TD>
+the product of the elements of a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingOf.html">RingOf</A>
+  </TD><TD>
+the ring of the object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdRingsOf.html">RingsOf</A>
+  </TD><TD>
+list of the rings of an object
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdrk.html">rk</A>
+  </TD><TD>
+rank of a matrix or module
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdrref.html">rref</A>
+  </TD><TD>
+reduced row echelon form of a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSetCol.html">SetCol</A>
+  </TD><TD>
+set a list as a column into a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSetEntry.html">SetEntry</A>
+  </TD><TD>
+set an entry into a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSetRow.html">SetRow</A>
+  </TD><TD>
+set a list as a row into a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsubmat.html">submat</A>
+  </TD><TD>
+submatrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdsum.html">sum</A>
+  </TD><TD>
+the sum of the elements of a list
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSwapCols.html">SwapCols</A>
+  </TD><TD>
+swap two columns in a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdSwapRows.html">SwapRows</A>
+  </TD><TD>
+swap two rows in a matrix
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdtoric.html">toric</A>
+  </TD><TD>
+saturate toric ideals
+  </TD></TR>
+
+  <TR bgcolor=#ffffff><TD>
+<A HREF="cmdtransposed.html">transposed</A>
+  </TD><TD>
+the transposition of a matrix
+  </TD></TR>
+
+</TABLE>
+</CENTER>
+<BR><BR>
+
+</div>
+
+</body>
+</html>

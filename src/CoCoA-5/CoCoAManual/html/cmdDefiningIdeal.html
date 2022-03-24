@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>DefiningIdeal</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#DefiningIdeal">up</a> <a href="cmddefine.html">previous</a>  <a href="cmddeg.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>DefiningIdeal<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+defining ideal of a quotient ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+DefiningIdeal(S: RING): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+When <tt><b style="background:#bbeeee">S</b></tt> is a quotient ring, say <tt><b style="background:#bbeeee">S = R/I</b></tt>, this function returns
+<tt><b style="background:#bbeeee">I</b></tt>, the ideal which defines <tt><b style="background:#bbeeee">S</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  S := R/ideal(x);
+/**/  DefiningIdeal(S);
+ideal(x)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdCanonicalRepr.html">CanonicalRepr</A>
+<li><a href="cmdInducedHom.html">InducedHom</A>
+<li><a href="cmdNewQuotientRing.html">NewQuotientRing</A>
+<li><a href="cmdBaseRing.html">BaseRing</A>
+</ul>
+</div>
+
+</body>
+</html>

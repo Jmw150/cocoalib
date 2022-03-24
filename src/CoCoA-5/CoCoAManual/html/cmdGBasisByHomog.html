@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GBasisByHomog</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GBasisByHomog">up</a> <a href="cmdGBasis.html">previous</a>  <a href="cmdGBasisTimeout.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GBasisByHomog<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+calculate a Groebner basis by homogenization</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GBasisByHomog(I: IDEAL): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Same as <A HREF="cmdGBasis.html">
+    <tt>GBasis</tt>
+  </A>, but it is computed by homogenizing the
+input generators, and then dehomogenizing the output.
+<br><br>
+Currently only for <tt><b style="background:#bbeeee">StdDegRevLex</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  I := ideal(x^4-x^2, x^3-y);
+/**/  GBasisByHomog(I);
+[-x^2 +x*y, -x*y +y^2, y^3 -y]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdGBasis.html">GBasis</A>
+</ul>
+</div>
+
+</body>
+</html>

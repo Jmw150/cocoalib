@@ -1,0 +1,47 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Quotient Rings</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c9">up</a> <a href="partModuleOrderings.html">previous</a> <a href="partCommandsandFunctionsforRING.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.9.7 Quotient Rings</b></font>
+</td></tr></table>
+
+If <tt><b style="background:#bbeeee">R</b></tt> is a ring and <tt><b style="background:#bbeeee">I</b></tt> is an ideal (in <tt><b style="background:#bbeeee">R</b></tt>)
+then <tt><b style="background:#bbeeee">R/I</b></tt> creates the corresponding quotient ring.  There is
+a convenient shorthand for quotients of <tt><b style="background:#bbeeee">ZZ</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use ZZ/(11)[x];
+/**/  (x+3)^11;
+x^11 + 3
+/**/  use R ::= QQ[x,y];
+/**/  I := ideal(x^3+y^3, x^2*y-y^2*x);
+/**/  Q := R/I;
+/**/  HilbertFn(Q);  -- the Hilbert function for Q
+H(0) = 1
+H(1) = 2
+H(2) = 3
+H(3) = 2
+H(4) = 1
+H(t) = 0   for t >= 5
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

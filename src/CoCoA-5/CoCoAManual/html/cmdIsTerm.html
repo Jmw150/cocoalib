@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IsTerm</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IsTerm">up</a> <a href="cmdIsSymmetric.html">previous</a>  <a href="cmdIsTermOrdering.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IsTerm<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+checks if the argument is a term</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IsTerm(X: RINGELEM|MODULEELEM): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+The function determines whether X is a term.  For a polynomial, a
+<b>term</b> is a power-product, namely, a product of indeterminates.
+Thus, <font color=#0000aa>x*y^2*z</font> is a term, while <font color=#0000aa>4*x*y^2*z</font> and <font color=#0000aa>x*y+z^3</font> are not.
+For a vector, a term is a power-product times a standard basis vector, for
+instance <font color=#0000aa>(0, x*y^2*z, 0)</font>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  IsTerm(x+y^2);
+false
+
+/**/  IsTerm(x^3*y*z^2);
+true
+
+/**/  IsTerm(5*x^3*y*z^2);
+false
+
+/**/  R2 := NewFreeModule(R,2);
+--/**/  IsTerm(ModuleElem(R2, [0,x*z])); --***WORK IN PROGRESS***
+--true
+
+--/**/  IsTerm(ModuleElem(R2, [x,y])); --***WORK IN PROGRESS***
+--false
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

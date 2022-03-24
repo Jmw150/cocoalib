@@ -1,0 +1,66 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Tutorial: printing</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c1">up</a> <a href="partTutorialarithmeticoperators.html">previous</a> <a href="partTutoriallists.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.1.6 Tutorial: printing</b></font>
+</td></tr></table>
+
+The way CoCoA-5 can show us the results of its computation is by
+(so-called) <i>printing</i> them on the screen.
+<br><br>
+At top level, if you type in an expression for a computation,
+CoCoA-5 will evaluate the expression, and then automatically print
+out the answer.  This is convenient for interactive use.
+<br><br>
+Inside a function definition you must use explicitly a printing
+command: the two fundamental printing commands are <tt><b style="background:#bbeeee">println</b></tt>
+and <tt><b style="background:#bbeeee">print</b></tt>.  The only difference between them is that the
+first command also prints out a <i>newline</i> at the end; this is
+usually what is desired.
+<br><br>
+The procedure <tt><b style="background:#bbeeee">indent</b></tt> is useful for printing out long
+lists of values: it prints a newline after each list entry
+(whereas <tt><b style="background:#bbeeee">print</b></tt> and <tt><b style="background:#bbeeee">println</b></tt> will print all entries
+on the same line).
+<br><br>
+To help comprehend the true size of large integers or rationals
+there is the function <tt><b style="background:#bbeeee">FloatStr</b></tt> which prints out the
+value using an easy-to-understand floating-point format.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ 1+2; // an expression at top level
+3
+/**/ println 1; println 2;
+1
+2
+/**/ print 1; print 2;
+12
+/**/ println [11,22];
+[11, 22]
+/**/ indent([11,22]);
+[
+  11,
+  22
+]
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

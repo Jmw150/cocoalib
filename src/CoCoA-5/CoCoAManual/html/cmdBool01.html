@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>Bool01</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#Bool01">up</a> <a href="cmdBlockMat2x2.html">previous</a>  <a href="cmdbreak.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>Bool01<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Convert a boolean to an integer</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+Bool01(B: BOOL): INT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function converts a boolean to an integer using the convention:
+<tt><b style="background:#bbeeee">false</b></tt> becomes 0, and <tt><b style="background:#bbeeee">true</b></tt> becomes 1.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Id4 := matrix([[Bool01(i=j) | i in 1..4] | j in 1..4]);
+/**/  Id4;
+matrix(QQ,
+ [[1, 0, 0, 0],
+  [0, 1, 0, 0],
+  [0, 0, 1, 0],
+  [0, 0, 0, 1]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

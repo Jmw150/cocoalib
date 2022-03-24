@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>NewRingTwinFloat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#NewRingTwinFloat">up</a> <a href="cmdNewRingFp[OBSOLESCENT].html">previous</a>  <a href="cmdNewWeylAlgebra.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>NewRingTwinFloat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+create a new twin-float ring</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+NewRingTwinFloat(Prec: INT): RING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Create a new twin-float ring with bit precision <tt><b style="background:#bbeeee">Prec</b></tt>.
+<br><br>
+NOTE: calling twice <tt><b style="background:#bbeeee">NewRingTwinFloat</b></tt> will produce two different
+rings, even with identical arguments, since the equality test for
+rings is performed on the pointers: see manual entry for <A HREF="cmdRingID.html">
+    <tt>RingID</tt>
+  </A>.
+<br><br>
+For more information see the article:
+John Abbott, "Twin-float arithmetic",
+Journal of Symbolic Computation, Volume 47 (2012), 536--551.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  RR32 := NewRingTwinFloat(32);
+/**/  use RR32[x];
+/**/  (3*x-1)/3;
+x -0.3333333333333333333
+
+/**/  RR64 := NewRingTwinFloat(64);
+/**/ use RR64[x];
+/**/  (3*x-1)/3;
+x -0.333333333333333333333333333333333333333
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdAsRAT.html">AsRAT</A>
+<li><a href="cmdRingID.html">RingID</A>
+</ul>
+</div>
+
+</body>
+</html>

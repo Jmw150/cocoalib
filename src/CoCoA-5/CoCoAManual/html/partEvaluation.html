@@ -1,0 +1,60 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Evaluation</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p1c5">up</a> <span class="grayed">previous</span> <a href="partAssignment.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>1.5.1 Evaluation</b></font>
+</td></tr></table>
+
+An expression is by itself a valid command. The effect of this
+command is that the expression is evaluated in the current ring and
+its value is displayed.
+<br><br>
+The evaluation of an expression in CoCoA is normally performed in a
+full recursive evaluation mode.
+Usually the result is the fully evaluated expression.
+<br><br>
+The result of the evaluation is automatically stored in the variable
+<A HREF="cmdIt.html">
+    <tt>It</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  2 + 2;
+4
+/**/  It + 3;
+7
+/**/  It;
+7
+/**/  X := 5;
+/**/  It;
+7
+</pre></td></tr></table>
+
+The command <tt><b style="background:#bbeeee">X := 5</b></tt> is an assignment, not an evaluation; so it does
+not change the value of the variable <A HREF="cmdIt.html">
+    <tt>It</tt>
+  </A>.
+<br><br>
+If an error occurs during the evaluation of an expression, then the
+evaluation is interrupted and the user is notified about the error.
+
+</div>
+
+</body>
+</html>

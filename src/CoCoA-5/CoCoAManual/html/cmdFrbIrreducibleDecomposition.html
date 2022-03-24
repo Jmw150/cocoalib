@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FrbIrreducibleDecomposition</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FrbIrreducibleDecomposition">up</a> <a href="cmdFrbAssociatedPrimes.html">previous</a>  <a href="cmdFrbMaximalStandardMonomials.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FrbIrreducibleDecomposition<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Irreducible decomposition of monomial ideals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FrbIrreducibleDecomposition(I: IDEAL): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Using the <A HREF="partFrobby.html">
+    <tt>Frobby</tt>
+  </A> C++ library by Bjarke Roune.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  I := ideal(x^2, x*y, y^2, z^2);
+/**/  FrbIrreducibleDecomposition(I);
+[ideal(x, y^2, z^2), ideal(x^2, y, z^2)];
+
+-- *** missing manual for these function: volunteers? ;-) ***
+FrbDimension
+FrbMultigradedHilbertPoincareNumerator
+FrbTotalDegreeHilbertPoincareNumerator
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partFrobby.html">Frobby</A>
+<li><a href="cmdFrbAssociatedPrimes.html">FrbAssociatedPrimes</A>
+<li><a href="cmdFrbIrreducibleDecomposition.html">FrbIrreducibleDecomposition</A>
+</ul>
+</div>
+
+</body>
+</html>

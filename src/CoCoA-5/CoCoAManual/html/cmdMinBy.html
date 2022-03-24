@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>MinBy</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#MinBy">up</a> <a href="cmdmin.html">previous</a>  <a href="cmdMinGBoverZZ[PROTOTYPE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>MinBy<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+a minimum element of a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+MinBy(L: LIST, LessThanFunc: FUNCTION): OBJECT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a minimum of the elements of the list <tt><b style="background:#bbeeee">L</b></tt>
+with respect to the comparisons made by <tt><b style="background:#bbeeee">LessThanFunc</b></tt>.
+(see <A HREF="cmdMaxBy.html">
+    <tt>MaxBy</tt>
+  </A> for details)
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Define ByLength(S, T)    -- define the sorting function
+/**/    Return len(S) < len(T);
+/**/  EndDefine;
+
+/**/  L := ["bird", "mouse", "cat", "elephant"];
+/**/  MinBy(L, ByLength);
+cat
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdMaxBy.html">MaxBy</A>
+<li><a href="cmdfunc.html">func</A>
+<li><a href="cmdSortBy.html">SortBy</A>
+<li><a href="cmdSortedBy.html">SortedBy</A>
+<li><a href="cmdTopLevel.html">TopLevel</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>IndetName</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#IndetName">up</a> <a href="cmdIndetIndex.html">previous</a>  <a href="cmdindets.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>IndetName<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+the name of an indeterminate</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+IndetName(X: RINGELEM): STRING</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the name of the indeterminate X as a string
+(i.e. the letter without the indices).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  IndetName(indet(R, 2));
+y
+
+/**/  type(It);
+STRING
+
+/**/  use R ::= QQ[a, x[1..3]];
+/**/  IndetName(Indet(R, 2));
+x
+
+/**/  indent(IndetSymbols(R));
+[
+  record[head := "a", indices := []],
+  record[head := "x", indices := [1]],
+  record[head := "x", indices := [2]],
+  record[head := "x", indices := [3]]
+]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdindet.html">indet</A>
+<li><a href="cmdIndetSubscripts.html">IndetSubscripts</A>
+<li><a href="cmdIndetIndex.html">IndetIndex</A>
+<li><a href="cmdIndetSymbols.html">IndetSymbols</A>
+<li><a href="cmdNumIndets.html">NumIndets</A>
+</ul>
+</div>
+
+</body>
+</html>

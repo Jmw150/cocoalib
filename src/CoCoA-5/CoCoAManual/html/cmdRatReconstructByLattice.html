@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>RatReconstructByLattice</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#RatReconstructByLattice">up</a> <a href="cmdRatReconstructByContFrac.html">previous</a>  <a href="cmdRatReconstructPoly.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>RatReconstructByLattice<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+rational reconstruction from modular image</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+RatReconstructByLattice(X: INT, M: INT): RECORD
+RatReconstructByLattice(X: INT, M: INT, threshold: INT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Same as <A HREF="cmdRatReconstructByContFrac.html">
+    <tt>RatReconstructByContFrac</tt>
+  </A> but with a different
+underlying heuristic algorithms, based on 2-dimensional lattice reduction.  
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  X := 3333333333;
+/**/  M := 10^10;
+/**/  RatReconstructByLattice(X,M);
+record[ReconstructedRat := -1/3, failed := false]
+
+/**/  X := 3141592654;
+/**/  M := 10^10;
+/**/  RatReconstructByLattice(X,M);
+record[failed := true]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdRatReconstructWithBounds.html">RatReconstructWithBounds</A>
+<li><a href="cmdRatReconstructByContFrac.html">RatReconstructByContFrac</A>
+<li><a href="cmdCRT.html">CRT</A>
+</ul>
+</div>
+
+</body>
+</html>

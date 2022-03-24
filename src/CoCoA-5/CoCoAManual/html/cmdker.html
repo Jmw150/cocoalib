@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ker</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ker">up</a> <span class="grayed">previous</span> <a href="cmdKroneckerProd.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ker<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Kernel of a homomorphism</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ker(phi: RINGHOM): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the kernel of a homomorphism.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  R ::= QQ[x,y,z,w];
+/**/  Use S ::= QQ[s,t];
+/**/  phi := PolyAlgebraHom(R, S, [s^3, s^2*t, s*t^2, t^3]);
+/**/  ker(phi);
+ideal(z^2 -y*w,  y*z -x*w,  y^2 -x*z)
+
+/**/  SmodJ := NewQuotientRing(S, "t+s");
+/**/  use SmodJ;
+/**/  psi := PolyAlgebraHom(R, SmodJ, [s^3, s^2*t, s*t^2, t^3]);
+/**/  ker(psi);
+ideal(x +w, y -w, z +w)
+
+/**/  RmodI := NewQuotientRing(R, "x+y");
+/**/  ker(InducedHom(RmodI, psi));
+ideal((z +w),  (y -w))
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdpreimage0.html">preimage0</A>
+<li><a href="cmdIsInjective.html">IsInjective</A>
+<li><a href="cmdIsSurjective.html">IsSurjective</A>
+<li><a href="cmdimplicit.html">implicit</A>
+</ul>
+</div>
+
+</body>
+</html>

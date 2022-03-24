@@ -1,0 +1,53 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>GinJacobian</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#GinJacobian">up</a> <a href="cmdgin.html">previous</a>  <a href="cmdGradingDim.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>GinJacobian<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+generic initial ideal of the Jacobian ideal of a polynomial</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+GensJacobian(Q: RINGELEM): IDEAL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the generic initial ideal of the Jacobian ideal of a polynomial Q.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use QQ[x,y,z];	
+/**/ Q := x^3;
+/**/ GinJacobian(Q);
+ideal(x^2)
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

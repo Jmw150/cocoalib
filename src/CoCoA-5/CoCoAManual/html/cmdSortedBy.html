@@ -1,0 +1,88 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>SortedBy</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#SortedBy">up</a> <a href="cmdsorted.html">previous</a>  <a href="cmdsource.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>SortedBy<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+sort a list</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+SortedBy(L: LIST, LessThanFn: FUNCTION): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the list of the sorted elements of <tt><b style="background:#bbeeee">L</b></tt> without
+affecting <tt><b style="background:#bbeeee">L</b></tt>, itself.  As for <A HREF="cmdSortBy.html">
+    <tt>SortBy</tt>
+  </A>, the comparison
+function <tt><b style="background:#bbeeee">LessThanFn</b></tt> takes two arguments and returns <tt><b style="background:#bbeeee">true</b></tt> if the first argument
+is less than the second, otherwise it returns <tt><b style="background:#bbeeee">false</b></tt>.  The sorted list
+is in increasing order.
+<br><br>
+NOTE: if both <tt><b style="background:#bbeeee">LessThanFn(A, B)</b></tt> and <tt><b style="background:#bbeeee">LessThanFn(B, A)</b></tt> return
+<tt><b style="background:#bbeeee">true</b></tt>, then <tt><b style="background:#bbeeee">A</b></tt> and <tt><b style="background:#bbeeee">B</b></tt> are viewed as being equivalent.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  Define LessByLength(S, T)    -- define the sorting function
+/**/    Return len(S) < len(T);
+/**/  EndDefine;
+
+/**/  L := ["bird","mouse","cat", "elephant"];
+/**/  sorted(L);  -- default is alphabetical order
+["bird", "cat", "elephant", "mouse"]
+/**/  SortedBy(L, LessByLength);
+["cat", "bird", "mouse", "elephant"]
+
+/**/  L;  -- L is not changed
+["bird", "mouse", "cat", "elephant"]
+
+/**/  SortBy(ref L, LessByLength);  -- sort L in place, changing L
+/**/  L;
+["cat", "bird", "mouse", "elephant"]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdfunc.html">func</A>
+<li><a href="cmdMinBy.html">MinBy</A>
+<li><a href="cmdMaxBy.html">MaxBy</A>
+<li><a href="cmdsort.html">sort</A>
+<li><a href="cmdsorted.html">sorted</A>
+<li><a href="cmdSortBy.html">SortBy</A>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>FrbMaximalStandardMonomials</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#FrbMaximalStandardMonomials">up</a> <a href="cmdFrbIrreducibleDecomposition.html">previous</a>  <a href="cmdFrbPrimaryDecomposition.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>FrbMaximalStandardMonomials<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Maximal standard monomials of monomial ideals</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+FrbMaximalStandardMonomials(I: IDEAL): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+Using the <A HREF="partFrobby.html">
+    <tt>Frobby</tt>
+  </A> library linked with CoCoALib.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use QQ[x,y,z];
+/**/  I := ideal(x^2, x*y, y^2, z^2);
+/**/  FrbMaximalStandardMonomials(I);
+ideal(y*z, x*z)
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partFrobby.html">Frobby</A>
+</ul>
+</div>
+
+</body>
+</html>

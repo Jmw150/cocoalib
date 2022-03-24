@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>LawrenceMat</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#LawrenceMat">up</a> <a href="cmdlatex.html">previous</a>  <a href="cmdLC.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>LawrenceMat<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Lawrence lifting of a matrix</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+LawrenceMat(M: MATRIX): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the Lawrence lifting of the matrix <tt><b style="background:#bbeeee">M</b></tt>,
+defined as follows:
+
+  <pre>
+                | M 0 |
+                | I I |
+</pre>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  LawrenceMat(mat([[1,2,3],[4,5,6]]));
+matrix(QQ,
+ [[1, 2, 3, 0, 0, 0],
+  [4, 5, 6, 0, 0, 0],
+  [1, 0, 0, 1, 0, 0],
+  [0, 1, 0, 0, 1, 0],
+  [0, 0, 1, 0, 0, 1]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

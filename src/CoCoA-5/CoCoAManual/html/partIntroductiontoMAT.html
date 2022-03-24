@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link REL="stylesheet" TYPE="text/css" href="gui.css">
+<title>Introduction to MAT</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#toc.html#p2c13">up</a> <span class="grayed">previous</span> <a href="partCommandsandFunctionsforMAT.html">next</a>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>2.13.1 Introduction to MAT</b></font>
+</td></tr></table>
+
+An m x n matrix is represented in CoCoA by the list of its rows
+(see <A HREF="cmdmatrix.html">
+    <tt>matrix</tt>
+  </A>).
+The (A,B)-th entry of a matrix M is given by <tt><b style="background:#bbeeee">M[A][B]</b></tt> or <tt><b style="background:#bbeeee">M[A,B]</b></tt>.
+<br><br>
+The following operations are defined as one would expect for matrices
+
+  <pre>
+  M^A, +M, -N, M+N, M-N, M*N, F*M, M*F
+</pre>
+
+where M, N are matrices, A is a non-negative integer, and F is a
+polynomial, with the obvious restrictions on the dimensions of the
+matrices involved.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y];
+/**/  N := matrix(R, [[1,2],[3,4]]);
+/**/  N[1,2];
+2;
+
+/**/  N^2;
+matrix( /*RingWithID(3, "QQ[x,y]")*/
+ [[7, 10],
+  [15, 22]])
+
+/**/  x * N;
+matrix( /*RingWithID(3, "QQ[x,y]")*/
+ [[x, 2*x],
+  [3*x, 4*x]])
+
+/**/  N + matrix([[x,x], [y,y]]);
+matrix( /*RingWithID(3, "QQ[x,y]")*/
+ [[x +1, x +2],
+  [y +3, y +4]])
+</pre></td></tr></table>
+
+</div>
+
+</body>
+</html>

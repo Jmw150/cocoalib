@@ -1,0 +1,85 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>OpenSocket</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#OpenSocket">up</a> <a href="cmdOpenOString.html">previous</a>  <a href="cmdOption[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>OpenSocket<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+open a socket connection</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+OpenSocket(HostName: STRING, PortNum: INT): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function opens a client socket (I/O) connection to port <tt><b style="background:#bbeeee">PortNum</b></tt>
+on the computer <tt><b style="background:#bbeeee">HostName</b></tt>; to make a connection to the same computer
+CoCoA is running on specify the host name <tt><b style="background:#bbeeee">localhost</b></tt>.
+<br><br>
+The result is a <tt><b style="background:#bbeeee">RECORD</b></tt> where the field <tt><b style="background:#bbeeee">send</b></tt> is an <tt><b style="background:#bbeeee">out-stream</b></tt>,
+and the field <tt><b style="background:#bbeeee">recv</b></tt> is an <tt><b style="background:#bbeeee">in-stream</b></tt>.  The expectation is that a
+<i>remote procedure call</i> is sent on <tt><b style="background:#bbeeee">send</b></tt>, and the result is read from
+<tt><b style="background:#bbeeee">recv</b></tt> using the function <A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A>.
+<br><br>
+The first arg <tt><b style="background:#bbeeee">HostName</b></tt> is a string containing the name of the
+computer which is waiting for a connection; the second arg <tt><b style="background:#bbeeee">PortNum</b></tt>
+is the <i>port number</i> at which the server is waiting.
+<br><br>
+An error will be signalled if the computer <tt><b style="background:#bbeeee">HostName</b></tt> is not waiting
+for a connection to port <tt><b style="background:#bbeeee">PortNum</b></tt>.  The obsolete CoCoAServer waits for
+a connection on the port number 49344 (which is <tt><b style="background:#bbeeee">c0c0</b></tt> in hexadecimal).
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ -->  assuming an echo server is waiting on port 50000...
+/**/ IOPair := OpenSocket("localhost", 50000);
+/**/ PrintLn 123+456 On IOPair.send;
+/**/ str := GetLine(IOPair.recv);
+/**/ str;
+579
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenOFile.html">OpenOFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+<li><a href="cmdOpenOString.html">OpenOString</A>
+</ul>
+</div>
+
+</body>
+</html>

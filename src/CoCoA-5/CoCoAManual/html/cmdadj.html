@@ -1,0 +1,70 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>adj</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#adj">up</a> <a href="cmdabs.html">previous</a>  <a href="cmdAffHilbert[OBSOLESCENT].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>adj<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+classical adjoint matrix (also known as adjugate)</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+adj(M: MAT): MAT</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the classical adjoint of the square matrix <tt><b style="background:#bbeeee">M</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[t,x,y,z];
+/**/  adj(mat([[x,y,z],[t,y,x],[x,x^2,x*y]]));
+matrix( /*RingWithID(44, "QQ[t,x,y,z]")*/
+ [[-x^3 +x*y^2, -x*y^2 +x^2*z, x*y -y*z],
+  [-t*x*y +x^2, x^2*y -x*z, -x^2 +t*z],
+  [t*x^2 -x*y, -x^3 +x*y, -t*y +x*y]])
+
+/**/   FF_5 := NewZZmod(5);
+/**/   adj(matrix(FF_5, [[1,2],[3,1]]));
+matrix( /*ZZ/(5)*/
+ [[1, -2],
+  [2, 1]])
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdinverse.html">inverse</A>
+</ul>
+</div>
+
+</body>
+</html>

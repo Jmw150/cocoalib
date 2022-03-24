@@ -1,0 +1,78 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>OpenOString</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#OpenOString">up</a> <a href="cmdOpenOFile.html">previous</a>  <a href="cmdOpenSocket.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>OpenOString<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+open output string</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+OpenOString(): OSTREAM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function opens strings for output.  <tt><b style="background:#bbeeee">OpenOString</b></tt> is used to write to a
+string with the help of <A HREF="cmdprinton.html">
+    <tt>print on</tt>
+  </A>.  use <A HREF="cmdclose.html">
+    <tt>close</tt>
+  </A> to obtain
+the string of characters "printed on" the ostream.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  str := OpenOString();  -- open a string for output from CoCoA
+/**/  L := [1,2,3]; -- a list
+/**/  print L on str;  -- print to str
+/**/  str;
+<out-stream>
+-------------------------------
+/**/  close(str);  -- gives a string containing the output sent to str
+[1, 2, 3]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdclose.html">close</A>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenOFile.html">OpenOFile</A>
+<li><a href="cmdOpenIString.html">OpenIString</A>
+<li><a href="cmdsource.html">source</A>
+<li><a href="cmdsprint.html">sprint</A>
+</ul>
+</div>
+
+</body>
+</html>

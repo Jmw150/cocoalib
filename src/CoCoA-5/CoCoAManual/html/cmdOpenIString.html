@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>OpenIString</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#OpenIString">up</a> <a href="cmdOpenIFile.html">previous</a>  <a href="cmdOpenLog.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>OpenIString<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+open input string</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+OpenIString(S: STRING): ISTREAM
+OpenOString(S: STRING): OSTREAM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function open strings for input.
+<tt><b style="background:#bbeeee">OpenIString</b></tt> is used to read input from the
+string <tt><b style="background:#bbeeee">S</b></tt> with the help of <A HREF="cmdGetLine.html">
+    <tt>GetLine</tt>
+  </A>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  S := "hello world\n1!\n2!\n3!";
+/**/  D := OpenIString(S);
+/**/  GetLine(D);
+hello world
+/**/  GetLine(D);
+1!
+/**/  GetLine(D);
+2!
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdclose.html">close</A>
+<li><a href="partIntroductiontoIO.html">Introduction to IO</A>
+<li><a href="cmdOpenOString.html">OpenOString</A>
+<li><a href="cmdOpenIFile.html">OpenIFile</A>
+<li><a href="cmdOpenOFile.html">OpenOFile</A>
+<li><a href="cmdsource.html">source</A>
+<li><a href="cmdsprint.html">sprint</A>
+</ul>
+</div>
+
+</body>
+</html>

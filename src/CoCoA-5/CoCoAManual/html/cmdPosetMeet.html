@@ -1,0 +1,73 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>PosetMeet</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#PosetMeet">up</a> <a href="cmdPosetJoin.html">previous</a>  <a href="cmdPosetNRank.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>PosetMeet<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+meet between two elements of a poset from the relations of the poset</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+PosetMeet(relP: LIST, N: INT,  M: INT): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns the meet (i.e. the greatest lower bound)
+between the two elements <tt><b style="background:#bbeeee">N</b></tt>, <tt><b style="background:#bbeeee">M</b></tt> in the poset <tt><b style="background:#bbeeee">P</b></tt>
+from the list <tt><b style="background:#bbeeee">relP</b></tt> of its strict relations.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+// POSET:
+//         3   4
+//          \ /  \
+//           2    5
+//           |
+//           1
+/**/ relP := [[1,  2], [2, 3],  [2,  4], [5,4]];
+/**/ PosetMeet(relP, 3, 4);
+[2]
+
+/**/ PosetMeet(relP, 2, 5);
+[] --> if it does not exist!
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdPosetDual.html">PosetDual</A>
+<li><a href="cmdPosetJoin.html">PosetJoin</A>
+</ul>
+</div>
+
+</body>
+</html>

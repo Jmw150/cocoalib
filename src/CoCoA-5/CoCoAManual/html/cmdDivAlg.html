@@ -1,0 +1,91 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>DivAlg</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#DivAlg">up</a> <a href="cmddiv.html">previous</a>  <a href="cmddomain.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>DivAlg<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+division algorithm</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+DivAlg(X: RINGELEM, L: LIST of RINGELEM): RECORD
+DivAlg(X: MODULEELEM, L: LIST of MODULEELEM): RECORD</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function performs the division algorithm on X with respect to L.
+It returns a record with two fields: <tt><b style="background:#bbeeee">quotients</b></tt> holding a list of
+polynomials, and <tt><b style="background:#bbeeee">remainder</b></tt> holding the remainder of X upon division
+by L.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use R ::= QQ[x,y,z];
+/**/  F := x^2*y +x*y^2 +y^2;
+/**/  L := [x*y-1, y^2-1];
+/**/  DivAlg(F, L);
+record[quotients := [x +y, 1], remainder := x +y +1]
+
+/**/  D := It;
+/**/  D.quotients;
+[x +y, 1]
+/**/  D.remainder;
+x +y + 1
+/**/  ScalarProduct(D.quotients, L) + D.remainder = F;
+true
+
+/**/  R2 := NewFreeModule(R,2);
+/**/  V := ModuleElem(R2, [x^2+y^2+z^2, x*y*z]);
+/**/  L := gens(SubmoduleRows(R2, mat([[x,y], [y,z], [z,x]])));
+/**/  D := DivAlg(V, L);
+/**/  indent(D);
+record[
+  quotients := [x, -z^2 +y +z, y*z -y],
+  remainder := [z^2, z^3 -y*z -z^2]
+]
+/**/ sum([D.quotients[i]*L[i] | i in 1..len(L)]) + D.remainder;
+[x^2 +y^2 +z^2, x*y*z]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmddiv.html">div</A>
+<li><a href="cmdmod.html">mod</A>
+<li><a href="cmdGenRepr.html">GenRepr</A>
+<li><a href="cmdNF.html">NF</A>
+<li><a href="cmdNR.html">NR</A>
+</ul>
+</div>
+
+</body>
+</html>

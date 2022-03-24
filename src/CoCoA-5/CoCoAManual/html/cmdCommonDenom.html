@@ -1,0 +1,72 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>CommonDenom</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#CommonDenom">up</a> <a href="cmdColumnVectors[OBSOLETE].html">previous</a>  <a href="cmdComp[OBSOLETE].html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>CommonDenom<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+Common denominator of a polynomial with rational coefficients</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+CommonDenom(f: RINGELEM): RINGELEM
+CommonDenom(L: LIST of RINGELEM): RINGELEM</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function returns a common denominator for the polynomial <tt><b style="background:#bbeeee">f</b></tt>.
+The coefficient ring of the polynomial ring to which <tt><b style="background:#bbeeee">f</b></tt> belongs
+must be a fraction field.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y];
+/**/  f := (1/4)*x+(1/6)*y;
+/**/ CommonDenom(f);
+12
+/**/ CommonDenom(2*x);
+1
+/**/ CommonDenom([2*x, y/3]);
+3
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdClearDenom.html">ClearDenom</A>
+<li><a href="cmdcontent.html">content</A>
+<li><a href="cmdContentWRT.html">ContentWRT</A>
+<li><a href="cmdprim.html">prim</A>
+</ul>
+</div>
+
+</body>
+</html>

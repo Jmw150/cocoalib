@@ -1,0 +1,65 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>not</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#not">up</a> <a href="cmdNonZero.html">previous</a>  <a href="cmdNR.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>not<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+boolean "not" operator</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+not(A: BOOL): BOOL</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function negates a boolean: i.e. if <tt><b style="background:#bbeeee">A</b></tt> gives <tt><b style="background:#bbeeee">true</b></tt>
+then <tt><b style="background:#bbeeee">not(A)</b></tt> gives <tt><b style="background:#bbeeee">false</b></tt>, and vice versa.
+<br><br>
+NOTE: from CoCoA-5.1 <tt><b style="background:#bbeeee">not</b></tt> is a function, so its argument must be
+between round brackets!
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  [n in 1..10 | not(IsPrime(n))];
+[1,4,6,8,9]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdand.html">and</A>
+<li><a href="cmdor.html">or</A>
+</ul>
+</div>
+
+</body>
+</html>

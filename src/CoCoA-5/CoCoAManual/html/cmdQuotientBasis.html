@@ -1,0 +1,79 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>QuotientBasis</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#QuotientBasis">up</a> <a href="cmdquit.html">previous</a>  <a href="cmdQuotientBasisSorted.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>QuotientBasis<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+vector space basis for zero-dimensional quotient rings</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+QuotientBasis(I: IDEAL): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function determines a vector space basis (of power products)
+for the quotient space associated to a zero-dimensional ideal.
+That is, if R is a polynomial ring with field of coefficients k, and
+I is a zero-dimensional ideal in R then QuotientBasis(I) is a set of
+power products forming a k-vector space basis of R/I.
+<br><br>
+The actual set of power products chosen depends on the term ordering
+in the ring R: the power products chosen are those not divisible by
+the leading term of any member of the reduced Groebner basis of I
+(and consequently they form a factor-closed set).
+<br><br>
+The power-products in the result are sorted in increasing lex ordering.  
+See <A HREF="cmdQuotientBasisSorted.html">
+    <tt>QuotientBasisSorted</tt>
+  </A> for sorting them according to the 
+term-ordering of the ring.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/  use P ::= QQ[x,y,z];
+/**/  I := intersection(ideal(x,y,z)^2, ideal(x-1, y+1, z)^2);
+/**/  QB := QuotientBasis(I);
+/**/  QB; -- power-products underneath the reduced GBasis of I
+[1, z, y, y*z, y^2, y^3, x, x*y]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+<li><a href="cmdIdealOfPoints.html">IdealOfPoints</A>
+<li><a href="cmdIsFactorClosed.html">IsFactorClosed</A>
+</ul>
+</div>
+
+</body>
+</html>

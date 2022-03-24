@@ -1,0 +1,67 @@
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="gui.css">
+<title>ArrSignedGraphical</title>
+</head>
+
+<body bgcolor=#eeffff>
+<div>
+<a href="toc.html#ArrSignedGraphical">up</a> <a href="cmdArrShiD.html">previous</a>  <a href="cmdArrToMultiArr.html">next</A>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+3><b>ArrSignedGraphical<small> <i> &nbsp;&nbsp; -- &nbsp;&nbsp; 
+signed graphical arrangement</i> </small></b></font>
+</td></tr></table>
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Syntax</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+ArrSignedGraphical(S: RING, PositiveEdgesG: LIST, PositiveEdgesG: LISTedgesG: LIST, loopsG: LIST): LIST</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>Description</b></font>
+</td></tr></table>
+
+This function constructs the signed graphical arrangement with respect
+to the list of positive edges <tt><b style="background:#bbeeee">PositiveEdgesG</b></tt>, of negative edges
+<tt><b style="background:#bbeeee">NegativeEdgesG</b></tt> and of loops <tt><b style="background:#bbeeee">loopsG</b></tt> of the signed graph <tt><b style="background:#bbeeee">G</b></tt>
+in the polynomial ring <tt><b style="background:#bbeeee">S</b></tt>.
+<br>
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+1><b>Example</b></font>
+</td></tr></table>
+<table bgcolor=#ccffff width=100%><tr><td><pre>
+/**/ use S::=QQ[x,y,z];	
+/**/ ArrSignedGraphical(S, [[1,2],[1,3]],[[2,3]],[1,3]);
+[x -y,  x -z,  y +z,  x,  z]
+
+/**/ use S::=QQ[x[1..3]];	
+/**/ ArrSignedGraphical(S, [[1,2],[1,3]],[[2,3]],[1,3]);
+[x[1] -x[2],  x[1] -x[3],  x[2] +x[3],  x[1],  x[3]]
+</pre></td></tr></table>
+
+
+<br> 
+<!-- ========================= -->
+<table bgcolor=#00dddd width=100%><tr><td>
+  <font size=+2><b>See Also</b></font>
+</td></tr></table>
+<ul>
+</ul>
+</div>
+
+</body>
+</html>
